@@ -16,7 +16,7 @@ namespace cqhttp.Cyan {
         /// <param name="isSendJson">是否序列化为json格式，默认为true</param>
         /// <returns>序列化后的字符串</returns>
         public static string Serialize (Message message, bool isSendJson = Config.isSendJson) {
-            if (isSendJson) return SerializeToJson (message);
+            if (isSendJson) return SerializeToJsonArray (message);
             else return SerializeToCQ (message);
         }
         /// <summary>
@@ -39,34 +39,26 @@ namespace cqhttp.Cyan {
         /// </return>
         /// <param name="message"></param>
         /// <returns></returns>
-        private static string SerializeToJson (Message message) {
-            string jsonBuild = "{";
+        private static string SerializeToJsonArray (Message message) {
+            string jsonBuild = "[";
             foreach (var i in message.data)
-                jsonBuild += i.raw_data;
-            jsonBuild += "}";
-            return jsonBuild;
+                jsonBuild += i.raw_data_json + ',';
+            return jsonBuild.TrimEnd(' ', ',') + ']';
         }
         /// <summary>
         /// 将消息序列化为CQ码格式，即酷Q原生消息格式
         /// 亦即<c>SerializeToJson</c>中页面所说的
         /// 字符串格式
         /// </summary>
-        /// <see cref=SerializeToJson>
+        /// <see cref=SerializeToJsonArray>
         /// <param name="message"></param>
         /// <returns></returns>
         private static string SerializeToCQ (Message message) {
             string cqBuild = "";
             foreach (Element i in message.data)
-                cqBuild += i.raw_data;
-            return "";
+                cqBuild += i.raw_data_cq;
+            return cqBuild;
         }
     }
-    public class Encoder {
-        public static string Encode (string enc) 
-            => enc.Replace ("&", "&amp").Replace ("[", "&#91").Replace ("]", "&#93");
-        public static string EncodeText (string text)
-            => Encode(text).Replace(",", "&#44");
-        public static string Decode (string enc)
-            => enc.Replace ("&amp", "&").Replace ("&#91", "[").Replace ("&#93", "]");
-    }
+
 }
