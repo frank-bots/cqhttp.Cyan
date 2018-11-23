@@ -8,10 +8,11 @@ namespace cqhttp.Cyan {
             get;private set;
         }
         static void Main (string[] args) {
-            test="asdf";
-            Console.WriteLine (test);
-            string b = new Dictionary<string, string> () ["asdf"];
-            Console.WriteLine ("Hello World!");
+            // Console.WriteLine (Convert.ToChar('a'+1));
+            // string b = new Dictionary<string, string> () ["asdf"];
+            // Console.WriteLine ("Hello World!");
+            Tests.ElementBuild.Test();
+            Tests.MessageBuild.Test();
         }
     }
 }
