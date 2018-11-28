@@ -43,7 +43,7 @@ namespace cqhttp.Cyan.Elements.Base {
             base (type, ("file", url)) {
                 if (!useCache) data["cache"] = "0";
             }
-        
+
         private void GetFilePath () {
             try {
                 this.file = data["file"];
@@ -53,18 +53,24 @@ namespace cqhttp.Cyan.Elements.Base {
         }
         /// <summary>
         /// 下载图片并转为base64存储，并删除data中的url项
-        /// 若仍需url可从<see cref="file"/>中获取
+        /// 网络环境恶劣的情况下最多获取<see cref=Config.networkMaxFailure/>次
+        /// 若仍需url可从<see cref=ElementFile.file/>中获取
         /// </summary>
         /// <returns>返回是否成功获取到</returns>
         private async Task<bool> Fix () {
-            try {
-                using (var http = new HttpClient ()) {
-                    bin_content = await http.GetByteArrayAsync (file);
-                    data["file"] =
-                        $"base64://{Convert.ToBase64String (bin_content)}";
-                }
-            } catch { return false; }
+            for (int i = 0; i < Config.networkMaxFailure; i++) {
+                try {
+                    using (var http = new HttpClient ()) {
+                        bin_content = await http.GetByteArrayAsync (file);
+                        data["file"] =
+                            $"base64://{Convert.ToBase64String (bin_content)}";
+                    }
+                    break;
+                } catch { }
+            }
+            // checkFormat(bin_content)
             return true;
         }
+
     }
 }

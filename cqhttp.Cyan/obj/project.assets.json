@@ -716,6 +716,15 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "websocketsharp.core/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/websocket-sharp-core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/websocket-sharp-core.dll": {}
+        }
       }
     }
   },
@@ -1917,12 +1926,24 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "websocketsharp.core/1.0.0": {
+      "sha512": "Pdr9TtOtlaxKI6XtuHdRBrxFsBPCpqxNerAFbpdb2K7foBMYJmUOV+wqhklZilphtFjxT5zN1X6X3iyG/OovAQ==",
+      "type": "package",
+      "path": "websocketsharp.core/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/websocket-sharp-core.dll",
+        "websocketsharp.core.1.0.0.nupkg.sha512",
+        "websocketsharp.core.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.Server.Kestrel >= 2.1.3",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "websocketsharp.core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1972,6 +1993,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "websocketsharp.core": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
