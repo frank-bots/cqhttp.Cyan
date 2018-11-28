@@ -8,9 +8,9 @@ namespace cqhttp.Cyan.Tests {
                 Message testmessage = new Message ();
                 testmessage.data =
                     new System.Collections.Generic.List<Elements.Base.Element> {
-                        new ElementText ("first text message"),
+                        new ElementText ("first te[xt] message"),
                         new ElementImage ("http://www.asdf.com/asdf.jpg"),
-                        new ElementText ("second text message"),
+                        new ElementText ("second #&text message"),
                         new ElementRecord ("http://asdf.com/asdf.mp3", true, false)
                     };
                 Console.WriteLine (MessageSerializer.Serialize (testmessage));

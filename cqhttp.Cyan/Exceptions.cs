@@ -12,7 +12,11 @@ namespace cqhttp.Cyan {
     /// 错误地进行了消息段构造
     /// </summary>
     public class ErrorElementException : Exception {
-        public ErrorElementException () { }
+        public ErrorElementException () : base () { }
         public ErrorElementException (string message) : base (message) { }
+    }
+    public class NetworkFailureException : Exception {
+        public NetworkFailureException () : base () { }
+        public NetworkFailureException (string message) : base (message) {}
     }
 }
