@@ -1,14 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "e882b9ac4db97ebd1418a19810eafaa490ecb1f3"
+    "signature": "a58afe9bad34d62b33083ad6b30d70a81ca51c4b"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "cqhttp.Cyan/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Server.Kestrel": "2.1.3"
+          "Microsoft.AspNetCore.Server.Kestrel": "2.1.3",
+          "websocketsharp.core": "1.0.0"
         },
         "runtime": {
           "cqhttp.Cyan.dll": {}
@@ -433,7 +434,15 @@
           }
         }
       },
-      "System.Threading.Tasks.Extensions/4.5.1": {}
+      "System.Threading.Tasks.Extensions/4.5.1": {},
+      "websocketsharp.core/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/websocket-sharp-core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -728,6 +737,13 @@
       "sha512": "sha512-rckdhLJtzQ3EI+0BGuq7dUVtCSnerqAoAmL3S6oMRZ4VMZTL3Rq9DS8IDW57c6PYVebA4O0NbSA1BDvyE18UMA==",
       "path": "system.threading.tasks.extensions/4.5.1",
       "hashPath": "system.threading.tasks.extensions.4.5.1.nupkg.sha512"
+    },
+    "websocketsharp.core/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pdr9TtOtlaxKI6XtuHdRBrxFsBPCpqxNerAFbpdb2K7foBMYJmUOV+wqhklZilphtFjxT5zN1X6X3iyG/OovAQ==",
+      "path": "websocketsharp.core/1.0.0",
+      "hashPath": "websocketsharp.core.1.0.0.nupkg.sha512"
     }
   }
 }
