@@ -5,10 +5,18 @@ namespace cqhttp.Cyan.Tests {
     public class ElementBuild {
         public static void Test () {
             try {
-                ElementText testtext = new ElementText ();
-                ElementImage testimage = new ElementImage ();
+                //ElementText testtext = new ElementText ();
+                //ElementImage testimage = new ElementImage ();
+                //ElementFace testface = new ElementFace();
+                ElementEmoji testemoji = new ElementEmoji ();
             } catch (NullElementException e) {
                 Console.WriteLine ($"OK: NullElementException thrown::{e.Message}");
+            }
+            try {
+                ElementEmoji errorEmoji = new ElementEmoji (("asdf", "asdf"));
+                ElementFace errorFace = new ElementFace (("asdf", "asdf"));
+            } catch (ErrorElementException e) {
+                Console.WriteLine ($"OK: ErrorElementException thrown::{e.Message}");
             }
             try {
                 ElementImage testimage = new ElementImage ("http://www.asdf.com/asdf.jpg");
@@ -22,7 +30,12 @@ namespace cqhttp.Cyan.Tests {
                 Console.WriteLine (testvoice.raw_data_cq);
                 Console.WriteLine (testvoice.raw_data_json + '\n' + '\n');
             } catch { }
-
+            try {
+                ElementImage testFix = new ElementImage ("https://i.loli.net/2018/11/28/5bfe41395dcbd.jpg");
+                testFix.Fix ().Wait ();
+                Console.WriteLine (testFix.raw_data_json);
+                
+            } catch (Exception e) { Console.WriteLine (e.Message); }
         }
     }
 }

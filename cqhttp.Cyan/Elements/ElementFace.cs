@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using cqhttp.Cyan.Elements.Base;
 
@@ -20,8 +21,11 @@ namespace cqhttp.Cyan.Elements {
         private void GetFace () {
             try {
                 this.faceId = int.Parse (data["id"]);
-            } catch (KeyNotFoundException) {
-                throw new ErrorElementException ("***data中没有id段");
+            } catch (Exception e) {
+                if( e is KeyNotFoundException)
+                    throw new ErrorElementException ("***data中没有id段");
+                else if(e is FormatException || e is OverflowException)
+                    throw new ErrorElementException ("***data中id项非数字或数字错误");
             }
         }
     }
