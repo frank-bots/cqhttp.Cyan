@@ -26,6 +26,9 @@ namespace cqhttp.Cyan {
     "user_id":745679136
 }
         */
+        class A{}
+        class B:A{}
+        class C:B{}
         static void Main (string[] args) {
             //JArray jArray=JArray.Parse("{\"type\":\"text\",\"data\":{\"text\":\"asdf\"}}");
             //Console.WriteLine(jArray[0]);

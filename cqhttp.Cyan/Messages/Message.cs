@@ -1,10 +1,14 @@
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using cqhttp.Cyan.Messages.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Messages {
     public class Message {
+        private static Regex cqCodeMatch 
+            = new Regex(@"\[CQ:([\w\-\.]+?)(?:,([\w\-\.]+?)=(.+?))*\]");
+            //my thanks to Bleatingsheep
         public List<Element> data;
         public object sender;
         
@@ -34,6 +38,11 @@ namespace cqhttp.Cyan.Messages {
                 result = 1;
                 
             } catch (JsonException) {
+                Match match = cqCodeMatch.Match(message);
+                if(match.Success == false ) {
+                    result = 0;
+                    return new Message();
+                }
                 ifParse = null;
                 result = -1;
             }
