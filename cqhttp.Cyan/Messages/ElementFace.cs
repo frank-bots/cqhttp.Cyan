@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using cqhttp.Cyan.Elements.Base;
+using cqhttp.Cyan.Messages.Base;
 
-namespace cqhttp.Cyan.Elements {
+namespace cqhttp.Cyan.Messages {
     public class ElementFace : Element {
         public int faceId { get; private set; }
         public ElementFace () : base () { }

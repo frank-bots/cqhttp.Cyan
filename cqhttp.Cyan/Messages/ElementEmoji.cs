@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using cqhttp.Cyan.Elements.Base;
-namespace cqhttp.Cyan.Elements {
+using cqhttp.Cyan.Messages.Base;
+namespace cqhttp.Cyan.Messages {
     public class ElementEmoji : Element {
         int id;
         public ElementEmoji () : base () { }

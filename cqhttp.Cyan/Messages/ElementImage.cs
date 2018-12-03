@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using cqhttp.Cyan.Elements.Base;
+using cqhttp.Cyan.Messages.Base;
 
-namespace cqhttp.Cyan.Elements {
+namespace cqhttp.Cyan.Messages {
     public class ElementImage : ElementFile {
 
         /// <returns><see cref="NullElementException"/></returns>
