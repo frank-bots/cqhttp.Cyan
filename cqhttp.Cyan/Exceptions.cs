@@ -17,6 +17,11 @@ namespace cqhttp.Cyan {
     }
     public class NetworkFailureException : Exception {
         public NetworkFailureException () : base () { }
-        public NetworkFailureException (string message) : base (message) {}
+        public NetworkFailureException (string message) : base (message) { }
+    }
+
+    public class NullEventException : Exception {
+        public NullEventException () : base () { }
+        public NullEventException (string message) : base (message) { }
     }
 }
