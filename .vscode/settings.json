@@ -4,5 +4,6 @@
         "vector": "cpp",
         "iostream": "cpp",
         "__tree": "cpp"
-    }
+    },
+    "python.linting.enabled": false
 }

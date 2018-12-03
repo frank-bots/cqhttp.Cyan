@@ -1,11 +1,13 @@
 using System.Collections.Generic;
-using cqhttp.Cyan.Elements.Base;
+using cqhttp.Cyan.Messages.Base;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan {
+namespace cqhttp.Cyan.Messages {
     public class Message {
         public List<Element> data;
-    }
-    public class MessageSerializer {
+        public object sender;
+        
         /// <summary>
         /// 将消息序列化便于发送或本地存储
         /// </summary>
@@ -23,8 +25,18 @@ namespace cqhttp.Cyan {
         /// 将收到或构造的消息反序列化以存储在内存中
         /// </summary>
         /// <param name="message">字符串形式的消息</param>
+        /// <param name="result">返回反序列化的结果,原消息为Json则为1,为CQ码则为-1,反序列化失败则为0</param>
         /// <returns>反序列化后的<c>Message</c>对象</returns>
-        public static Message Deserialize (string message) {
+        public static Message Deserialize (string message, out short result) {
+            JArray ifParse;
+            try {
+                ifParse = JArray.Parse(message);
+                result = 1;
+                
+            } catch (JsonException) {
+                ifParse = null;
+                result = -1;
+            }
             return new Message ();
             // TODO:
         }
@@ -43,7 +55,7 @@ namespace cqhttp.Cyan {
             string jsonBuild = "[";
             foreach (var i in message.data)
                 jsonBuild += i.raw_data_json + ',';
-            return jsonBuild.TrimEnd(' ', ',') + ']';
+            return jsonBuild.TrimEnd (' ', ',') + ']';
         }
         /// <summary>
         /// 将消息序列化为CQ码格式，即酷Q原生消息格式

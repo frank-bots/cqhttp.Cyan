@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4053cb77-bc0c-4460-8b15-68385d710732" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/Base/BaseElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/Base/BaseElementFile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/ElementEmoji.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/ElementFace.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/ElementImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/ElementRecord.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/ElementText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Elements/phy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Message.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/ElementBuild.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Tests/ElementBuild.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/MessageBuild.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Tests/MessageBuild.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/CQ-码的坑.md" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/CQ-码的坑.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/FAQ.md" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/FAQ.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/HTTPS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/HTTPS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/Home.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/Tests/coolq-http-api.wiki/扩展列表.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.dll" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/cqhttp.Cyan.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/cqhttp.Cyan.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.dll" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/cqhttp.Cyan.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/cqhttp.Cyan.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/cqhttp.Cyan.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/cqhttp.Cyan.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cqhttp.Cyan/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/cqhttp.Cyan/obj/project.assets.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1372239189">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="101" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="101" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Events/Base/EventReceived.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <folding>
+                <marker date="1543823838868" expanded="true" signature="34:133" ph="{...}" />
+                <marker date="1543823838868" expanded="true" signature="67:131" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+              <folding>
+                <marker date="1543824032258" expanded="false" signature="6:117" ph="..." />
+                <marker date="1543824032258" expanded="true" signature="141:1023" ph="{...}" />
+                <marker date="1543824032258" expanded="true" signature="161:1021" ph="{...}" />
+                <marker date="1543824032258" expanded="true" signature="171:565" ph="/* { ... */" />
+                <marker date="1543824032258" expanded="true" signature="607:1015" ph="{...}" />
+                <marker date="1543824032258" expanded="true" signature="621:925" ph="/* JArray jArray=JArray.Parse(&quot;{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;data\&quot;:{\&quot;text\&quot;:\&quot;asdf\&quot;}}&quot;); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Tests/MessageBuild.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+              <folding>
+                <marker date="1543824012969" expanded="false" signature="6:41" ph="..." />
+                <marker date="1543824012969" expanded="true" signature="71:1245" ph="{...}" />
+                <marker date="1543824012969" expanded="true" signature="103:1243" ph="{...}" />
+                <marker date="1543824012969" expanded="true" signature="140:1237" ph="{...}" />
+                <marker date="1543824012969" expanded="true" signature="158:1217" ph="{...}" />
+                <marker date="1543824012969" expanded="true" signature="226:663" ph="{...}" />
+                <marker date="1543824012969" expanded="true" signature="334:645" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Exceptions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1543228445219" expanded="true" signature="37:715" ph="{...}" />
+                <marker date="1543228445219" expanded="true" signature="43:100" ph="/// 调用了空构造函数，不能构造空对象 ... " />
+                <marker date="1543228445219" expanded="true" signature="151:275" ph="{...}" />
+                <marker date="1543228445219" expanded="true" signature="280:332" ph="/// 错误地进行了消息段构造 ... " />
+                <marker date="1543228445219" expanded="true" signature="384:520" ph="{...}" />
+                <marker date="1543228445219" expanded="true" signature="574:713" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Tests/ElementBuild.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <marker date="1543823740211" expanded="true" signature="6:41" ph="..." />
+                <marker date="1543823740211" expanded="true" signature="71:2013" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="103:2011" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="140:2005" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="158:420" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="176:344" ph="/* ElementText testtext = new ElementText (); ... */" />
+                <marker date="1543823740211" expanded="true" signature="452:552" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="569:739" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="772:873" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="890:1633" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="1169:1485" ph="/* Xunit.Assert(testimage.raw_data_cq) ... */" />
+                <marker date="1543823740211" expanded="true" signature="1640:1682" ph="{...}" />
+                <marker date="1543823740211" expanded="true" signature="1700:1940" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/cqhttp.Cyan/Messages/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cqhttp.Cyan/Tests/ElementBuild.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cqhttp.Cyan/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cqhttp.Cyan/Tests/MessageBuild.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cqhttp.Cyan/Events/Base/EventReceived.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cqhttp.Cyan/Exceptions.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/cqhttp.Cyan/Tests/ElementBuild.cs" />
+        <option value="$PROJECT_DIR$/cqhttp.Cyan/Events/Base/MessageReceived.cs" />
+        <option value="$PROJECT_DIR$/cqhttp.Cyan/Events/Base/EventReceived.cs" />
+        <option value="$PROJECT_DIR$/cqhttp.Cyan/Tests/MessageBuild.cs" />
+        <option value="$PROJECT_DIR$/cqhttp.Cyan/Messages/Message.cs" />
+        <option value="$PROJECT_DIR$/cqhttp.Cyan/Program.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Events" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Events" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Base" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cqhttp.Cyan" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Tests" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cqhttp.Cyan" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/cqhttp.Cyan/cqhttp.Cyan.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4053cb77-bc0c-4460-8b15-68385d710732" name="Default Changelist" comment="" />
+      <created>1543823548063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543823548063</updated>
+      <workItem from="1543823550047" duration="712000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="712000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23319027" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" weight="0.32891566" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Exceptions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1543228445219" expanded="true" signature="37:715" ph="{...}" />
+            <marker date="1543228445219" expanded="true" signature="43:100" ph="/// 调用了空构造函数，不能构造空对象 ... " />
+            <marker date="1543228445219" expanded="true" signature="151:275" ph="{...}" />
+            <marker date="1543228445219" expanded="true" signature="280:332" ph="/// 错误地进行了消息段构造 ... " />
+            <marker date="1543228445219" expanded="true" signature="384:520" ph="{...}" />
+            <marker date="1543228445219" expanded="true" signature="574:713" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Tests/ElementBuild.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <marker date="1543823740211" expanded="true" signature="6:41" ph="..." />
+            <marker date="1543823740211" expanded="true" signature="71:2013" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="103:2011" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="140:2005" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="158:420" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="176:344" ph="/* ElementText testtext = new ElementText (); ... */" />
+            <marker date="1543823740211" expanded="true" signature="452:552" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="569:739" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="772:873" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="890:1633" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="1169:1485" ph="/* Xunit.Assert(testimage.raw_data_cq) ... */" />
+            <marker date="1543823740211" expanded="true" signature="1640:1682" ph="{...}" />
+            <marker date="1543823740211" expanded="true" signature="1700:1940" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Messages/Message.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <marker date="1543823943373" expanded="false" signature="6:117" ph="..." />
+            <marker date="1543823943373" expanded="true" signature="150:2497" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="177:2494" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="261:569" ph="/// 将消息序列化便于发送或本地存储 ... " />
+            <marker date="1543823943373" expanded="true" signature="664:791" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="800:1056" ph="/// 将收到或构造的消息反序列化以存储在内存中 ... " />
+            <marker date="1543823943373" expanded="true" signature="1134:1454" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="1180:1289" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="1312:1388" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="1464:1735" ph="/// 将消息序列化为Json格式，即 ... " />
+            <marker date="1543823943373" expanded="true" signature="1805:2003" ph="{...}" />
+            <marker date="1543823943373" expanded="true" signature="2012:2263" ph="/// 将消息序列化为CQ码格式，即酷Q原生消息格式 ... " />
+            <marker date="1543823943373" expanded="true" signature="2326:2488" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Tests/MessageBuild.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding>
+            <marker date="1543824012969" expanded="false" signature="6:41" ph="..." />
+            <marker date="1543824012969" expanded="true" signature="71:1245" ph="{...}" />
+            <marker date="1543824012969" expanded="true" signature="103:1243" ph="{...}" />
+            <marker date="1543824012969" expanded="true" signature="140:1237" ph="{...}" />
+            <marker date="1543824012969" expanded="true" signature="158:1217" ph="{...}" />
+            <marker date="1543824012969" expanded="true" signature="226:663" ph="{...}" />
+            <marker date="1543824012969" expanded="true" signature="334:645" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Events/Base/EventReceived.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding>
+            <marker date="1543823838868" expanded="true" signature="34:133" ph="{...}" />
+            <marker date="1543823838868" expanded="true" signature="67:131" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cqhttp.Cyan/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <marker date="1543824032258" expanded="false" signature="6:117" ph="..." />
+            <marker date="1543824032258" expanded="true" signature="141:1023" ph="{...}" />
+            <marker date="1543824032258" expanded="true" signature="161:1021" ph="{...}" />
+            <marker date="1543824032258" expanded="true" signature="171:565" ph="/* { ... */" />
+            <marker date="1543824032258" expanded="true" signature="607:1015" ph="{...}" />
+            <marker date="1543824032258" expanded="true" signature="621:925" ph="/* JArray jArray=JArray.Parse(&quot;{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;data\&quot;:{\&quot;text\&quot;:\&quot;asdf\&quot;}}&quot;); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

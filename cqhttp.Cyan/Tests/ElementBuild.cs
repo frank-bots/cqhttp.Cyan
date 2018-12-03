@@ -1,5 +1,5 @@
 using System;
-using cqhttp.Cyan.Elements;
+using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Tests {
     public class ElementBuild {
@@ -29,7 +29,10 @@ namespace cqhttp.Cyan.Tests {
                 // Console.WriteLine (testtext.raw_data_json + '\n' + '\n');
                 Console.WriteLine (testvoice.raw_data_cq);
                 Console.WriteLine (testvoice.raw_data_json + '\n' + '\n');
-            } catch { }
+            } catch {
+                // ignored
+            }
+
             try {
                 ElementImage testFix = new ElementImage ("https://i.loli.net/2018/11/28/5bfe41395dcbd.jpg");
                 testFix.Fix ().Wait ();

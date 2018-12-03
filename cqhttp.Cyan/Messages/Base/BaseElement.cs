@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace cqhttp.Cyan.Elements.Base {
+namespace cqhttp.Cyan.Messages.Base {
     /// <summary>
     /// 消息元素，即cqhttp所定义的消息段
     /// </summary>

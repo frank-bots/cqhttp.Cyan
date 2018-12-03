@@ -4,7 +4,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace cqhttp.Cyan.Elements.Base {
+namespace cqhttp.Cyan.Messages.Base {
     /// <summary>
     /// 包括图片，语音
     /// </summary>
