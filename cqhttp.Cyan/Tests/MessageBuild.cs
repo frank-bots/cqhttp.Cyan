@@ -1,5 +1,6 @@
 using System;
 using cqhttp.Cyan.Messages;
+using cqhttp.Cyan.Messages.CQElements;
 
 namespace cqhttp.Cyan.Tests {
     public class MessageBuild {

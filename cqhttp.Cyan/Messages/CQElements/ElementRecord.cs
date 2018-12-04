@@ -1,6 +1,6 @@
 using cqhttp.Cyan.Messages.Base;
 
-namespace cqhttp.Cyan.Messages {
+namespace cqhttp.Cyan.Messages.CQElements {
     class ElementRecord : ElementFile {
 
         /// <summary>是否变声</summary>

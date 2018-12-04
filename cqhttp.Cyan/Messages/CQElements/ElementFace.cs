@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using cqhttp.Cyan.Messages.Base;
 
-namespace cqhttp.Cyan.Messages {
+namespace cqhttp.Cyan.Messages.CQElements {
     public class ElementFace : Element {
         public int faceId { get; private set; }
         public ElementFace () : base () { }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using cqhttp.Cyan.Messages.Base;
 
-namespace cqhttp.Cyan.Messages {
+namespace cqhttp.Cyan.Messages.CQElements {
     public class ElementText : Element {
         public string text { get; private set; }
         public ElementText() : base() { }
