@@ -24,12 +24,12 @@ namespace cqhttp.Cyan.Messages.Base {
             get {
                 if (type == "text")
                     return Encoder.EncodeText (data["text"]);
-                string builder = "";
+                string builder = ",";
                 foreach (var i in data)
                     builder += $"{i.Key}={Encoder.EncodeValue(i.Value)},";
                 return string.Format (
                     Config.wrapperCQCode,
-                    type, builder.TrimEnd(' ', ',')
+                    type, builder.TrimEnd (' ', ',')
                 );
             }
         }
@@ -40,10 +40,10 @@ namespace cqhttp.Cyan.Messages.Base {
         /// </summary>
         public string raw_data_json {
             get {
-                string builder = $"{{\"type\":\"{type}\",\"data\":{{";
+                string builder = $"{{\"type\":\"{type}\",\"data\":"+(data.Count!=0?$"{{":"\"");
                 foreach (var i in data)
                     builder += $"\"{i.Key}\":\"{i.Value.Replace("\"","\\\"")}\",";
-                return builder.TrimEnd (',', ' ') + $"}}}}";
+                return builder.TrimEnd (',', ' ')+(data.Count!=0?$"}}": "\"")+$"}}";
                 //。。。不这么写的话我的代码格式化插件就会崩掉
             }
         }
@@ -62,12 +62,9 @@ namespace cqhttp.Cyan.Messages.Base {
         }
     }
     public class Encoder {
-        public static string EncodeText (string enc) 
-            => enc.Replace ("&", "&amp").Replace ("[", "&#91").Replace ("]", "&#93");
-        public static string EncodeValue (string text) 
-            => EncodeText (text).Replace (",", "&#44");
-        public static string Decode (string enc) 
-            => enc.Replace ("&amp", "&").Replace ("&#91", "[")
+        public static string EncodeText (string enc) => enc.Replace ("&", "&amp").Replace ("[", "&#91").Replace ("]", "&#93");
+        public static string EncodeValue (string text) => EncodeText (text).Replace (",", "&#44");
+        public static string Decode (string enc) => enc.Replace ("&amp", "&").Replace ("&#91", "[")
             .Replace ("&#93", "]").Replace ("&#44", ",");
     }
 }

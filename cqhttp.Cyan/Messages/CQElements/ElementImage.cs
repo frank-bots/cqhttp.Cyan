@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Messages.Base;
 
-namespace cqhttp.Cyan.Messages {
+namespace cqhttp.Cyan.Messages.CQElements {
     public class ElementImage : ElementFile {
 
         /// <returns><see cref="NullElementException"/></returns>

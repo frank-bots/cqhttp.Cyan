@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using cqhttp.Cyan.Messages.Base;
+using cqhttp.Cyan.Messages.CQElements;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Messages {
     public class Message {
-        private static Regex cqCodeMatch 
-            = new Regex(@"\[CQ:([\w\-\.]+?)(?:,([\w\-\.]+?)=(.+?))*\]");
-            //my thanks to Bleatingsheep
+        //any cq code
         public List<Element> data;
         public object sender;
-        
+        private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
+
         /// <summary>
         /// 将消息序列化便于发送或本地存储
         /// </summary>
@@ -25,29 +25,49 @@ namespace cqhttp.Cyan.Messages {
             if (isSendJson) return SerializeToJsonArray (message);
             else return SerializeToCQ (message);
         }
+        /*
+        asdf[CQ:image,file=DE69C8D4C54997FC5ECBE475153651BE.jpg,url=https://c2cpicdw.qpic.cn/offpic_new/745679136//73da0548-ac93-4d5e-abd8-71138f019b28/0?vuin=2956005355&amp;term=2]
+         */
         /// <summary>
         /// 将收到或构造的消息反序列化以存储在内存中
         /// </summary>
         /// <param name="message">字符串形式的消息</param>
-        /// <param name="result">返回反序列化的结果,原消息为Json则为1,为CQ码则为-1,反序列化失败则为0</param>
+        /// <param name="result">返回反序列化的结果,原消息为Json则为1,含CQ码则为-1,纯文本则为0</param>
         /// <returns>反序列化后的<c>Message</c>对象</returns>
         public static Message Deserialize (string message, out short result) {
-            JArray ifParse;
+            Message ret = new Message {data=new List<Element>()};
             try {
-                ifParse = JArray.Parse(message);
-                result = 1;
-                
-            } catch (JsonException) {
-                Match match = cqCodeMatch.Match(message);
-                if(match.Success == false ) {
-                    result = 0;
-                    return new Message();
+                JArray ifParse = JArray.Parse (message);
+                tempDict.Clear ();
+                foreach (var i in ifParse) {
+                    tempDict = i["data"].ToObject<Dictionary<string, string>> ();
+                    ret.data.Add (
+                        BuildElement (i["type"].ToString (), tempDict)
+                    );
                 }
-                ifParse = null;
-                result = -1;
+                result = 1;
+            } catch (JsonException) {
+                Match match = Config.matchCqCode.Match (message);
+                if (match.Success) {
+                    while (match.Success) {
+                        if (match.Index > 0)
+                            ret.data.Add (
+                                new ElementText (
+                                    message.Substring (0, match.Index)
+                                )
+                            );
+                        //try { //for production
+                        ret.data.Add (BuildCQElement (match.Value));
+                        //} catch { }
+                        message = message.Substring (match.Index + match.Length);
+                        match = Config.matchCqCode.Match (message);
+                    }
+                    result = -1;
+                    return ret;
+                }
             }
-            return new Message ();
-            // TODO:
+            result = 0;
+            return new Message { data = new List<Element>(){ new ElementText (message) } };
         }
 
         /// <summary>
@@ -79,6 +99,30 @@ namespace cqhttp.Cyan.Messages {
             foreach (Element i in message.data)
                 cqBuild += i.raw_data_cq;
             return cqBuild;
+        }
+
+        private static Element BuildCQElement (string cqcode) {
+            string type = Config.parseCqCode.Match (cqcode).Groups[1].Value;
+            tempDict.Clear ();
+            foreach (Match i in Config.paramCqCode.Matches (cqcode))
+                tempDict.Add (i.Groups[1].Value, i.Groups[2].Value);
+            return BuildElement (type, tempDict);
+        }
+        private static Element BuildElement (string type, Dictionary<string, string> dict) {
+            switch (type) {
+                case "text":
+                    return new ElementText (dict["text"]);
+                case "image":
+                    return new ElementImage (dict["url"]);
+                case "record":
+                    return new ElementRecord (dict["file"]);
+                case "face":
+                case "emoji":
+                    return new ElementEmoji (int.Parse (dict["id"]));
+                case "shake":
+                    return new ElementShake ();
+            }
+            throw new ErrorElementException ($"未能解析type为{type}的元素");
         }
     }
 
