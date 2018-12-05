@@ -24,4 +24,8 @@ namespace cqhttp.Cyan {
         public NullEventException () : base () { }
         public NullEventException (string message) : base (message) { }
     }
+    public class ErrorEventException : Exception {
+        public ErrorEventException () : base () { }
+        public ErrorEventException (string message) : base (message) { }
+    }
 }

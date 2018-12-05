@@ -4,8 +4,17 @@ using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events {
     public class GroupMessageEvent : MessageEvent {
-        public GroupMessageEvent (int time, Message message, Sender sender):
-            base (time, MessageType._group, sender, message) { }
+        long group_id;
+        public GroupMessageEvent (
+                long time,
+                Message message,
+                Sender sender,
+                int message_id,
+                long group_id
+            ):
+            base (time, MessageType._group, sender, message, message_id) {
+                this.group_id = group_id;
+            }
         public GroupMessageEvent () : base () { }
     }
 }

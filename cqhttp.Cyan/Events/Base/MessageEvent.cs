@@ -8,22 +8,28 @@ namespace cqhttp.Cyan.Events.Base {
         _group,
         _discuss
     }
-    public class MessageEvent : Event {
+    public class MessageEvent : CQEvent {
 
         public MessageType messageType { get; private set; }
         public Sender sender { get; private set; }
         public Message message { get; private set; }
+        public int message_id { get; private set; }
+        public int font { get; private set; }
         public MessageEvent () : base () { }
         public MessageEvent (
-                int time,
+                long time,
                 MessageType messageType,
                 Sender sender,
-                Message message
+                Message message,
+                int message_id,
+                int font = 0
             ):
             base (time, PostType.message) {
                 this.messageType = messageType;
                 this.sender = sender;
                 this.message = message;
+                this.message_id = message_id;
+                this.font = font;
             }
     }
 

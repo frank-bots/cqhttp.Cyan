@@ -9,7 +9,7 @@ namespace cqhttp.Cyan.Events.Base {
         group_increase,
         friend_add
     }
-    public class NoticeEvent : Event {
+    public class NoticeEvent : CQEvent {
         public NoticeType noticeType { get; private set; }
         public int user_id { get; private set; }
         public NoticeEvent (int time, NoticeType noticeType, int user_id):
