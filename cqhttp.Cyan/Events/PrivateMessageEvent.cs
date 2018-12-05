@@ -4,8 +4,13 @@ using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events {
     public class PrivateMessageEvent : MessageEvent {
-        public PrivateMessageEvent (int time, Message message, Sender sender):
-            base (time, MessageType._private, sender, message) { }
+        public PrivateMessageEvent (
+                long time,
+                Message message,
+                Sender sender,
+                int message_id
+            ):
+            base (time, MessageType._private, sender, message, message_id) { }
         public PrivateMessageEvent () : base () { }
     }
 }

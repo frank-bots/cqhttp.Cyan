@@ -9,7 +9,6 @@ namespace cqhttp.Cyan.Messages {
     public class Message {
         //any cq code
         public List<Element> data;
-        public object sender;
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
         /// <summary>
@@ -35,7 +34,7 @@ namespace cqhttp.Cyan.Messages {
         /// <param name="result">返回反序列化的结果,原消息为Json则为1,含CQ码则为-1,纯文本则为0</param>
         /// <returns>反序列化后的<c>Message</c>对象</returns>
         public static Message Deserialize (string message, out short result) {
-            Message ret = new Message {data=new List<Element>()};
+            Message ret = new Message { data = new List<Element> () };
             try {
                 JArray ifParse = JArray.Parse (message);
                 tempDict.Clear ();
@@ -67,7 +66,7 @@ namespace cqhttp.Cyan.Messages {
                 }
             }
             result = 0;
-            return new Message { data = new List<Element>(){ new ElementText (message) } };
+            return new Message { data = new List<Element> () { new ElementText (message) } };
         }
 
         /// <summary>
@@ -109,20 +108,25 @@ namespace cqhttp.Cyan.Messages {
             return BuildElement (type, tempDict);
         }
         private static Element BuildElement (string type, Dictionary<string, string> dict) {
-            switch (type) {
-                case "text":
-                    return new ElementText (dict["text"]);
-                case "image":
-                    return new ElementImage (dict["url"]);
-                case "record":
-                    return new ElementRecord (dict["file"]);
-                case "face":
-                case "emoji":
-                    return new ElementEmoji (int.Parse (dict["id"]));
-                case "shake":
-                    return new ElementShake ();
+            try {
+                switch (type) {
+                    case "text":
+                        return new ElementText (dict["text"]);
+                    case "image":
+                        return new ElementImage (dict["url"]);
+                    case "record":
+                        return new ElementRecord (dict["file"]);
+                    case "face":
+                    case "emoji":
+                        return new ElementEmoji (int.Parse (dict["id"]));
+                    case "shake":
+                        return new ElementShake ();
+                }
+            } catch (KeyNotFoundException) {
+                throw new ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
             }
-            throw new ErrorElementException ($"未能解析type为{type}的元素");
+
+            throw new NullElementException ($"未能解析type为{type}的元素");
         }
     }
 
