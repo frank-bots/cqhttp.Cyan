@@ -2,7 +2,11 @@ using System.Collections.Generic;
 using cqhttp.Cyan.Messages.Base;
 
 namespace cqhttp.Cyan.Messages.CQElements {
+    /// <summary>
+    /// 文本消息段
+    /// </summary>
     public class ElementText : Element {
+        ///
         public string text { get; private set; }
         public ElementText() : base() { }
         public ElementText (string text):

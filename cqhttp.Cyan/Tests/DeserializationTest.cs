@@ -4,7 +4,13 @@ using cqhttp.Cyan.Events.Base;
 using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Tests {
+    /// <summary>
+    /// 
+    /// </summary>
     public class DeserializationTest {
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Test () {
             short res;
             Message test = Message.Deserialize ("asdf", out res);
