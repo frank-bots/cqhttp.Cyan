@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using cqhttp.Cyan;
 using Newtonsoft.Json;
@@ -27,9 +28,9 @@ namespace cqhttp.Cyan {
     "user_id":745679136
 }
         */
-        class A{}
-        class B:A{}
-        class C:B{}
+        class A { }
+        class B : A { }
+        class C : B { }
         private static Regex cqCodeMatch
             = new Regex (@"\[CQ:([\w\-\.]+?)(?:,([\w\-\.]+?)=(.+?))*\]");
         static void Main (string[] args) {
@@ -45,7 +46,8 @@ namespace cqhttp.Cyan {
             // Console.WriteLine ("Hello World!");
             // Tests.ElementBuild.Test();
             // Tests.MessageBuild.Test();
-            Tests.DeserializationTest.Test();
+            
+            //Tests.DeserializationTest.Test ();
         }
     }
 }

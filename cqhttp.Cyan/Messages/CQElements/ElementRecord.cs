@@ -1,7 +1,10 @@
 using cqhttp.Cyan.Messages.Base;
 
 namespace cqhttp.Cyan.Messages.CQElements {
-    class ElementRecord : ElementFile {
+    /// <summary>
+    /// 语音消息
+    /// </summary>
+    public class ElementRecord : ElementFile {
 
         /// <summary>是否变声</summary>
         /// <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>

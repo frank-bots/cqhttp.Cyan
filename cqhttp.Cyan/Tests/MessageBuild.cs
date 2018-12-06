@@ -3,7 +3,13 @@ using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
 
 namespace cqhttp.Cyan.Tests {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MessageBuild {
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Test () {
             try {
                 Message testmessage = new Message

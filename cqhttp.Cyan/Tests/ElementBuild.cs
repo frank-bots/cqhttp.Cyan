@@ -2,7 +2,13 @@ using System;
 using cqhttp.Cyan.Messages.CQElements;
 
 namespace cqhttp.Cyan.Tests {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ElementBuild {
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Test () {
             try {
                 //ElementText testtext = new ElementText ();

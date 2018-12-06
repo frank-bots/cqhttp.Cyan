@@ -24,12 +24,12 @@ namespace cqhttp.Cyan.Messages.Base {
             get {
                 if (type == "text")
                     return Encoder.EncodeText (data["text"]);
-                string builder = ",";
+                string paramBuilder = "";
                 foreach (var i in data)
-                    builder += $"{i.Key}={Encoder.EncodeValue(i.Value)},";
+                    paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
                 return string.Format (
-                    Config.wrapperCQCode,
-                    type, builder.TrimEnd (' ', ',')
+                    "[CQ:{0}{1}]",
+                    type, paramBuilder.TrimEnd (' ')
                 );
             }
         }

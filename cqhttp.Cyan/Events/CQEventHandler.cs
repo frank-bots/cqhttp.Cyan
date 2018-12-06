@@ -6,7 +6,15 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events {
+    /// <summary>
+    /// 事件处理
+    /// </summary>
     public class CQEventHandler {
+        /// <summary>
+        /// 处理完整的上报事件
+        /// </summary>
+        /// <param name="e">上报事件</param>
+        /// <returns>处理后的事件对象</returns>
         public static CQEvent Handle (string e) {
             string post_type;
             JObject eventJson;
@@ -29,7 +37,7 @@ namespace cqhttp.Cyan.Events {
             throw new NullEventException ($"未能解析type为{post_type}的event");
         }
 
-        public static CQEvent HandleMessage (ref JObject e) {
+        private static CQEvent HandleMessage (ref JObject e) {
             string sub_type = e["message_type"].ToString ();
             short temp;
             switch (sub_type) {

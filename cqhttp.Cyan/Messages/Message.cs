@@ -6,8 +6,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Messages {
+    /// <summary>
+    /// 由消息段构成的消息
+    /// </summary>
     public class Message {
         //any cq code
+        /// <summary>
+        /// 消息段列表
+        /// </summary>
         public List<Element> data;
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
@@ -15,12 +21,12 @@ namespace cqhttp.Cyan.Messages {
         /// 将消息序列化便于发送或本地存储
         /// </summary>
         /// <remarks>
-        /// 依据参数<c/>isSendJson</c>判断格式化的结果
+        /// 依据参数<c>isSendJson</c>判断格式化的结果
         /// </remarks>
         /// <param name="message">待序列化的消息</param>
         /// <param name="isSendJson">是否序列化为json格式，默认为true</param>
         /// <returns>序列化后的字符串</returns>
-        public static string Serialize (Message message, bool isSendJson = Config.isSendJson) {
+        public static string Serialize (Message message, bool isSendJson = true) {
             if (isSendJson) return SerializeToJsonArray (message);
             else return SerializeToCQ (message);
         }
@@ -78,7 +84,7 @@ namespace cqhttp.Cyan.Messages {
         /// 数组格式的消息
         /// </return>
         /// <param name="message"></param>
-        /// <returns></returns>
+        /// <returns>序列化后的json字符串</returns>
         private static string SerializeToJsonArray (Message message) {
             string jsonBuild = "[";
             foreach (var i in message.data)
@@ -90,9 +96,9 @@ namespace cqhttp.Cyan.Messages {
         /// 亦即<c>SerializeToJson</c>中页面所说的
         /// 字符串格式
         /// </summary>
-        /// <see cref=SerializeToJsonArray>
+        /// <see cref="Message.SerializeToJsonArray(Message)"/>
         /// <param name="message"></param>
-        /// <returns></returns>
+        /// <returns>序列化后的CQ码</returns>
         private static string SerializeToCQ (Message message) {
             string cqBuild = "";
             foreach (Element i in message.data)
