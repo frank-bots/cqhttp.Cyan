@@ -2,6 +2,7 @@ using System;
 using cqhttp.Cyan;
 using cqhttp.Cyan.Events.Base;
 using cqhttp.Cyan.Messages;
+using cqhttp.Cyan.Events.CQEvents;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -37,7 +38,7 @@ namespace cqhttp.Cyan.Events {
             throw new NullEventException ($"未能解析type为{post_type}的event");
         }
 
-        private static CQEvent HandleMessage (ref JObject e) {
+        private static MessageEvent HandleMessage (ref JObject e) {
             string sub_type = e["message_type"].ToString ();
             short temp;
             switch (sub_type) {

@@ -1,6 +1,7 @@
 using System;
 using cqhttp.Cyan.Events;
 using cqhttp.Cyan.Events.Base;
+using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Tests {

@@ -2,7 +2,7 @@ using cqhttp.Cyan.Events.Base;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events {
+namespace cqhttp.Cyan.Events.CQEvents {
     public class GroupMessageEvent : MessageEvent {
         long group_id;
         public GroupMessageEvent (
@@ -12,7 +12,7 @@ namespace cqhttp.Cyan.Events {
                 int message_id,
                 long group_id
             ):
-            base (time, MessageType._group, sender, message, message_id) {
+            base (time, Enums.MessageType.group_, sender, message, message_id) {
                 this.group_id = group_id;
             }
         public GroupMessageEvent () : base () { }
