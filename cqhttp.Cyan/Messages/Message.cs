@@ -100,10 +100,10 @@ namespace cqhttp.Cyan.Messages {
         /// <param name="message"></param>
         /// <returns>序列化后的CQ码</returns>
         private static string SerializeToCQ (Message message) {
-            string cqBuild = "";
+            string cqBuild = "\"";
             foreach (Element i in message.data)
                 cqBuild += i.raw_data_cq;
-            return cqBuild;
+            return cqBuild + "\"";
         }
 
         private static Element BuildCQElement (string cqcode) {

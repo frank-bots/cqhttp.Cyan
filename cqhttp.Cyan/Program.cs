@@ -46,8 +46,10 @@ namespace cqhttp.Cyan {
             // Console.WriteLine ("Hello World!");
             // Tests.ElementBuild.Test();
             // Tests.MessageBuild.Test();
-            
+
             //Tests.DeserializationTest.Test ();
+            
+            Tests.ApiRequestTest.Test();
         }
     }
 }

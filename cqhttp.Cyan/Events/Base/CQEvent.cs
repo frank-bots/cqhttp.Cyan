@@ -1,12 +1,8 @@
 using Newtonsoft.Json.Linq;
+using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.Events.Base {
-    public enum PostType {
-        meta_event,
-        message,
-        notice,
-        request
-    }
+
     /// <summary>
     /// Event指“事件上报”中的事件
     /// <see>https://cqhttp.cc/docs/4.6/#/Post</see>

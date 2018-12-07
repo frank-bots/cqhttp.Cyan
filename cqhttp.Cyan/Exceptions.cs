@@ -28,4 +28,12 @@ namespace cqhttp.Cyan {
         public ErrorEventException () : base () { }
         public ErrorEventException (string message) : base (message) { }
     }
+    public class NullApicallException : Exception {
+        public NullApicallException () : base () { }
+        public NullApicallException (string message) : base (message) { }
+    }
+    public class ErrorApicallException : Exception {
+        public ErrorApicallException () : base () { }
+        public ErrorApicallException (string message) : base (message) { }
+    }
 }

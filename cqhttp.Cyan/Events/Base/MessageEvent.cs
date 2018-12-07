@@ -1,14 +1,10 @@
 using cqhttp.Cyan.Messages;
+using cqhttp.Cyan.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events.Base {
-    public enum MessageType {
-        _private,
-        _group,
-        _discuss
-    }
-    public class MessageEvent : CQEvent {
+        public class MessageEvent : CQEvent {
 
         public MessageType messageType { get; private set; }
         public Sender sender { get; private set; }

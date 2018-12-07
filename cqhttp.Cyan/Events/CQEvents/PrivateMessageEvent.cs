@@ -2,7 +2,7 @@ using cqhttp.Cyan.Events.Base;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events {
+namespace cqhttp.Cyan.Events.CQEvents {
     public class PrivateMessageEvent : MessageEvent {
         public PrivateMessageEvent (
                 long time,
@@ -10,7 +10,7 @@ namespace cqhttp.Cyan.Events {
                 Sender sender,
                 int message_id
             ):
-            base (time, MessageType._private, sender, message, message_id) { }
+            base (time, Enums.MessageType.private_, sender, message, message_id) { }
         public PrivateMessageEvent () : base () { }
     }
 }
