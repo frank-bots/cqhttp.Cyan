@@ -1,15 +1,15 @@
-using cqhttp.Cyan.Api.Requests.Base;
+using cqhttp.Cyan.ApiHTTP.Requests.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Api.Requests {
-    public class ApiSendmsg : ApiRequest {
+namespace cqhttp.Cyan.ApiHTTP.Requests {
+    public class SendmsgRequest : ApiRequest {
         long target_id;
         MessageType messageType;
         Messages.Message toSend;
-        public ApiSendmsg () : base () { }
-        public ApiSendmsg (MessageType messageType, long target_id, Messages.Message toSend):
+        public SendmsgRequest () : base () { }
+        public SendmsgRequest (MessageType messageType, long target_id, Messages.Message toSend):
             base ("/send_msg") {
                 this.messageType = messageType;
                 this.toSend = toSend;

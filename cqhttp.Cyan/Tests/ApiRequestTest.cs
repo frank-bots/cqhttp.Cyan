@@ -1,5 +1,5 @@
 using System;
-using cqhttp.Cyan.Api.Requests;
+using cqhttp.Cyan.ApiHTTP.Requests;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
@@ -24,12 +24,16 @@ ok
                 new ElementText ("second #&text message")
                 }
             };
-            ApiSendmsg testapi = new ApiSendmsg (MessageType.private_, 745679136, testmessage);
-            Console.WriteLine (testapi.content);
-            Console.WriteLine (Api.ApiSender.Post (testapi).Result.data);
-            ApiSendmsg testapi2 = new ApiSendmsg (MessageType.private_, 745679136, new Message{data=new System.Collections.Generic.List<Messages.Base.Element>{new ElementShake()}});
-            Console.WriteLine (testapi2.content);
-            Console.WriteLine (Api.ApiSender.Post (testapi2).Result.data);
+            ApiClient client = new ApiClient ("http://service.std-frank.club:233");
+            // Console.WriteLine (
+            //     client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result.data.ToString()
+            // );
+            // Console.WriteLine (
+            //     client.SendTextAsync (MessageType.private_, 745679136, "testmessage").Result.data.ToString()
+            // );
+            // Console.WriteLine (
+            //     client.SendMessageAsync (MessageType.private_, 745679136, new Messages.CommonMessages.MessageShake()).Result.data.ToString()
+            // );
         }
     }
 }

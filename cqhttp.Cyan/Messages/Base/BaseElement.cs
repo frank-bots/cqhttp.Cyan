@@ -23,7 +23,7 @@ namespace cqhttp.Cyan.Messages.Base {
         public string raw_data_cq {
             get {
                 if (type == "text")
-                    return Encoder.EncodeText (data["text"]);
+                    return data["text"];
                 string paramBuilder = "";
                 foreach (var i in data)
                     paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
