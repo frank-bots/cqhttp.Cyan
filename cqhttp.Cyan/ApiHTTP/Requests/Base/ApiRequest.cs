@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 /*
 
 */
-namespace cqhttp.Cyan.Api.Requests.Base {
+namespace cqhttp.Cyan.ApiHTTP.Requests.Base {
     public class ApiRequest {
         public string apiUrl { get; private set; }
         public ApiResponse response;

@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.Api
+namespace cqhttp.Cyan.ApiHTTP
 {
     public class ErrorHandler
     {

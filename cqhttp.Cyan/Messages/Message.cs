@@ -15,6 +15,22 @@ namespace cqhttp.Cyan.Messages {
         /// 消息段列表
         /// </summary>
         public List<Element> data;
+        /// <summary>
+        /// 将消息序列化为CQ码格式
+        /// </summary>
+        public string raw_data_cq {
+            get {
+                return Serialize (this, false);
+            }
+        }
+        /// <summary>
+        /// 将消息序列化为Json格式
+        /// </summary>
+        public string raw_data_json {
+            get {
+                return Serialize (this);
+            }
+        }
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
         /// <summary>
