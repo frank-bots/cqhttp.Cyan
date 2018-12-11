@@ -1,10 +1,13 @@
-using cqhttp.Cyan.Events.Base;
+using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events.CQEvents {
+    /// <summary></summary>
     public class DiscussMessageEvent : MessageEvent {
-        long discuss_id;
+        /// <summary>讨论组编号，只能从此处获取</summary>
+        public long discuss_id { get; private set; }
+        /// <summary></summary>
         public DiscussMessageEvent (
                 long time,
                 Message message,
@@ -15,6 +18,7 @@ namespace cqhttp.Cyan.Events.CQEvents {
             base (time, Enums.MessageType.group_, sender, message, message_id) {
                 this.discuss_id = discuss_id;
             }
+        /// <summary></summary>
         public DiscussMessageEvent () : base () { }
     }
 }

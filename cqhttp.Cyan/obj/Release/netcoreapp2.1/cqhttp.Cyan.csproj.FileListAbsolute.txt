@@ -1,0 +1,13 @@
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Release/netcoreapp2.1/cqhttp.Cyan.deps.json
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Release/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Release/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.dev.json
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Release/netcoreapp2.1/cqhttp.Cyan.dll
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Release/netcoreapp2.1/cqhttp.Cyan.pdb
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.csprojAssemblyReference.cache
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.csproj.CoreCompileInputs.cache
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.AssemblyInfoInputs.cache
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.AssemblyInfo.cs
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.dll
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.pdb
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Release/netcoreapp2.1/cqhttp.Cyan.xml
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Release/netcoreapp2.1/cqhttp.Cyan.xml

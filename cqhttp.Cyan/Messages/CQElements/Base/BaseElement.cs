@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace cqhttp.Cyan.Messages.Base {
+namespace cqhttp.Cyan.Messages.CQElements.Base {
     /// <summary>
     /// 消息元素，即cqhttp所定义的消息段
     /// </summary>
@@ -8,6 +8,9 @@ namespace cqhttp.Cyan.Messages.Base {
     /// should NEVER be constructed or used directly
     /// </remarks>
     public class Element {
+        /// <summary>
+        /// 消息段类型
+        /// </summary>
         public string type { get; private set; }
         /// <summary>
         /// represents the true message 
@@ -17,7 +20,7 @@ namespace cqhttp.Cyan.Messages.Base {
         /// <summary>
         /// builds the value when constructing CQCode
         /// <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>
-        /// <see cref=ElementText.raw_data_cq/>
+        /// <see cref="CQElements.ElementText"/>
         /// </summary>
         /// <value>CQCode</value>
         public string raw_data_cq {
@@ -47,21 +50,34 @@ namespace cqhttp.Cyan.Messages.Base {
                 //。。。不这么写的话我的代码格式化插件就会崩掉
             }
         }
+        /// <summary>
+        /// 请勿调用默认构造函数
+        /// </summary>
         public Element () {
             throw new NullElementException ("调用了Element()");
         }
+        /// <summary>
+        /// 手动构造一个消息段，一般用不到
+        /// </summary>
+        /// <param name="type">消息段类型</param>
+        /// <param name="dict">手动输入的键值对</param>
         public Element (string type, params (string key, string value) [] dict) {
             this.type = type;
             data = new Dictionary<string, string> ();
             foreach (var i in dict)
                 data.Add (i.key, i.value);
         }
+        /// <summary>
+        /// 构造消息段，一般不会手动调用
+        /// </summary>
+        /// <param name="type">消息段类型</param>
+        /// <param name="dict">消息段键值对</param>
         public Element (string type, Dictionary<string, string> dict) {
             this.type = type;
             data = dict;
         }
     }
-    public class Encoder {
+    class Encoder {
         public static string EncodeText (string enc) => enc.Replace ("&", "&amp").Replace ("[", "&#91").Replace ("]", "&#93");
         public static string EncodeValue (string text) => EncodeText (text).Replace (",", "&#44");
         public static string Decode (string enc) => enc.Replace ("&amp", "&").Replace ("&#91", "[")

@@ -1,17 +1,24 @@
-using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Enums;
+using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events.Base {
-        public class MessageEvent : CQEvent {
-
+namespace cqhttp.Cyan.Events.CQEvents.Base {
+    /// <summary></summary>
+    public abstract class MessageEvent : CQEvent {
+        /// <summary></summary>
         public MessageType messageType { get; private set; }
+        /// <summary>消息发送者</summary>
         public Sender sender { get; private set; }
+        /// <summary></summary>
         public Message message { get; private set; }
+        /// <summary></summary>
         public int message_id { get; private set; }
+        /// <summary>字体</summary>
         public int font { get; private set; }
+        /// <summary></summary>
         public MessageEvent () : base () { }
+        /// <summary></summary>
         public MessageEvent (
                 long time,
                 MessageType messageType,
@@ -28,17 +35,22 @@ namespace cqhttp.Cyan.Events.Base {
                 this.font = font;
             }
     }
-
+    /// <summary>
+    /// 发送者信息
+    /// </summary>
     [JsonObject]
     public class Sender {
+        /// <summary>QQ号</summary>
         [JsonProperty ("user_id")]
         public long user_id { get; private set; }
-
+        /// <summary>QQ昵称</summary>
         [JsonProperty ("nickname")]
         public string nickname { get; private set; }
+        /// <summary></summary>
 
         [JsonProperty ("sex")]
         public string sex { get; private set; }
+        /// <summary></summary>
 
         [JsonProperty ("age")]
         public int age { get; private set; }

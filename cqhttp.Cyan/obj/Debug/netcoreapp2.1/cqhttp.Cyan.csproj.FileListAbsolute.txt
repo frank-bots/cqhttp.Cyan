@@ -9,3 +9,5 @@
 /Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.AssemblyInfo.cs
 /Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.dll
 /Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.pdb
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/bin/Debug/netcoreapp2.1/cqhttp.Cyan.xml
+/Users/Frank/VisualStudioProjects/cqhttp.Cyan/cqhttp.Cyan/obj/Debug/netcoreapp2.1/cqhttp.Cyan.xml

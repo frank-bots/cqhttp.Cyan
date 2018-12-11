@@ -1,6 +1,6 @@
 using System;
 using cqhttp.Cyan.Events;
-using cqhttp.Cyan.Events.Base;
+using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Messages;
 
@@ -21,7 +21,7 @@ namespace cqhttp.Cyan.Tests {
 
 
             string messageEvent = "{\"font\":31108208,\"message\":\"asdf\",\"message_id\":1002,\"message_type\":\"private\",\"post_type\":\"message\",\"raw_message\":\"asdf\",\"self_id\":2956005355,\"sender\":{\"age\":48,\"nickname\":\"Frank\xe2\x84\xa2\",\"sex\":\"male\",\"user_id\":745679136},\"sub_type\":\"friend\",\"time\":1543816446,\"user_id\":745679136}";
-            CQEvent a = CQEventHandler.Handle(messageEvent);
+            CQEvent a = CQEventHandler.HandleEvent(messageEvent);
             Console.WriteLine(Message.Serialize((a as PrivateMessageEvent).message));
         }
     }

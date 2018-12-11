@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cqhttp.Cyan</name>
+    </assembly>
+    <members>
+        <member name="T:cqhttp.Cyan.ApiCall.HTTPApiSender">
+            <summary>
+            调用HTTP API的抽象层
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest">
+            <summary>
+            调用API的请求
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse">
+            <summary>
+            调用API时cqhttp的响应
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse.status">
+            <summary>
+            "ok","async","failed"
+            参照<see>https://cqhttp.cc/docs/4.6/#/API</see>中有关status的说明
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse.retcode">
+            <summary>
+            status ok为0,async为1,failed参照链接
+            <see>https://d.cqp.me/Pro/%E5%BC%80%E5%8F%91/Error</see>
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse.data">
+            <summary>
+            原封不动
+            <see>https://cqhttp.cc/docs/4.6/#/API</see>
+            </summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.isSendJson">
+            <summary>消息默认发送格式</summary>
+            <see>https://cqhttp.cc/docs/4.6/#/Message</see>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.networkMaxFailure">
+            <summary>网络错误时最多重试的次数</summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.timeOut">
+            <summary>网络请求超时秒数</summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.apiToken">
+            <summary>调用API时的验证头</summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.matchCqCode">
+            <summary>匹配CQ码</summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.parseCqCode">
+            <summary>匹配CQ码的类型</summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Config.paramCqCode">
+            <summary>匹配CQ码的参数</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Config.SetToken(System.String)">
+            <summary>
+            设定调用api时的验证头
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Enums.NoticeType">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Communication.Listener">
+            <summary>
+            HTTP监听上报消息
+            </summary>
+            <remarks>
+            请勿实例化！
+            多次实例化会导致后来者的行为覆盖前者
+            （onRecv为static)
+            </remarks>
+        </member>
+        <member name="T:cqhttp.Cyan.Communication.WebSocketClient">
+            <summary>
+            WebSocket监听上报消息
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Communication.WebSocketClient.#ctor(System.String)">
+            <param name="url">监听地址</param>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEventHandler">
+            <summary>
+            事件处理
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEventHandler.HandleEvent(System.String)">
+            <summary>
+            处理完整的上报事件
+            </summary>
+            <param name="e">上报事件</param>
+            <returns>处理后的事件对象</returns>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.Base.CQEvent">
+            <summary>
+            Event指“事件上报”中的事件
+            <see>https://cqhttp.cc/docs/4.6/#/Post</see>
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor">
+            <summary>
+            请勿默认构造，本项目中一切默认构造函数仅为测试所用
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)">
+            <summary>
+            底层构造事件
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent">
+            <summary>
+            <see>https://cqhttp.cc/docs/4.6/#/Post?id=%E4%BA%8B%E4%BB%B6%E5%88%97%E8%A1%A8</see>
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.group_id">
+            <summary>
+            事件发生的群号码
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.NoticeType,System.Int64,System.Int64)">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent">
+            <summary></summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.messageType">
+            <summary></summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.sender">
+            <summary>消息发送者</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.message">
+            <summary></summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.message_id">
+            <summary></summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.font">
+            <summary>字体</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.isSet">
+            <summary>
+            set/unset是设为管理员还是撤销管理员
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.sub_type">
+            <summary>
+            退出群/加入群的方式
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.operator_id">
+            <summary>
+            操作者id
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.GroupUploadEvent">
+            <summary>
+            <see>https://cqhttp.cc/docs/4.6/#/Post?id=%E7%BE%A4%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0</see>
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.fileInfo">
+            <summary>上传文件信息</summary>
+        </member>
+        <member name="T:cqhttp.Cyan.NullElementException">
+            <summary>
+            调用了空构造函数，不能构造空对象
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.ErrorElementException">
+            <summary>
+            错误地进行了消息段构造
+            </summary>
+        </member>
+        <member name="F:cqhttp.Cyan.CQApiClient.accessToken">
+            <summary>
+            酷Q配置中的access_token
+            <see>https://cqhttp.cc/docs/4.6/#/API?id=%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F</see>
+            </summary>
+        </member>
+        <member name="F:cqhttp.Cyan.CQApiClient.accessUrl">
+            <summary>
+            API地址
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.CQApiClient.self_id">
+            <summary>
+            当前实例的QQ号
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.CQApiClient.self_nick">
+            <summary>
+            当前实例的QQ昵称
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.CommonMessages.MessageShake">
+            <summary>
+            戳一戳
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CommonMessages.MessageShake.#ctor">
+            <summary>
+            构造一个窗口抖动,貌似仅在使用CQ码模式下发送有效
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.CQElements.Base.Element">
+            <summary>
+            消息元素，即cqhttp所定义的消息段
+            </summary>
+            <remarks>
+            should NEVER be constructed or used directly
+            </remarks>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.Base.Element.type">
+            <summary>
+            消息段类型
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.Base.Element.data">
+            <summary>
+            represents the true message 
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_cq">
+            <summary>
+            builds the value when constructing CQCode
+            <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>
+            <see cref="T:cqhttp.Cyan.Messages.CQElements.ElementText"/>
+            </summary>
+            <value>CQCode</value>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_json">
+            <summary>
+            builds the value when constructing EXTENDED CQCode
+            <see>https://cqhttp.cc/docs/4.6/#/Message</see>
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor">
+            <summary>
+            请勿调用默认构造函数
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,System.ValueTuple{System.String,System.String}[])">
+            <summary>
+            手动构造一个消息段，一般用不到
+            </summary>
+            <param name="type">消息段类型</param>
+            <param name="dict">手动输入的键值对</param>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            构造消息段，一般不会手动调用
+            </summary>
+            <param name="type">消息段类型</param>
+            <param name="dict">消息段键值对</param>
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.CQElements.Base.ElementFile">
+            <summary>
+            包括图片，语音
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.fileUrl">
+            <summary>
+            stores the location of the file
+            could be base64://, http(s):// or file://
+            <see>https://tools.ietf.org/html/rfc8089</see>
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.isFixed">
+            <summary>represents whether the file has downloaded</summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.bin_content">
+            <summary>以二进制形式存储的文件</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor">
+            <returns><see cref="T:cqhttp.Cyan.NullElementException"/></returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.ValueTuple{System.String,System.String}[])">
+            <summary>
+            手动构造一个消息段，一般用不到
+            </summary>
+            <param name="type">消息段类型</param>
+            <param name="dict">手动输入的键值对</param>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            构造消息段，一般不会手动调用
+            </summary>
+            <param name="type">消息段类型</param>
+            <param name="data">消息段键值对</param>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.Byte[],System.Boolean)">
+            <summary>
+            通过byte array构造文件消息段
+            </summary>
+            <param name="type">消息段种类</param>
+            <param name="bytes"></param>
+            <param name="useCache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            通过url构建文件消息段
+            </summary>
+            <param name="type">消息段种类</param>
+            <param name="url"></param>
+            <param name="useCache">是否缓存于酷Q端</param>
+            <returns></returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Fix">
+            <summary>
+            下载图片并转为base64存储，并删除data中的url项
+            网络环境恶劣的情况下最多获取<see cref="F:cqhttp.Cyan.Config.networkMaxFailure"/>次
+            若仍需url可从<see cref="P:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.fileUrl"/>中获取
+            </summary>
+            <returns>返回是否成功获取到</returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.ElementFace.#ctor(System.Int32)">
+            <summary>
+            recommended constructor for qq faces
+            </summary>
+            <param name="id">qq表情编号(1-170)</param>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.ElementImage.#ctor">
+            <returns><see cref="T:cqhttp.Cyan.NullElementException"/></returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.ElementImage.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            通过含图片的byte array构造图片Element
+            </summary>
+            <param name="imageBytes"></param>
+            <param name="useCache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.CQElements.ElementImage.#ctor(System.String,System.Boolean)">
+            <summary>
+            通过网络资源构造图片Element
+            </summary>
+            <param name="url"></param>
+            <param name="useCache"></param>
+            <returns></returns>
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.CQElements.ElementRecord">
+            <summary>
+            语音消息
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.ElementRecord.isMagic">
+            <summary>是否变声</summary>
+            <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.CQElements.ElementShake">
+            <summary>
+            戳一戳/窗口抖动
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.CQElements.ElementText">
+            <summary>
+            文本消息段
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.CQElements.ElementText.text">
+            
+        </member>
+        <member name="T:cqhttp.Cyan.Messages.Message">
+            <summary>
+            由消息段构成的消息
+            </summary>
+        </member>
+        <member name="F:cqhttp.Cyan.Messages.Message.data">
+            <summary>
+            消息段列表
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.Message.raw_data_cq">
+            <summary>
+            将消息序列化为CQ码格式
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Messages.Message.raw_data_json">
+            <summary>
+            将消息序列化为Json格式
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.Message.Serialize(cqhttp.Cyan.Messages.Message,System.Boolean)">
+            <summary>
+            将消息序列化便于发送或本地存储
+            </summary>
+            <remarks>
+            依据参数<c>isSendJson</c>判断格式化的结果
+            </remarks>
+            <param name="message">待序列化的消息</param>
+            <param name="isSendJson">是否序列化为json格式，默认为true</param>
+            <returns>序列化后的字符串</returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.Message.Deserialize(System.String,System.Int16@)">
+            <summary>
+            将收到或构造的消息反序列化以存储在内存中
+            </summary>
+            <param name="message">字符串形式的消息</param>
+            <param name="result">返回反序列化的结果,原消息为Json则为1,含CQ码则为-1,纯文本则为0</param>
+            <returns>反序列化后的<c>Message</c>对象</returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.Message.SerializeToJsonArray(cqhttp.Cyan.Messages.Message)">
+            <summary>
+            将消息序列化为Json格式，即
+            https://cqhttp.cc/docs/4.6/#/Message 中的
+            数组格式
+            </summary>
+            <return>
+            数组格式的消息
+            </return>
+            <param name="message"></param>
+            <returns>序列化后的json字符串</returns>
+        </member>
+        <member name="M:cqhttp.Cyan.Messages.Message.SerializeToCQ(cqhttp.Cyan.Messages.Message)">
+            <summary>
+            将消息序列化为CQ码格式，即酷Q原生消息格式
+            亦即<c>SerializeToJson</c>中页面所说的
+            字符串格式
+            </summary>
+            <see cref="M:cqhttp.Cyan.Messages.Message.SerializeToJsonArray(cqhttp.Cyan.Messages.Message)"/>
+            <param name="message"></param>
+            <returns>序列化后的CQ码</returns>
+        </member>
+        <member name="T:cqhttp.Cyan.Status">
+            <summary>
+            插件运行状态
+            <see>https://cqhttp.cc/docs/4.6/#/API?id=%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE27</see>
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Status.app_initialized">
+            
+        </member>
+        <member name="P:cqhttp.Cyan.Status.app_enabled">
+            
+        </member>
+        <member name="P:cqhttp.Cyan.Status.plugins_good">
+            
+        </member>
+        <member name="P:cqhttp.Cyan.Status.app_good">
+            
+        </member>
+        <member name="P:cqhttp.Cyan.Status.online">
+            
+        </member>
+        <member name="P:cqhttp.Cyan.Status.good">
+            
+        </member>
+        <member name="T:cqhttp.Cyan.Tests.DeserializationTest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Tests.DeserializationTest.Test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Tests.ElementBuild">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Tests.ElementBuild.Test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Tests.MessageBuild">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Tests.MessageBuild.Test">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

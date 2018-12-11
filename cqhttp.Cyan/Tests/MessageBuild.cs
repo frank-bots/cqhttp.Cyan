@@ -14,7 +14,7 @@ namespace cqhttp.Cyan.Tests {
             try {
                 Message testmessage = new Message
                 {
-                    data = new System.Collections.Generic.List<Messages.Base.Element>
+                    data = new System.Collections.Generic.List<Messages.CQElements.Base.Element>
                     {
                         new ElementText("first te[xt] message"),
                         new ElementImage("http://www.asdf.com/asdf.jpg"),

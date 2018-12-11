@@ -14,7 +14,7 @@ namespace cqhttp.Cyan.Communication {
     /// HTTP监听上报消息
     /// </summary>
     /// <remarks>
-    /// 只能实例化一次！！！
+    /// 请勿实例化！
     /// 多次实例化会导致后来者的行为覆盖前者
     /// （onRecv为static)
     /// </remarks>

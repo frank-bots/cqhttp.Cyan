@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using cqhttp.Cyan.Messages.Base;
+using cqhttp.Cyan.Messages.CQElements.Base;
 using cqhttp.Cyan.Messages.CQElements;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
