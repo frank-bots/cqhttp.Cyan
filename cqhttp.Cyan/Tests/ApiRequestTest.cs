@@ -1,11 +1,14 @@
 using System;
-using cqhttp.Cyan.ApiHTTP.Requests;
+using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.Enums;
+using cqhttp.Cyan.Instance;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
 
 namespace cqhttp.Cyan.Tests {
+    /// <summary></summary>
     public class ApiRequestTest {
+        /// <summary></summary>
         public static void Test () {
             /*
 In [34]: p={"message_type":"private","user_id":745679136,"message":[{"type":"tex
@@ -18,13 +21,13 @@ In [35]: x=requests.post('http://service.std-frank.club:233/send_msg',json=p)
 ok
              */
             Message testmessage = new Message {
-                data = new System.Collections.Generic.List<Messages.Base.Element> {
+                data = new System.Collections.Generic.List<Messages.CQElements.Base.Element> {
                 new ElementText ("first te[xt] message"),
                 new ElementFace (3),
                 new ElementText ("second #&text message")
                 }
             };
-            ApiClient client = new ApiClient ("http://service.std-frank.club:233");
+            CQHTTPClient client = new CQHTTPClient ("http://service.std-frank.club:233");
             // Console.WriteLine (
             //     client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result.data.ToString()
             // );

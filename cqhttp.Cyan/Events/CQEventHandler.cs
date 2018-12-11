@@ -1,8 +1,8 @@
 using System;
 using cqhttp.Cyan;
-using cqhttp.Cyan.Events.Base;
-using cqhttp.Cyan.Messages;
+using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents;
+using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -16,7 +16,7 @@ namespace cqhttp.Cyan.Events {
         /// </summary>
         /// <param name="e">上报事件</param>
         /// <returns>处理后的事件对象</returns>
-        public static CQEvent Handle (string e) {
+        public static CQEvent HandleEvent (string e) {
             string post_type;
             JObject eventJson;
             try {
@@ -66,14 +66,43 @@ namespace cqhttp.Cyan.Events {
                         e["discuss_id"].ToObject<long> ()
                     );
             }
-            throw new ErrorEventException ("未能解析消息事件");
+            throw new ErrorEventException ("未能解析消息(message)事件");
         }
-        private static CQEvent HandleRequest (ref JObject eventJson) {
+        private static CQEvent HandleRequest (ref JObject e) {
             throw new NotImplementedException ();
         }
 
-        private static CQEvent HandleNotice (ref JObject eventJson) {
-            throw new NotImplementedException ();
+        private static CQEvent HandleNotice (ref JObject e) {
+            string notice_type = e["notice_type"].ToString ();
+            switch (notice_type) {
+                case "group_upload":
+                    return new GroupUploadEvent (
+                        e["time"].ToObject<long> (),
+                        e["file"].ToObject<FileInfo> (),
+                        e["group_id"].ToObject<long> (),
+                        e["user_id"].ToObject<long> ()
+                    );
+                case "group_admin":
+                    return new GroupAdminEvent (
+                        e["time"].ToObject<long> (),
+                        e["group_id"].ToObject<long> (),
+                        e["user_id"].ToObject<long> (),
+                        e["sub_type"].ToString () == "set"
+                    );
+                case "group_decrease":
+                case "group_increase":
+                    return new GroupMemberChangeEvent (
+                        e["time"].ToObject<long> (),
+                        e["group_id"].ToObject<long> (),
+                        e["user_id"].ToObject<long> (),
+                        e["operator_id"].ToObject<long> (),
+                        notice_type == "group_increase",
+                        e["sub_type"].ToString ()
+                    );
+                case "friend_add":
+                    return new FriendAddEvent ();
+            }
+            throw new ErrorEventException ("未能解析提醒(notice)事件");
         }
 
     }

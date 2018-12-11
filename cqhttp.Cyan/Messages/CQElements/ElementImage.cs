@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using cqhttp.Cyan.Messages.Base;
+using cqhttp.Cyan.Messages.CQElements.Base;
 
 namespace cqhttp.Cyan.Messages.CQElements {
+    /// <summary>注意酷Q Air是发送不了图片的</summary>
     public class ElementImage : ElementFile {
 
         /// <returns><see cref="NullElementException"/></returns>
@@ -25,6 +26,7 @@ namespace cqhttp.Cyan.Messages.CQElements {
         /// <returns></returns>
         public ElementImage (string url, bool useCache = true):
             base ("image", url, useCache) { }
+        /// <summary></summary>
         public ElementImage (params (string key, string val) [] dict):
             base ("image", dict) { }
 

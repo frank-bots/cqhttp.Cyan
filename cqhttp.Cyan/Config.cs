@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 
 namespace cqhttp.Cyan {
+    /// <summary>全局设置</summary>
     public class Config {
         /// <summary>消息默认发送格式</summary>
         /// <see>https://cqhttp.cc/docs/4.6/#/Message</see>

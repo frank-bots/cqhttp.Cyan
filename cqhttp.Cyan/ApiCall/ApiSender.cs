@@ -4,18 +4,20 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using cqhttp.Cyan.ApiHTTP.Requests.Base;
+using cqhttp.Cyan.ApiCall.Requests.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.ApiHTTP {
+namespace cqhttp.Cyan.ApiCall {
     /// <summary>
-    /// 在底层调用API
+    /// 调用HTTP API的抽象层
     /// </summary>
-    public class ApiSender {
+    public class HTTPApiSender {
+        /// <summary></summary>
         public async static Task<ApiResponse> DebugPostAsync (ApiRequest request) {
-            return await PostJsonAsync ("http://service.std-frank.club:233" + request.apiUrl, request.content);
+            return await PostJsonAsync ("http://service.std-frank.club:233" + request.apiPath, request.content);
         }
+        /// <summary></summary>
         public async static Task<ApiResponse> PostJsonAsync (string dest, string param, string apiToken = "") {
             HttpResponseMessage response = new HttpResponseMessage ();
             using (HttpContent content = new StringContent (
