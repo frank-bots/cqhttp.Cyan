@@ -21,8 +21,8 @@ namespace cqhttp.Cyan.Messages.CQElements {
         /// <summary>
         /// 通过网络资源构造图片Element
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="useCache"></param>
+        /// <param name="url">资源位置</param>
+        /// <param name="useCache">是否缓存于酷Q客户端</param>
         /// <returns></returns>
         public ElementImage (string url, bool useCache = true):
             base ("image", url, useCache) { }
