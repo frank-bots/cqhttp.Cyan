@@ -10,6 +10,16 @@
                 "${workspaceFolder}/cqhttp.Cyan/cqhttp.Cyan.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build_release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/cqhttp.Cyan/cqhttp.Cyan.csproj",
+                "-c", "Release"
+            ]
         }
     ]
 }
