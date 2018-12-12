@@ -67,6 +67,7 @@ namespace cqhttp.Cyan.Messages {
                     );
                 }
                 result = 1;
+                return ret;
             } catch (JsonException) {
                 Match match = Config.matchCqCode.Match (message);
                 if (match.Success) {

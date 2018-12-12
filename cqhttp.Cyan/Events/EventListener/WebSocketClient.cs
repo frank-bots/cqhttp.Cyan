@@ -2,7 +2,7 @@ using System;
 using System.Net.WebSockets;
 using System.Threading;
 
-namespace cqhttp.Cyan.Communication {
+namespace cqhttp.Cyan.Events.EventListener {
     /// <summary>
     /// WebSocket监听上报消息
     /// </summary>
