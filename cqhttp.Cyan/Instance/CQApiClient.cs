@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Enums;
+using cqhttp.Cyan.Events.CQEvents.Base;
+using cqhttp.Cyan.Events.CQResponses.Base;
+using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan {
@@ -25,17 +28,18 @@ namespace cqhttp.Cyan {
         /// 当前实例的QQ昵称
         /// </summary>
         public string self_nick { get; private set; }
+        
         /// <summary></summary>
         public CQApiClient (string accessUrl, string accessToken = "") {
             this.accessToken = accessToken;
             this.accessUrl = accessUrl;
-            if(!Initiate().Result)throw new ErrorApicallException();
+            if (!Initiate ().Result) throw new ErrorApicallException ();
         }
         private async Task<bool> Initiate () {
             ApiResponse loginInfo = await SendRequestAsync (new GetLoginInfoRequest ());
             if (loginInfo.retcode != 0) return false;
             this.self_id = loginInfo.data["user_id"].ToObject<long> ();
-            this.self_nick = loginInfo.data["nickname"].ToString();
+            this.self_nick = loginInfo.data["nickname"].ToString ();
             return true;
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
@@ -60,6 +64,17 @@ namespace cqhttp.Cyan {
                 new Message { data = new System.Collections.Generic.List<Messages.CQElements.Base.Element> { new Messages.CQElements.ElementText (text) } }
             ));
         }
-        
+
+//////////////////////////////////////////////////////////////////////////////////////
+        /// <summary></summary>
+        public CQEventListener __eventListener;
+        /// <summary></summary>
+        public event OnEvent OnEventDelegate;
+        /// <summary></summary>
+        public CQResponse __HandleEvent(CQEvent event_){
+            return OnEventDelegate(this, event_);
+        }
     }
+    /// <summary></summary>
+    public delegate CQResponse OnEvent (CQApiClient client, CQEvent eventObj);
 }

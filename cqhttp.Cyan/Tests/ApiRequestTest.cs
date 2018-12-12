@@ -2,6 +2,8 @@ using System;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.Enums;
+using cqhttp.Cyan.Events.CQEvents;
+using cqhttp.Cyan.Events.CQResponses;
 using cqhttp.Cyan.Instance;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
@@ -19,10 +21,18 @@ namespace cqhttp.Cyan.Tests {
                 }
             };
             // CQHTTPClient client = new CQHTTPClient ("http://service.std-frank.club:233");
-            var clientws = new CQWebsocketClient ("ws://service.std-frank.club:233");
-            var i = clientws.SendTextAsync (MessageType.private_, 745679136, "test").Result;
-            var j = clientws.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result;
-            Console.WriteLine ("tested");
+            var client = new CQHTTPClient (
+                accessUrl: "http://service.std-frank.club:233",
+                listen_port : 256
+            );
+            client.OnEventDelegate += (cli, e) => {
+                Console.WriteLine ((e as GroupMessageEvent).message.raw_data_json);
+                return new CQEmptyResponse ();
+            };
+            //var i = client.SendTextAsync (MessageType.private_, 745679136, "test").Result;
+            //var j = client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result;
+            Console.ReadLine ();
+
             // Console.WriteLine (
             //     client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result.data.ToString()
             // );

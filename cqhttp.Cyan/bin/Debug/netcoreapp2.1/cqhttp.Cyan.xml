@@ -175,24 +175,6 @@
         <member name="F:cqhttp.Cyan.Enums.NoticeType.friend_add">
             <summary>好友申请</summary>
         </member>
-        <member name="T:cqhttp.Cyan.Communication.Listener">
-            <summary>
-            HTTP监听上报消息
-            </summary>
-            <remarks>
-            请勿实例化！
-            多次实例化会导致后来者的行为覆盖前者
-            （onRecv为static)
-            </remarks>
-        </member>
-        <member name="T:cqhttp.Cyan.Communication.WebSocketClient">
-            <summary>
-            WebSocket监听上报消息
-            </summary>
-        </member>
-        <member name="M:cqhttp.Cyan.Communication.WebSocketClient.#ctor(System.String)">
-            <param name="url">监听地址</param>
-        </member>
         <member name="T:cqhttp.Cyan.Events.CQEventHandler">
             <summary>
             事件处理
@@ -481,6 +463,46 @@
         <member name="M:cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.#ctor">
             <summary></summary>
         </member>
+        <member name="T:cqhttp.Cyan.Events.CQResponses.Base.CQResponse">
+            <summary></summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQResponses.Base.CQResponse.content">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQResponses.Base.CQResponse.ToString">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.EventListener.CQEventListener">
+            <summary></summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.EventListener.CQEventListener.secret">
+            <summary>用于验证消息真实性</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor(System.Int32,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.EventListener.HttpEventListener">
+            <summary>
+            HTTP监听上报消息
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.EventListener.HttpEventListener.#ctor(System.Int32,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.EventListener.WebSocketClient">
+            <summary>
+            WebSocket监听上报消息
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.EventListener.WebSocketClient.#ctor(System.String)">
+            <param name="url">监听地址</param>
+        </member>
         <member name="T:cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent">
             <summary>心跳包，请在设置中开启</summary>
         </member>
@@ -602,10 +624,22 @@
         <member name="M:cqhttp.Cyan.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)">
             <summary>发送纯文本消息</summary>
         </member>
+        <member name="F:cqhttp.Cyan.CQApiClient.__eventListener">
+            <summary></summary>
+        </member>
+        <member name="E:cqhttp.Cyan.CQApiClient.OnEventDelegate">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.OnEvent">
+            <summary></summary>
+        </member>
         <member name="T:cqhttp.Cyan.Instance.CQHTTPClient">
             <summary>以HTTP协议调用API</summary>
         </member>
-        <member name="M:cqhttp.Cyan.Instance.CQHTTPClient.#ctor(System.String,System.String)">
+        <member name="M:cqhttp.Cyan.Instance.CQHTTPClient.#ctor(System.String,System.String,System.Int32,System.String)">
             <summary></summary>
         </member>
         <member name="M:cqhttp.Cyan.Instance.CQHTTPClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)">
