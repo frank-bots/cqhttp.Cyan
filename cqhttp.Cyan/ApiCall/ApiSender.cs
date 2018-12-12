@@ -53,8 +53,8 @@ namespace cqhttp.Cyan.ApiCall {
     /// 
     /// </summary>
     public class WebSocketApiSender {
-        private static Dictionary < string, (Dictionary<int, ApiResponse>, ClientWebSocket) > pool =
-            new Dictionary < string, (Dictionary<int, ApiResponse>, ClientWebSocket) > ();
+        private static Dictionary<string, ClientWebSocket> pool =
+            new Dictionary<string, ClientWebSocket> ();
         /// <summary>
         /// 1、若不存在与host的连接，创建之
         /// 
@@ -65,39 +65,37 @@ namespace cqhttp.Cyan.ApiCall {
         /// <param name="apiToken">access_token</param>
         public static async Task<ApiResponse> WSSendJson (string host, ApiRequest request, string apiToken = "") {
             string dest = host + "/api/";
-            (Dictionary<int, ApiResponse>, ClientWebSocket) current;
+            ClientWebSocket current;
             if (pool.ContainsKey (dest) == false) {
-                pool.Add (dest, (
-                    new Dictionary<int, ApiResponse> (),
-                    new ClientWebSocket ()
-                ));
+                pool.Add (dest, new ClientWebSocket ());
                 current = pool[dest];
-                await current.Item2.ConnectAsync (new Uri (dest), new CancellationToken ());
+                await current.ConnectAsync (new Uri (dest), new CancellationToken ());
             } else current = pool[dest];
             int time = DateTime.Now.Millisecond;
             string constructor =
                 $"{{\"action\":\"{request.apiPath.Substring(1)}\","+
                 $"\"params\":{request.content},"+
                 $"\"echo\":{time}}}";
-            ApiResponse i = new ApiResponse ();
-            await current.Item2.SendAsync (
+            await current.SendAsync (
                 buffer: Encoding.UTF8.GetBytes (constructor),
                 messageType: WebSocketMessageType.Text,
                 endOfMessage: true,
-                cancellationToken: new CancellationToken ()//not going to cancel
+                cancellationToken: new CancellationToken () //not going to cancel
             );
-
-            while (current.Item1.ContainsKey (time) == false)
-                Thread.Sleep (20);
-            i = current.Item1[time];
-            current.Item1.Remove (time);
-            return i;
+            byte[] buffer = new byte[1024];
+            constructor = "";
+            var recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
+            constructor += Encoding.UTF8.GetString (buffer);
+            while (recvResult.EndOfMessage == false) {
+                recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
+                constructor += Encoding.UTF8.GetString (buffer);
+            }
+            return JToken.Parse (constructor).ToObject<ApiResponse> ();
         }
         /// <summary>Websocket关闭所有连接</summary>
         public async static void CleanUp () {
             foreach (var i in pool) {
-                i.Value.Item1.Clear ();
-                await i.Value.Item2.CloseAsync (
+                await i.Value.CloseAsync (
                     closeStatus: WebSocketCloseStatus.NormalClosure,
                     statusDescription: "client shutdown",
                     cancellationToken : new CancellationToken ()

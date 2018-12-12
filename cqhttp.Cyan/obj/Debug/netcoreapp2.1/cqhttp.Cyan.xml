@@ -19,8 +19,13 @@
         </member>
         <member name="M:cqhttp.Cyan.ApiCall.WebSocketApiSender.WSSendJson(System.String,cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest,System.String)">
             <summary>
+            1、若不存在与host的连接，创建之
             
+            2、向host发送API请求request
             </summary>
+            <param name="request">待发送的请求</param>
+            <param name="host">主机地址 (host的一个可能值为 "ws://domain:port")</param>
+            <param name="apiToken">access_token</param>
         </member>
         <member name="M:cqhttp.Cyan.ApiCall.WebSocketApiSender.CleanUp">
             <summary>Websocket关闭所有连接</summary>
@@ -298,6 +303,20 @@
         <member name="M:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.#ctor">
             <summary></summary>
         </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent">
+            <summary>
+            请求消息，目前仅有好友申请与加群申请
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.user_id">
+            <summary>操作者ID(发起邀请者)</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.#ctor(System.Int64,System.Int64)">
+            <summary></summary>
+        </member>
         <member name="T:cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent">
             <summary></summary>
         </member>
@@ -312,15 +331,54 @@
         </member>
         <member name="T:cqhttp.Cyan.Events.CQEvents.FriendAddEvent">
             <summary>
-            加个好友如何?
-            
-            属性this.user_id中存储了请求者QQ
+            属性this.user_id中存储了新好友QQ
             </summary>
         </member>
         <member name="M:cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor">
             <summary></summary>
         </member>
         <member name="M:cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor(System.Int64,System.Int64)">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent">
+            <summary>
+            加个好友如何?
+            
+            属性this.user_id中存储了请求者QQ
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.comment">
+            <summary>请求验证信息</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.flag">
+            <summary>请求 flag，在调用处理请求的 API 时需要传入</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor(System.Int64,System.Int64,System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent">
+            <summary>
+            加个群如何?
+            
+            属性this.user_id中存储了请求者QQ
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.group_id">
+            <summary>加入的群号</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.comment">
+            <summary>请求验证信息</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.flag">
+            <summary>请求 flag，在调用处理请求的 API 时需要传入</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.String)">
             <summary></summary>
         </member>
         <member name="T:cqhttp.Cyan.Events.CQEvents.GroupAdminEvent">

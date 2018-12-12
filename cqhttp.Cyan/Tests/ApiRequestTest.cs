@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Instance;
@@ -18,8 +19,10 @@ namespace cqhttp.Cyan.Tests {
                 }
             };
             // CQHTTPClient client = new CQHTTPClient ("http://service.std-frank.club:233");
-            CQApiClient clientws=new CQWebsocketClient("ws://service.std-frank.club:233");
-            Console.ReadLine();
+            var clientws = new CQWebsocketClient ("ws://service.std-frank.club:233");
+            var i = clientws.SendTextAsync (MessageType.private_, 745679136, "test").Result;
+            var j = clientws.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result;
+            Console.WriteLine ("tested");
             // Console.WriteLine (
             //     client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result.data.ToString()
             // );
