@@ -52,8 +52,9 @@ namespace cqhttp.Cyan.Events {
                 case "group":
                     return new GroupMessageEvent (
                         e["time"].ToObject<long> (),
+                        e["sub_type"].ToString(),
                         Message.Deserialize (e["message"].ToString (), out temp),
-                        e["sender"].ToObject<Sender> (),
+                        e["sender"].ToObject<GroupSender> (),
                         e["message_id"].ToObject<int> (),
                         e["group_id"].ToObject<long> ()
                     );

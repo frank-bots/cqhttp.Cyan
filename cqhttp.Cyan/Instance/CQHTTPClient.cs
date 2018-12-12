@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall;
 using cqhttp.Cyan.ApiCall.Requests.Base;
+using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Instance {
     /// <summary>以HTTP协议调用API</summary>
@@ -13,9 +14,7 @@ namespace cqhttp.Cyan.Instance {
         /// <summary>发送API请求</summary>
         public override async Task<ApiResponse> SendRequestAsync (ApiRequest x) {
             return await HTTPApiSender.PostJsonAsync (
-                dest: accessUrl + x.apiPath,
-                param: x.content,
-                apiToken: accessToken
+                accessUrl, x, accessToken
             );
         }
     }

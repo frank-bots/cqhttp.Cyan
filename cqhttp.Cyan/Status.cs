@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace cqhttp.Cyan {
@@ -15,7 +16,7 @@ namespace cqhttp.Cyan {
         public bool app_enabled { get; private set; }
         ///
         [JsonProperty("plugins_good")]
-        public bool plugins_good { get; private set; }
+        public Dictionary<string,bool> plugins_good { get; private set; }
         ///
         [JsonProperty("app_good")]
         public bool app_good { get; private set; }
