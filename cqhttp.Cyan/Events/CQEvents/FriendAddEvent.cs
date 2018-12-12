@@ -1,8 +1,6 @@
 namespace cqhttp.Cyan.Events.CQEvents {
     /// <summary>
-    /// 加个好友如何?
-    /// 
-    /// 属性this.user_id中存储了请求者QQ
+    /// 属性this.user_id中存储了新好友QQ
     /// </summary>
     public class FriendAddEvent : Base.NoticeEvent {
         /// <summary></summary>
