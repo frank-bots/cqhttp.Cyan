@@ -9,11 +9,21 @@
             调用HTTP API的抽象层
             </summary>
         </member>
-        <member name="M:cqhttp.Cyan.ApiCall.HTTPApiSender.DebugPostAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)">
+        <member name="M:cqhttp.Cyan.ApiCall.HTTPApiSender.PostJsonAsync(System.String,cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest,System.String)">
             <summary></summary>
         </member>
-        <member name="M:cqhttp.Cyan.ApiCall.HTTPApiSender.PostJsonAsync(System.String,System.String,System.String)">
-            <summary></summary>
+        <member name="T:cqhttp.Cyan.ApiCall.WebSocketApiSender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.ApiCall.WebSocketApiSender.WSSendJson(System.String,cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:cqhttp.Cyan.ApiCall.WebSocketApiSender.CleanUp">
+            <summary>Websocket关闭所有连接</summary>
         </member>
         <member name="T:cqhttp.Cyan.ApiCall.ErrorHandler">
             <summary>处理调用API时遇到错误代码的情况</summary>
@@ -349,11 +359,31 @@
         <member name="T:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent">
             <summary>收到群消息</summary>
         </member>
-        <member name="M:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.#ctor(System.Int64,cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Events.CQEvents.Base.Sender,System.Int32,System.Int64)">
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.isAnonymous">
+            <summary>群消息是否匿名</summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.#ctor(System.Int64,System.String,cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Events.CQEvents.GroupSender,System.Int32,System.Int64)">
             <summary></summary>
         </member>
         <member name="M:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.#ctor">
             <summary></summary>
+        </member>
+        <member name="T:cqhttp.Cyan.Events.CQEvents.GroupSender">
+            <summary>
+            群消息发送者信息，匿名时无参考价值
+            </summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupSender.area">
+            <summary>来自</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupSender.level">
+            <summary>成员等级</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupSender.role">
+            <summary>身份(owner/admin/member)</summary>
+        </member>
+        <member name="P:cqhttp.Cyan.Events.CQEvents.GroupSender.title">
+            <summary>头衔</summary>
         </member>
         <member name="T:cqhttp.Cyan.Events.CQEvents.GroupUploadEvent">
             <summary>
@@ -524,9 +554,15 @@
             <summary>发送API请求</summary>
         </member>
         <member name="T:cqhttp.Cyan.Instance.CQWebsocketClient">
-            <summary></summary>
+            <summary>websocket协议调用api</summary>
         </member>
         <member name="M:cqhttp.Cyan.Instance.CQWebsocketClient.#ctor(System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Instance.CQWebsocketClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)">
+            <summary></summary>
+        </member>
+        <member name="M:cqhttp.Cyan.Instance.CQWebsocketClient.Finalize">
             <summary></summary>
         </member>
         <member name="T:cqhttp.Cyan.Messages.CommonMessages.MessageShake">
