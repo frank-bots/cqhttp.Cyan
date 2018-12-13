@@ -4,7 +4,7 @@ using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Events.CQResponses.Base;
+using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Messages;
 

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
-using cqhttp.Cyan.Events.CQResponses;
+using cqhttp.Cyan.Events.CQEvents.CQResponses;
 using cqhttp.Cyan.Instance;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
@@ -27,7 +27,7 @@ namespace cqhttp.Cyan.Tests {
             );
             client.OnEventDelegate += (cli, e) => {
                 Console.WriteLine ((e as GroupMessageEvent).message.raw_data_json);
-                return new CQEmptyResponse ();
+                return new EmptyResponse ();
             };
             //var i = client.SendTextAsync (MessageType.private_, 745679136, "test").Result;
             //var j = client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result;

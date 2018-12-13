@@ -13,7 +13,7 @@ namespace cqhttp.Cyan.Events.EventListener {
             this.secret = (secret == "" ? null : Encoding.UTF8.GetBytes (secret));
         }
         /// <summary></summary>
-        public virtual void StartListen (Func<CQEvents.Base.CQEvent, Events.CQResponses.Base.CQResponse> callback) { }
+        public virtual void StartListen (Func<CQEvents.Base.CQEvent, Events.CQEvents.CQResponses.Base.CQResponse> callback) { }
 
     }
 }

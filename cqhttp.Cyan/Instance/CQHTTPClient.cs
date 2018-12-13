@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Events.CQResponses.Base;
+using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Instance {

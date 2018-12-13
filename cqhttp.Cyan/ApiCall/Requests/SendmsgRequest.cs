@@ -43,7 +43,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 string constructer =
                     $"{{\"message_type\":\"{messageType}\","+
                     $"\"{idKey}\":{this.target_id},"+
-                    $"\"message\":{Message.Serialize(toSend,Config.isSendJson)}}}";
+                    $"\"message\":{toSend.ToString()}}}";
 
                 return constructer;
             }

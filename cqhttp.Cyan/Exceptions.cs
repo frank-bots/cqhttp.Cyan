@@ -54,4 +54,11 @@ namespace cqhttp.Cyan {
         /// <summary></summary>
         public ErrorApicallException (string message) : base (message) { }
     }
+    /// <summary></summary>
+    public class ErrorResponseException : Exception {
+        /// <summary></summary>
+        public ErrorResponseException () : base () { }
+        /// <summary></summary>
+        public ErrorResponseException (string message) : base (message) { }
+    }
 }
