@@ -1,7 +1,7 @@
 using System;
 using cqhttp.Cyan.Messages.CQElements;
 
-namespace cqhttp.Cyan.Tests {
+namespace cqhttp.Cyan.Examples {
     /// <summary>
     /// 
     /// </summary>
