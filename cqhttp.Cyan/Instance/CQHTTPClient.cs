@@ -11,9 +11,10 @@ namespace cqhttp.Cyan.Instance {
         /// <summary></summary>
         public CQHTTPClient (string accessUrl, string accessToken = "", int listen_port = -1, string secret = ""):
             base (accessUrl, accessToken) {
-                if (listen_port != -1)
+                if (listen_port != -1) {
                     this.__eventListener = new Events.EventListener.HttpEventListener (listen_port, secret);
-                this.__eventListener.StartListen (__HandleEvent);
+                    this.__eventListener.StartListen (__HandleEvent);
+                }
             }
         /// <summary>发送API请求</summary>
         public override async Task<ApiResponse> SendRequestAsync (ApiRequest x) {
@@ -21,6 +22,6 @@ namespace cqhttp.Cyan.Instance {
                 accessUrl, x, accessToken
             );
         }
-        
+
     }
 }
