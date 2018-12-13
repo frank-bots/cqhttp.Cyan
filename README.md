@@ -43,7 +43,7 @@ namespace YourNS {
 |cqhttp中的概念|对应本项目中的类型|所处在的命名空间|
 |--------------:|:-----------:|:-----------:|
 |消息|```Message```|.Messages|
-|消息段|```Element```|.Messages.CQElements(.Base)|
+|消息段|```Element```|.Messages.CQElements(.Base)|
 |事件|```CQEvent```|.Events.CQEvents(.Base)|
 |事件响应|```CQResponse```|.Events.CQResponse(.Base)|
 |Api调用|```ApiRequest```|.ApiCall.Requests(.Base)|
@@ -62,9 +62,9 @@ static void Main() {
     var client = HTTPApiClient(...);
     client.OnEventDelegate += HandleEvent;
 }
-static void HandleEvent(CQApiClient api,CQEvent e) {
+static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
     if(e is MessageEvent) {
-        HandleMessage(
+        return HandleMessage(
             (e as MessageEvent).message
         )
     }
