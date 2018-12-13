@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using cqhttp.Cyan.Messages.CQElements.Base;
 using cqhttp.Cyan.Messages.CQElements;
+using cqhttp.Cyan.Messages.CQElements.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -30,6 +30,12 @@ namespace cqhttp.Cyan.Messages {
             get {
                 return Serialize (this);
             }
+        }
+        /// <summary>
+        /// 按照默认设置序列化消息
+        /// </summary>
+        public override string ToString () {
+            return Serialize (this, Config.isSendJson);
         }
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 

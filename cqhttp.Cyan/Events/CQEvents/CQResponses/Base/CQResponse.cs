@@ -1,10 +1,10 @@
-namespace cqhttp.Cyan.Events.CQResponses.Base {
+namespace cqhttp.Cyan.Events.CQEvents.CQResponses.Base {
     /// <summary></summary>
     public abstract class CQResponse {
         /// <summary></summary>
         public virtual string content {
             get {
-                return "";
+                throw new System.NotImplementedException();
             }
         }
         /// <summary></summary>

@@ -38,6 +38,10 @@ namespace YourNS {
 }
 ```
 
+    在Examples文件夹下有更详细的示例
+
+------------------------------
+
 ## 对应关系
 
 |cqhttp中的概念|对应本项目中的类型|所处在的命名空间|
@@ -48,6 +52,8 @@ namespace YourNS {
 |事件响应|```CQResponse```|.Events.CQResponse(.Base)|
 |Api调用|```ApiRequest```|.ApiCall.Requests(.Base)|
 |Api响应|```ApiResponse```|.ApiCall.Requests(.Base)|
+
+------------------------------
 
 ## 消息的发送与接收
 
@@ -113,7 +119,9 @@ static void Main() {
 
 > 出于不知道什么原因ElementShake()只有在以非json发送消息时才有效
 
-## 事件列表
+------------------------------
+
+## 事件列表(对应CQEvent)
 
 ### 消息事件(继承于MessageEvent)
 
@@ -134,3 +142,22 @@ static void Main() {
 * GroupAddRequestEvent 邀请加群
 * FriendAddRequestEvent 添加好友
 > 需要作出回应(....不回应也罢)
+
+------------------------------
+
+## 事件回应列表(对应CQResponse)
+
+### 通用回应
+
+* EmptyResponse 默认
+
+### 消息事件回应(继承于CQReplyMessageResponse)
+
+* PrivateMessageResponse 快速回复私聊消息
+* GroupMessageResponse 快速回复群消息
+* DiscussMessageResponse 快速回复讨论组消息
+
+### 请求事件回应
+
+* FriendAddReqestResponse 加好友
+* GroupAddRequestResponse 加群

@@ -1,6 +1,6 @@
-namespace cqhttp.Cyan.Events.CQResponses {
+namespace cqhttp.Cyan.Events.CQEvents.CQResponses {
     /// <summary>不知所措？那就返回空值吧！www</summary>
-    public class CQEmptyResponse : CQResponses.Base.CQResponse {
+    public class EmptyResponse : Base.CQResponse {
         /// <summary></summary>
         public override string content {
             get{

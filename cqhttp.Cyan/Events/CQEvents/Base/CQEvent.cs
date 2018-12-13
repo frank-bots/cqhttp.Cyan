@@ -1,5 +1,5 @@
-using Newtonsoft.Json.Linq;
 using cqhttp.Cyan.Enums;
+using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events.CQEvents.Base {
 
