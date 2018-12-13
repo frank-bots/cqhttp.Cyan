@@ -10,11 +10,11 @@ namespace cqhttp.Cyan {
     class Program {
         static void Main (string[] args) {
             // Tests.ElementBuild.Test();
-            // Tests.MessageBuild.Test();
+            //Examples.MessageBuild.Test();
 
-            //Tests.DeserializationTest.Test ();
+            //Examples.DeserializationTest.Test ();
             
-            Tests.ApiRequestTest.Test();
+            Examples.ApiRequestTest.Test();
         }
     }
 }

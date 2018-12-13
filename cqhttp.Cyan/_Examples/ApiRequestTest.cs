@@ -8,7 +8,7 @@ using cqhttp.Cyan.Instance;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
 
-namespace cqhttp.Cyan.Tests {
+namespace cqhttp.Cyan.Examples {
     /// <summary></summary>
     public class ApiRequestTest {
         /// <summary></summary>
@@ -21,27 +21,23 @@ namespace cqhttp.Cyan.Tests {
                 }
             };
             // CQHTTPClient client = new CQHTTPClient ("http://service.std-frank.club:233");
-            var client = new CQHTTPClient (
-                accessUrl: "http://service.std-frank.club:233",
-                listen_port : 256
+            var clientHttp = new CQHTTPClient (
+                accessUrl: "http://domain.com:port",//请不要在后面加多余的/斜线，没有进行判定
+                accessToken: "token",               //api token
+                listen_port : 256,                  //本地监听端口
+                secret: "secret"                    //消息上报secret
             );
-            client.OnEventDelegate += (cli, e) => {
+            clientHttp.OnEventDelegate += (cli, e) => {
                 Console.WriteLine ((e as GroupMessageEvent).message.raw_data_json);
                 return new EmptyResponse ();
             };
+            var clientWebsocket = new CQWebsocketClient(
+                accessUrl: "ws://domain.com:port",  //请不要在后面加多余的/斜线，没有进行判定
+                accessToken: "token"               //api token
+            );//暂时只能发送api请求
             //var i = client.SendTextAsync (MessageType.private_, 745679136, "test").Result;
             //var j = client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result;
             Console.ReadLine ();
-
-            // Console.WriteLine (
-            //     client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result.data.ToString()
-            // );
-            // Console.WriteLine (
-            //     client.SendTextAsync (MessageType.private_, 745679136, "testmessage").Result.data.ToString()
-            // );
-            // Console.WriteLine (
-            //     client.SendMessageAsync (MessageType.private_, 745679136, new Messages.CommonMessages.MessageShake()).Result.data.ToString()
-            // );
         }
     }
 }
