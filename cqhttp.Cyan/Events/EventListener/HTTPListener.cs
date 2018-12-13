@@ -2,7 +2,6 @@
 using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events;
@@ -15,11 +14,9 @@ namespace cqhttp.Cyan.Events.EventListener {
     /// </summary>
     public class HttpEventListener : Events.EventListener.CQEventListener {
         private HttpListener listener;
-        private object listen_lock = new object ();
-        private Task listen_task;
-        private Func<CQEvent, CQResponse> listen_callback;
+
         /// <summary></summary>
-        public HttpEventListener (int port, string secret = "") : base (port, secret) {
+        public HttpEventListener (int port, string secret = "") : base (secret) {
             listener = new HttpListener ();
             listener.Prefixes.Add ($"http://+:{port}/");
         }
@@ -37,7 +34,6 @@ namespace cqhttp.Cyan.Events.EventListener {
             }
         }
         private async void ProcessContext (HttpListenerContext context) {
-            string requestContent = null;
             try {
                 await Task.Run (() => {
                     var request = context.Request;
@@ -45,10 +41,10 @@ namespace cqhttp.Cyan.Events.EventListener {
                         if (!request.ContentType.StartsWith ("application/json", StringComparison.Ordinal))
                             return;
 
-                        requestContent = GetContent (secret, request);
+                        string requestContent = GetContent (secret, request);
                         if (string.IsNullOrEmpty (requestContent))
                             return;
-                        
+
                         var responseObject =
                             listen_callback (CQEventHandler.HandleEvent (requestContent));
 
@@ -82,16 +78,6 @@ namespace cqhttp.Cyan.Events.EventListener {
                 return requestContent;
             }
             return null;
-        }
-
-        private static bool Verify (byte[] secret, string signature, byte[] buffer, int offset, int length) {
-            if (secret is null)
-                return true;
-            using (var hmac = new HMACSHA1 (secret)) {
-                hmac.Initialize ();
-                string result = BitConverter.ToString (hmac.ComputeHash (buffer, offset, length)).Replace ("-", "");
-                return string.Equals (signature, $"sha1={result}", StringComparison.OrdinalIgnoreCase);
-            }
         }
     }
 }
