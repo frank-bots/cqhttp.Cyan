@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/cqhttp.Cyan/cqhttp.Cyan.csproj"
+                "${workspaceFolder}/src/cqhttp.Cyan.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -17,7 +17,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/cqhttp.Cyan/cqhttp.Cyan.csproj",
+                "${workspaceFolder}/src/cqhttp.Cyan.csproj",
                 "-c", "Release"
             ]
         }

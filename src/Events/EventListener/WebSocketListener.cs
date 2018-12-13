@@ -11,6 +11,7 @@ namespace cqhttp.Cyan.Events.EventListener {
         /// <summary></summary>
         public WebSocketListener (string dest_url, string secret) : base (secret) {
             this.dest_url = dest_url;
+            client = new ClientWebSocket ();
         }
         /// <summary></summary>
         public override void StartListen (System.Func<CQEvents.Base.CQEvent, CQEvents.CQResponses.Base.CQResponse> callback) {
@@ -39,7 +40,7 @@ namespace cqhttp.Cyan.Events.EventListener {
             try {
                 await Task.Run (() =>
                     listen_callback (CQEventHandler.HandleEvent (Encoding.UTF8.GetString (message)))
-                );//Websocket下不会处理响应！！！！！
+                ); //Websocket下不会处理响应！！！！！
             } catch (System.Exception e) {
                 System.Console.WriteLine (e.ToString ());
             }
