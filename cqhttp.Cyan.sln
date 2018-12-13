@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cqhttp.Cyan", "cqhttp.Cyan\cqhttp.Cyan.csproj", "{BEC1AC5B-90E5-4422-B2FB-44C457B606D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cqhttp.Cyan", "src\cqhttp.Cyan.csproj", "{BEC1AC5B-90E5-4422-B2FB-44C457B606D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

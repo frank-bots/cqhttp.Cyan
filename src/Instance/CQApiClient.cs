@@ -8,7 +8,7 @@ using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Messages;
 
-namespace cqhttp.Cyan {
+namespace cqhttp.Cyan.Instance {
     /// <summary></summary>
     public abstract class CQApiClient {
         /// <summary>
