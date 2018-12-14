@@ -26,7 +26,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public string raw_data_cq {
             get {
                 if (type == "text")
-                    return data["text"];
+                    return data["text"].
+                        Replace ("\n", "\\n").
+                        Replace ("\t", "\\t").
+                        Replace ("\"", "\\\"");
                 string paramBuilder = "";
                 foreach (var i in data)
                     paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";

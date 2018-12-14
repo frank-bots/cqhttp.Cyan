@@ -33,6 +33,14 @@ namespace cqhttp.Cyan.Messages {
             a.data.Add (b);
             return a;
         }
+        /// <summary></summary>
+        public static bool operator == (Message a, Message b) {
+            return a.data.Equals (b.data);
+        }
+        /// <summary></summary>
+        public static bool operator != (Message a, Message b) {
+            return !(a == b);
+        }
         /// <summary>
         /// 将消息序列化为CQ码格式
         /// </summary>
@@ -55,7 +63,14 @@ namespace cqhttp.Cyan.Messages {
         public override string ToString () {
             return Serialize (this, Config.isSendJson);
         }
-
+        /// <summary></summary>
+        public override int GetHashCode () {
+            return this.data.GetHashCode ();
+        }
+        /// <summary></summary>
+        public override bool Equals (object a) {
+            return this.data == (a as Message).data;
+        }
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
         /// <param name="message">待序列化的消息</param>
