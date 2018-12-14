@@ -1,0 +1,63 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.Base
+  id: cqhttp.Cyan.Events.CQEvents.Base
+  children:
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.Sender
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.Base
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: CQEvent
+  nameWithType: CQEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: GroupNoticeEvent
+  nameWithType: GroupNoticeEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: MessageEvent
+  nameWithType: MessageEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.Sender
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.Sender
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: Sender
+  nameWithType: Sender
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.Sender
+- uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: NoticeEvent
+  nameWithType: NoticeEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: RequestEvent
+  nameWithType: RequestEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.Base
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.Base

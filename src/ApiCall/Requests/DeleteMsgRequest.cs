@@ -1,6 +1,6 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
 
-namespace src.ApiCall.Requests {
+namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary>
     /// 撤回消息
     /// </summary>

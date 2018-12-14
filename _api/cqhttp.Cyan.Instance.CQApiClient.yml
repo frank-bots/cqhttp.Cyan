@@ -1,0 +1,969 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Instance.CQApiClient
+  commentId: T:cqhttp.Cyan.Instance.CQApiClient
+  id: CQApiClient
+  parent: cqhttp.Cyan.Instance
+  children:
+  - cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.String)
+  - cqhttp.Cyan.Instance.CQApiClient.__eventListener
+  - cqhttp.Cyan.Instance.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)
+  - cqhttp.Cyan.Instance.CQApiClient.accessToken
+  - cqhttp.Cyan.Instance.CQApiClient.accessUrl
+  - cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
+  - cqhttp.Cyan.Instance.CQApiClient.self_id
+  - cqhttp.Cyan.Instance.CQApiClient.self_nick
+  - cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
+  - cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  - cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
+  langs:
+  - csharp
+  - vb
+  name: CQApiClient
+  nameWithType: CQApiClient
+  fullName: cqhttp.Cyan.Instance.CQApiClient
+  type: Class
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: CQApiClient
+    path: src/Instance/CQApiClient.cs
+    startLine: 12
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract class CQApiClient
+    content.vb: Public MustInherit Class CQApiClient
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - cqhttp.Cyan.Instance.CQHTTPClient
+  - cqhttp.Cyan.Instance.CQWebsocketClient
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: cqhttp.Cyan.Instance.CQApiClient.accessToken
+  commentId: F:cqhttp.Cyan.Instance.CQApiClient.accessToken
+  id: accessToken
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: accessToken
+  nameWithType: CQApiClient.accessToken
+  fullName: cqhttp.Cyan.Instance.CQApiClient.accessToken
+  type: Field
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: accessToken
+    path: src/Instance/CQApiClient.cs
+    startLine: 17
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: "\n酷Q配置中的access_token\n<see>https://cqhttp.cc/docs/4.6/#/API?id=%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F</see>\n"
+  example: []
+  syntax:
+    content: public string accessToken
+    return:
+      type: System.String
+    content.vb: Public accessToken As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.accessUrl
+  commentId: F:cqhttp.Cyan.Instance.CQApiClient.accessUrl
+  id: accessUrl
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: accessUrl
+  nameWithType: CQApiClient.accessUrl
+  fullName: cqhttp.Cyan.Instance.CQApiClient.accessUrl
+  type: Field
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: accessUrl
+    path: src/Instance/CQApiClient.cs
+    startLine: 21
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: "\nAPI地址\n"
+  example: []
+  syntax:
+    content: public string accessUrl
+    return:
+      type: System.String
+    content.vb: Public accessUrl As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.self_id
+  commentId: P:cqhttp.Cyan.Instance.CQApiClient.self_id
+  id: self_id
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: self_id
+  nameWithType: CQApiClient.self_id
+  fullName: cqhttp.Cyan.Instance.CQApiClient.self_id
+  type: Property
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: self_id
+    path: src/Instance/CQApiClient.cs
+    startLine: 25
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: "\n当前实例的QQ号\n"
+  example: []
+  syntax:
+    content: public long self_id { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property self_id As Long
+  overload: cqhttp.Cyan.Instance.CQApiClient.self_id*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Instance.CQApiClient.self_nick
+  commentId: P:cqhttp.Cyan.Instance.CQApiClient.self_nick
+  id: self_nick
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: self_nick
+  nameWithType: CQApiClient.self_nick
+  fullName: cqhttp.Cyan.Instance.CQApiClient.self_nick
+  type: Property
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: self_nick
+    path: src/Instance/CQApiClient.cs
+    startLine: 29
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: "\n当前实例的QQ昵称\n"
+  example: []
+  syntax:
+    content: public string self_nick { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property self_nick As String
+  overload: cqhttp.Cyan.Instance.CQApiClient.self_nick*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.String)
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: CQApiClient(String, String)
+  nameWithType: CQApiClient.CQApiClient(String, String)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.CQApiClient(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Instance/CQApiClient.cs
+    startLine: 32
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: ''
+  example: []
+  syntax:
+    content: public CQApiClient(string accessUrl, string accessToken = "")
+    parameters:
+    - id: accessUrl
+      type: System.String
+    - id: accessToken
+      type: System.String
+    content.vb: Public Sub New(accessUrl As String, accessToken As String = "")
+  overload: cqhttp.Cyan.Instance.CQApiClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  id: SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: SendRequestAsync(ApiRequest)
+  nameWithType: CQApiClient.SendRequestAsync(ApiRequest)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  type: Method
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: SendRequestAsync
+    path: src/Instance/CQApiClient.cs
+    startLine: 45
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: 通用发送请求函数，一般不需调用
+  example: []
+  syntax:
+    content: public virtual Task<ApiResponse> SendRequestAsync(ApiRequest x)
+    parameters:
+    - id: x
+      type: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+    return:
+      type: System.Threading.Tasks.Task{cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse}
+    content.vb: Public Overridable Function SendRequestAsync(x As ApiRequest) As Task(Of ApiResponse)
+  overload: cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
+  id: SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: SendMessageAsync(MessageType, Int64, Message)
+  nameWithType: CQApiClient.SendMessageAsync(MessageType, Int64, Message)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType, System.Int64, cqhttp.Cyan.Messages.Message)
+  type: Method
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: SendMessageAsync
+    path: src/Instance/CQApiClient.cs
+    startLine: 49
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: 发送消息(自行构造)
+  example: []
+  syntax:
+    content: public Task<ApiResponse> SendMessageAsync(MessageType messageType, long target, Message message)
+    parameters:
+    - id: messageType
+      type: cqhttp.Cyan.Enums.MessageType
+    - id: target
+      type: System.Int64
+    - id: message
+      type: cqhttp.Cyan.Messages.Message
+    return:
+      type: System.Threading.Tasks.Task{cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse}
+    content.vb: Public Function SendMessageAsync(messageType As MessageType, target As Long, message As Message) As Task(Of ApiResponse)
+  overload: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
+  id: SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: SendTextAsync(MessageType, Int64, String)
+  nameWithType: CQApiClient.SendTextAsync(MessageType, Int64, String)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType, System.Int64, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: SendTextAsync
+    path: src/Instance/CQApiClient.cs
+    startLine: 57
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: 发送纯文本消息
+  example: []
+  syntax:
+    content: public Task<ApiResponse> SendTextAsync(MessageType messageType, long target, string text)
+    parameters:
+    - id: messageType
+      type: cqhttp.Cyan.Enums.MessageType
+    - id: target
+      type: System.Int64
+    - id: text
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse}
+    content.vb: Public Function SendTextAsync(messageType As MessageType, target As Long, text As String) As Task(Of ApiResponse)
+  overload: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.__eventListener
+  commentId: F:cqhttp.Cyan.Instance.CQApiClient.__eventListener
+  id: __eventListener
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: __eventListener
+  nameWithType: CQApiClient.__eventListener
+  fullName: cqhttp.Cyan.Instance.CQApiClient.__eventListener
+  type: Field
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: __eventListener
+    path: src/Instance/CQApiClient.cs
+    startLine: 69
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: ''
+  example: []
+  syntax:
+    content: public CQEventListener __eventListener
+    return:
+      type: cqhttp.Cyan.Events.EventListener.CQEventListener
+    content.vb: Public __eventListener As CQEventListener
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
+  commentId: E:cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
+  id: OnEventDelegate
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: OnEventDelegate
+  nameWithType: CQApiClient.OnEventDelegate
+  fullName: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
+  type: Event
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: OnEventDelegate
+    path: src/Instance/CQApiClient.cs
+    startLine: 71
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: ''
+  example: []
+  syntax:
+    content: public event OnEvent OnEventDelegate
+    return:
+      type: cqhttp.Cyan.Instance.OnEvent
+    content.vb: Public Event OnEventDelegate As OnEvent
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Instance.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)
+  id: __HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)
+  parent: cqhttp.Cyan.Instance.CQApiClient
+  langs:
+  - csharp
+  - vb
+  name: __HandleEvent(CQEvent)
+  nameWithType: CQApiClient.__HandleEvent(CQEvent)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)
+  type: Method
+  source:
+    remote:
+      path: src/Instance/CQApiClient.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: __HandleEvent
+    path: src/Instance/CQApiClient.cs
+    startLine: 73
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Instance
+  summary: ''
+  example: []
+  syntax:
+    content: public CQResponse __HandleEvent(CQEvent event_)
+    parameters:
+    - id: event_
+      type: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+    return:
+      type: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+    content.vb: Public Function __HandleEvent(event_ As CQEvent) As CQResponse
+  overload: cqhttp.Cyan.Instance.CQApiClient.__HandleEvent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: cqhttp.Cyan.Instance
+  commentId: N:cqhttp.Cyan.Instance
+  name: cqhttp.Cyan.Instance
+  nameWithType: cqhttp.Cyan.Instance
+  fullName: cqhttp.Cyan.Instance
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: cqhttp.Cyan.Instance.CQApiClient.self_id*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.self_id
+  name: self_id
+  nameWithType: CQApiClient.self_id
+  fullName: cqhttp.Cyan.Instance.CQApiClient.self_id
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: cqhttp.Cyan.Instance.CQApiClient.self_nick*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.self_nick
+  name: self_nick
+  nameWithType: CQApiClient.self_nick
+  fullName: cqhttp.Cyan.Instance.CQApiClient.self_nick
+- uid: cqhttp.Cyan.Instance.CQApiClient.#ctor*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.#ctor
+  name: CQApiClient
+  nameWithType: CQApiClient.CQApiClient
+  fullName: cqhttp.Cyan.Instance.CQApiClient.CQApiClient
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync
+  name: SendRequestAsync
+  nameWithType: CQApiClient.SendRequestAsync
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  parent: cqhttp.Cyan.ApiCall.Requests.Base
+  name: ApiRequest
+  nameWithType: ApiRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+- uid: System.Threading.Tasks.Task{cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse}
+  commentId: T:System.Threading.Tasks.Task{cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ApiResponse>
+  nameWithType: Task<ApiResponse>
+  fullName: System.Threading.Tasks.Task<cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse>
+  nameWithType.vb: Task(Of ApiResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse)
+  name.vb: Task(Of ApiResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+    name: ApiResponse
+    nameWithType: ApiResponse
+    fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+    name: ApiResponse
+    nameWithType: ApiResponse
+    fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: cqhttp.Cyan.ApiCall.Requests.Base
+  commentId: N:cqhttp.Cyan.ApiCall.Requests.Base
+  name: cqhttp.Cyan.ApiCall.Requests.Base
+  nameWithType: cqhttp.Cyan.ApiCall.Requests.Base
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync
+  name: SendMessageAsync
+  nameWithType: CQApiClient.SendMessageAsync
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync
+- uid: cqhttp.Cyan.Enums.MessageType
+  commentId: T:cqhttp.Cyan.Enums.MessageType
+  parent: cqhttp.Cyan.Enums
+  name: MessageType
+  nameWithType: MessageType
+  fullName: cqhttp.Cyan.Enums.MessageType
+- uid: cqhttp.Cyan.Messages.Message
+  commentId: T:cqhttp.Cyan.Messages.Message
+  parent: cqhttp.Cyan.Messages
+  name: Message
+  nameWithType: Message
+  fullName: cqhttp.Cyan.Messages.Message
+- uid: cqhttp.Cyan.Enums
+  commentId: N:cqhttp.Cyan.Enums
+  name: cqhttp.Cyan.Enums
+  nameWithType: cqhttp.Cyan.Enums
+  fullName: cqhttp.Cyan.Enums
+- uid: cqhttp.Cyan.Messages
+  commentId: N:cqhttp.Cyan.Messages
+  name: cqhttp.Cyan.Messages
+  nameWithType: cqhttp.Cyan.Messages
+  fullName: cqhttp.Cyan.Messages
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.SendTextAsync
+  name: SendTextAsync
+  nameWithType: CQApiClient.SendTextAsync
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener
+  commentId: T:cqhttp.Cyan.Events.EventListener.CQEventListener
+  parent: cqhttp.Cyan.Events.EventListener
+  name: CQEventListener
+  nameWithType: CQEventListener
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener
+- uid: cqhttp.Cyan.Events.EventListener
+  commentId: N:cqhttp.Cyan.Events.EventListener
+  name: cqhttp.Cyan.Events.EventListener
+  nameWithType: cqhttp.Cyan.Events.EventListener
+  fullName: cqhttp.Cyan.Events.EventListener
+- uid: cqhttp.Cyan.Instance.OnEvent
+  commentId: T:cqhttp.Cyan.Instance.OnEvent
+  parent: cqhttp.Cyan.Instance
+  name: OnEvent
+  nameWithType: OnEvent
+  fullName: cqhttp.Cyan.Instance.OnEvent
+- uid: cqhttp.Cyan.Instance.CQApiClient.__HandleEvent*
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.__HandleEvent
+  name: __HandleEvent
+  nameWithType: CQApiClient.__HandleEvent
+  fullName: cqhttp.Cyan.Instance.CQApiClient.__HandleEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: CQEvent
+  nameWithType: CQEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  commentId: T:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  name: CQResponse
+  nameWithType: CQResponse
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.Base
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.Base
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  name: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base

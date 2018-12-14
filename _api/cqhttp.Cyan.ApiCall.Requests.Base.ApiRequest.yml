@@ -1,0 +1,559 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  id: ApiRequest
+  parent: cqhttp.Cyan.ApiCall.Requests.Base
+  children:
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor(System.String)
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  langs:
+  - csharp
+  - vb
+  name: ApiRequest
+  nameWithType: ApiRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  type: Class
+  source:
+    remote:
+      path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: ApiRequest
+    path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+    startLine: 10
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.ApiCall.Requests.Base
+  summary: "\n调用API的请求\n"
+  example: []
+  syntax:
+    content: public abstract class ApiRequest
+    content.vb: Public MustInherit Class ApiRequest
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - cqhttp.Cyan.ApiCall.Requests.GetLoginInfoRequest
+  - cqhttp.Cyan.ApiCall.Requests.SendmsgRequest
+  - src.ApiCall.Requests.DeleteMsgRequest
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  id: apiPath
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  langs:
+  - csharp
+  - vb
+  name: apiPath
+  nameWithType: ApiRequest.apiPath
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  type: Property
+  source:
+    remote:
+      path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: apiPath
+    path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+    startLine: 12
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.ApiCall.Requests.Base
+  summary: ''
+  example: []
+  syntax:
+    content: public string apiPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property apiPath As String
+  overload: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  commentId: F:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  id: response
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  langs:
+  - csharp
+  - vb
+  name: response
+  nameWithType: ApiRequest.response
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  type: Field
+  source:
+    remote:
+      path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: response
+    path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+    startLine: 14
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.ApiCall.Requests.Base
+  summary: ''
+  example: []
+  syntax:
+    content: public ApiResponse response
+    return:
+      type: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+    content.vb: Public response As ApiResponse
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor
+  id: '#ctor'
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  langs:
+  - csharp
+  - vb
+  name: ApiRequest()
+  nameWithType: ApiRequest.ApiRequest()
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.ApiRequest()
+  type: Constructor
+  source:
+    remote:
+      path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+    startLine: 16
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.ApiCall.Requests.Base
+  summary: ''
+  example: []
+  syntax:
+    content: public ApiRequest()
+    content.vb: Public Sub New
+  overload: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor(System.String)
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  langs:
+  - csharp
+  - vb
+  name: ApiRequest(String)
+  nameWithType: ApiRequest.ApiRequest(String)
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.ApiRequest(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+    startLine: 20
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.ApiCall.Requests.Base
+  summary: ''
+  example: []
+  syntax:
+    content: public ApiRequest(string r)
+    parameters:
+    - id: r
+      type: System.String
+    content.vb: Public Sub New(r As String)
+  overload: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  id: content
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  langs:
+  - csharp
+  - vb
+  name: content
+  nameWithType: ApiRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  type: Property
+  source:
+    remote:
+      path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: content
+    path: src/ApiCall/Requests/Base/ApiRequestResponse.cs
+    startLine: 22
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.ApiCall.Requests.Base
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual string content { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property content As String
+  overload: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+references:
+- uid: cqhttp.Cyan.ApiCall.Requests.Base
+  commentId: N:cqhttp.Cyan.ApiCall.Requests.Base
+  name: cqhttp.Cyan.ApiCall.Requests.Base
+  nameWithType: cqhttp.Cyan.ApiCall.Requests.Base
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath*
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  name: apiPath
+  nameWithType: ApiRequest.apiPath
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  parent: cqhttp.Cyan.ApiCall.Requests.Base
+  name: ApiResponse
+  nameWithType: ApiResponse
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor*
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor
+  name: ApiRequest
+  nameWithType: ApiRequest.ApiRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.ApiRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content*
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  name: content
+  nameWithType: ApiRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content

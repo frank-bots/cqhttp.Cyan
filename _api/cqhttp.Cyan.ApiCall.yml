@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.ApiCall
+  commentId: N:cqhttp.Cyan.ApiCall
+  id: cqhttp.Cyan.ApiCall
+  children:
+  - cqhttp.Cyan.ApiCall.ErrorHandler
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.ApiCall
+  nameWithType: cqhttp.Cyan.ApiCall
+  fullName: cqhttp.Cyan.ApiCall
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.ApiCall.ErrorHandler
+  commentId: T:cqhttp.Cyan.ApiCall.ErrorHandler
+  name: ErrorHandler
+  nameWithType: ErrorHandler
+  fullName: cqhttp.Cyan.ApiCall.ErrorHandler

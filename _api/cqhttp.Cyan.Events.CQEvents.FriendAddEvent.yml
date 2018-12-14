@@ -1,0 +1,476 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.FriendAddEvent
+  id: FriendAddEvent
+  parent: cqhttp.Cyan.Events.CQEvents
+  children:
+  - cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor
+  - cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor(System.Int64,System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: FriendAddEvent
+  nameWithType: FriendAddEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.FriendAddEvent
+  type: Class
+  source:
+    remote:
+      path: src/Events/CQEvents/FriendAddEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: FriendAddEvent
+    path: src/Events/CQEvents/FriendAddEvent.cs
+    startLine: 4
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: "\n属性this.user_id中存储了新好友QQ\n"
+  example: []
+  syntax:
+    content: 'public class FriendAddEvent : NoticeEvent'
+    content.vb: >-
+      Public Class FriendAddEvent
+          Inherits NoticeEvent
+  inheritance:
+  - System.Object
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  inheritedMembers:
+  - cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.noticeType
+  - cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.user_id
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor
+  commentId: M:cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor
+  id: '#ctor'
+  parent: cqhttp.Cyan.Events.CQEvents.FriendAddEvent
+  langs:
+  - csharp
+  - vb
+  name: FriendAddEvent()
+  nameWithType: FriendAddEvent.FriendAddEvent()
+  fullName: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.FriendAddEvent()
+  type: Constructor
+  source:
+    remote:
+      path: src/Events/CQEvents/FriendAddEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Events/CQEvents/FriendAddEvent.cs
+    startLine: 6
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: ''
+  example: []
+  syntax:
+    content: public FriendAddEvent()
+    content.vb: Public Sub New
+  overload: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor(System.Int64,System.Int64)
+  commentId: M:cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor(System.Int64,System.Int64)
+  id: '#ctor(System.Int64,System.Int64)'
+  parent: cqhttp.Cyan.Events.CQEvents.FriendAddEvent
+  langs:
+  - csharp
+  - vb
+  name: FriendAddEvent(Int64, Int64)
+  nameWithType: FriendAddEvent.FriendAddEvent(Int64, Int64)
+  fullName: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.FriendAddEvent(System.Int64, System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: src/Events/CQEvents/FriendAddEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Events/CQEvents/FriendAddEvent.cs
+    startLine: 8
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: ''
+  example: []
+  syntax:
+    content: public FriendAddEvent(long time, long user_id)
+    parameters:
+    - id: time
+      type: System.Int64
+    - id: user_id
+      type: System.Int64
+    content.vb: Public Sub New(time As Long, user_id As Long)
+  overload: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: cqhttp.Cyan.Events.CQEvents
+  commentId: N:cqhttp.Cyan.Events.CQEvents
+  name: cqhttp.Cyan.Events.CQEvents
+  nameWithType: cqhttp.Cyan.Events.CQEvents
+  fullName: cqhttp.Cyan.Events.CQEvents
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: CQEvent
+  nameWithType: CQEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: NoticeEvent
+  nameWithType: NoticeEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.noticeType
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.noticeType
+  parent: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  name: noticeType
+  nameWithType: NoticeEvent.noticeType
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.noticeType
+- uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.user_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.user_id
+  parent: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  name: user_id
+  nameWithType: NoticeEvent.user_id
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.user_id
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  parent: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  name: time
+  nameWithType: CQEvent.time
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  parent: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  name: postType
+  nameWithType: CQEvent.postType
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.Base
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.Base
+- uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor
+  name: FriendAddEvent
+  nameWithType: FriendAddEvent.FriendAddEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.FriendAddEvent
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64

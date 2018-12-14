@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Enums
+  commentId: N:cqhttp.Cyan.Enums
+  id: cqhttp.Cyan.Enums
+  children:
+  - cqhttp.Cyan.Enums.MessageType
+  - cqhttp.Cyan.Enums.NoticeType
+  - cqhttp.Cyan.Enums.PostType
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Enums
+  nameWithType: cqhttp.Cyan.Enums
+  fullName: cqhttp.Cyan.Enums
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Enums.MessageType
+  commentId: T:cqhttp.Cyan.Enums.MessageType
+  parent: cqhttp.Cyan.Enums
+  name: MessageType
+  nameWithType: MessageType
+  fullName: cqhttp.Cyan.Enums.MessageType
+- uid: cqhttp.Cyan.Enums.PostType
+  commentId: T:cqhttp.Cyan.Enums.PostType
+  parent: cqhttp.Cyan.Enums
+  name: PostType
+  nameWithType: PostType
+  fullName: cqhttp.Cyan.Enums.PostType
+- uid: cqhttp.Cyan.Enums.NoticeType
+  commentId: T:cqhttp.Cyan.Enums.NoticeType
+  parent: cqhttp.Cyan.Enums
+  name: NoticeType
+  nameWithType: NoticeType
+  fullName: cqhttp.Cyan.Enums.NoticeType
+- uid: cqhttp.Cyan.Enums
+  commentId: N:cqhttp.Cyan.Enums
+  name: cqhttp.Cyan.Enums
+  nameWithType: cqhttp.Cyan.Enums
+  fullName: cqhttp.Cyan.Enums

@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Examples
+  commentId: N:cqhttp.Cyan.Examples
+  id: cqhttp.Cyan.Examples
+  children:
+  - cqhttp.Cyan.Examples.ApiRequestTest
+  - cqhttp.Cyan.Examples.DeserializationTest
+  - cqhttp.Cyan.Examples.ElementBuild
+  - cqhttp.Cyan.Examples.MessageBuild
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Examples
+  nameWithType: cqhttp.Cyan.Examples
+  fullName: cqhttp.Cyan.Examples
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Examples.ApiRequestTest
+  commentId: T:cqhttp.Cyan.Examples.ApiRequestTest
+  name: ApiRequestTest
+  nameWithType: ApiRequestTest
+  fullName: cqhttp.Cyan.Examples.ApiRequestTest
+- uid: cqhttp.Cyan.Examples.DeserializationTest
+  commentId: T:cqhttp.Cyan.Examples.DeserializationTest
+  name: DeserializationTest
+  nameWithType: DeserializationTest
+  fullName: cqhttp.Cyan.Examples.DeserializationTest
+- uid: cqhttp.Cyan.Examples.ElementBuild
+  commentId: T:cqhttp.Cyan.Examples.ElementBuild
+  name: ElementBuild
+  nameWithType: ElementBuild
+  fullName: cqhttp.Cyan.Examples.ElementBuild
+- uid: cqhttp.Cyan.Examples.MessageBuild
+  commentId: T:cqhttp.Cyan.Examples.MessageBuild
+  name: MessageBuild
+  nameWithType: MessageBuild
+  fullName: cqhttp.Cyan.Examples.MessageBuild

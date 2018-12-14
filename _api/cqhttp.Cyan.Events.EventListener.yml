@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.EventListener
+  commentId: N:cqhttp.Cyan.Events.EventListener
+  id: cqhttp.Cyan.Events.EventListener
+  children:
+  - cqhttp.Cyan.Events.EventListener.CQEventListener
+  - cqhttp.Cyan.Events.EventListener.HttpEventListener
+  - cqhttp.Cyan.Events.EventListener.WebSocketListener
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Events.EventListener
+  nameWithType: cqhttp.Cyan.Events.EventListener
+  fullName: cqhttp.Cyan.Events.EventListener
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener
+  commentId: T:cqhttp.Cyan.Events.EventListener.CQEventListener
+  parent: cqhttp.Cyan.Events.EventListener
+  name: CQEventListener
+  nameWithType: CQEventListener
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener
+- uid: cqhttp.Cyan.Events.EventListener.HttpEventListener
+  commentId: T:cqhttp.Cyan.Events.EventListener.HttpEventListener
+  name: HttpEventListener
+  nameWithType: HttpEventListener
+  fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener
+- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener
+  commentId: T:cqhttp.Cyan.Events.EventListener.WebSocketListener
+  name: WebSocketListener
+  nameWithType: WebSocketListener
+  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener
+- uid: cqhttp.Cyan.Events.EventListener
+  commentId: N:cqhttp.Cyan.Events.EventListener
+  name: cqhttp.Cyan.Events.EventListener
+  nameWithType: cqhttp.Cyan.Events.EventListener
+  fullName: cqhttp.Cyan.Events.EventListener

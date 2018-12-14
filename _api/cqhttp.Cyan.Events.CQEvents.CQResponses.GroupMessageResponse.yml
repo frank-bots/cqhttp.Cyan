@@ -1,0 +1,734 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  commentId: T:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  id: GroupMessageResponse
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses
+  children:
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.#ctor(cqhttp.Cyan.Messages.Message,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content
+  langs:
+  - csharp
+  - vb
+  name: GroupMessageResponse
+  nameWithType: GroupMessageResponse
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  type: Class
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: GroupMessageResponse
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 4
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: 群消息回复
+  example: []
+  syntax:
+    content: 'public class GroupMessageResponse : CQReplyMessageResponse'
+    content.vb: >-
+      Public Class GroupMessageResponse
+          Inherits CQReplyMessageResponse
+  inheritance:
+  - System.Object
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+  inheritedMembers:
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.reply
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.auto_escape
+  - cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender
+  id: at_sender
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: at_sender
+  nameWithType: GroupMessageResponse.at_sender
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: at_sender
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 6
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: ''
+  example: []
+  syntax:
+    content: public bool at_sender { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property at_sender As Boolean
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete
+  id: admin_delete
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: admin_delete
+  nameWithType: GroupMessageResponse.admin_delete
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: admin_delete
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 8
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: ''
+  example: []
+  syntax:
+    content: public bool admin_delete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property admin_delete As Boolean
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick
+  id: admin_kick
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: admin_kick
+  nameWithType: GroupMessageResponse.admin_kick
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: admin_kick
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 10
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: ''
+  example: []
+  syntax:
+    content: public bool admin_kick { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property admin_kick As Boolean
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban
+  id: admin_ban
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: admin_ban
+  nameWithType: GroupMessageResponse.admin_ban
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: admin_ban
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 12
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: ''
+  example: []
+  syntax:
+    content: public bool admin_ban { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property admin_ban As Boolean
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration
+  id: admin_ban_duration
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: admin_ban_duration
+  nameWithType: GroupMessageResponse.admin_ban_duration
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: admin_ban_duration
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 14
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: ''
+  example: []
+  syntax:
+    content: public int admin_ban_duration { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property admin_ban_duration As Integer
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.#ctor(cqhttp.Cyan.Messages.Message,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)
+  commentId: M:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.#ctor(cqhttp.Cyan.Messages.Message,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)
+  id: '#ctor(cqhttp.Cyan.Messages.Message,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)'
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: GroupMessageResponse(Message, Boolean, Boolean, Boolean, Boolean, Boolean, Int32)
+  nameWithType: GroupMessageResponse.GroupMessageResponse(Message, Boolean, Boolean, Boolean, Boolean, Boolean, Int32)
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.GroupMessageResponse(cqhttp.Cyan.Messages.Message, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 24
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  example: []
+  syntax:
+    content: public GroupMessageResponse(Message reply, bool auto_escape, bool at_sender = true, bool delete = false, bool kick = false, bool ban = false, int ban_duration = 0)
+    parameters:
+    - id: reply
+      type: cqhttp.Cyan.Messages.Message
+      description: 回复的消息
+    - id: auto_escape
+      type: System.Boolean
+      description: 是否转义字符串
+    - id: at_sender
+      type: System.Boolean
+      description: 是否@发送者
+    - id: delete
+      type: System.Boolean
+      description: 是否撤回(苟管理bot)
+    - id: kick
+      type: System.Boolean
+      description: 是否踢掉发送者(苟管理bot)
+    - id: ban
+      type: System.Boolean
+      description: 是否禁言发送者(苟管理bot)
+    - id: ban_duration
+      type: System.Int32
+      description: 禁言的话禁言多久(苟管理bot)
+    content.vb: Public Sub New(reply As Message, auto_escape As Boolean, at_sender As Boolean = True, delete As Boolean = False, kick As Boolean = False, ban As Boolean = False, ban_duration As Integer = 0)
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content
+  id: content
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: content
+  nameWithType: GroupMessageResponse.content
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: content
+    path: src/Events/CQEvents/CQResponses/GroupMessageResponse.cs
+    startLine: 40
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.CQResponses
+  summary: ''
+  example: []
+  syntax:
+    content: public override string content { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property content As String
+  overridden: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.content
+  overload: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+references:
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses
+  commentId: N:cqhttp.Cyan.Events.CQEvents.CQResponses
+  name: cqhttp.Cyan.Events.CQEvents.CQResponses
+  nameWithType: cqhttp.Cyan.Events.CQEvents.CQResponses
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  commentId: T:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  name: CQResponse
+  nameWithType: CQResponse
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+  commentId: T:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  name: CQReplyMessageResponse
+  nameWithType: CQReplyMessageResponse
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.reply
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.reply
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+  name: reply
+  nameWithType: CQReplyMessageResponse.reply
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.reply
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.auto_escape
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.auto_escape
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+  name: auto_escape
+  nameWithType: CQReplyMessageResponse.auto_escape
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.auto_escape
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+  commentId: M:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  name: ToString()
+  nameWithType: CQResponse.ToString()
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString()
+  spec.csharp:
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+    name: ToString
+    nameWithType: CQResponse.ToString
+    fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+    name: ToString
+    nameWithType: CQResponse.ToString
+    fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  name: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender
+  name: at_sender
+  nameWithType: GroupMessageResponse.at_sender
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.at_sender
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete
+  name: admin_delete
+  nameWithType: GroupMessageResponse.admin_delete
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_delete
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick
+  name: admin_kick
+  nameWithType: GroupMessageResponse.admin_kick
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_kick
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban
+  name: admin_ban
+  nameWithType: GroupMessageResponse.admin_ban
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration
+  name: admin_ban_duration
+  nameWithType: GroupMessageResponse.admin_ban_duration
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.admin_ban_duration
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.#ctor*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.#ctor
+  name: GroupMessageResponse
+  nameWithType: GroupMessageResponse.GroupMessageResponse
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.GroupMessageResponse
+- uid: cqhttp.Cyan.Messages.Message
+  commentId: T:cqhttp.Cyan.Messages.Message
+  parent: cqhttp.Cyan.Messages
+  name: Message
+  nameWithType: Message
+  fullName: cqhttp.Cyan.Messages.Message
+- uid: cqhttp.Cyan.Messages
+  commentId: N:cqhttp.Cyan.Messages
+  name: cqhttp.Cyan.Messages
+  nameWithType: cqhttp.Cyan.Messages
+  fullName: cqhttp.Cyan.Messages
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.content
+  commentId: P:cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.content
+  parent: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  name: content
+  nameWithType: CQResponse.content
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.content
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content
+  name: content
+  nameWithType: GroupMessageResponse.content
+  fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.content
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

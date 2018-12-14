@@ -4,7 +4,7 @@
       "src": [
         {
           "files": [
-            "cqhttp.Cyan/**.csproj"
+            "src/**.csproj"
           ]
         }
       ],

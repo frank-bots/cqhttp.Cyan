@@ -1,0 +1,804 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener
+  commentId: T:cqhttp.Cyan.Events.EventListener.CQEventListener
+  id: CQEventListener
+  parent: cqhttp.Cyan.Events.EventListener
+  children:
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor(System.String)
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.listen_callback
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.listen_lock
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.listen_task
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.secret
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse})
+  - cqhttp.Cyan.Events.EventListener.CQEventListener.Verify(System.Byte[],System.String,System.Byte[],System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: CQEventListener
+  nameWithType: CQEventListener
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener
+  type: Class
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: CQEventListener
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 10
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract class CQEventListener
+    content.vb: Public MustInherit Class CQEventListener
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - cqhttp.Cyan.Events.EventListener.HttpEventListener
+  - cqhttp.Cyan.Events.EventListener.WebSocketListener
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.secret
+  commentId: P:cqhttp.Cyan.Events.EventListener.CQEventListener.secret
+  id: secret
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: secret
+  nameWithType: CQEventListener.secret
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.secret
+  type: Property
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: secret
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 12
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: 用于验证消息真实性
+  example: []
+  syntax:
+    content: public byte[] secret { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property secret As Byte()
+  overload: cqhttp.Cyan.Events.EventListener.CQEventListener.secret*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.listen_callback
+  commentId: F:cqhttp.Cyan.Events.EventListener.CQEventListener.listen_callback
+  id: listen_callback
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: listen_callback
+  nameWithType: CQEventListener.listen_callback
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.listen_callback
+  type: Field
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: listen_callback
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 14
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: protected Func<CQEvent, CQResponse> listen_callback
+    return:
+      type: System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse}
+    content.vb: Protected listen_callback As Func(Of CQEvent, CQResponse)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.listen_task
+  commentId: F:cqhttp.Cyan.Events.EventListener.CQEventListener.listen_task
+  id: listen_task
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: listen_task
+  nameWithType: CQEventListener.listen_task
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.listen_task
+  type: Field
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: listen_task
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 16
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: protected Task listen_task
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Protected listen_task As Task
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.listen_lock
+  commentId: F:cqhttp.Cyan.Events.EventListener.CQEventListener.listen_lock
+  id: listen_lock
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: listen_lock
+  nameWithType: CQEventListener.listen_lock
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.listen_lock
+  type: Field
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: listen_lock
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 18
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: protected object listen_lock
+    return:
+      type: System.Object
+    content.vb: Protected listen_lock As Object
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor(System.String)
+  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: CQEventListener(String)
+  nameWithType: CQEventListener.CQEventListener(String)
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.CQEventListener(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 20
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: public CQEventListener(string secret)
+    parameters:
+    - id: secret
+      type: System.String
+    content.vb: Public Sub New(secret As String)
+  overload: cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse})
+  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse})
+  id: StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse})
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: StartListen(Func<CQEvent, CQResponse>)
+  nameWithType: CQEventListener.StartListen(Func<CQEvent, CQResponse>)
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse>)
+  type: Method
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: StartListen
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 24
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void StartListen(Func<CQEvent, CQResponse> callback)
+    parameters:
+    - id: callback
+      type: System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse}
+    content.vb: Public Overridable Sub StartListen(callback As Func(Of CQEvent, CQResponse))
+  overload: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen*
+  nameWithType.vb: CQEventListener.StartListen(Func(Of CQEvent, CQResponse))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse))
+  name.vb: StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.Verify(System.Byte[],System.String,System.Byte[],System.Int32,System.Int32)
+  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.Verify(System.Byte[],System.String,System.Byte[],System.Int32,System.Int32)
+  id: Verify(System.Byte[],System.String,System.Byte[],System.Int32,System.Int32)
+  parent: cqhttp.Cyan.Events.EventListener.CQEventListener
+  langs:
+  - csharp
+  - vb
+  name: Verify(Byte[], String, Byte[], Int32, Int32)
+  nameWithType: CQEventListener.Verify(Byte[], String, Byte[], Int32, Int32)
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.Verify(System.Byte[], System.String, System.Byte[], System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Events/EventListener/CQEventListener.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: Verify
+    path: src/Events/EventListener/CQEventListener.cs
+    startLine: 26
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.EventListener
+  summary: ''
+  example: []
+  syntax:
+    content: protected static bool Verify(byte[] secret, string signature, byte[] buffer, int offset, int length)
+    parameters:
+    - id: secret
+      type: System.Byte[]
+    - id: signature
+      type: System.String
+    - id: buffer
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Protected Shared Function Verify(secret As Byte(), signature As String, buffer As Byte(), offset As Integer, length As Integer) As Boolean
+  overload: cqhttp.Cyan.Events.EventListener.CQEventListener.Verify*
+  nameWithType.vb: CQEventListener.Verify(Byte(), String, Byte(), Int32, Int32)
+  modifiers.csharp:
+  - protected
+  - static
+  modifiers.vb:
+  - Protected
+  - Shared
+  fullName.vb: cqhttp.Cyan.Events.EventListener.CQEventListener.Verify(System.Byte(), System.String, System.Byte(), System.Int32, System.Int32)
+  name.vb: Verify(Byte(), String, Byte(), Int32, Int32)
+references:
+- uid: cqhttp.Cyan.Events.EventListener
+  commentId: N:cqhttp.Cyan.Events.EventListener
+  name: cqhttp.Cyan.Events.EventListener
+  nameWithType: cqhttp.Cyan.Events.EventListener
+  fullName: cqhttp.Cyan.Events.EventListener
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.secret*
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.CQEventListener.secret
+  name: secret
+  nameWithType: CQEventListener.secret
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.secret
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse}
+  commentId: T:System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse}
+  parent: System
+  definition: System.Func`2
+  name: Func<CQEvent, CQResponse>
+  nameWithType: Func<CQEvent, CQResponse>
+  fullName: System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse>
+  nameWithType.vb: Func(Of CQEvent, CQResponse)
+  fullName.vb: System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse)
+  name.vb: Func(Of CQEvent, CQResponse)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+    name: CQEvent
+    nameWithType: CQEvent
+    fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+    name: CQResponse
+    nameWithType: CQResponse
+    fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+    name: CQEvent
+    nameWithType: CQEvent
+    fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+    name: CQResponse
+    nameWithType: CQResponse
+    fullName: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor*
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.CQEventListener.#ctor
+  name: CQEventListener
+  nameWithType: CQEventListener.CQEventListener
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.CQEventListener
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen*
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen
+  name: StartListen
+  nameWithType: CQEventListener.StartListen
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.Verify*
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.CQEventListener.Verify
+  name: Verify
+  nameWithType: CQEventListener.Verify
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.Verify
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

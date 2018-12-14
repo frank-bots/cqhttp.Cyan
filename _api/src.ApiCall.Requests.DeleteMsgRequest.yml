@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: src.ApiCall.Requests.DeleteMsgRequest
+  commentId: T:src.ApiCall.Requests.DeleteMsgRequest
+  id: DeleteMsgRequest
+  parent: src.ApiCall.Requests
+  children:
+  - src.ApiCall.Requests.DeleteMsgRequest.#ctor(System.Int32)
+  - src.ApiCall.Requests.DeleteMsgRequest.content
+  langs:
+  - csharp
+  - vb
+  name: DeleteMsgRequest
+  nameWithType: DeleteMsgRequest
+  fullName: src.ApiCall.Requests.DeleteMsgRequest
+  type: Class
+  source:
+    remote:
+      path: src/ApiCall/Requests/DeleteMsgRequest.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: DeleteMsgRequest
+    path: src/ApiCall/Requests/DeleteMsgRequest.cs
+    startLine: 6
+  assemblies:
+  - cqhttp.Cyan
+  namespace: src.ApiCall.Requests
+  summary: "\n撤回消息\n"
+  example: []
+  syntax:
+    content: 'public class DeleteMsgRequest : ApiRequest'
+    content.vb: >-
+      Public Class DeleteMsgRequest
+          Inherits ApiRequest
+  inheritance:
+  - System.Object
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  inheritedMembers:
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: src.ApiCall.Requests.DeleteMsgRequest.#ctor(System.Int32)
+  commentId: M:src.ApiCall.Requests.DeleteMsgRequest.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: src.ApiCall.Requests.DeleteMsgRequest
+  langs:
+  - csharp
+  - vb
+  name: DeleteMsgRequest(Int32)
+  nameWithType: DeleteMsgRequest.DeleteMsgRequest(Int32)
+  fullName: src.ApiCall.Requests.DeleteMsgRequest.DeleteMsgRequest(System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: src/ApiCall/Requests/DeleteMsgRequest.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/ApiCall/Requests/DeleteMsgRequest.cs
+    startLine: 9
+  assemblies:
+  - cqhttp.Cyan
+  namespace: src.ApiCall.Requests
+  summary: ''
+  example: []
+  syntax:
+    content: public DeleteMsgRequest(int message_id)
+    parameters:
+    - id: message_id
+      type: System.Int32
+    content.vb: Public Sub New(message_id As Integer)
+  overload: src.ApiCall.Requests.DeleteMsgRequest.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: src.ApiCall.Requests.DeleteMsgRequest.content
+  commentId: P:src.ApiCall.Requests.DeleteMsgRequest.content
+  id: content
+  parent: src.ApiCall.Requests.DeleteMsgRequest
+  langs:
+  - csharp
+  - vb
+  name: content
+  nameWithType: DeleteMsgRequest.content
+  fullName: src.ApiCall.Requests.DeleteMsgRequest.content
+  type: Property
+  source:
+    remote:
+      path: src/ApiCall/Requests/DeleteMsgRequest.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: content
+    path: src/ApiCall/Requests/DeleteMsgRequest.cs
+    startLine: 13
+  assemblies:
+  - cqhttp.Cyan
+  namespace: src.ApiCall.Requests
+  summary: ''
+  example: []
+  syntax:
+    content: public override string content { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property content As String
+  overridden: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  overload: src.ApiCall.Requests.DeleteMsgRequest.content*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+references:
+- uid: src.ApiCall.Requests
+  commentId: N:src.ApiCall.Requests
+  name: src.ApiCall.Requests
+  nameWithType: src.ApiCall.Requests
+  fullName: src.ApiCall.Requests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  parent: cqhttp.Cyan.ApiCall.Requests.Base
+  name: ApiRequest
+  nameWithType: ApiRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  name: apiPath
+  nameWithType: ApiRequest.apiPath
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.apiPath
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  commentId: F:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  name: response
+  nameWithType: ApiRequest.response
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.response
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.ApiCall.Requests.Base
+  commentId: N:cqhttp.Cyan.ApiCall.Requests.Base
+  name: cqhttp.Cyan.ApiCall.Requests.Base
+  nameWithType: cqhttp.Cyan.ApiCall.Requests.Base
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base
+- uid: src.ApiCall.Requests.DeleteMsgRequest.#ctor*
+  commentId: Overload:src.ApiCall.Requests.DeleteMsgRequest.#ctor
+  name: DeleteMsgRequest
+  nameWithType: DeleteMsgRequest.DeleteMsgRequest
+  fullName: src.ApiCall.Requests.DeleteMsgRequest.DeleteMsgRequest
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+  parent: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  name: content
+  nameWithType: ApiRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.content
+- uid: src.ApiCall.Requests.DeleteMsgRequest.content*
+  commentId: Overload:src.ApiCall.Requests.DeleteMsgRequest.content
+  name: content
+  nameWithType: DeleteMsgRequest.content
+  fullName: src.ApiCall.Requests.DeleteMsgRequest.content
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

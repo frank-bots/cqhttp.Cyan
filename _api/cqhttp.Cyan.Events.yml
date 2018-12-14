@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events
+  commentId: N:cqhttp.Cyan.Events
+  id: cqhttp.Cyan.Events
+  children:
+  - cqhttp.Cyan.Events.CQEventHandler
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Events
+  nameWithType: cqhttp.Cyan.Events
+  fullName: cqhttp.Cyan.Events
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Events.CQEventHandler
+  commentId: T:cqhttp.Cyan.Events.CQEventHandler
+  name: CQEventHandler
+  nameWithType: CQEventHandler
+  fullName: cqhttp.Cyan.Events.CQEventHandler
