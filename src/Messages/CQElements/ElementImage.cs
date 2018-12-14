@@ -7,9 +7,6 @@ using cqhttp.Cyan.Messages.CQElements.Base;
 namespace cqhttp.Cyan.Messages.CQElements {
     /// <summary>注意酷Q Air是发送不了图片的</summary>
     public class ElementImage : ElementFile {
-
-        /// <returns><see cref="NullElementException"/></returns>
-        public ElementImage () : base () { }
         /// <summary>
         /// 通过含图片的byte array构造图片Element
         /// </summary>
@@ -26,9 +23,5 @@ namespace cqhttp.Cyan.Messages.CQElements {
         /// <returns></returns>
         public ElementImage (string url, bool useCache = true):
             base ("image", url, useCache) { }
-        /// <summary></summary>
-        public ElementImage (params (string key, string val) [] dict):
-            base ("image", dict) { }
-
     }
 }
