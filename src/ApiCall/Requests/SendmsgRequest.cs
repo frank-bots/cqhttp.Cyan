@@ -1,9 +1,8 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Enums;
-using cqhttp.Cyan.Messages;
-using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.ApiCall.Requests {
+namespace cqhttp.Cyan.ApiCall.Requests
+{
     /// <summary></summary>
     public class SendmsgRequest : ApiRequest {
         long target_id;

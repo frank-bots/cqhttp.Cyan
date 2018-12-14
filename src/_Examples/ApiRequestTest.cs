@@ -1,14 +1,12 @@
 using System;
-using System.Threading.Tasks;
-using cqhttp.Cyan.ApiCall.Requests;
-using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.CQResponses;
 using cqhttp.Cyan.Instance;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
 
-namespace cqhttp.Cyan.Examples {
+namespace cqhttp.Cyan.Examples
+{
     /// <summary></summary>
     public class ApiRequestTest {
         /// <summary></summary>

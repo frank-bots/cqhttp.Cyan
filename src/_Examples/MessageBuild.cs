@@ -17,10 +17,10 @@ namespace cqhttp.Cyan.Examples {
                     new ElementText ("second #&text message"),
                     new ElementRecord ("http://asdf.com/asdf.mp3", true, false)
                 );
-                Console.WriteLine (Message.Serialize (testmessage));
+                Console.WriteLine (testmessage.raw_data_json);
                 //[{"type":"text","data":{"text":"first text message"}},{"type":"image","data":{"file":"http://www.asdf.com/asdf.jpg"}},{"type":"text","data":{"text":"second text message"}},{"type":"record","data":{"file":"http://asdf.com/asdf.mp3"}}]
 
-                Console.WriteLine (Message.Serialize (testmessage, false));
+                Console.WriteLine (testmessage.raw_data_cq);
                 //first text message[CQ:image,file=http://www.asdf.com/asdf.jpg]second text message[CQ:record,file=http://asdf.com/asdf.mp3]
             } catch { }
         }

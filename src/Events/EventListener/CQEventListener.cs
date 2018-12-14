@@ -1,12 +1,12 @@
 using System;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 
-namespace cqhttp.Cyan.Events.EventListener {
+namespace cqhttp.Cyan.Events.EventListener
+{
     /// <summary></summary>
     public abstract class CQEventListener {
         /// <summary>用于验证消息真实性</summary>
