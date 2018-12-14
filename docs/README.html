@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>cqhttp.Cyan </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="cqhttp.Cyan ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="cqhttpcyan">cqhttp.Cyan</h1>
+
+<pre><code>Cyan---青
+</code></pre>
+<h2 id="快速上手">快速上手</h2>
+<pre><code class="lang-csharp">using cqhttp.Cyan.[];
+namespace YourNS {
+    class Program {
+        static void Main(string[] args) {
+            //CQApiClient client = CQWebsocketClient(
+            CQApiClient client = CQHTTPClient (
+                //accessUrl: &quot;ws://domain:port/path&quot;,
+                accessUrl: &quot;http://domain:port/path&quot;,
+                accessToken: &quot;your_token&quot;,
+                listen_port: 8080,
+                //Websocket 监听仍在调试中，请暂时不要使用
+                //然鹅可以通过Websocket发送API请求
+                secret: &quot;your_secret&quot;
+            )
+            Console.WriteLine(
+                $&quot;QQ:{client.self_id},昵称:{client.self_nick}&quot;
+            );
+            //client构造后会发送一条get_login_info请求，则可以通过
+            //判断是否成功获取登陆的账号的QQ与昵称判断API是否可访问
+            client.OnEventDelegate += (client, e) =&gt; {
+                //process (CQEvent e)
+                return new CQEmptyResponse ();
+            };
+            client.SendTextAsync(
+                MessageType.private_,
+                12345678,
+                &quot;一条文字消息&quot;
+            );
+        }
+    }
+}
+</code></pre>
+<pre><code>在Examples文件夹下有更详细的示例
+</code></pre>
+<hr>
+<h2 id="对应关系">对应关系</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">cqhttp中的概念</th>
+<th style="text-align: center;">对应本项目中的类型</th>
+<th style="text-align: center;">所处在的命名空间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">消息</td>
+<td style="text-align: center;"><code>Message</code></td>
+<td style="text-align: center;">.Messages</td>
+</tr>
+<tr>
+<td style="text-align: right;">消息段</td>
+<td style="text-align: center;"><code>Element</code></td>
+<td style="text-align: center;">.Messages.CQElements(.Base)</td>
+</tr>
+<tr>
+<td style="text-align: right;">事件</td>
+<td style="text-align: center;"><code>CQEvent</code></td>
+<td style="text-align: center;">.Events.CQEvents(.Base)</td>
+</tr>
+<tr>
+<td style="text-align: right;">事件响应</td>
+<td style="text-align: center;"><code>CQResponse</code></td>
+<td style="text-align: center;">.Events.CQResponse(.Base)</td>
+</tr>
+<tr>
+<td style="text-align: right;">Api调用</td>
+<td style="text-align: center;"><code>ApiRequest</code></td>
+<td style="text-align: center;">.ApiCall.Requests(.Base)</td>
+</tr>
+<tr>
+<td style="text-align: right;">Api响应</td>
+<td style="text-align: center;"><code>ApiResponse</code></td>
+<td style="text-align: center;">.ApiCall.Requests(.Base)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="消息的发送与接收">消息的发送与接收</h2>
+<p>本项目中发送与接收到的消息同为Message类型。</p>
+<h3 id="消息接收">消息接收</h3>
+<p>在事件处理函数中可通过<code>(e is MessageEvent)</code>判断收到的是否为消息事件，如下：</p>
+<pre><code class="lang-csharp">static void Main() {
+    var client = HTTPApiClient(...);
+    client.OnEventDelegate += HandleEvent;
+}
+static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
+    if(e is MessageEvent) {
+        return HandleMessage(
+            (e as MessageEvent).message
+        )
+    }
+}
+</code></pre>
+<h3 id="消息发送">消息发送</h3>
+<p>可以自己构建需要发送的消息，也可以选择直接发送文本消息，亦或是发送定义好的常用消息</p>
+<p>目前可用的常用消息:</p>
+<ol>
+<li>MessageShake(), 戳一戳</li>
+<li><del>MessageText(), 纯文本</del>, 由于提供了发送纯文本消息的函数，故不需要</li>
+</ol>
+<pre><code class="lang-csharp">static void Main() {
+    var client = HTTPApiClient(...);
+    //////////////////////
+    client.SendTextAsync(&quot;text&quot;);
+    //////////////////////
+    client.SendMessageAsync(
+        MessageType.private_/group_/discuss_,
+        qq号/群号/讨论组号,
+        new Message (
+            new ElementText(&quot;part1&quot;),
+            new ElementFace(1),//1-170
+            new ElementText(&quot;part2&quot;)
+        )
+    )
+    //////////////////////
+}
+</code></pre>
+<p>目前可用的Element类型:</p>
+<ul>
+<li><code>ElementEmoji(int id)</code></li>
+<li><code>ElementFace(int id)</code></li>
+<li><code>ElementImage(string url,bool useCache = false)</code></li>
+<li>........................<code>(byte[] resourse, bool useCache = false)</code></li>
+<li><code>ElementRecord(string url,bool useCache = false)</code></li>
+<li>..........................<code>(byte[] resourse, bool useCache = false)</code></li>
+<li><code>ElementShake()</code></li>
+</ul>
+<blockquote>
+<p>出于不知道什么原因ElementShake()只有在以非json发送消息时才有效</p>
+</blockquote>
+<hr>
+<h2 id="事件列表对应cqevent">事件列表(对应CQEvent)</h2>
+<h3 id="消息事件继承于messageevent">消息事件(继承于MessageEvent)</h3>
+<ul>
+<li>PrivateMessageEvent</li>
+<li>GroupMessageEvent</li>
+<li>DiscussMessageEvent</li>
+</ul>
+<h3 id="群通知继承于groupnoticeevent">群通知(继承于GroupNoticeEvent)</h3>
+<ul>
+<li>GroupAdminEvent 群管理员变动</li>
+<li>GroupUploadEvent 群文件上传</li>
+<li>GroupMemberChangeEvent 群成员变动</li>
+</ul>
+<h4 id="另有friendaddevent与groupnoticeevent同继承于noticeevent">另有FriendAddEvent与GroupNoticeEvent同继承于NoticeEvent</h4>
+<h3 id="请求事件继承于requestevent">请求事件(继承于RequestEvent)</h3>
+<ul>
+<li>GroupAddRequestEvent 邀请加群</li>
+<li>FriendAddRequestEvent 添加好友</li>
+</ul>
+<blockquote>
+<p>需要作出回应(....不回应也罢)</p>
+</blockquote>
+<hr>
+<h2 id="事件回应列表对应cqresponse">事件回应列表(对应CQResponse)</h2>
+<h3 id="通用回应">通用回应</h3>
+<ul>
+<li>EmptyResponse 默认</li>
+</ul>
+<h3 id="消息事件回应继承于cqreplymessageresponse">消息事件回应(继承于CQReplyMessageResponse)</h3>
+<ul>
+<li>PrivateMessageResponse 快速回复私聊消息</li>
+<li>GroupMessageResponse 快速回复群消息</li>
+<li>DiscussMessageResponse 快速回复讨论组消息</li>
+</ul>
+<h3 id="请求事件回应">请求事件回应</h3>
+<ul>
+<li>FriendAddReqestResponse 加好友</li>
+<li>GroupAddRequestResponse 加群</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
