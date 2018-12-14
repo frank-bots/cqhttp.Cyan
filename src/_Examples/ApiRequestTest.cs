@@ -13,13 +13,11 @@ namespace cqhttp.Cyan.Examples {
     public class ApiRequestTest {
         /// <summary></summary>
         public static void Test () {
-            Message testmessage = new Message {
-                data = new System.Collections.Generic.List<Messages.CQElements.Base.Element> {
+            Message testmessage = new Message (
                 new ElementText ("first te[xt] message"),
                 new ElementFace (3),
                 new ElementText ("second #&text message")
-                }
-            };
+            );
             // CQHTTPClient client = new CQHTTPClient ("http://service.std-frank.club:233");
             var clientHttp = new CQHTTPClient (
                 accessUrl: "http://domain.com:port",//请不要在后面加多余的/斜线，没有进行判定
