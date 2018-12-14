@@ -15,6 +15,24 @@ namespace cqhttp.Cyan.Messages {
         /// 消息段列表
         /// </summary>
         public List<Element> data;
+        /// <param name="elements">构建的消息段列表</param>
+        public Message (params Element[] elements) {
+            this.data = new List<Element> (elements);
+        }
+        /// <summary>
+        /// 拼接消息
+        /// </summary>
+        public static Message operator + (Message a, Message b) {
+            a.data.AddRange (b.data);
+            return a;
+        }
+        /// <summary>
+        /// 向消息拼接消息段
+        /// </summary>
+        public static Message operator + (Message a, Element b) {
+            a.data.Add (b);
+            return a;
+        }
         /// <summary>
         /// 将消息序列化为CQ码格式
         /// </summary>
@@ -37,6 +55,7 @@ namespace cqhttp.Cyan.Messages {
         public override string ToString () {
             return Serialize (this, Config.isSendJson);
         }
+
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
         /// <summary>

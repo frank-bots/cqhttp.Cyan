@@ -17,16 +17,13 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public string fileUrl { get; private set; }
 
         /// <summary>represents whether the file has downloaded</summary>
-        private bool isFixed {
+        public bool isFixed {
             get {
                 return fileUrl.Substring (0, fileUrl.IndexOf (':')) == "base64"; //"[base64]://"
             }
         }
         /// <summary>以二进制形式存储的文件</summary>
         private byte[] bin_content;
-
-        /// <returns><see cref="NullElementException"/></returns>
-        public ElementFile () : base () { }
         /// <summary>
         /// 手动构造一个消息段，一般用不到
         /// </summary>

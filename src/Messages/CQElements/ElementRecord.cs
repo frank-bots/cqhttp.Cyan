@@ -10,8 +10,6 @@ namespace cqhttp.Cyan.Messages.CQElements {
         /// <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>
         public bool isMagic { get; private set; }
         /// <summary></summary>
-        public ElementRecord () : base () { }
-        /// <summary></summary>
         public ElementRecord (byte[] record, bool useCache = true, bool isMagic = false):
             base ("record", record, useCache) {
                 this.isMagic = isMagic;
