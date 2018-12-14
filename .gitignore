@@ -6,5 +6,6 @@
 /**/packages/
 /**/bin/
 /**/obj/
-_site
-cqhttp.Cyan/Tests/coolq-http-api.wiki
+.api
+.apidoc
+docs
