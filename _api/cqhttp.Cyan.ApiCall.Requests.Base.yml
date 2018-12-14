@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.ApiCall.Requests.Base
+  commentId: N:cqhttp.Cyan.ApiCall.Requests.Base
+  id: cqhttp.Cyan.ApiCall.Requests.Base
+  children:
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  - cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.ApiCall.Requests.Base
+  nameWithType: cqhttp.Cyan.ApiCall.Requests.Base
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+  parent: cqhttp.Cyan.ApiCall.Requests.Base
+  name: ApiRequest
+  nameWithType: ApiRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+  parent: cqhttp.Cyan.ApiCall.Requests.Base
+  name: ApiResponse
+  nameWithType: ApiResponse
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+- uid: cqhttp.Cyan.ApiCall.Requests.Base
+  commentId: N:cqhttp.Cyan.ApiCall.Requests.Base
+  name: cqhttp.Cyan.ApiCall.Requests.Base
+  nameWithType: cqhttp.Cyan.ApiCall.Requests.Base
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base

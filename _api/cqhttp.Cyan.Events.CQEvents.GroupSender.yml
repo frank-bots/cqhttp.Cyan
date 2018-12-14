@@ -1,0 +1,622 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender
+  commentId: T:cqhttp.Cyan.Events.CQEvents.GroupSender
+  id: GroupSender
+  parent: cqhttp.Cyan.Events.CQEvents
+  children:
+  - cqhttp.Cyan.Events.CQEvents.GroupSender.area
+  - cqhttp.Cyan.Events.CQEvents.GroupSender.level
+  - cqhttp.Cyan.Events.CQEvents.GroupSender.role
+  - cqhttp.Cyan.Events.CQEvents.GroupSender.title
+  langs:
+  - csharp
+  - vb
+  name: GroupSender
+  nameWithType: GroupSender
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender
+  type: Class
+  source:
+    remote:
+      path: src/Events/CQEvents/GroupMessageEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: GroupSender
+    path: src/Events/CQEvents/GroupMessageEvent.cs
+    startLine: 35
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: "\n群消息发送者信息，匿名时无参考价值\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonObject]
+
+      public class GroupSender : Sender
+    content.vb: >-
+      <JsonObject>
+
+      Public Class GroupSender
+          Inherits Sender
+  inheritance:
+  - System.Object
+  - cqhttp.Cyan.Events.CQEvents.Base.Sender
+  inheritedMembers:
+  - cqhttp.Cyan.Events.CQEvents.Base.Sender.user_id
+  - cqhttp.Cyan.Events.CQEvents.Base.Sender.nickname
+  - cqhttp.Cyan.Events.CQEvents.Base.Sender.sex
+  - cqhttp.Cyan.Events.CQEvents.Base.Sender.age
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.area
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupSender.area
+  id: area
+  parent: cqhttp.Cyan.Events.CQEvents.GroupSender
+  langs:
+  - csharp
+  - vb
+  name: area
+  nameWithType: GroupSender.area
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.area
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/GroupMessageEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: area
+    path: src/Events/CQEvents/GroupMessageEvent.cs
+    startLine: 38
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: 来自
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("area")]
+
+      public string area { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("area")>
+
+      Public ReadOnly Property area As String
+  overload: cqhttp.Cyan.Events.CQEvents.GroupSender.area*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: area
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.level
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupSender.level
+  id: level
+  parent: cqhttp.Cyan.Events.CQEvents.GroupSender
+  langs:
+  - csharp
+  - vb
+  name: level
+  nameWithType: GroupSender.level
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.level
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/GroupMessageEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: level
+    path: src/Events/CQEvents/GroupMessageEvent.cs
+    startLine: 42
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: 成员等级
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("level")]
+
+      public string level { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("level")>
+
+      Public ReadOnly Property level As String
+  overload: cqhttp.Cyan.Events.CQEvents.GroupSender.level*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: level
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.role
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupSender.role
+  id: role
+  parent: cqhttp.Cyan.Events.CQEvents.GroupSender
+  langs:
+  - csharp
+  - vb
+  name: role
+  nameWithType: GroupSender.role
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.role
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/GroupMessageEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: role
+    path: src/Events/CQEvents/GroupMessageEvent.cs
+    startLine: 46
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: 身份(owner/admin/member)
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("role")]
+
+      public string role { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("role")>
+
+      Public ReadOnly Property role As String
+  overload: cqhttp.Cyan.Events.CQEvents.GroupSender.role*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: role
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.title
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupSender.title
+  id: title
+  parent: cqhttp.Cyan.Events.CQEvents.GroupSender
+  langs:
+  - csharp
+  - vb
+  name: title
+  nameWithType: GroupSender.title
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.title
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/GroupMessageEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: title
+    path: src/Events/CQEvents/GroupMessageEvent.cs
+    startLine: 49
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents
+  summary: 头衔
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("title")]
+
+      public string title { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("title")>
+
+      Public ReadOnly Property title As String
+  overload: cqhttp.Cyan.Events.CQEvents.GroupSender.title*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: title
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: cqhttp.Cyan.Events.CQEvents
+  commentId: N:cqhttp.Cyan.Events.CQEvents
+  name: cqhttp.Cyan.Events.CQEvents
+  nameWithType: cqhttp.Cyan.Events.CQEvents
+  fullName: cqhttp.Cyan.Events.CQEvents
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: cqhttp.Cyan.Events.CQEvents.Base.Sender
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.Sender
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  name: Sender
+  nameWithType: Sender
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.Sender
+- uid: cqhttp.Cyan.Events.CQEvents.Base.Sender.user_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.Sender.user_id
+  parent: cqhttp.Cyan.Events.CQEvents.Base.Sender
+  name: user_id
+  nameWithType: Sender.user_id
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.Sender.user_id
+- uid: cqhttp.Cyan.Events.CQEvents.Base.Sender.nickname
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.Sender.nickname
+  parent: cqhttp.Cyan.Events.CQEvents.Base.Sender
+  name: nickname
+  nameWithType: Sender.nickname
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.Sender.nickname
+- uid: cqhttp.Cyan.Events.CQEvents.Base.Sender.sex
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.Sender.sex
+  parent: cqhttp.Cyan.Events.CQEvents.Base.Sender
+  name: sex
+  nameWithType: Sender.sex
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.Sender.sex
+- uid: cqhttp.Cyan.Events.CQEvents.Base.Sender.age
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.Sender.age
+  parent: cqhttp.Cyan.Events.CQEvents.Base.Sender
+  name: age
+  nameWithType: Sender.age
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.Sender.age
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.Base
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.Base
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.area*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupSender.area
+  name: area
+  nameWithType: GroupSender.area
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.area
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.level*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupSender.level
+  name: level
+  nameWithType: GroupSender.level
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.level
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.role*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupSender.role
+  name: role
+  nameWithType: GroupSender.role
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.role
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.title*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupSender.title
+  name: title
+  nameWithType: GroupSender.title
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.title

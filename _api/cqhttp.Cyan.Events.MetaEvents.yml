@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.MetaEvents
+  commentId: N:cqhttp.Cyan.Events.MetaEvents
+  id: cqhttp.Cyan.Events.MetaEvents
+  children:
+  - cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent
+  - cqhttp.Cyan.Events.MetaEvents.LifecycleEvent
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Events.MetaEvents
+  nameWithType: cqhttp.Cyan.Events.MetaEvents
+  fullName: cqhttp.Cyan.Events.MetaEvents
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent
+  commentId: T:cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent
+  name: HeartbeatEvent
+  nameWithType: HeartbeatEvent
+  fullName: cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent
+- uid: cqhttp.Cyan.Events.MetaEvents.LifecycleEvent
+  commentId: T:cqhttp.Cyan.Events.MetaEvents.LifecycleEvent
+  name: LifecycleEvent
+  nameWithType: LifecycleEvent
+  fullName: cqhttp.Cyan.Events.MetaEvents.LifecycleEvent

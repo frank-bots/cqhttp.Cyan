@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Messages.CommonMessages
+  commentId: N:cqhttp.Cyan.Messages.CommonMessages
+  id: cqhttp.Cyan.Messages.CommonMessages
+  children:
+  - cqhttp.Cyan.Messages.CommonMessages.MessageShake
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Messages.CommonMessages
+  nameWithType: cqhttp.Cyan.Messages.CommonMessages
+  fullName: cqhttp.Cyan.Messages.CommonMessages
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageShake
+  commentId: T:cqhttp.Cyan.Messages.CommonMessages.MessageShake
+  name: MessageShake
+  nameWithType: MessageShake
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageShake

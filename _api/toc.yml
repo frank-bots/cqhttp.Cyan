@@ -1,0 +1,199 @@
+### YamlMime:TableOfContent
+- uid: cqhttp.Cyan
+  name: cqhttp.Cyan
+  items:
+  - uid: cqhttp.Cyan.Config
+    name: Config
+  - uid: cqhttp.Cyan.ErrorApicallException
+    name: ErrorApicallException
+  - uid: cqhttp.Cyan.ErrorElementException
+    name: ErrorElementException
+  - uid: cqhttp.Cyan.ErrorEventException
+    name: ErrorEventException
+  - uid: cqhttp.Cyan.ErrorResponseException
+    name: ErrorResponseException
+  - uid: cqhttp.Cyan.NetworkFailureException
+    name: NetworkFailureException
+  - uid: cqhttp.Cyan.NullApicallException
+    name: NullApicallException
+  - uid: cqhttp.Cyan.NullElementException
+    name: NullElementException
+  - uid: cqhttp.Cyan.NullEventException
+    name: NullEventException
+  - uid: cqhttp.Cyan.Status
+    name: Status
+- uid: cqhttp.Cyan.ApiCall
+  name: cqhttp.Cyan.ApiCall
+  items:
+  - uid: cqhttp.Cyan.ApiCall.ErrorHandler
+    name: ErrorHandler
+- uid: cqhttp.Cyan.ApiCall.Requests
+  name: cqhttp.Cyan.ApiCall.Requests
+  items:
+  - uid: cqhttp.Cyan.ApiCall.Requests.GetLoginInfoRequest
+    name: GetLoginInfoRequest
+  - uid: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest
+    name: SendmsgRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.Base
+  name: cqhttp.Cyan.ApiCall.Requests.Base
+  items:
+  - uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
+    name: ApiRequest
+  - uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse
+    name: ApiResponse
+- uid: cqhttp.Cyan.Enums
+  name: cqhttp.Cyan.Enums
+  items:
+  - uid: cqhttp.Cyan.Enums.MessageType
+    name: MessageType
+  - uid: cqhttp.Cyan.Enums.NoticeType
+    name: NoticeType
+  - uid: cqhttp.Cyan.Enums.PostType
+    name: PostType
+- uid: cqhttp.Cyan.Events
+  name: cqhttp.Cyan.Events
+  items:
+  - uid: cqhttp.Cyan.Events.CQEventHandler
+    name: CQEventHandler
+- uid: cqhttp.Cyan.Events.CQEvents
+  name: cqhttp.Cyan.Events.CQEvents
+  items:
+  - uid: cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent
+    name: DiscussMessageEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.FileInfo
+    name: FileInfo
+  - uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent
+    name: FriendAddEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent
+    name: FriendAddRequestEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent
+    name: GroupAddRequestEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.GroupAdminEvent
+    name: GroupAdminEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent
+    name: GroupMemberChangeEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent
+    name: GroupMessageEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.GroupSender
+    name: GroupSender
+  - uid: cqhttp.Cyan.Events.CQEvents.GroupUploadEvent
+    name: GroupUploadEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent
+    name: PrivateMessageEvent
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  items:
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+    name: CQEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
+    name: GroupNoticeEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
+    name: MessageEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+    name: NoticeEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
+    name: RequestEvent
+  - uid: cqhttp.Cyan.Events.CQEvents.Base.Sender
+    name: Sender
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses
+  name: cqhttp.Cyan.Events.CQEvents.CQResponses
+  items:
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.DiscussMessageResponse
+    name: DiscussMessageResponse
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.EmptyResponse
+    name: EmptyResponse
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.FriendAddResponse
+    name: FriendAddResponse
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupAddRequestResponse
+    name: GroupAddRequestResponse
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse
+    name: GroupMessageResponse
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.PrivateMessageResponse
+    name: PrivateMessageResponse
+- uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  name: cqhttp.Cyan.Events.CQEvents.CQResponses.Base
+  items:
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse
+    name: CQReplyMessageResponse
+  - uid: cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse
+    name: CQResponse
+- uid: cqhttp.Cyan.Events.EventListener
+  name: cqhttp.Cyan.Events.EventListener
+  items:
+  - uid: cqhttp.Cyan.Events.EventListener.CQEventListener
+    name: CQEventListener
+  - uid: cqhttp.Cyan.Events.EventListener.HttpEventListener
+    name: HttpEventListener
+  - uid: cqhttp.Cyan.Events.EventListener.WebSocketListener
+    name: WebSocketListener
+- uid: cqhttp.Cyan.Events.MetaEvents
+  name: cqhttp.Cyan.Events.MetaEvents
+  items:
+  - uid: cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent
+    name: HeartbeatEvent
+  - uid: cqhttp.Cyan.Events.MetaEvents.LifecycleEvent
+    name: LifecycleEvent
+- uid: cqhttp.Cyan.Examples
+  name: cqhttp.Cyan.Examples
+  items:
+  - uid: cqhttp.Cyan.Examples.ApiRequestTest
+    name: ApiRequestTest
+  - uid: cqhttp.Cyan.Examples.DeserializationTest
+    name: DeserializationTest
+  - uid: cqhttp.Cyan.Examples.ElementBuild
+    name: ElementBuild
+  - uid: cqhttp.Cyan.Examples.MessageBuild
+    name: MessageBuild
+- uid: cqhttp.Cyan.Instance
+  name: cqhttp.Cyan.Instance
+  items:
+  - uid: cqhttp.Cyan.Instance.CQApiClient
+    name: CQApiClient
+  - uid: cqhttp.Cyan.Instance.CQHTTPClient
+    name: CQHTTPClient
+  - uid: cqhttp.Cyan.Instance.CQWebsocketClient
+    name: CQWebsocketClient
+  - uid: cqhttp.Cyan.Instance.OnEvent
+    name: OnEvent
+- uid: cqhttp.Cyan.Messages
+  name: cqhttp.Cyan.Messages
+  items:
+  - uid: cqhttp.Cyan.Messages.Message
+    name: Message
+- uid: cqhttp.Cyan.Messages.CommonMessages
+  name: cqhttp.Cyan.Messages.CommonMessages
+  items:
+  - uid: cqhttp.Cyan.Messages.CommonMessages.MessageShake
+    name: MessageShake
+- uid: cqhttp.Cyan.Messages.CQElements
+  name: cqhttp.Cyan.Messages.CQElements
+  items:
+  - uid: cqhttp.Cyan.Messages.CQElements.ElementEmoji
+    name: ElementEmoji
+  - uid: cqhttp.Cyan.Messages.CQElements.ElementFace
+    name: ElementFace
+  - uid: cqhttp.Cyan.Messages.CQElements.ElementImage
+    name: ElementImage
+  - uid: cqhttp.Cyan.Messages.CQElements.ElementRecord
+    name: ElementRecord
+  - uid: cqhttp.Cyan.Messages.CQElements.ElementShake
+    name: ElementShake
+  - uid: cqhttp.Cyan.Messages.CQElements.ElementText
+    name: ElementText
+- uid: cqhttp.Cyan.Messages.CQElements.Base
+  name: cqhttp.Cyan.Messages.CQElements.Base
+  items:
+  - uid: cqhttp.Cyan.Messages.CQElements.Base.Element
+    name: Element
+  - uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile
+    name: ElementFile
+- uid: src.ApiCall.Requests
+  name: src.ApiCall.Requests
+  items:
+  - uid: src.ApiCall.Requests.DeleteMsgRequest
+    name: DeleteMsgRequest
+- uid: src.Messages.CQElements
+  name: src.Messages.CQElements
+  items:
+  - uid: src.Messages.CQElements.ElementAt
+    name: ElementAt

@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Messages.CQElements.Base
+  commentId: N:cqhttp.Cyan.Messages.CQElements.Base
+  id: cqhttp.Cyan.Messages.CQElements.Base
+  children:
+  - cqhttp.Cyan.Messages.CQElements.Base.Element
+  - cqhttp.Cyan.Messages.CQElements.Base.ElementFile
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Messages.CQElements.Base
+  nameWithType: cqhttp.Cyan.Messages.CQElements.Base
+  fullName: cqhttp.Cyan.Messages.CQElements.Base
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element
+  commentId: T:cqhttp.Cyan.Messages.CQElements.Base.Element
+  parent: cqhttp.Cyan.Messages.CQElements.Base
+  name: Element
+  nameWithType: Element
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element
+- uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile
+  commentId: T:cqhttp.Cyan.Messages.CQElements.Base.ElementFile
+  parent: cqhttp.Cyan.Messages.CQElements.Base
+  name: ElementFile
+  nameWithType: ElementFile
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile
+- uid: cqhttp.Cyan.Messages.CQElements.Base
+  commentId: N:cqhttp.Cyan.Messages.CQElements.Base
+  name: cqhttp.Cyan.Messages.CQElements.Base
+  nameWithType: cqhttp.Cyan.Messages.CQElements.Base
+  fullName: cqhttp.Cyan.Messages.CQElements.Base

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: src.ApiCall.Requests
+  commentId: N:src.ApiCall.Requests
+  id: src.ApiCall.Requests
+  children:
+  - src.ApiCall.Requests.DeleteMsgRequest
+  langs:
+  - csharp
+  - vb
+  name: src.ApiCall.Requests
+  nameWithType: src.ApiCall.Requests
+  fullName: src.ApiCall.Requests
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: src.ApiCall.Requests.DeleteMsgRequest
+  commentId: T:src.ApiCall.Requests.DeleteMsgRequest
+  name: DeleteMsgRequest
+  nameWithType: DeleteMsgRequest
+  fullName: src.ApiCall.Requests.DeleteMsgRequest

@@ -1,0 +1,476 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Messages.CQElements.ElementText
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementText
+  id: ElementText
+  parent: cqhttp.Cyan.Messages.CQElements
+  children:
+  - cqhttp.Cyan.Messages.CQElements.ElementText.#ctor(System.String)
+  - cqhttp.Cyan.Messages.CQElements.ElementText.text
+  langs:
+  - csharp
+  - vb
+  name: ElementText
+  nameWithType: ElementText
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementText
+  type: Class
+  source:
+    remote:
+      path: src/Messages/CQElements/ElementText.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: ElementText
+    path: src/Messages/CQElements/ElementText.cs
+    startLine: 7
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Messages.CQElements
+  summary: "\n文本消息段\n"
+  example: []
+  syntax:
+    content: 'public class ElementText : Element'
+    content.vb: >-
+      Public Class ElementText
+          Inherits Element
+  inheritance:
+  - System.Object
+  - cqhttp.Cyan.Messages.CQElements.Base.Element
+  inheritedMembers:
+  - cqhttp.Cyan.Messages.CQElements.Base.Element.type
+  - cqhttp.Cyan.Messages.CQElements.Base.Element.data
+  - cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_cq
+  - cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_json
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: cqhttp.Cyan.Messages.CQElements.ElementText.text
+  commentId: P:cqhttp.Cyan.Messages.CQElements.ElementText.text
+  id: text
+  parent: cqhttp.Cyan.Messages.CQElements.ElementText
+  langs:
+  - csharp
+  - vb
+  name: text
+  nameWithType: ElementText.text
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementText.text
+  type: Property
+  source:
+    remote:
+      path: src/Messages/CQElements/ElementText.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: text
+    path: src/Messages/CQElements/ElementText.cs
+    startLine: 9
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Messages.CQElements
+  example: []
+  syntax:
+    content: public string text { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property text As String
+  overload: cqhttp.Cyan.Messages.CQElements.ElementText.text*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Messages.CQElements.ElementText.#ctor(System.String)
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementText.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: cqhttp.Cyan.Messages.CQElements.ElementText
+  langs:
+  - csharp
+  - vb
+  name: ElementText(String)
+  nameWithType: ElementText.ElementText(String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementText.ElementText(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Messages/CQElements/ElementText.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Messages/CQElements/ElementText.cs
+    startLine: 11
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Messages.CQElements
+  summary: ''
+  example: []
+  syntax:
+    content: public ElementText(string text)
+    parameters:
+    - id: text
+      type: System.String
+    content.vb: Public Sub New(text As String)
+  overload: cqhttp.Cyan.Messages.CQElements.ElementText.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: cqhttp.Cyan.Messages.CQElements
+  commentId: N:cqhttp.Cyan.Messages.CQElements
+  name: cqhttp.Cyan.Messages.CQElements
+  nameWithType: cqhttp.Cyan.Messages.CQElements
+  fullName: cqhttp.Cyan.Messages.CQElements
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element
+  commentId: T:cqhttp.Cyan.Messages.CQElements.Base.Element
+  parent: cqhttp.Cyan.Messages.CQElements.Base
+  name: Element
+  nameWithType: Element
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.type
+  commentId: P:cqhttp.Cyan.Messages.CQElements.Base.Element.type
+  parent: cqhttp.Cyan.Messages.CQElements.Base.Element
+  name: type
+  nameWithType: Element.type
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.type
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.data
+  commentId: P:cqhttp.Cyan.Messages.CQElements.Base.Element.data
+  parent: cqhttp.Cyan.Messages.CQElements.Base.Element
+  name: data
+  nameWithType: Element.data
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.data
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_cq
+  commentId: P:cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_cq
+  parent: cqhttp.Cyan.Messages.CQElements.Base.Element
+  name: raw_data_cq
+  nameWithType: Element.raw_data_cq
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_cq
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_json
+  commentId: P:cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_json
+  parent: cqhttp.Cyan.Messages.CQElements.Base.Element
+  name: raw_data_json
+  nameWithType: Element.raw_data_json
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_json
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.Messages.CQElements.Base
+  commentId: N:cqhttp.Cyan.Messages.CQElements.Base
+  name: cqhttp.Cyan.Messages.CQElements.Base
+  nameWithType: cqhttp.Cyan.Messages.CQElements.Base
+  fullName: cqhttp.Cyan.Messages.CQElements.Base
+- uid: cqhttp.Cyan.Messages.CQElements.ElementText.text*
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementText.text
+  name: text
+  nameWithType: ElementText.text
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementText.text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: cqhttp.Cyan.Messages.CQElements.ElementText.#ctor*
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementText.#ctor
+  name: ElementText
+  nameWithType: ElementText.ElementText
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementText.ElementText

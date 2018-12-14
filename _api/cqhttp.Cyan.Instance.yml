@@ -1,0 +1,47 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Instance
+  commentId: N:cqhttp.Cyan.Instance
+  id: cqhttp.Cyan.Instance
+  children:
+  - cqhttp.Cyan.Instance.CQApiClient
+  - cqhttp.Cyan.Instance.CQHTTPClient
+  - cqhttp.Cyan.Instance.CQWebsocketClient
+  - cqhttp.Cyan.Instance.OnEvent
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Instance
+  nameWithType: cqhttp.Cyan.Instance
+  fullName: cqhttp.Cyan.Instance
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Instance.CQApiClient
+  commentId: T:cqhttp.Cyan.Instance.CQApiClient
+  parent: cqhttp.Cyan.Instance
+  name: CQApiClient
+  nameWithType: CQApiClient
+  fullName: cqhttp.Cyan.Instance.CQApiClient
+- uid: cqhttp.Cyan.Instance.OnEvent
+  commentId: T:cqhttp.Cyan.Instance.OnEvent
+  parent: cqhttp.Cyan.Instance
+  name: OnEvent
+  nameWithType: OnEvent
+  fullName: cqhttp.Cyan.Instance.OnEvent
+- uid: cqhttp.Cyan.Instance.CQHTTPClient
+  commentId: T:cqhttp.Cyan.Instance.CQHTTPClient
+  name: CQHTTPClient
+  nameWithType: CQHTTPClient
+  fullName: cqhttp.Cyan.Instance.CQHTTPClient
+- uid: cqhttp.Cyan.Instance.CQWebsocketClient
+  commentId: T:cqhttp.Cyan.Instance.CQWebsocketClient
+  name: CQWebsocketClient
+  nameWithType: CQWebsocketClient
+  fullName: cqhttp.Cyan.Instance.CQWebsocketClient
+- uid: cqhttp.Cyan.Instance
+  commentId: N:cqhttp.Cyan.Instance
+  name: cqhttp.Cyan.Instance
+  nameWithType: cqhttp.Cyan.Instance
+  fullName: cqhttp.Cyan.Instance

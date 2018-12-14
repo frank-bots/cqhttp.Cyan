@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Enums.PostType
+  commentId: T:cqhttp.Cyan.Enums.PostType
+  id: PostType
+  parent: cqhttp.Cyan.Enums
+  children:
+  - cqhttp.Cyan.Enums.PostType.message
+  - cqhttp.Cyan.Enums.PostType.meta_event
+  - cqhttp.Cyan.Enums.PostType.notice
+  - cqhttp.Cyan.Enums.PostType.request
+  langs:
+  - csharp
+  - vb
+  name: PostType
+  nameWithType: PostType
+  fullName: cqhttp.Cyan.Enums.PostType
+  type: Enum
+  source:
+    remote:
+      path: src/Enums.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: PostType
+    path: src/Enums.cs
+    startLine: 11
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Enums
+  summary: 消息上报类型
+  example: []
+  syntax:
+    content: public enum PostType
+    content.vb: Public Enum PostType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: cqhttp.Cyan.Enums.PostType.meta_event
+  commentId: F:cqhttp.Cyan.Enums.PostType.meta_event
+  id: meta_event
+  parent: cqhttp.Cyan.Enums.PostType
+  langs:
+  - csharp
+  - vb
+  name: meta_event
+  nameWithType: PostType.meta_event
+  fullName: cqhttp.Cyan.Enums.PostType.meta_event
+  type: Field
+  source:
+    remote:
+      path: src/Enums.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: meta_event
+    path: src/Enums.cs
+    startLine: 13
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Enums
+  summary: 元事件
+  example: []
+  syntax:
+    content: meta_event = 0
+    return:
+      type: cqhttp.Cyan.Enums.PostType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: cqhttp.Cyan.Enums.PostType.message
+  commentId: F:cqhttp.Cyan.Enums.PostType.message
+  id: message
+  parent: cqhttp.Cyan.Enums.PostType
+  langs:
+  - csharp
+  - vb
+  name: message
+  nameWithType: PostType.message
+  fullName: cqhttp.Cyan.Enums.PostType.message
+  type: Field
+  source:
+    remote:
+      path: src/Enums.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: message
+    path: src/Enums.cs
+    startLine: 15
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Enums
+  summary: 消息事件
+  example: []
+  syntax:
+    content: message = 1
+    return:
+      type: cqhttp.Cyan.Enums.PostType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: cqhttp.Cyan.Enums.PostType.notice
+  commentId: F:cqhttp.Cyan.Enums.PostType.notice
+  id: notice
+  parent: cqhttp.Cyan.Enums.PostType
+  langs:
+  - csharp
+  - vb
+  name: notice
+  nameWithType: PostType.notice
+  fullName: cqhttp.Cyan.Enums.PostType.notice
+  type: Field
+  source:
+    remote:
+      path: src/Enums.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: notice
+    path: src/Enums.cs
+    startLine: 17
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Enums
+  summary: ''
+  example: []
+  syntax:
+    content: notice = 2
+    return:
+      type: cqhttp.Cyan.Enums.PostType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: cqhttp.Cyan.Enums.PostType.request
+  commentId: F:cqhttp.Cyan.Enums.PostType.request
+  id: request
+  parent: cqhttp.Cyan.Enums.PostType
+  langs:
+  - csharp
+  - vb
+  name: request
+  nameWithType: PostType.request
+  fullName: cqhttp.Cyan.Enums.PostType.request
+  type: Field
+  source:
+    remote:
+      path: src/Enums.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: request
+    path: src/Enums.cs
+    startLine: 19
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Enums
+  summary: ''
+  example: []
+  syntax:
+    content: request = 3
+    return:
+      type: cqhttp.Cyan.Enums.PostType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: cqhttp.Cyan.Enums
+  commentId: N:cqhttp.Cyan.Enums
+  name: cqhttp.Cyan.Enums
+  nameWithType: cqhttp.Cyan.Enums
+  fullName: cqhttp.Cyan.Enums
+- uid: cqhttp.Cyan.Enums.PostType
+  commentId: T:cqhttp.Cyan.Enums.PostType
+  parent: cqhttp.Cyan.Enums
+  name: PostType
+  nameWithType: PostType
+  fullName: cqhttp.Cyan.Enums.PostType

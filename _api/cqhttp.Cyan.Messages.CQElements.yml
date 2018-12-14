@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Messages.CQElements
+  commentId: N:cqhttp.Cyan.Messages.CQElements
+  id: cqhttp.Cyan.Messages.CQElements
+  children:
+  - cqhttp.Cyan.Messages.CQElements.ElementEmoji
+  - cqhttp.Cyan.Messages.CQElements.ElementFace
+  - cqhttp.Cyan.Messages.CQElements.ElementImage
+  - cqhttp.Cyan.Messages.CQElements.ElementRecord
+  - cqhttp.Cyan.Messages.CQElements.ElementShake
+  - cqhttp.Cyan.Messages.CQElements.ElementText
+  langs:
+  - csharp
+  - vb
+  name: cqhttp.Cyan.Messages.CQElements
+  nameWithType: cqhttp.Cyan.Messages.CQElements
+  fullName: cqhttp.Cyan.Messages.CQElements
+  type: Namespace
+  assemblies:
+  - cqhttp.Cyan
+references:
+- uid: cqhttp.Cyan.Messages.CQElements.ElementEmoji
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementEmoji
+  name: ElementEmoji
+  nameWithType: ElementEmoji
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementEmoji
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFace
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementFace
+  name: ElementFace
+  nameWithType: ElementFace
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFace
+- uid: cqhttp.Cyan.Messages.CQElements.ElementImage
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementImage
+  name: ElementImage
+  nameWithType: ElementImage
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementImage
+- uid: cqhttp.Cyan.Messages.CQElements.ElementRecord
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementRecord
+  name: ElementRecord
+  nameWithType: ElementRecord
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementRecord
+- uid: cqhttp.Cyan.Messages.CQElements.ElementShake
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementShake
+  name: ElementShake
+  nameWithType: ElementShake
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementShake
+- uid: cqhttp.Cyan.Messages.CQElements.ElementText
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementText
+  name: ElementText
+  nameWithType: ElementText
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementText

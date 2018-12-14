@@ -1,0 +1,532 @@
+### YamlMime:ManagedReference
+items:
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  commentId: T:cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  id: CQEvent
+  parent: cqhttp.Cyan.Events.CQEvents.Base
+  children:
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  - cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  langs:
+  - csharp
+  - vb
+  name: CQEvent
+  nameWithType: CQEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  type: Class
+  source:
+    remote:
+      path: src/Events/CQEvents/Base/CQEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: CQEvent
+    path: src/Events/CQEvents/Base/CQEvent.cs
+    startLine: 9
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.Base
+  summary: "\nEvent指“事件上报”中的事件\n<see>https://cqhttp.cc/docs/4.6/#/Post</see>\n"
+  example: []
+  syntax:
+    content: public abstract class CQEvent
+    content.vb: Public MustInherit Class CQEvent
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
+  - cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
+  - cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent
+  - cqhttp.Cyan.Events.MetaEvents.LifecycleEvent
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  id: time
+  parent: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  langs:
+  - csharp
+  - vb
+  name: time
+  nameWithType: CQEvent.time
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/Base/CQEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: time
+    path: src/Events/CQEvents/Base/CQEvent.cs
+    startLine: 13
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.Base
+  summary: "\n时间戳\n"
+  example: []
+  syntax:
+    content: public long time { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property time As Long
+  overload: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  commentId: P:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  id: postType
+  parent: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  langs:
+  - csharp
+  - vb
+  name: postType
+  nameWithType: CQEvent.postType
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  type: Property
+  source:
+    remote:
+      path: src/Events/CQEvents/Base/CQEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: postType
+    path: src/Events/CQEvents/Base/CQEvent.cs
+    startLine: 17
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.Base
+  summary: "\n事件类型\n"
+  example: []
+  syntax:
+    content: public PostType postType { get; }
+    parameters: []
+    return:
+      type: cqhttp.Cyan.Enums.PostType
+    content.vb: Public ReadOnly Property postType As PostType
+  overload: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor
+  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor
+  id: '#ctor'
+  parent: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  langs:
+  - csharp
+  - vb
+  name: CQEvent()
+  nameWithType: CQEvent.CQEvent()
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.CQEvent()
+  type: Constructor
+  source:
+    remote:
+      path: src/Events/CQEvents/Base/CQEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Events/CQEvents/Base/CQEvent.cs
+    startLine: 21
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.Base
+  summary: "\n请勿默认构造，本项目中一切默认构造函数仅为测试所用\n"
+  example: []
+  syntax:
+    content: public CQEvent()
+    content.vb: Public Sub New
+  overload: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)
+  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)
+  id: '#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)'
+  parent: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
+  langs:
+  - csharp
+  - vb
+  name: CQEvent(Int64, PostType)
+  nameWithType: CQEvent.CQEvent(Int64, PostType)
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.CQEvent(System.Int64, cqhttp.Cyan.Enums.PostType)
+  type: Constructor
+  source:
+    remote:
+      path: src/Events/CQEvents/Base/CQEvent.cs
+      branch: master
+      repo: https://github.com/frankli0324/cqhttp.Cyan.git
+    id: .ctor
+    path: src/Events/CQEvents/Base/CQEvent.cs
+    startLine: 27
+  assemblies:
+  - cqhttp.Cyan
+  namespace: cqhttp.Cyan.Events.CQEvents.Base
+  summary: "\n底层构造事件\n"
+  example: []
+  syntax:
+    content: public CQEvent(long time, PostType postType)
+    parameters:
+    - id: time
+      type: System.Int64
+    - id: postType
+      type: cqhttp.Cyan.Enums.PostType
+    content.vb: Public Sub New(time As Long, postType As PostType)
+  overload: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: cqhttp.Cyan.Events.CQEvents.Base
+  commentId: N:cqhttp.Cyan.Events.CQEvents.Base
+  name: cqhttp.Cyan.Events.CQEvents.Base
+  nameWithType: cqhttp.Cyan.Events.CQEvents.Base
+  fullName: cqhttp.Cyan.Events.CQEvents.Base
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+  name: time
+  nameWithType: CQEvent.time
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.time
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+  name: postType
+  nameWithType: CQEvent.postType
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.postType
+- uid: cqhttp.Cyan.Enums.PostType
+  commentId: T:cqhttp.Cyan.Enums.PostType
+  parent: cqhttp.Cyan.Enums
+  name: PostType
+  nameWithType: PostType
+  fullName: cqhttp.Cyan.Enums.PostType
+- uid: cqhttp.Cyan.Enums
+  commentId: N:cqhttp.Cyan.Enums
+  name: cqhttp.Cyan.Enums
+  nameWithType: cqhttp.Cyan.Enums
+  fullName: cqhttp.Cyan.Enums
+- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor*
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor
+  name: CQEvent
+  nameWithType: CQEvent.CQEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.CQEvent
