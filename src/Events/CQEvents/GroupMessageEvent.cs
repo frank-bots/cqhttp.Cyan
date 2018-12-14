@@ -6,8 +6,10 @@ using Newtonsoft.Json.Linq;
 namespace cqhttp.Cyan.Events.CQEvents {
     /// <summary>收到群消息</summary>
     public class GroupMessageEvent : MessageEvent {
-        long group_id;
-        string sub_type;
+        /// <summary></summary>
+        public long group_id { get; private set; }
+        /// <summary></summary>
+        public string sub_type { get; private set; }
         /// <summary>群消息是否匿名</summary>
         public bool isAnonymous {
             get {
