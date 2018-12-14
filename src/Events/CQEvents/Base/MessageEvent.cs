@@ -1,9 +1,9 @@
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events.CQEvents.Base {
+namespace cqhttp.Cyan.Events.CQEvents.Base
+{
     /// <summary></summary>
     public abstract class MessageEvent : CQEvent {
         /// <summary></summary>

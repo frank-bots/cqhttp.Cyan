@@ -58,25 +58,16 @@ namespace cqhttp.Cyan.Messages {
 
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
-        /// <summary>
-        /// 将消息序列化便于发送或本地存储
-        /// </summary>
-        /// <remarks>
-        /// 依据参数<c>isSendJson</c>判断格式化的结果
-        /// </remarks>
         /// <param name="message">待序列化的消息</param>
         /// <param name="isSendJson">是否序列化为json格式，默认为true</param>
         /// <returns>序列化后的字符串</returns>
-        public static string Serialize (Message message, bool isSendJson = true) {
+        private static string Serialize (Message message, bool isSendJson = true) {
             if (isSendJson) return SerializeToJsonArray (message);
             else return SerializeToCQ (message);
         }
         /*
         asdf[CQ:image,file=DE69C8D4C54997FC5ECBE475153651BE.jpg,url=https://c2cpicdw.qpic.cn/offpic_new/745679136//73da0548-ac93-4d5e-abd8-71138f019b28/0?vuin=2956005355&amp;term=2]
          */
-        /// <summary>
-        /// 将收到或构造的消息反序列化以存储在内存中
-        /// </summary>
         /// <param name="message">字符串形式的消息</param>
         /// <param name="result">返回反序列化的结果,原消息为Json则为1,含CQ码则为-1,纯文本则为0</param>
         /// <returns>反序列化后的<c>Message</c>对象</returns>

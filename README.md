@@ -95,13 +95,11 @@ static void Main() {
     client.SendMessageAsync(
         MessageType.private_/group_/discuss_,
         qq号/群号/讨论组号,
-        new Message {
-            data=new List<Element> {
-                new ElementText("part1"),
-                new ElementFace(1),//1-170
-                new ElementText("part2")
-            }
-        }
+        new Message (
+            new ElementText("part1"),
+            new ElementFace(1),//1-170
+            new ElementText("part2")
+        )
     )
     //////////////////////
 }

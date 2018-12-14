@@ -1,7 +1,7 @@
 using cqhttp.Cyan.Enums;
-using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events.CQEvents.Base {
+namespace cqhttp.Cyan.Events.CQEvents.Base
+{
 
     /// <summary>
     /// Event指“事件上报”中的事件

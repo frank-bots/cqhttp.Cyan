@@ -9,12 +9,7 @@ using Newtonsoft.Json.Linq;
 namespace cqhttp.Cyan {
     class Program {
         static void Main (string[] args) {
-            // Tests.ElementBuild.Test();
-            //Examples.MessageBuild.Test();
-
-            //Examples.DeserializationTest.Test ();
             
-            Examples.ApiRequestTest.Test();
         }
     }
 }
