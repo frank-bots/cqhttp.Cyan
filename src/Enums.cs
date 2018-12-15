@@ -34,4 +34,10 @@ namespace cqhttp.Cyan.Enums {
         /// <summary>好友申请</summary>
         friend_add
     }
+    /// <summary>
+    /// 日志 严重性
+    /// </summary>
+    public enum Verbosity {
+        /**<summary/>*/OFF,/**<summary/>*/FATAL,/**<summary/>*/ERROR,/**<summary/>*/WARN,/**<summary/>*/INFO,/**<summary/>*/DEBUG,/**<summary/>*/ALL
+    }
 }
