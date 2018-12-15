@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
+using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.Events.EventListener {
     /// <summary></summary>
@@ -15,6 +16,7 @@ namespace cqhttp.Cyan.Events.EventListener {
         }
         /// <summary></summary>
         public override void StartListen (System.Func<CQEvents.Base.CQEvent, CQEvents.CQResponses.Base.CQResponse> callback) {
+            Logger.Log (Verbosity.INFO, $"建立与事件上报服务器{dest_url}的websocket连接");
             listen_callback = callback;
             lock (listen_lock) {
                 client.ConnectAsync (
@@ -42,7 +44,10 @@ namespace cqhttp.Cyan.Events.EventListener {
                     listen_callback (CQEventHandler.HandleEvent (Encoding.UTF8.GetString (message)))
                 ); //Websocket下不会处理响应！！！！！
             } catch (System.Exception e) {
-                System.Console.WriteLine (e.ToString ());
+                Logger.Log (
+                    Verbosity.ERROR,
+                    $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
+                );
             }
         }
     }

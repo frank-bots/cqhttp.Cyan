@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall;
 using cqhttp.Cyan.ApiCall.Requests.Base;
+using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 using Newtonsoft.Json;
@@ -41,12 +42,18 @@ namespace cqhttp.Cyan.Instance {
                         response = await httpClient.PostAsync (host + request.apiPath, content);
                     }
                 } catch (HttpRequestException) {
-                    //logger.log
+                    Logger.Log (
+                        Verbosity.ERROR,
+                        "HTTP API连接错误"
+                    );
                     throw new Exceptions.NetworkFailureException ("您有没有忘记插网线emmmmmm?");
                 }
                 if (response.IsSuccessStatusCode == false) {
-                    //logger.log
-                    throw new Exceptions.NetworkFailureException ($"POST调用api出错,HTTP code{response.StatusCode}");
+                    Logger.Log (
+                        Verbosity.ERROR,
+                        $"调用HTTP API{await content.ReadAsStringAsync()}得到了错误的返回值{response.StatusCode}"
+                    );
+                    throw new Exceptions.NetworkFailureException ($"POST调用api出错");
                 }
             }
             try {
@@ -55,7 +62,8 @@ namespace cqhttp.Cyan.Instance {
                 ).ToObject<ApiResponse> ();
                 return request.response;
             } catch (JsonException) {
-                throw new Exceptions.ErrorApicallException ($"调用api{request.apiPath}时返回值无法反序列化");
+                Logger.Log (Verbosity.ERROR, $"调用api{request.apiPath}时返回值无法反序列化");
+                throw new Exceptions.ErrorApicallException ($"返回值无法反序列化");
             }
         }
     }

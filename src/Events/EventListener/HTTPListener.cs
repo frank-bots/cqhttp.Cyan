@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
@@ -19,6 +20,10 @@ namespace cqhttp.Cyan.Events.EventListener {
         public HttpEventListener (int port, string secret = "") : base (secret) {
             listener = new HttpListener ();
             listener.Prefixes.Add ($"http://+:{port}/");
+            Logger.Log (
+                Verbosity.INFO,
+                $"准备监听来自端口{port}的http连接"
+            );
         }
         /// <summary></summary>
         public override void StartListen (Func<CQEvent, CQResponse> callback) {
@@ -44,9 +49,16 @@ namespace cqhttp.Cyan.Events.EventListener {
                         string requestContent = GetContent (secret, request);
                         if (string.IsNullOrEmpty (requestContent))
                             return;
-
-                        var responseObject =
-                            listen_callback (CQEventHandler.HandleEvent (requestContent));
+                        CQResponse responseObject = null;
+                        try {
+                            responseObject =
+                                listen_callback (CQEventHandler.HandleEvent (requestContent));
+                        } catch (Exception e) {
+                            Logger.Log (
+                                Verbosity.ERROR,
+                                $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
+                            );
+                        }
 
                         response.ContentType = "application/json";
                         if (responseObject != null) {
@@ -61,7 +73,10 @@ namespace cqhttp.Cyan.Events.EventListener {
                     }
                 });
             } catch (Exception e) {
-                Console.WriteLine (e.ToString ());
+                Logger.Log (
+                    Verbosity.ERROR,
+                    $"网络出现未知错误{e}"
+                );
             }
         }
         private static string GetContent (byte[] secret, HttpListenerRequest request) {

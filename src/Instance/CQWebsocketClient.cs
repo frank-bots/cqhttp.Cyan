@@ -4,9 +4,9 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using cqhttp.Cyan.ApiCall;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Events.EventListener;
+using cqhttp.Cyan.Enums;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Instance {
@@ -43,6 +43,7 @@ namespace cqhttp.Cyan.Instance {
                 $"{{\"action\":\"{request.apiPath.Substring(1)}\","+
                 $"\"params\":{request.content},"+
                 $"\"echo\":{time}}}";
+            Logger.Log(Verbosity.DEBUG,$"向{dest}发送数据{constructor}调用API");
             await current.SendAsync (
                 buffer: Encoding.UTF8.GetBytes (constructor),
                 messageType: WebSocketMessageType.Text,
@@ -60,6 +61,7 @@ namespace cqhttp.Cyan.Instance {
             return JToken.Parse (constructor).ToObject<ApiResponse> ();
         }
         private async static void CleanUp () {
+            Logger.Log (Verbosity.INFO, "开始关闭Websocket连接");
             foreach (var i in pool) {
                 await i.Value.CloseAsync (
                     closeStatus: WebSocketCloseStatus.NormalClosure,
