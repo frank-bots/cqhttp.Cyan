@@ -26,17 +26,14 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public string raw_data_cq {
             get {
                 if (type == "text")
-                    return data["text"].
-                        Replace ("\n", "\\n").
-                        Replace ("\t", "\\t").
-                        Replace ("\"", "\\\"");
+                    return Config.asJsonStringVariable(data["text"]);
                 string paramBuilder = "";
                 foreach (var i in data)
                     paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
-                return string.Format (
+                return Config.asJsonStringVariable(string.Format (
                     "[CQ:{0}{1}]",
                     type, paramBuilder.TrimEnd (' ')
-                );
+                ));
             }
         }
 
@@ -48,7 +45,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
             get {
                 string builder = $"{{\"type\":\"{type}\",\"data\":"+(data.Count!=0?$"{{":"\"");
                 foreach (var i in data)
-                    builder += $"\"{i.Key}\":\"{i.Value.Replace("\"","\\\"")}\",";
+                    builder += $"\"{i.Key}\":\"{Config.asJsonStringVariable(i.Value)}\",";
                 return builder.TrimEnd (',', ' ')+(data.Count!=0?$"}}": "\"")+$"}}";
                 //。。。不这么写的话我的代码格式化插件就会崩掉
             }
