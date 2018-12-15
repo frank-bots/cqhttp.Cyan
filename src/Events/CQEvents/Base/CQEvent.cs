@@ -20,7 +20,7 @@ namespace cqhttp.Cyan.Events.CQEvents.Base
         /// 请勿默认构造，本项目中一切默认构造函数仅为测试所用
         /// </summary>
         public CQEvent () {
-            throw new NullEventException ("调用了Event()");
+            throw new Exceptions.NullEventException ("调用了Event()");
         }
         /// <summary>
         /// 底层构造事件

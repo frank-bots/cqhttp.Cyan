@@ -33,7 +33,7 @@ namespace cqhttp.Cyan.Instance {
         public CQApiClient (string accessUrl, string accessToken = "") {
             this.accessToken = accessToken;
             this.accessUrl = accessUrl;
-            if (!Initiate ().Result) throw new ErrorApicallException ();
+            if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
         }
         private async Task<bool> Initiate () {
             ApiResponse loginInfo = await SendRequestAsync (new GetLoginInfoRequest ());

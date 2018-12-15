@@ -42,11 +42,11 @@ namespace cqhttp.Cyan.Instance {
                     }
                 } catch (HttpRequestException) {
                     //logger.log
-                    throw new NetworkFailureException ("您有没有忘记插网线emmmmmm?");
+                    throw new Exceptions.NetworkFailureException ("您有没有忘记插网线emmmmmm?");
                 }
                 if (response.IsSuccessStatusCode == false) {
                     //logger.log
-                    throw new NetworkFailureException ($"POST调用api出错,HTTP code{response.StatusCode}");
+                    throw new Exceptions.NetworkFailureException ($"POST调用api出错,HTTP code{response.StatusCode}");
                 }
             }
             try {
@@ -55,7 +55,7 @@ namespace cqhttp.Cyan.Instance {
                 ).ToObject<ApiResponse> ();
                 return request.response;
             } catch (JsonException) {
-                throw new ErrorApicallException ($"调用api{request.apiPath}时返回值无法反序列化");
+                throw new Exceptions.ErrorApicallException ($"调用api{request.apiPath}时返回值无法反序列化");
             }
         }
     }

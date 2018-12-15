@@ -54,7 +54,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// 请勿调用默认构造函数
         /// </summary>
         protected Element () {
-            throw new NullElementException ("调用了Element()");
+            throw new Exceptions.NullElementException ("调用了Element()");
         }
         /// <summary>
         /// 手动构造一个消息段，一般用不到

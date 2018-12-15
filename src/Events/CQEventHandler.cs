@@ -22,7 +22,7 @@ namespace cqhttp.Cyan.Events {
             try {
                 eventJson = JObject.Parse (e);
             } catch (JsonException) {
-                throw new ErrorEventException ("收到了错误的上报消息");
+                throw new Exceptions.ErrorEventException ("收到了错误的上报消息");
             }
             post_type = eventJson["post_type"].ToString ();
             switch (post_type) {
@@ -45,10 +45,10 @@ namespace cqhttp.Cyan.Events {
                                 eventJson["status"].ToObject<Status> ()
                             );
                         default:
-                            throw new ErrorEventException ("未能解析元事件");
+                            throw new Exceptions.ErrorEventException ("未能解析元事件");
                     }
             }
-            throw new NullEventException ($"未能解析type为{post_type}的event");
+            throw new Exceptions.NullEventException ($"未能解析type为{post_type}的event");
         }
 
         private static MessageEvent HandleMessage (ref JObject e) {
@@ -80,7 +80,7 @@ namespace cqhttp.Cyan.Events {
                         e["discuss_id"].ToObject<long> ()
                     );
             }
-            throw new ErrorEventException ("未能解析消息(message)事件");
+            throw new Exceptions.ErrorEventException ("未能解析消息(message)事件");
         }
         private static CQEvent HandleRequest (ref JObject e) {
             string request_type = e["request_type"].ToString();
@@ -101,7 +101,7 @@ namespace cqhttp.Cyan.Events {
                         e["flag"].ToString()
                     );
             }
-            throw new ErrorEventException("未能解析请求(request)事件");
+            throw new Exceptions.ErrorEventException("未能解析请求(request)事件");
         }
 
         private static CQEvent HandleNotice (ref JObject e) {
@@ -137,7 +137,7 @@ namespace cqhttp.Cyan.Events {
                         e["user_id"].ToObject<long>()
                     );
             }
-            throw new ErrorEventException ("未能解析提醒(notice)事件");
+            throw new Exceptions.ErrorEventException ("未能解析提醒(notice)事件");
         }
 
     }

@@ -1,6 +1,6 @@
 using System;
 
-namespace cqhttp.Cyan {
+namespace cqhttp.Cyan.Exceptions {
     /// <summary>
     /// 调用了空构造函数，不能构造空对象
     /// </summary>
