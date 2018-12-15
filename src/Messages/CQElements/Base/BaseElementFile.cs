@@ -66,7 +66,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
             try {
                 this.fileUrl = data["file"];
             } catch (KeyNotFoundException) {
-                throw new ErrorElementException ("data中没有file段***");
+                throw new Exceptions.ErrorElementException ("data中没有file段***");
             }
         }
         /// <summary>

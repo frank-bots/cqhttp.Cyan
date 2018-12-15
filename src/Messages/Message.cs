@@ -177,10 +177,10 @@ namespace cqhttp.Cyan.Messages {
                         return new ElementShake ();
                 }
             } catch (KeyNotFoundException) {
-                throw new ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
+                throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
             }
 
-            throw new NullElementException ($"未能解析type为{type}的元素");
+            throw new Exceptions.NullElementException ($"未能解析type为{type}的元素");
         }
     }
 

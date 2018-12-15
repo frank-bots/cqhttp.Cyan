@@ -38,7 +38,8 @@ namespace cqhttp.Cyan.ApiCall.Requests
                         messageType = idKey = "";
                         break;
                 }
-                if (messageType.Length == 0) throw new ErrorApicallException ("what?");
+                if (messageType.Length == 0) 
+                    throw new Exceptions.ErrorApicallException ("what?");
                 string constructer =
                     $"{{\"message_type\":\"{messageType}\","+
                     $"\"{idKey}\":{this.target_id},"+

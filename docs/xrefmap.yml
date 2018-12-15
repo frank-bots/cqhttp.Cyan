@@ -247,6 +247,19 @@ references:
   commentId: F:cqhttp.Cyan.Config.apiToken
   fullName: cqhttp.Cyan.Config.apiToken
   nameWithType: Config.apiToken
+- uid: cqhttp.Cyan.Config.asJsonStringVariable(System.String)
+  name: asJsonStringVariable(String)
+  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_asJsonStringVariable_System_String_
+  commentId: M:cqhttp.Cyan.Config.asJsonStringVariable(System.String)
+  fullName: cqhttp.Cyan.Config.asJsonStringVariable(System.String)
+  nameWithType: Config.asJsonStringVariable(String)
+- uid: cqhttp.Cyan.Config.asJsonStringVariable*
+  name: asJsonStringVariable
+  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_asJsonStringVariable_
+  commentId: Overload:cqhttp.Cyan.Config.asJsonStringVariable
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Config.asJsonStringVariable
+  nameWithType: Config.asJsonStringVariable
 - uid: cqhttp.Cyan.Config.isSendJson
   name: isSendJson
   href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_isSendJson
@@ -1551,6 +1564,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.GroupMessageEvent
   nameWithType: GroupMessageEvent.GroupMessageEvent
+- uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.group_id
+  name: group_id
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_group_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.group_id
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.group_id
+  nameWithType: GroupMessageEvent.group_id
+- uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.group_id*
+  name: group_id
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_group_id_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.group_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.group_id
+  nameWithType: GroupMessageEvent.group_id
 - uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.isAnonymous
   name: isAnonymous
   href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_isAnonymous
@@ -1564,6 +1590,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.isAnonymous
   nameWithType: GroupMessageEvent.isAnonymous
+- uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type
+  name: sub_type
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_sub_type
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type
+  nameWithType: GroupMessageEvent.sub_type
+- uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type*
+  name: sub_type
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_sub_type_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type
+  nameWithType: GroupMessageEvent.sub_type
 - uid: cqhttp.Cyan.Events.CQEvents.GroupSender
   name: GroupSender
   href: api/cqhttp.Cyan.Events.CQEvents.GroupSender.html
@@ -1685,6 +1724,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.PrivateMessageEvent
   nameWithType: PrivateMessageEvent.PrivateMessageEvent
+- uid: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.sender_id
+  name: sender_id
+  href: api/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.html#cqhttp_Cyan_Events_CQEvents_PrivateMessageEvent_sender_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.sender_id
+  fullName: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.sender_id
+  nameWithType: PrivateMessageEvent.sender_id
+- uid: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.sender_id*
+  name: sender_id
+  href: api/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.html#cqhttp_Cyan_Events_CQEvents_PrivateMessageEvent_sender_id_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.sender_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.sender_id
+  nameWithType: PrivateMessageEvent.sender_id
 - uid: cqhttp.Cyan.Events.EventListener
   name: cqhttp.Cyan.Events.EventListener
   href: api/cqhttp.Cyan.Events.EventListener.html
@@ -2643,6 +2695,32 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.Message.Deserialize
   nameWithType: Message.Deserialize
+- uid: cqhttp.Cyan.Messages.Message.Equals(System.Object)
+  name: Equals(Object)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Equals_System_Object_
+  commentId: M:cqhttp.Cyan.Messages.Message.Equals(System.Object)
+  fullName: cqhttp.Cyan.Messages.Message.Equals(System.Object)
+  nameWithType: Message.Equals(Object)
+- uid: cqhttp.Cyan.Messages.Message.Equals*
+  name: Equals
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Equals_
+  commentId: Overload:cqhttp.Cyan.Messages.Message.Equals
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.Message.Equals
+  nameWithType: Message.Equals
+- uid: cqhttp.Cyan.Messages.Message.GetHashCode
+  name: GetHashCode()
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_GetHashCode
+  commentId: M:cqhttp.Cyan.Messages.Message.GetHashCode
+  fullName: cqhttp.Cyan.Messages.Message.GetHashCode()
+  nameWithType: Message.GetHashCode()
+- uid: cqhttp.Cyan.Messages.Message.GetHashCode*
+  name: GetHashCode
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_GetHashCode_
+  commentId: Overload:cqhttp.Cyan.Messages.Message.GetHashCode
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.Message.GetHashCode
+  nameWithType: Message.GetHashCode
 - uid: cqhttp.Cyan.Messages.Message.op_Addition(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.CQElements.Base.Element)
   name: Addition(Message, Element)
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Addition_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Messages_CQElements_Base_Element_
@@ -2662,6 +2740,32 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.Message.Addition
   nameWithType: Message.Addition
+- uid: cqhttp.Cyan.Messages.Message.op_Equality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
+  name: Equality(Message, Message)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Equality_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Messages_Message_
+  commentId: M:cqhttp.Cyan.Messages.Message.op_Equality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
+  fullName: cqhttp.Cyan.Messages.Message.Equality(cqhttp.Cyan.Messages.Message, cqhttp.Cyan.Messages.Message)
+  nameWithType: Message.Equality(Message, Message)
+- uid: cqhttp.Cyan.Messages.Message.op_Equality*
+  name: Equality
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Equality_
+  commentId: Overload:cqhttp.Cyan.Messages.Message.op_Equality
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.Message.Equality
+  nameWithType: Message.Equality
+- uid: cqhttp.Cyan.Messages.Message.op_Inequality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
+  name: Inequality(Message, Message)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Inequality_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Messages_Message_
+  commentId: M:cqhttp.Cyan.Messages.Message.op_Inequality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
+  fullName: cqhttp.Cyan.Messages.Message.Inequality(cqhttp.Cyan.Messages.Message, cqhttp.Cyan.Messages.Message)
+  nameWithType: Message.Inequality(Message, Message)
+- uid: cqhttp.Cyan.Messages.Message.op_Inequality*
+  name: Inequality
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Inequality_
+  commentId: Overload:cqhttp.Cyan.Messages.Message.op_Inequality
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.Message.Inequality
+  nameWithType: Message.Inequality
 - uid: cqhttp.Cyan.Messages.Message.raw_data_cq
   name: raw_data_cq
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_raw_data_cq

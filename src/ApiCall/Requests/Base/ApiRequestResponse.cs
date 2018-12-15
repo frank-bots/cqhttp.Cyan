@@ -15,12 +15,12 @@ namespace cqhttp.Cyan.ApiCall.Requests.Base {
         public ApiResponse response;
         /// <summary></summary>
         public ApiRequest () {
-            throw new NullApicallException ();
+            throw new Exceptions.NullApicallException ();
         }
         /// <summary></summary>
         public ApiRequest (string r) => apiPath = r;
         /// <summary></summary>
-        virtual public string content { get { throw new NullApicallException (); } }
+        virtual public string content { get { throw new Exceptions.NullApicallException (); } }
     }
     /// <summary>
     /// 调用API时cqhttp的响应
