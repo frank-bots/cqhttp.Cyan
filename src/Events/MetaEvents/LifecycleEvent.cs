@@ -1,7 +1,7 @@
 using cqhttp.Cyan.Events.CQEvents.Base;
 namespace cqhttp.Cyan.Events.MetaEvents {
     /// <summary></summary>
-    public class LifecycleEvent : CQEvent {
+    public class LifecycleEvent : MetaEvent {
         /// <summary></summary>
         public bool enabled { get; private set; }
         /// <summary></summary>

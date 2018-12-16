@@ -12,7 +12,5 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
                 this.noticeType = noticeType;
                 this.user_id = user_id;
             }
-        /// <summary></summary>
-        public NoticeEvent () : base () { }
     }
 }

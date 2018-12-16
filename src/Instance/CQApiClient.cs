@@ -28,7 +28,7 @@ namespace cqhttp.Cyan.Instance {
         /// 当前实例的QQ昵称
         /// </summary>
         public string self_nick { get; private set; }
-        
+
         /// <summary></summary>
         public CQApiClient (string accessUrl, string accessToken = "") {
             this.accessToken = accessToken;
@@ -65,16 +65,19 @@ namespace cqhttp.Cyan.Instance {
             ));
         }
 
-//////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////
         /// <summary></summary>
         public CQEventListener __eventListener;
         /// <summary></summary>
+        public delegate CQResponse OnEvent (CQApiClient client, CQEvent eventObj);
+        /// <summary></summary>
         public event OnEvent OnEventDelegate;
         /// <summary></summary>
-        public CQResponse __HandleEvent(CQEvent event_){
-            return OnEventDelegate(this, event_);
+        public CQResponse __HandleEvent (CQEvent event_) {
+            if (event_ is Events.MetaEvents.MetaEvent) {
+                
+            }
+            return OnEventDelegate (this, event_);
         }
     }
-    /// <summary></summary>
-    public delegate CQResponse OnEvent (CQApiClient client, CQEvent eventObj);
 }

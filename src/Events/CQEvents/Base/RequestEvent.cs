@@ -6,8 +6,6 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
         /// <summary>操作者ID(发起邀请者)</summary>
         public long user_id { get; private set; }
         /// <summary></summary>
-        public RequestEvent () : base () { }
-        /// <summary></summary>
         public RequestEvent (long time, long user_id) : base (time, Enums.PostType.request) {
             this.user_id = user_id;
         }

@@ -9,9 +9,6 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public string comment { get; private set; }
         /// <summary>请求 flag，在调用处理请求的 API 时需要传入</summary>
         public string flag { get; private set; }
-
-        /// <summary></summary>
-        public FriendAddRequestEvent () : base () { }
         /// <summary></summary>
         public FriendAddRequestEvent (long time, long user_id, string comment, string flag):
             base (time, user_id) {

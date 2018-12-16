@@ -2,7 +2,7 @@ using cqhttp.Cyan.Events.CQEvents.Base;
 
 namespace cqhttp.Cyan.Events.MetaEvents {
     /// <summary>心跳包，请在设置中开启</summary>
-    public class HeartbeatEvent : CQEvent {
+    public class HeartbeatEvent : MetaEvent {
         /// <summary></summary>
         public Status status { get; private set; }
         /// <summary></summary>
