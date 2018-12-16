@@ -12,8 +12,6 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// </summary>
         public long operator_id { get; private set; }
         /// <summary></summary>
-        public GroupMemberChangeEvent () : base () { }
-        /// <summary></summary>
         public GroupMemberChangeEvent (
             long time, long group_id, long user_id, 
             long operator_id, bool isAdd, string sub_type):

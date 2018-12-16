@@ -17,8 +17,6 @@ namespace cqhttp.Cyan.Events.CQEvents.Base
         /// <summary>字体</summary>
         public int font { get; private set; }
         /// <summary></summary>
-        public MessageEvent () : base () { }
-        /// <summary></summary>
         public MessageEvent (
                 long time,
                 MessageType messageType,

@@ -11,9 +11,6 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public string comment { get; private set; }
         /// <summary>请求 flag，在调用处理请求的 API 时需要传入</summary>
         public string flag { get; private set; }
-
-        /// <summary></summary>
-        public GroupAddRequestEvent () : base () { }
         /// <summary></summary>
         public GroupAddRequestEvent (long time, long user_id, long group_id, string comment, string flag):
             base (time, user_id) {

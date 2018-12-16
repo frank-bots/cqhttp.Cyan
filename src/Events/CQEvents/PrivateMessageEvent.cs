@@ -17,7 +17,5 @@ namespace cqhttp.Cyan.Events.CQEvents {
             base (time, Enums.MessageType.private_, sender, message, message_id) {
                 this.sender_id = sender.user_id;
             }
-        /// <summary></summary>
-        public PrivateMessageEvent () : base () { }
     }
 }

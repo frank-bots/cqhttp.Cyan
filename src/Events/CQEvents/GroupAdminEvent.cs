@@ -8,8 +8,6 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// </summary>
         public bool isSet { get; private set; }
         /// <summary></summary>
-        public GroupAdminEvent () : base () { }
-        /// <summary></summary>
         public GroupAdminEvent (long time, long group_id, long user_id, bool isSet):
             base (time, Enums.NoticeType.group_admin, group_id, user_id) {
                 this.isSet = isSet;

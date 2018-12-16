@@ -4,8 +4,6 @@ namespace cqhttp.Cyan.Events.CQEvents {
     /// </summary>
     public class FriendAddEvent : Base.NoticeEvent {
         /// <summary></summary>
-        public FriendAddEvent () : base () { }
-        /// <summary></summary>
         public FriendAddEvent (long time, long user_id):
             base (time, Enums.NoticeType.friend_add, user_id) { }
     }

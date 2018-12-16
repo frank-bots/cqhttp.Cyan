@@ -37,12 +37,6 @@ references:
   commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
   fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest
   nameWithType: ApiRequest
-- uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor
-  name: ApiRequest()
-  href: api/cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest__ctor
-  commentId: M:cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor
-  fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.ApiRequest()
-  nameWithType: ApiRequest.ApiRequest()
 - uid: cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.#ctor(System.String)
   name: ApiRequest(String)
   href: api/cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest__ctor_System_String_
@@ -133,6 +127,37 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Requests.Base.ApiResponse.status
   nameWithType: ApiResponse.status
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest
+  name: SetGroupMemberStatusRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest
+  nameWithType: SetGroupMemberStatusRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor(System.String,System.Int64,System.Int64)
+  name: SetGroupMemberStatusRequest(String, Int64, Int64)
+  href: api/cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_System_String_System_Int64_System_Int64_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor(System.String,System.Int64,System.Int64)
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.SetGroupMemberStatusRequest(System.String, System.Int64, System.Int64)
+  nameWithType: SetGroupMemberStatusRequest.SetGroupMemberStatusRequest(String, Int64, Int64)
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor*
+  name: SetGroupMemberStatusRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.SetGroupMemberStatusRequest
+  nameWithType: SetGroupMemberStatusRequest.SetGroupMemberStatusRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.group_id
+  name: group_id
+  href: api/cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest_group_id
+  commentId: F:cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.group_id
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.group_id
+  nameWithType: SetGroupMemberStatusRequest.group_id
+- uid: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.user_id
+  name: user_id
+  href: api/cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest_user_id
+  commentId: F:cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.user_id
+  fullName: cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.user_id
+  nameWithType: SetGroupMemberStatusRequest.user_id
 - uid: cqhttp.Cyan.ApiCall.Requests.DeleteMsgRequest
   name: DeleteMsgRequest
   href: api/cqhttp.Cyan.ApiCall.Requests.DeleteMsgRequest.html
@@ -203,12 +228,6 @@ references:
   commentId: T:cqhttp.Cyan.ApiCall.Requests.SendmsgRequest
   fullName: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest
   nameWithType: SendmsgRequest
-- uid: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.#ctor
-  name: SendmsgRequest()
-  href: api/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.html#cqhttp_Cyan_ApiCall_Requests_SendmsgRequest__ctor
-  commentId: M:cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.#ctor
-  fullName: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.SendmsgRequest()
-  nameWithType: SendmsgRequest.SendmsgRequest()
 - uid: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.#ctor(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
   name: SendmsgRequest(MessageType, Int64, Message)
   href: api/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.html#cqhttp_Cyan_ApiCall_Requests_SendmsgRequest__ctor_cqhttp_Cyan_Enums_MessageType_System_Int64_cqhttp_Cyan_Messages_Message_
@@ -235,6 +254,102 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.content
   nameWithType: SendmsgRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest
+  name: SetGroupBanRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest
+  nameWithType: SetGroupBanRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.#ctor(System.Int64,System.Int64,System.Int64)
+  name: SetGroupBanRequest(Int64, Int64, Int64)
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupBanRequest__ctor_System_Int64_System_Int64_System_Int64_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.#ctor(System.Int64,System.Int64,System.Int64)
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.SetGroupBanRequest(System.Int64, System.Int64, System.Int64)
+  nameWithType: SetGroupBanRequest.SetGroupBanRequest(Int64, Int64, Int64)
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.#ctor*
+  name: SetGroupBanRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupBanRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.SetGroupBanRequest
+  nameWithType: SetGroupBanRequest.SetGroupBanRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.content
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupBanRequest_content
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.content
+  nameWithType: SetGroupBanRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.content*
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupBanRequest_content_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.content
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.content
+  nameWithType: SetGroupBanRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest
+  name: SetGroupCardRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest
+  nameWithType: SetGroupCardRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.#ctor(System.Int64,System.Int64,System.String)
+  name: SetGroupCardRequest(Int64, Int64, String)
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupCardRequest__ctor_System_Int64_System_Int64_System_String_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.#ctor(System.Int64,System.Int64,System.String)
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.SetGroupCardRequest(System.Int64, System.Int64, System.String)
+  nameWithType: SetGroupCardRequest.SetGroupCardRequest(Int64, Int64, String)
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.#ctor*
+  name: SetGroupCardRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupCardRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.SetGroupCardRequest
+  nameWithType: SetGroupCardRequest.SetGroupCardRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.content
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupCardRequest_content
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.content
+  nameWithType: SetGroupCardRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.content*
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupCardRequest_content_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.content
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.content
+  nameWithType: SetGroupCardRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest
+  name: SetGroupKickRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest
+  nameWithType: SetGroupKickRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.#ctor(System.Int64,System.Int64,System.Boolean)
+  name: SetGroupKickRequest(Int64, Int64, Boolean)
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest__ctor_System_Int64_System_Int64_System_Boolean_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.#ctor(System.Int64,System.Int64,System.Boolean)
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.SetGroupKickRequest(System.Int64, System.Int64, System.Boolean)
+  nameWithType: SetGroupKickRequest.SetGroupKickRequest(Int64, Int64, Boolean)
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.#ctor*
+  name: SetGroupKickRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.SetGroupKickRequest
+  nameWithType: SetGroupKickRequest.SetGroupKickRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.content
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest_content
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.content
+  nameWithType: SetGroupKickRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.content*
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html#cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest_content_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.content
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.content
+  nameWithType: SetGroupKickRequest.content
 - uid: cqhttp.Cyan.Config
   name: Config
   href: api/cqhttp.Cyan.Config.html

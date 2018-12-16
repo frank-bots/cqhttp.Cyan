@@ -29,8 +29,6 @@ namespace cqhttp.Cyan.Events.CQEvents {
                 this.group_id = group_id;
                 this.sub_type = sub_type;
             }
-        /// <summary></summary>
-        public GroupMessageEvent () : base () { }
     }
     /// <summary>
     /// 群消息发送者信息，匿名时无参考价值

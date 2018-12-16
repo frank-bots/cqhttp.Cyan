@@ -18,7 +18,5 @@ namespace cqhttp.Cyan.Events.CQEvents {
             base (time, Enums.MessageType.group_, sender, message, message_id) {
                 this.discuss_id = discuss_id;
             }
-        /// <summary></summary>
-        public DiscussMessageEvent () : base () { }
     }
 }
