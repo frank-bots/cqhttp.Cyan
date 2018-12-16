@@ -1,15 +1,12 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Enums;
 
-namespace cqhttp.Cyan.ApiCall.Requests
-{
+namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary></summary>
     public class SendmsgRequest : ApiRequest {
         long target_id;
         MessageType messageType;
         Messages.Message toSend;
-        /// <summary></summary>
-        public SendmsgRequest () : base () { }
         /// <summary></summary>
         public SendmsgRequest (MessageType messageType, long target_id, Messages.Message toSend):
             base ("/send_msg") {
@@ -38,12 +35,12 @@ namespace cqhttp.Cyan.ApiCall.Requests
                         messageType = idKey = "";
                         break;
                 }
-                if (messageType.Length == 0) 
+                if (messageType.Length == 0)
                     throw new Exceptions.ErrorApicallException ("what?");
                 string constructer =
                     $"{{\"message_type\":\"{messageType}\","+
                     $"\"{idKey}\":{this.target_id},"+
-                    $"\"message\":{toSend.ToString()}}}";
+                    $"\"message\":{Config.asJsonStringVariable(toSend.ToString())}}}";
 
                 return constructer;
             }

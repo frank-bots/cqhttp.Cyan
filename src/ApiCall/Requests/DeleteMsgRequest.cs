@@ -13,7 +13,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         /// <summary></summary>
         public override string content {
             get {
-                return $"{{message_id:{message_id}}}";
+                return $"{{\"message_id\":{message_id}}}";
             }
         }
     }
