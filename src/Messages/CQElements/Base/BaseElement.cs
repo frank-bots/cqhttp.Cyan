@@ -26,14 +26,14 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public string raw_data_cq {
             get {
                 if (type == "text")
-                    return Config.asJsonStringVariable(data["text"]);
+                    return data["text"];
                 string paramBuilder = "";
                 foreach (var i in data)
                     paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
-                return Config.asJsonStringVariable(string.Format (
+                return string.Format (
                     "[CQ:{0}{1}]",
                     type, paramBuilder.TrimEnd (' ')
-                ));
+                );
             }
         }
 

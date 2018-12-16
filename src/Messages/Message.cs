@@ -81,7 +81,7 @@ namespace cqhttp.Cyan.Messages {
         /// <returns>序列化后的字符串</returns>
         private static string Serialize (Message message, bool isSendJson = true) {
             if (isSendJson) return SerializeToJsonArray (message);
-            else return SerializeToCQ (message);
+            else return "\"" + Config.asJsonStringVariable (SerializeToCQ (message)) + "\"";
         }
         /*
         asdf[CQ:image,file=DE69C8D4C54997FC5ECBE475153651BE.jpg,url=https://c2cpicdw.qpic.cn/offpic_new/745679136//73da0548-ac93-4d5e-abd8-71138f019b28/0?vuin=2956005355&amp;term=2]
@@ -158,10 +158,10 @@ namespace cqhttp.Cyan.Messages {
         /// <param name="message"></param>
         /// <returns>序列化后的CQ码</returns>
         private static string SerializeToCQ (Message message) {
-            string cqBuild = "\"";
+            string cqBuild = "";
             foreach (Element i in message.data)
                 cqBuild += i.raw_data_cq;
-            return cqBuild + "\"";
+            return cqBuild;
         }
 
         private static Element BuildCQElement (string cqcode) {
