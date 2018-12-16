@@ -6,6 +6,7 @@ using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
+using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Instance {
@@ -28,6 +29,10 @@ namespace cqhttp.Cyan.Instance {
         /// 当前实例的QQ昵称
         /// </summary>
         public string self_nick { get; private set; }
+        /// <summary>
+        /// 表示插件是否正常运行
+        /// </summary>
+        public bool alive { get; private set; }
 
         /// <summary></summary>
         public CQApiClient (string accessUrl, string accessToken = "") {
@@ -67,15 +72,26 @@ namespace cqhttp.Cyan.Instance {
 
         //////////////////////////////////////////////////////////////////////////////////////
         /// <summary></summary>
-        public CQEventListener __eventListener;
+        protected CQEventListener __eventListener;
         /// <summary></summary>
         public delegate CQResponse OnEvent (CQApiClient client, CQEvent eventObj);
         /// <summary></summary>
         public event OnEvent OnEventDelegate;
         /// <summary></summary>
-        public CQResponse __HandleEvent (CQEvent event_) {
-            if (event_ is Events.MetaEvents.MetaEvent) {
-                
+        protected CQResponse __HandleEvent (CQEvent event_) {
+            Logger.Log (Verbosity.INFO, $"收到了完整的上报事件{event_.postType}");
+            if (event_ is MetaEvent) {
+                if (event_ is HeartbeatEvent) {
+                    if ((event_ as HeartbeatEvent).status.online)
+                        alive = true;
+                    else alive = false;
+                } else if (event_ is LifecycleEvent) {
+                    if ((event_ as LifecycleEvent).enabled)
+                        alive = true;
+                    else alive = false;
+                }
+                Logger.Log(Verbosity.INFO,$"根据元事件判定cqhttp状态是否正常:{alive}");
+                return new Events.CQEvents.CQResponses.EmptyResponse ();
             }
             return OnEventDelegate (this, event_);
         }
