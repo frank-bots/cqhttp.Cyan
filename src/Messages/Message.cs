@@ -179,6 +179,8 @@ namespace cqhttp.Cyan.Messages {
                         return new ElementText (dict["text"]);
                     case "image":
                         return new ElementImage (dict["url"]);
+                    case "at":
+                        return new ElementAt (long.Parse (dict["qq"]));
                     case "record":
                         return new ElementRecord (dict["file"]);
                     case "face":
@@ -186,6 +188,7 @@ namespace cqhttp.Cyan.Messages {
                         return new ElementEmoji (int.Parse (dict["id"]));
                     case "shake":
                         return new ElementShake ();
+
                 }
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
