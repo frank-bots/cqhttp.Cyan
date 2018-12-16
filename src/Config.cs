@@ -34,10 +34,11 @@ namespace cqhttp.Cyan {
         public static void SetToken (string token) => apiToken = token;
         /// <summary>将字符串转义为json值</summary>
         public static string asJsonStringVariable (string str) =>
-            str.Replace ("\"", "\\\"")
+            str
+                .Replace("\\","\\\\")
+                .Replace ("\"", "\\\"")
                 .Replace ("\n", "\\n")
                 .Replace("\r","\\r")
-                .Replace("\\","\\\\")
                 ;
     }
 }
