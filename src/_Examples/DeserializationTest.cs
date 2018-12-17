@@ -13,10 +13,9 @@ namespace cqhttp.Cyan.Examples {
         /// 
         /// </summary>
         public static void Test () {
-            short res;
-            Message test = Message.Deserialize ("asdf", out res);
+            Message test = Message.Parse ("asdf");
 
-            test = Message.Deserialize ("[CQ:image,url=asdf.net]asdf[CQ:image,url=asdf.net]", out res);
+            test = Message.Parse ("[CQ:image,url=asdf.net]asdf[CQ:image,url=asdf.net]");
 
             // 昵称为user，QQ号为987654321的用户向QQ号为123456789的bot发送了"asdf"文字消息
             string messageEvent = "{\"font\":31108208,\"message\":\"asdf\",\"message_id\":1000,\"message_type\":\"private\",\"post_type\":\"message\",\"raw_message\":\"asdf\",\"self_id\":123456789,\"sender\":{\"age\":1,\"nickname\":\"user\",\"sex\":\"male\",\"user_id\":987654321},\"sub_type\":\"friend\",\"time\":1500000000,\"user_id\":987654321}";

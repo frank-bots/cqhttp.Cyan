@@ -87,9 +87,14 @@ namespace cqhttp.Cyan.Messages {
         asdf[CQ:image,file=DE69C8D4C54997FC5ECBE475153651BE.jpg,url=https://c2cpicdw.qpic.cn/offpic_new/745679136//73da0548-ac93-4d5e-abd8-71138f019b28/0?vuin=2956005355&amp;term=2]
          */
         /// <param name="message">字符串形式的消息</param>
+        public static Message Parse (string message) {
+            short temp; //suppress format result
+            return Deserialize (message, out temp);
+        }
         /// <param name="result">返回反序列化的结果,原消息为Json则为1,含CQ码则为-1,纯文本则为0</param>
         /// <returns>反序列化后的<c>Message</c>对象</returns>
-        public static Message Deserialize (string message, out short result) {
+        /// <param name="message"/>
+        private static Message Deserialize (string message, out short result) {
             Message ret = new Message { data = new List<Element> () };
 
             Logger.Log (
