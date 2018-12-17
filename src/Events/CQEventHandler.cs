@@ -60,12 +60,11 @@ namespace cqhttp.Cyan.Events {
 
         private static MessageEvent HandleMessage (ref JObject e) {
             string sub_type = e["message_type"].ToString ();
-            short temp;
             switch (sub_type) {
                 case "private":
                     return new PrivateMessageEvent (
                         e["time"].ToObject<long> (),
-                        Message.Deserialize (e["message"].ToString (), out temp),
+                        Message.Parse (e["message"].ToString ()),
                         e["sender"].ToObject<Sender> (),
                         e["message_id"].ToObject<int> ()
                     );
@@ -73,7 +72,7 @@ namespace cqhttp.Cyan.Events {
                     return new GroupMessageEvent (
                         e["time"].ToObject<long> (),
                         e["sub_type"].ToString (),
-                        Message.Deserialize (e["message"].ToString (), out temp),
+                        Message.Parse (e["message"].ToString ()),
                         e["sender"].ToObject<GroupSender> (),
                         e["message_id"].ToObject<int> (),
                         e["group_id"].ToObject<long> ()
@@ -81,7 +80,7 @@ namespace cqhttp.Cyan.Events {
                 case "discuss":
                     return new DiscussMessageEvent (
                         e["time"].ToObject<long> (),
-                        Message.Deserialize (e["message"].ToString (), out temp),
+                        Message.Parse (e["message"].ToString ()),
                         e["sender"].ToObject<Sender> (),
                         e["message_id"].ToObject<int> (),
                         e["discuss_id"].ToObject<long> ()
