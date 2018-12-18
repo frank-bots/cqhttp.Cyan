@@ -2518,6 +2518,25 @@ references:
   commentId: N:cqhttp.Cyan.Messages.CommonMessages
   fullName: cqhttp.Cyan.Messages.CommonMessages
   nameWithType: cqhttp.Cyan.Messages.CommonMessages
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage
+  name: MessageOnlineImage
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.html
+  commentId: T:cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage
+  nameWithType: MessageOnlineImage
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.#ctor(System.String,System.Boolean)
+  name: MessageOnlineImage(String, Boolean)
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.html#cqhttp_Cyan_Messages_CommonMessages_MessageOnlineImage__ctor_System_String_System_Boolean_
+  commentId: M:cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.#ctor(System.String,System.Boolean)
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.MessageOnlineImage(System.String, System.Boolean)
+  nameWithType: MessageOnlineImage.MessageOnlineImage(String, Boolean)
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.#ctor*
+  name: MessageOnlineImage
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.html#cqhttp_Cyan_Messages_CommonMessages_MessageOnlineImage__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.MessageOnlineImage
+  nameWithType: MessageOnlineImage.MessageOnlineImage
 - uid: cqhttp.Cyan.Messages.CommonMessages.MessageShake
   name: MessageShake
   href: api/cqhttp.Cyan.Messages.CommonMessages.MessageShake.html
