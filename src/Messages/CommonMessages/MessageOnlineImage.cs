@@ -1,7 +1,7 @@
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
 
-namespace src.Messages.CommonMessages {
+namespace cqhttp.Cyan.Messages.CommonMessages {
     /// <summary>
     /// 在线图片
     /// </summary>
