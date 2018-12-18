@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>cqhttp.Cyan</id>
+    <version>1.0.2</version>
+    <authors>Frank</authors>
+    <owners>Frank</owners>
+    <description>see https://github.com/frankli0324/cqhttp.Cyan</description>
+
+    <licenseUrl>https://github.com/frankli0324/cqhttp.Cyan/blob/master/LICENSE</licenseUrl>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/Frank/VisualStudioProjects/cqhttp.Cyan/src/bin/Release/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json" target="lib/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json" />
+    <file src="/Users/Frank/VisualStudioProjects/cqhttp.Cyan/src/bin/Release/netcoreapp2.1/cqhttp.Cyan.dll" target="lib/netcoreapp2.1/cqhttp.Cyan.dll" />
+    <file src="/Users/Frank/VisualStudioProjects/cqhttp.Cyan/src/bin/Release/netcoreapp2.1/cqhttp.Cyan.xml" target="lib/netcoreapp2.1/cqhttp.Cyan.xml" />
+  </files>
+</package>
