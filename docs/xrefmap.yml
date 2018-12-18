@@ -611,12 +611,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.Base.CQEvent
   fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent
   nameWithType: CQEvent
-- uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor
-  name: CQEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.CQEvent()
-  nameWithType: CQEvent.CQEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.Base.CQEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)
   name: CQEvent(Int64, PostType)
   href: api/cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent__ctor_System_Int64_cqhttp_Cyan_Enums_PostType_
@@ -662,12 +656,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
   fullName: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent
   nameWithType: GroupNoticeEvent
-- uid: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.#ctor
-  name: GroupNoticeEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_GroupNoticeEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.GroupNoticeEvent()
-  nameWithType: GroupNoticeEvent.GroupNoticeEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.NoticeType,System.Int64,System.Int64)
   name: GroupNoticeEvent(Int64, NoticeType, Int64, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_GroupNoticeEvent__ctor_System_Int64_cqhttp_Cyan_Enums_NoticeType_System_Int64_System_Int64_
@@ -700,12 +688,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
   fullName: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent
   nameWithType: MessageEvent
-- uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.#ctor
-  name: MessageEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.MessageEvent()
-  nameWithType: MessageEvent.MessageEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.MessageType,cqhttp.Cyan.Events.CQEvents.Base.Sender,cqhttp.Cyan.Messages.Message,System.Int32,System.Int32)
   name: MessageEvent(Int64, MessageType, Sender, Message, Int32, Int32)
   href: api/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent__ctor_System_Int64_cqhttp_Cyan_Enums_MessageType_cqhttp_Cyan_Events_CQEvents_Base_Sender_cqhttp_Cyan_Messages_Message_System_Int32_System_Int32_
@@ -790,12 +772,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
   fullName: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent
   nameWithType: NoticeEvent
-- uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.#ctor
-  name: NoticeEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_NoticeEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.NoticeEvent()
-  nameWithType: NoticeEvent.NoticeEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.NoticeType,System.Int64)
   name: NoticeEvent(Int64, NoticeType, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_NoticeEvent__ctor_System_Int64_cqhttp_Cyan_Enums_NoticeType_System_Int64_
@@ -841,12 +817,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
   fullName: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent
   nameWithType: RequestEvent
-- uid: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.#ctor
-  name: RequestEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.html#cqhttp_Cyan_Events_CQEvents_Base_RequestEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.RequestEvent()
-  nameWithType: RequestEvent.RequestEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.#ctor(System.Int64,System.Int64)
   name: RequestEvent(Int64, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.html#cqhttp_Cyan_Events_CQEvents_Base_RequestEvent__ctor_System_Int64_System_Int64_
@@ -1283,12 +1253,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent
   fullName: cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent
   nameWithType: DiscussMessageEvent
-- uid: cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.#ctor
-  name: DiscussMessageEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.html#cqhttp_Cyan_Events_CQEvents_DiscussMessageEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.DiscussMessageEvent()
-  nameWithType: DiscussMessageEvent.DiscussMessageEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.#ctor(System.Int64,cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Events.CQEvents.Base.Sender,System.Int32,System.Int64)
   name: DiscussMessageEvent(Int64, Message, Sender, Int32, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.html#cqhttp_Cyan_Events_CQEvents_DiscussMessageEvent__ctor_System_Int64_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Events_CQEvents_Base_Sender_System_Int32_System_Int64_
@@ -1379,12 +1343,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.FriendAddEvent
   fullName: cqhttp.Cyan.Events.CQEvents.FriendAddEvent
   nameWithType: FriendAddEvent
-- uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor
-  name: FriendAddEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.FriendAddEvent.html#cqhttp_Cyan_Events_CQEvents_FriendAddEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.FriendAddEvent()
-  nameWithType: FriendAddEvent.FriendAddEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.FriendAddEvent.#ctor(System.Int64,System.Int64)
   name: FriendAddEvent(Int64, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.FriendAddEvent.html#cqhttp_Cyan_Events_CQEvents_FriendAddEvent__ctor_System_Int64_System_Int64_
@@ -1404,12 +1362,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent
   fullName: cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent
   nameWithType: FriendAddRequestEvent
-- uid: cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor
-  name: FriendAddRequestEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.html#cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.FriendAddRequestEvent()
-  nameWithType: FriendAddRequestEvent.FriendAddRequestEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor(System.Int64,System.Int64,System.String,System.String)
   name: FriendAddRequestEvent(Int64, Int64, String, String)
   href: api/cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.html#cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent__ctor_System_Int64_System_Int64_System_String_System_String_
@@ -1455,12 +1407,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent
   fullName: cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent
   nameWithType: GroupAddRequestEvent
-- uid: cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.#ctor
-  name: GroupAddRequestEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.html#cqhttp_Cyan_Events_CQEvents_GroupAddRequestEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.GroupAddRequestEvent()
-  nameWithType: GroupAddRequestEvent.GroupAddRequestEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.String)
   name: GroupAddRequestEvent(Int64, Int64, Int64, String, String)
   href: api/cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.html#cqhttp_Cyan_Events_CQEvents_GroupAddRequestEvent__ctor_System_Int64_System_Int64_System_Int64_System_String_System_String_
@@ -1519,12 +1465,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.GroupAdminEvent
   fullName: cqhttp.Cyan.Events.CQEvents.GroupAdminEvent
   nameWithType: GroupAdminEvent
-- uid: cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.#ctor
-  name: GroupAdminEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.html#cqhttp_Cyan_Events_CQEvents_GroupAdminEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.GroupAdminEvent()
-  nameWithType: GroupAdminEvent.GroupAdminEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean)
   name: GroupAdminEvent(Int64, Int64, Int64, Boolean)
   href: api/cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.html#cqhttp_Cyan_Events_CQEvents_GroupAdminEvent__ctor_System_Int64_System_Int64_System_Int64_System_Boolean_
@@ -1557,12 +1497,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent
   fullName: cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent
   nameWithType: GroupMemberChangeEvent
-- uid: cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.#ctor
-  name: GroupMemberChangeEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMemberChangeEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.GroupMemberChangeEvent()
-  nameWithType: GroupMemberChangeEvent.GroupMemberChangeEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Boolean,System.String)
   name: GroupMemberChangeEvent(Int64, Int64, Int64, Int64, Boolean, String)
   href: api/cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMemberChangeEvent__ctor_System_Int64_System_Int64_System_Int64_System_Int64_System_Boolean_System_String_
@@ -1608,12 +1542,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent
   fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent
   nameWithType: GroupMessageEvent
-- uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.#ctor
-  name: GroupMessageEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.GroupMessageEvent()
-  nameWithType: GroupMessageEvent.GroupMessageEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.#ctor(System.Int64,System.String,cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Events.CQEvents.GroupSender,System.Int32,System.Int64)
   name: GroupMessageEvent(Int64, String, Message, GroupSender, Int32, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent__ctor_System_Int64_System_String_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Events_CQEvents_GroupSender_System_Int32_System_Int64_
@@ -1730,12 +1658,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.GroupUploadEvent
   fullName: cqhttp.Cyan.Events.CQEvents.GroupUploadEvent
   nameWithType: GroupUploadEvent
-- uid: cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.#ctor
-  name: GroupUploadEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.html#cqhttp_Cyan_Events_CQEvents_GroupUploadEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.GroupUploadEvent()
-  nameWithType: GroupUploadEvent.GroupUploadEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.#ctor(System.Int64,cqhttp.Cyan.Events.CQEvents.FileInfo,System.Int64,System.Int64)
   name: GroupUploadEvent(Int64, FileInfo, Int64, Int64)
   href: api/cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.html#cqhttp_Cyan_Events_CQEvents_GroupUploadEvent__ctor_System_Int64_cqhttp_Cyan_Events_CQEvents_FileInfo_System_Int64_System_Int64_
@@ -1768,12 +1690,6 @@ references:
   commentId: T:cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent
   fullName: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent
   nameWithType: PrivateMessageEvent
-- uid: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.#ctor
-  name: PrivateMessageEvent()
-  href: api/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.html#cqhttp_Cyan_Events_CQEvents_PrivateMessageEvent__ctor
-  commentId: M:cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.#ctor
-  fullName: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.PrivateMessageEvent()
-  nameWithType: PrivateMessageEvent.PrivateMessageEvent()
 - uid: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.#ctor(System.Int64,cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Events.CQEvents.Base.Sender,System.Int32)
   name: PrivateMessageEvent(Int64, Message, Sender, Int32)
   href: api/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.html#cqhttp_Cyan_Events_CQEvents_PrivateMessageEvent__ctor_System_Int64_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Events_CQEvents_Base_Sender_System_Int32_
@@ -2028,6 +1944,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.MetaEvents.LifecycleEvent.enabled
   nameWithType: LifecycleEvent.enabled
+- uid: cqhttp.Cyan.Events.MetaEvents.MetaEvent
+  name: MetaEvent
+  href: api/cqhttp.Cyan.Events.MetaEvents.MetaEvent.html
+  commentId: T:cqhttp.Cyan.Events.MetaEvents.MetaEvent
+  fullName: cqhttp.Cyan.Events.MetaEvents.MetaEvent
+  nameWithType: MetaEvent
+- uid: cqhttp.Cyan.Events.MetaEvents.MetaEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)
+  name: MetaEvent(Int64, PostType)
+  href: api/cqhttp.Cyan.Events.MetaEvents.MetaEvent.html#cqhttp_Cyan_Events_MetaEvents_MetaEvent__ctor_System_Int64_cqhttp_Cyan_Enums_PostType_
+  commentId: M:cqhttp.Cyan.Events.MetaEvents.MetaEvent.#ctor(System.Int64,cqhttp.Cyan.Enums.PostType)
+  fullName: cqhttp.Cyan.Events.MetaEvents.MetaEvent.MetaEvent(System.Int64, cqhttp.Cyan.Enums.PostType)
+  nameWithType: MetaEvent.MetaEvent(Int64, PostType)
+- uid: cqhttp.Cyan.Events.MetaEvents.MetaEvent.#ctor*
+  name: MetaEvent
+  href: api/cqhttp.Cyan.Events.MetaEvents.MetaEvent.html#cqhttp_Cyan_Events_MetaEvents_MetaEvent__ctor_
+  commentId: Overload:cqhttp.Cyan.Events.MetaEvents.MetaEvent.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.MetaEvents.MetaEvent.MetaEvent
+  nameWithType: MetaEvent.MetaEvent
 - uid: cqhttp.Cyan.Examples
   name: cqhttp.Cyan.Examples
   href: api/cqhttp.Cyan.Examples.html
@@ -2372,6 +2307,25 @@ references:
   commentId: F:cqhttp.Cyan.Instance.CQApiClient.accessUrl
   fullName: cqhttp.Cyan.Instance.CQApiClient.accessUrl
   nameWithType: CQApiClient.accessUrl
+- uid: cqhttp.Cyan.Instance.CQApiClient.alive
+  name: alive
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_alive
+  commentId: P:cqhttp.Cyan.Instance.CQApiClient.alive
+  fullName: cqhttp.Cyan.Instance.CQApiClient.alive
+  nameWithType: CQApiClient.alive
+- uid: cqhttp.Cyan.Instance.CQApiClient.alive*
+  name: alive
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_alive_
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.alive
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Instance.CQApiClient.alive
+  nameWithType: CQApiClient.alive
+- uid: cqhttp.Cyan.Instance.CQApiClient.OnEvent
+  name: CQApiClient.OnEvent
+  href: api/cqhttp.Cyan.Instance.CQApiClient.OnEvent.html
+  commentId: T:cqhttp.Cyan.Instance.CQApiClient.OnEvent
+  fullName: cqhttp.Cyan.Instance.CQApiClient.OnEvent
+  nameWithType: CQApiClient.OnEvent
 - uid: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
   name: OnEventDelegate
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_OnEventDelegate
@@ -2520,12 +2474,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Instance.CQWebsocketClient.SendRequestAsync
   nameWithType: CQWebsocketClient.SendRequestAsync
-- uid: cqhttp.Cyan.Instance.OnEvent
-  name: OnEvent
-  href: api/cqhttp.Cyan.Instance.OnEvent.html
-  commentId: T:cqhttp.Cyan.Instance.OnEvent
-  fullName: cqhttp.Cyan.Instance.OnEvent
-  nameWithType: OnEvent
 - uid: cqhttp.Cyan.Logger
   name: Logger
   href: api/cqhttp.Cyan.Logger.html
@@ -2651,6 +2599,58 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.data
   nameWithType: Element.data
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.Equals(System.Object)
+  name: Equals(Object)
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_Equals_System_Object_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.Equals(System.Object)
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Equals(System.Object)
+  nameWithType: Element.Equals(Object)
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.Equals*
+  name: Equals
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_Equals_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.Base.Element.Equals
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Equals
+  nameWithType: Element.Equals
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode
+  name: GetHashCode()
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_GetHashCode
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode()
+  nameWithType: Element.GetHashCode()
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode*
+  name: GetHashCode
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_GetHashCode_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode
+  nameWithType: Element.GetHashCode
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.op_Equality(cqhttp.Cyan.Messages.CQElements.Base.Element,cqhttp.Cyan.Messages.CQElements.Base.Element)
+  name: Equality(Element, Element)
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_op_Equality_cqhttp_Cyan_Messages_CQElements_Base_Element_cqhttp_Cyan_Messages_CQElements_Base_Element_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.op_Equality(cqhttp.Cyan.Messages.CQElements.Base.Element,cqhttp.Cyan.Messages.CQElements.Base.Element)
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Equality(cqhttp.Cyan.Messages.CQElements.Base.Element, cqhttp.Cyan.Messages.CQElements.Base.Element)
+  nameWithType: Element.Equality(Element, Element)
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.op_Equality*
+  name: Equality
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_op_Equality_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.Base.Element.op_Equality
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Equality
+  nameWithType: Element.Equality
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.op_Inequality(cqhttp.Cyan.Messages.CQElements.Base.Element,cqhttp.Cyan.Messages.CQElements.Base.Element)
+  name: Inequality(Element, Element)
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_op_Inequality_cqhttp_Cyan_Messages_CQElements_Base_Element_cqhttp_Cyan_Messages_CQElements_Base_Element_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.op_Inequality(cqhttp.Cyan.Messages.CQElements.Base.Element,cqhttp.Cyan.Messages.CQElements.Base.Element)
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Inequality(cqhttp.Cyan.Messages.CQElements.Base.Element, cqhttp.Cyan.Messages.CQElements.Base.Element)
+  nameWithType: Element.Inequality(Element, Element)
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.op_Inequality*
+  name: Inequality
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_op_Inequality_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.Base.Element.op_Inequality
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Inequality
+  nameWithType: Element.Inequality
 - uid: cqhttp.Cyan.Messages.CQElements.Base.Element.raw_data_cq
   name: raw_data_cq
   href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_raw_data_cq
@@ -2980,22 +2980,6 @@ references:
   commentId: F:cqhttp.Cyan.Messages.Message.data
   fullName: cqhttp.Cyan.Messages.Message.data
   nameWithType: Message.data
-- uid: cqhttp.Cyan.Messages.Message.Deserialize(System.String,System.Int16@)
-  name: Deserialize(String, out Int16)
-  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Deserialize_System_String_System_Int16__
-  commentId: M:cqhttp.Cyan.Messages.Message.Deserialize(System.String,System.Int16@)
-  name.vb: Deserialize(String, ByRef Int16)
-  fullName: cqhttp.Cyan.Messages.Message.Deserialize(System.String, out System.Int16)
-  fullName.vb: cqhttp.Cyan.Messages.Message.Deserialize(System.String, ByRef System.Int16)
-  nameWithType: Message.Deserialize(String, out Int16)
-  nameWithType.vb: Message.Deserialize(String, ByRef Int16)
-- uid: cqhttp.Cyan.Messages.Message.Deserialize*
-  name: Deserialize
-  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Deserialize_
-  commentId: Overload:cqhttp.Cyan.Messages.Message.Deserialize
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Messages.Message.Deserialize
-  nameWithType: Message.Deserialize
 - uid: cqhttp.Cyan.Messages.Message.Equals(System.Object)
   name: Equals(Object)
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Equals_System_Object_
@@ -3041,12 +3025,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.Message.Addition
   nameWithType: Message.Addition
-- uid: cqhttp.Cyan.Messages.Message.op_Equality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
-  name: Equality(Message, Message)
-  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Equality_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Messages_Message_
-  commentId: M:cqhttp.Cyan.Messages.Message.op_Equality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
-  fullName: cqhttp.Cyan.Messages.Message.Equality(cqhttp.Cyan.Messages.Message, cqhttp.Cyan.Messages.Message)
-  nameWithType: Message.Equality(Message, Message)
+- uid: cqhttp.Cyan.Messages.Message.op_Equality(cqhttp.Cyan.Messages.Message,System.Object)
+  name: Equality(Message, Object)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Equality_cqhttp_Cyan_Messages_Message_System_Object_
+  commentId: M:cqhttp.Cyan.Messages.Message.op_Equality(cqhttp.Cyan.Messages.Message,System.Object)
+  fullName: cqhttp.Cyan.Messages.Message.Equality(cqhttp.Cyan.Messages.Message, System.Object)
+  nameWithType: Message.Equality(Message, Object)
 - uid: cqhttp.Cyan.Messages.Message.op_Equality*
   name: Equality
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Equality_
@@ -3054,12 +3038,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.Message.Equality
   nameWithType: Message.Equality
-- uid: cqhttp.Cyan.Messages.Message.op_Inequality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
-  name: Inequality(Message, Message)
-  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Inequality_cqhttp_Cyan_Messages_Message_cqhttp_Cyan_Messages_Message_
-  commentId: M:cqhttp.Cyan.Messages.Message.op_Inequality(cqhttp.Cyan.Messages.Message,cqhttp.Cyan.Messages.Message)
-  fullName: cqhttp.Cyan.Messages.Message.Inequality(cqhttp.Cyan.Messages.Message, cqhttp.Cyan.Messages.Message)
-  nameWithType: Message.Inequality(Message, Message)
+- uid: cqhttp.Cyan.Messages.Message.op_Inequality(cqhttp.Cyan.Messages.Message,System.Object)
+  name: Inequality(Message, Object)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Inequality_cqhttp_Cyan_Messages_Message_System_Object_
+  commentId: M:cqhttp.Cyan.Messages.Message.op_Inequality(cqhttp.Cyan.Messages.Message,System.Object)
+  fullName: cqhttp.Cyan.Messages.Message.Inequality(cqhttp.Cyan.Messages.Message, System.Object)
+  nameWithType: Message.Inequality(Message, Object)
 - uid: cqhttp.Cyan.Messages.Message.op_Inequality*
   name: Inequality
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_op_Inequality_
@@ -3067,6 +3051,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.Message.Inequality
   nameWithType: Message.Inequality
+- uid: cqhttp.Cyan.Messages.Message.Parse(System.String)
+  name: Parse(String)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Parse_System_String_
+  commentId: M:cqhttp.Cyan.Messages.Message.Parse(System.String)
+  fullName: cqhttp.Cyan.Messages.Message.Parse(System.String)
+  nameWithType: Message.Parse(String)
+- uid: cqhttp.Cyan.Messages.Message.Parse*
+  name: Parse
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Parse_
+  commentId: Overload:cqhttp.Cyan.Messages.Message.Parse
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.Message.Parse
+  nameWithType: Message.Parse
 - uid: cqhttp.Cyan.Messages.Message.raw_data_cq
   name: raw_data_cq
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_raw_data_cq
