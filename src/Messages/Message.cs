@@ -35,11 +35,21 @@ namespace cqhttp.Cyan.Messages {
             return a;
         }
         /// <summary></summary>
-        public static bool operator == (Message a, Message b) {
-            return a.data.Equals (b.data);
+        public static bool operator == (Message a, object b) {
+            if (a is null && b is null) return true;
+            if (a is null || b is null) return false;
+            if (b is Message) {
+                if (a.data.Count != (b as Message).data.Count)
+                    return false;
+                for (int i = 0; i < a.data.Count; i++) {
+                    if (a.data[i] != (b as Message).data[i])
+                        return false;
+                }
+                return true;
+            } else return false;
         }
         /// <summary></summary>
-        public static bool operator != (Message a, Message b) {
+        public static bool operator != (Message a, object b) {
             return !(a == b);
         }
         /// <summary>

@@ -17,6 +17,39 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// </summary>
         public virtual Dictionary<string, string> data { get; private set; }
 
+        /// <summary></summary>
+        public static bool operator == (Element a, Element b) {
+            if (a is null && b is null) return true;
+            if (a is null || b is null) return false;
+            var i = a.data.GetEnumerator ();
+            var j = b.data.GetEnumerator ();
+            while (i.Current.Key == j.Current.Key && i.Current.Value == j.Current.Value) {
+                if (i.MoveNext ()) {
+                    if (j.MoveNext ()) continue;
+                    else break;
+                } else {
+                    j.MoveNext ();
+                    break;
+                }
+            }
+            if (!(i.Current.Key is null) || !(j.Current.Key is null)) return false;
+            return true;
+        }
+        /// <summary></summary>
+        public static bool operator != (Element a, Element b) {
+            return !(a == b);
+        }
+        /// <summary></summary>
+        public override bool Equals (object b) {
+            if (b is Element) {
+                return this == (b as Element);
+            }
+            return false;
+        }
+        /// <summary></summary>
+        public override int GetHashCode () {
+            return 1;
+        }
         /// <summary>
         /// builds the value when constructing CQCode
         /// <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>
