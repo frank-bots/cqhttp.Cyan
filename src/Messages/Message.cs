@@ -84,6 +84,14 @@ namespace cqhttp.Cyan.Messages {
         public override bool Equals (object a) {
             return this.data == (a as Message).data;
         }
+        /// <summary>
+        /// 下载所有文件元素(图片,语音)
+        /// </summary>
+        public async void FixAsync () {
+            foreach (var i in data)
+                if (i is ElementFile)
+                    await (i as ElementFile).Fix ();
+        }
         private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
 
         /// <param name="message">待序列化的消息</param>
