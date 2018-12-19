@@ -80,10 +80,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// </summary>
         public string raw_data_json {
             get {
-                string builder = $"{{\"type\":\"{type}\",\"data\":"+(data.Count!=0?$"{{":"\"");
+                string builder = $"{{\"type\":\"{type}\",\"data\":{{";
                 foreach (var i in data)
                     builder += $"\"{i.Key}\":\"{Config.asJsonStringVariable(i.Value)}\",";
-                return builder.TrimEnd (',', ' ')+(data.Count!=0?$"}}": "\"")+$"}}";
+                return builder.TrimEnd (',', ' ')+$"}}}}";
                 //。。。不这么写的话我的代码格式化插件就会崩掉
             }
         }
