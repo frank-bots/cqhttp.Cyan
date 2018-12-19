@@ -16,7 +16,6 @@ namespace cqhttp.Cyan.Examples
                 new ElementFace (3),
                 new ElementText ("second #&text message")
             );
-            // CQHTTPClient client = new CQHTTPClient ("http://service.std-frank.club:233");
             var clientHttp = new CQHTTPClient (
                 accessUrl: "http://domain.com:port",//请不要在后面加多余的/斜线，没有进行判定
                 accessToken: "token",               //api token
@@ -31,8 +30,6 @@ namespace cqhttp.Cyan.Examples
                 accessUrl: "ws://domain.com:port",  //请不要在后面加多余的/斜线，没有进行判定
                 accessToken: "token"               //api token
             );//暂时只能发送api请求
-            //var i = client.SendTextAsync (MessageType.private_, 745679136, "test").Result;
-            //var j = client.SendMessageAsync (MessageType.private_, 745679136, testmessage).Result;
             Console.ReadLine ();
         }
     }
