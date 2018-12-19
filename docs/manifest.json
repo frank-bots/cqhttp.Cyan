@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "OqnioexW/P0uoxudorz5UA=="
+          "hash": "wn2aCwM75/3xG17WO72WuQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html",
-          "hash": "jVXYBQPtLge9ws0wuAbfyA=="
+          "hash": "aLGNKUyztA1Y/gXin46rDw=="
         }
       },
       "is_incremental": false,
@@ -921,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Instance.CQWebsocketClient.html",
-          "hash": "WeGF/ZjBf73Hg3LtgTyVyg=="
+          "hash": "F+qUyjCgPDyAjZeFsWigUA=="
         }
       },
       "is_incremental": false,
@@ -957,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Messages.CQElements.Base.Element.html",
-          "hash": "aifd9itOh23s/l71Z34A0Q=="
+          "hash": "QBQXz/7G77UMa5qoDoRRMA=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.html",
-          "hash": "QU22Lm7laopWaVE4wXTStg=="
+          "hash": "TTns/YvXbb63BZ7e2wdZyw=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Messages.CommonMessages.MessageShake.html",
-          "hash": "9T/mJCZaJz/ufTD9YGhPpw=="
+          "hash": "xhHiM+nxzByITZHCFTosFA=="
         }
       },
       "is_incremental": false,
@@ -1125,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Messages.Message.html",
-          "hash": "nTOA9jLunmtc4LraqQvEFw=="
+          "hash": "GBWUVN8IpHj8X5Yq+A2+bg=="
         }
       },
       "is_incremental": false,
@@ -1150,6 +1150,42 @@
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Status.html",
           "hash": "bqmauCaLndfWHTis6teg5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Utils.Convert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Utils.Convert.html",
+          "hash": "ltcW4yoPI7z4qD8/n5VQpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Utils.MessageTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Utils.MessageTable.html",
+          "hash": "Sb4uiRox8NErokopxmvULA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Utils.html",
+          "hash": "oEf9ss6WPGb4MC+SqwtodQ=="
         }
       },
       "is_incremental": false,
@@ -1185,7 +1221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Tv/hLYIReR3npuT5LD1n8g=="
+          "hash": "adsgDjFoVhT1hCpaSJlS7Q=="
         }
       },
       "is_incremental": false,
@@ -1250,17 +1286,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
