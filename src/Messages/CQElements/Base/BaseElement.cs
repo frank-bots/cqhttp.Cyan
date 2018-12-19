@@ -18,6 +18,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public virtual Dictionary<string, string> data { get; private set; }
 
         /// <summary></summary>
+        public static Message operator + (Element a, Element b) {
+            return new Message (a, b);
+        }
+        /// <summary></summary>
         public static bool operator == (Element a, Element b) {
             if (a is null && b is null) return true;
             if (a is null || b is null) return false;
