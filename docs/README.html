@@ -71,12 +71,12 @@ namespace YourNS {
         static void Main(string[] args) {
             //CQApiClient client = CQWebsocketClient(
             CQApiClient client = CQHTTPClient (
-                //accessUrl: &quot;ws://domain:port/path&quot;,
+                //accessUrl: &quot;ws://domain:port/api&quot;,
                 accessUrl: &quot;http://domain:port/path&quot;,
                 accessToken: &quot;your_token&quot;,
+                //listenUrl: &quot;ws://domain:port/events
                 listen_port: 8080,
-                //Websocket 监听仍在调试中，请暂时不要使用
-                //然鹅可以通过Websocket发送API请求
+                //注意websocket无secret参数
                 secret: &quot;your_secret&quot;
             )
             Console.WriteLine(
@@ -93,6 +93,7 @@ namespace YourNS {
                 12345678,
                 &quot;一条文字消息&quot;
             );
+            Console.ReadLine();
         }
     }
 }
@@ -159,6 +160,14 @@ static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
     }
 }
 </code></pre>
+<p>消息之间可以进行相等判断</p>
+<pre><code class="lang-csharp">Message a = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(4));
+Message b = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(4));
+Console.WriteLine(a == b);//True
+Message c = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(3));
+Console.WriteLine(a == c);//False
+</code></pre>
+<p>....也就是说....你可以很轻松地写一个复读鸡emmmmmmm</p>
 <h3 id="消息发送">消息发送</h3>
 <p>可以自己构建需要发送的消息，也可以选择直接发送文本消息，亦或是发送定义好的常用消息</p>
 <p>目前可用的常用消息:</p>
@@ -197,6 +206,8 @@ static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
 <p>出于不知道什么原因ElementShake()只有在以非json发送消息时才有效</p>
 </blockquote>
 <hr>
+<h2 id="文档">文档</h2>
+<p><a href="http://www.std-frank.club/cqhttp.Cyan">http://www.std-frank.club/cqhttp.Cyan</a></p>
 <h2 id="事件列表对应cqevent">事件列表(对应CQEvent)</h2>
 <h3 id="消息事件继承于messageevent">消息事件(继承于MessageEvent)</h3>
 <ul>
