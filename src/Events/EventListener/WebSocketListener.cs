@@ -10,7 +10,7 @@ namespace cqhttp.Cyan.Events.EventListener {
         private ClientWebSocket client;
         private string dest_url;
         /// <summary></summary>
-        public WebSocketListener (string dest_url, string secret) : base (secret) {
+        public WebSocketListener (string dest_url) : base ("") {
             this.dest_url = dest_url;
             client = new ClientWebSocket ();
         }

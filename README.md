@@ -11,12 +11,12 @@ namespace YourNS {
         static void Main(string[] args) {
             //CQApiClient client = CQWebsocketClient(
             CQApiClient client = CQHTTPClient (
-                //accessUrl: "ws://domain:port/path",
+                //accessUrl: "ws://domain:port/api",
                 accessUrl: "http://domain:port/path",
                 accessToken: "your_token",
+                //listenUrl: "ws://domain:port/events
                 listen_port: 8080,
-                //Websocket 监听仍在调试中，请暂时不要使用
-                //然鹅可以通过Websocket发送API请求
+                //注意websocket无secret参数
                 secret: "your_secret"
             )
             Console.WriteLine(
@@ -33,6 +33,7 @@ namespace YourNS {
                 12345678,
                 "一条文字消息"
             );
+            Console.ReadLine();
         }
     }
 }
@@ -77,6 +78,18 @@ static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
 }
 ```
 
+消息之间可以进行相等判断
+
+```csharp
+Message a = new Message(new ElementText("asdf"), new ElementFace(4));
+Message b = new Message(new ElementText("asdf"), new ElementFace(4));
+Console.WriteLine(a == b);//True
+Message c = new Message(new ElementText("asdf"), new ElementFace(3));
+Console.WriteLine(a == c);//False
+```
+
+....也就是说....你可以很轻松地写一个复读鸡emmmmmmm
+
 ### 消息发送
 
 可以自己构建需要发送的消息，也可以选择直接发送文本消息，亦或是发送定义好的常用消息  
@@ -118,6 +131,10 @@ static void Main() {
 > 出于不知道什么原因ElementShake()只有在以非json发送消息时才有效
 
 ------------------------------
+
+## 文档
+
+<http://www.std-frank.club/cqhttp.Cyan>
 
 ## 事件列表(对应CQEvent)
 
