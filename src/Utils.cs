@@ -52,9 +52,9 @@ namespace cqhttp.Cyan.Utils {
     /// 记录发送的消息
     /// </summary>
     public class MessageTable {
-        Queue<MessageEvent> queue;
+        Queue<MessageEvent> queue = new Queue<MessageEvent> ();
         Task monitor;
-        CancellationTokenSource monitorCanceller;
+        CancellationTokenSource monitorCanceller = new CancellationTokenSource ();
         /// <summary></summary>
         ~MessageTable () {
             monitorCanceller.Cancel ();
