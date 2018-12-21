@@ -2126,6 +2126,31 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Exceptions.ErrorEventException.ErrorEventException
   nameWithType: ErrorEventException.ErrorEventException
+- uid: cqhttp.Cyan.Exceptions.ErrorMessageException
+  name: ErrorMessageException
+  href: api/cqhttp.Cyan.Exceptions.ErrorMessageException.html
+  commentId: T:cqhttp.Cyan.Exceptions.ErrorMessageException
+  fullName: cqhttp.Cyan.Exceptions.ErrorMessageException
+  nameWithType: ErrorMessageException
+- uid: cqhttp.Cyan.Exceptions.ErrorMessageException.#ctor
+  name: ErrorMessageException()
+  href: api/cqhttp.Cyan.Exceptions.ErrorMessageException.html#cqhttp_Cyan_Exceptions_ErrorMessageException__ctor
+  commentId: M:cqhttp.Cyan.Exceptions.ErrorMessageException.#ctor
+  fullName: cqhttp.Cyan.Exceptions.ErrorMessageException.ErrorMessageException()
+  nameWithType: ErrorMessageException.ErrorMessageException()
+- uid: cqhttp.Cyan.Exceptions.ErrorMessageException.#ctor(System.String)
+  name: ErrorMessageException(String)
+  href: api/cqhttp.Cyan.Exceptions.ErrorMessageException.html#cqhttp_Cyan_Exceptions_ErrorMessageException__ctor_System_String_
+  commentId: M:cqhttp.Cyan.Exceptions.ErrorMessageException.#ctor(System.String)
+  fullName: cqhttp.Cyan.Exceptions.ErrorMessageException.ErrorMessageException(System.String)
+  nameWithType: ErrorMessageException.ErrorMessageException(String)
+- uid: cqhttp.Cyan.Exceptions.ErrorMessageException.#ctor*
+  name: ErrorMessageException
+  href: api/cqhttp.Cyan.Exceptions.ErrorMessageException.html#cqhttp_Cyan_Exceptions_ErrorMessageException__ctor_
+  commentId: Overload:cqhttp.Cyan.Exceptions.ErrorMessageException.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Exceptions.ErrorMessageException.ErrorMessageException
+  nameWithType: ErrorMessageException.ErrorMessageException
 - uid: cqhttp.Cyan.Exceptions.ErrorResponseException
   name: ErrorResponseException
   href: api/cqhttp.Cyan.Exceptions.ErrorResponseException.html
@@ -2518,6 +2543,28 @@ references:
   commentId: N:cqhttp.Cyan.Messages.CommonMessages
   fullName: cqhttp.Cyan.Messages.CommonMessages
   nameWithType: cqhttp.Cyan.Messages.CommonMessages
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous
+  name: MessageAnnonymous
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.html
+  commentId: T:cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous
+  nameWithType: MessageAnnonymous
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.#ctor(System.Boolean,cqhttp.Cyan.Messages.CQElements.Base.Element[])
+  name: MessageAnnonymous(Boolean, Element[])
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.html#cqhttp_Cyan_Messages_CommonMessages_MessageAnnonymous__ctor_System_Boolean_cqhttp_Cyan_Messages_CQElements_Base_Element___
+  commentId: M:cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.#ctor(System.Boolean,cqhttp.Cyan.Messages.CQElements.Base.Element[])
+  name.vb: MessageAnnonymous(Boolean, Element())
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.MessageAnnonymous(System.Boolean, cqhttp.Cyan.Messages.CQElements.Base.Element[])
+  fullName.vb: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.MessageAnnonymous(System.Boolean, cqhttp.Cyan.Messages.CQElements.Base.Element())
+  nameWithType: MessageAnnonymous.MessageAnnonymous(Boolean, Element[])
+  nameWithType.vb: MessageAnnonymous.MessageAnnonymous(Boolean, Element())
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.#ctor*
+  name: MessageAnnonymous
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.html#cqhttp_Cyan_Messages_CommonMessages_MessageAnnonymous__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.MessageAnnonymous
+  nameWithType: MessageAnnonymous.MessageAnnonymous
 - uid: cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage
   name: MessageOnlineImage
   href: api/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.html
@@ -2556,6 +2603,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CommonMessages.MessageShake.MessageShake
   nameWithType: MessageShake.MessageShake
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageShare
+  name: MessageShare
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageShare.html
+  commentId: T:cqhttp.Cyan.Messages.CommonMessages.MessageShare
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageShare
+  nameWithType: MessageShare
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageShare.#ctor(System.String,System.String,System.String,System.String)
+  name: MessageShare(String, String, String, String)
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageShare.html#cqhttp_Cyan_Messages_CommonMessages_MessageShare__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CommonMessages.MessageShare.#ctor(System.String,System.String,System.String,System.String)
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageShare.MessageShare(System.String, System.String, System.String, System.String)
+  nameWithType: MessageShare.MessageShare(String, String, String, String)
+- uid: cqhttp.Cyan.Messages.CommonMessages.MessageShare.#ctor*
+  name: MessageShare
+  href: api/cqhttp.Cyan.Messages.CommonMessages.MessageShare.html#cqhttp_Cyan_Messages_CommonMessages_MessageShare__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CommonMessages.MessageShare.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CommonMessages.MessageShare.MessageShare
+  nameWithType: MessageShare.MessageShare
 - uid: cqhttp.Cyan.Messages.CQElements
   name: cqhttp.Cyan.Messages.CQElements
   href: api/cqhttp.Cyan.Messages.CQElements.html
@@ -2574,12 +2640,6 @@ references:
   commentId: T:cqhttp.Cyan.Messages.CQElements.Base.Element
   fullName: cqhttp.Cyan.Messages.CQElements.Base.Element
   nameWithType: Element
-- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor
-  name: Element()
-  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element__ctor
-  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor
-  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Element()
-  nameWithType: Element.Element()
 - uid: cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
   name: Element(String, Dictionary<String, String>)
   href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element__ctor_System_String_System_Collections_Generic_Dictionary_System_String_System_String__
@@ -2644,6 +2704,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.GetHashCode
   nameWithType: Element.GetHashCode
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.isSingle
+  name: isSingle
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_isSingle
+  commentId: F:cqhttp.Cyan.Messages.CQElements.Base.Element.isSingle
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.isSingle
+  nameWithType: Element.isSingle
 - uid: cqhttp.Cyan.Messages.CQElements.Base.Element.op_Addition(cqhttp.Cyan.Messages.CQElements.Base.Element,cqhttp.Cyan.Messages.CQElements.Base.Element)
   name: Addition(Element, Element)
   href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element_op_Addition_cqhttp_Cyan_Messages_CQElements_Base_Element_cqhttp_Cyan_Messages_CQElements_Base_Element_
@@ -2807,6 +2873,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.isFixed
   nameWithType: ElementFile.isFixed
+- uid: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous
+  name: ElementAnnonymous
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementAnnonymous
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous
+  nameWithType: ElementAnnonymous
+- uid: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.#ctor(System.Boolean)
+  name: ElementAnnonymous(Boolean)
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.html#cqhttp_Cyan_Messages_CQElements_ElementAnnonymous__ctor_System_Boolean_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.#ctor(System.Boolean)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.ElementAnnonymous(System.Boolean)
+  nameWithType: ElementAnnonymous.ElementAnnonymous(Boolean)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.#ctor*
+  name: ElementAnnonymous
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.html#cqhttp_Cyan_Messages_CQElements_ElementAnnonymous__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.ElementAnnonymous
+  nameWithType: ElementAnnonymous.ElementAnnonymous
 - uid: cqhttp.Cyan.Messages.CQElements.ElementAt
   name: ElementAt
   href: api/cqhttp.Cyan.Messages.CQElements.ElementAt.html
@@ -2952,6 +3037,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementShake.ElementShake
   nameWithType: ElementShake.ElementShake
+- uid: cqhttp.Cyan.Messages.CQElements.ElementShare
+  name: ElementShare
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementShare.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementShare
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementShare
+  nameWithType: ElementShare
+- uid: cqhttp.Cyan.Messages.CQElements.ElementShare.#ctor(System.String,System.String,System.String,System.String)
+  name: ElementShare(String, String, String, String)
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementShare.html#cqhttp_Cyan_Messages_CQElements_ElementShare__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementShare.#ctor(System.String,System.String,System.String,System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementShare.ElementShare(System.String, System.String, System.String, System.String)
+  nameWithType: ElementShare.ElementShare(String, String, String, String)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementShare.#ctor*
+  name: ElementShare
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementShare.html#cqhttp_Cyan_Messages_CQElements_ElementShare__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementShare.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementShare.ElementShare
+  nameWithType: ElementShare.ElementShare
 - uid: cqhttp.Cyan.Messages.CQElements.ElementText
   name: ElementText
   href: api/cqhttp.Cyan.Messages.CQElements.ElementText.html
@@ -3244,6 +3348,12 @@ references:
   commentId: T:cqhttp.Cyan.Utils.Convert
   fullName: cqhttp.Cyan.Utils.Convert
   nameWithType: Convert
+- uid: cqhttp.Cyan.Utils.Convert.ToEmoji(cqhttp.Cyan.Messages.CQElements.ElementFace)
+  name: ToEmoji(ElementFace)
+  href: api/cqhttp.Cyan.Utils.Convert.html#cqhttp_Cyan_Utils_Convert_ToEmoji_cqhttp_Cyan_Messages_CQElements_ElementFace_
+  commentId: M:cqhttp.Cyan.Utils.Convert.ToEmoji(cqhttp.Cyan.Messages.CQElements.ElementFace)
+  fullName: cqhttp.Cyan.Utils.Convert.ToEmoji(cqhttp.Cyan.Messages.CQElements.ElementFace)
+  nameWithType: Convert.ToEmoji(ElementFace)
 - uid: cqhttp.Cyan.Utils.Convert.ToEmoji(System.Int32)
   name: ToEmoji(Int32)
   href: api/cqhttp.Cyan.Utils.Convert.html#cqhttp_Cyan_Utils_Convert_ToEmoji_System_Int32_

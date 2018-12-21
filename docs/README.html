@@ -8,7 +8,7 @@
     <title>cqhttp.Cyan </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="cqhttp.Cyan ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -65,7 +65,23 @@
 <pre><code>Cyan---青
 </code></pre>
 <h2 id="快速上手">快速上手</h2>
-<pre><code class="lang-csharp">using cqhttp.Cyan.[];
+<h3 id="1搭建一个酷q示例并开启事件上报">1.搭建一个酷Q示例并开启事件上报</h3>
+<p>请参考<br>
+<a href="https://cqp.cc">酷Q官网</a><br>
+<a href="https://cqhttp.cc/docs/4.7/#/?id=%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">cqhttp插件文档</a></p>
+<h3 id="2创建一个-net-console项目">2.创建一个 .NET console项目</h3>
+<p>在<a href="https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install">https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install</a>获取.NET工具包<br>
+在任意目录下创建项目文件夹，并在cmd中执行</p>
+<pre><code class="lang-sh">dotnet new console -o [给项目起的名字]
+</code></pre>
+<h3 id="3添加nuget包">3.添加nuget包</h3>
+<p>在项目目录下执行</p>
+<pre><code class="lang-shell">dotnet add package cqhttp.Cyan
+dotnet restore
+</code></pre>
+<h3 id="4掌握一定的c语言基础并在programcs中编写bot逻辑">4.掌握一定的C#语言基础，并在Program.cs中编写bot逻辑</h3>
+<pre><code class="lang-csharp">using cqhttp.Cyan;
+using cqhttp.Cyan.Instance;
 namespace YourNS {
     class Program {
         static void Main(string[] args) {
@@ -149,12 +165,12 @@ namespace YourNS {
 <h3 id="消息接收">消息接收</h3>
 <p>在事件处理函数中可通过<code>(e is MessageEvent)</code>判断收到的是否为消息事件，如下：</p>
 <pre><code class="lang-csharp">static void Main() {
-    var client = HTTPApiClient(...);
+    var client = new HTTPApiClient(...);
     client.OnEventDelegate += HandleEvent;
 }
-static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
+static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
     if(e is MessageEvent) {
-        return HandleMessage(
+        return HandleMessage (
             (e as MessageEvent).message
         )
     }
@@ -172,8 +188,11 @@ Console.WriteLine(a == c);//False
 <p>可以自己构建需要发送的消息，也可以选择直接发送文本消息，亦或是发送定义好的常用消息</p>
 <p>目前可用的常用消息:</p>
 <ol>
-<li>MessageShake(), 戳一戳</li>
+<li>MessageShake(), 戳一戳, 空构造</li>
 <li><del>MessageText(), 纯文本</del>, 由于提供了发送纯文本消息的函数，故不需要</li>
+<li>MessageOnlineImage(), 在线图片, 通过url构造</li>
+<li>MessageShare(), 分享卡片, 通过URL, 分享标题, 分享简介与分享图片的URL构造</li>
+<li>MessageAnonymous(), 匿名消息, 在Message构造的基础上多了ignore参数</li>
 </ol>
 <pre><code class="lang-csharp">static void Main() {
     var client = HTTPApiClient(...);
@@ -188,7 +207,7 @@ Console.WriteLine(a == c);//False
             new ElementFace(1),//1-170
             new ElementText(&quot;part2&quot;)
         )
-    )
+    );
     //////////////////////
 }
 </code></pre>
@@ -200,10 +219,13 @@ Console.WriteLine(a == c);//False
 <li>........................<code>(byte[] resourse, bool useCache = false)</code></li>
 <li><code>ElementRecord(string url,bool useCache = false)</code></li>
 <li>..........................<code>(byte[] resourse, bool useCache = false)</code></li>
-<li><code>ElementShake()</code></li>
+<li><code>ElementShake()</code>*</li>
+<li><code>ElementShare()</code>*</li>
+<li><code>ElementAnnonymous()</code>*</li>
 </ul>
 <blockquote>
-<p>出于不知道什么原因ElementShake()只有在以非json发送消息时才有效</p>
+<p>出于不知道什么原因ElementShake()只有在以非json发送消息时才有效
+星标Element最好使用CommonMessages中的对象构造</p>
 </blockquote>
 <hr>
 <h2 id="文档">文档</h2>
