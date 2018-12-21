@@ -96,8 +96,11 @@ Console.WriteLine(a == c);//False
 
 目前可用的常用消息:
 
-1. MessageShake(), 戳一戳
+1. MessageShake(), 戳一戳, 空构造
 2. ~~MessageText(), 纯文本~~, 由于提供了发送纯文本消息的函数，故不需要
+3. MessageOnlineImage(), 在线图片, 通过url构造
+4. MessageShare(), 分享卡片, 通过URL, 分享标题, 分享简介与分享图片的URL构造
+5. MessageAnonymous(), 匿名消息, 在Message构造的基础上多了ignore参数
 
 ```csharp
 static void Main() {
@@ -113,7 +116,7 @@ static void Main() {
             new ElementFace(1),//1-170
             new ElementText("part2")
         )
-    )
+    );
     //////////////////////
 }
 ```
@@ -126,9 +129,12 @@ static void Main() {
 * ........................```(byte[] resourse, bool useCache = false)```
 * ```ElementRecord(string url,bool useCache = false)```
 * ..........................```(byte[] resourse, bool useCache = false)```
-* ```ElementShake()```
+* ```ElementShake()```*
+* ```ElementShare()```*
+* ```ElementAnnonymous()```*
 
 > 出于不知道什么原因ElementShake()只有在以非json发送消息时才有效
+> 星标Element最好使用CommonMessages中的对象构造
 
 ------------------------------
 
