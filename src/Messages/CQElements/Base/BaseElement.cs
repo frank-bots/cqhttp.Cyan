@@ -16,6 +16,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// represents the true message 
         /// </summary>
         public virtual Dictionary<string, string> data { get; private set; }
+        /// <summary>
+        /// 表示消息段是否只能单独发送
+        /// </summary>
+        public bool isSingle = false;
 
         /// <summary></summary>
         public static Message operator + (Element a, Element b) {
@@ -66,7 +70,8 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
                     return data["text"];
                 string paramBuilder = "";
                 foreach (var i in data)
-                    paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
+                    if (i.Value.Length > 0)
+                        paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
                 return string.Format (
                     "[CQ:{0}{1}]",
                     type, paramBuilder.TrimEnd (' ')
@@ -86,12 +91,6 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
                 return builder.TrimEnd (',', ' ')+$"}}}}";
                 //。。。不这么写的话我的代码格式化插件就会崩掉
             }
-        }
-        /// <summary>
-        /// 请勿调用默认构造函数
-        /// </summary>
-        protected Element () {
-            throw new Exceptions.NullElementException ("调用了Element()");
         }
         /// <summary>
         /// 手动构造一个消息段，一般用不到

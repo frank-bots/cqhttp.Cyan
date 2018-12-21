@@ -19,6 +19,15 @@ namespace cqhttp.Cyan.Exceptions {
         /// <summary></summary>
         public ErrorElementException (string message) : base (message) { }
     }
+    /// <summary>
+    /// 消息构造格式错误
+    /// </summary>
+    public class ErrorMessageException : Exception {
+        /// <summary></summary>
+        public ErrorMessageException () : base () { }
+        /// <summary></summary>
+        public ErrorMessageException (string message) : base (message) { }
+    }
     /// <summary></summary>
     public class NetworkFailureException : Exception {
         /// <summary></summary>
