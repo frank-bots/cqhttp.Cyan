@@ -4,8 +4,35 @@
 
 ## 快速上手
 
+### 1.搭建一个酷Q示例并开启事件上报
+
+请参考  
+[酷Q官网](https://cqp.cc)  
+[cqhttp插件文档](https://cqhttp.cc/docs/4.7/#/?id=%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)  
+
+### 2.创建一个 .NET console项目
+
+在<https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install>获取.NET工具包  
+在任意目录下创建项目文件夹，并在cmd中执行
+
+```sh
+dotnet new console -o [给项目起的名字]
+```
+
+### 3.添加nuget包
+
+在项目目录下执行
+
+```shell
+dotnet add package cqhttp.Cyan
+dotnet restore
+```
+
+### 4.掌握一定的C#语言基础，并在Program.cs中编写bot逻辑
+
 ```csharp
-using cqhttp.Cyan.[];
+using cqhttp.Cyan;
+using cqhttp.Cyan.Instance;
 namespace YourNS {
     class Program {
         static void Main(string[] args) {
@@ -66,12 +93,12 @@ namespace YourNS {
 
 ```csharp
 static void Main() {
-    var client = HTTPApiClient(...);
+    var client = new HTTPApiClient(...);
     client.OnEventDelegate += HandleEvent;
 }
-static CQResponse HandleEvent(CQApiClient api,CQEvent e) {
+static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
     if(e is MessageEvent) {
-        return HandleMessage(
+        return HandleMessage (
             (e as MessageEvent).message
         )
     }
