@@ -3,7 +3,10 @@
         "stack": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
-        "__tree": "cpp"
+        "__tree": "cpp",
+        "ostream": "cpp",
+        "string": "cpp",
+        "random": "cpp"
     },
     "python.linting.enabled": false
 }

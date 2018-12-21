@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
+using cqhttp.Cyan.Messages.CQElements;
 
 namespace cqhttp.Cyan.Utils {
     /// <summary>
@@ -46,6 +47,10 @@ namespace cqhttp.Cyan.Utils {
             if (faceId < emojiDict.Length)
                 return emojiDict[faceId];
             else return "未知表情";
+        }
+        /// <summary></summary>
+        public static string ToEmoji (ElementFace i) {
+            return ToEmoji (int.Parse (i.data["id"]));
         }
     }
     /// <summary>

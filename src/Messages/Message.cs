@@ -168,8 +168,11 @@ namespace cqhttp.Cyan.Messages {
         /// <returns>序列化后的json字符串</returns>
         private static string SerializeToJsonArray (Message message) {
             string jsonBuild = "[";
-            foreach (var i in message.data)
-                jsonBuild += i.raw_data_json + ',';
+            foreach (var i in message.data) {
+                if (i.isSingle)
+                    jsonBuild += i.raw_data_json + ',';
+                else throw new Exceptions.ErrorMessageException ($"{i.type}消息段只能单独发送");
+            }
             return jsonBuild.TrimEnd (' ', ',') + ']';
         }
         /// <summary>
@@ -211,7 +214,11 @@ namespace cqhttp.Cyan.Messages {
                         return new ElementEmoji (int.Parse (dict["id"]));
                     case "shake":
                         return new ElementShake ();
-
+                    case "share":
+                        return new ElementShare (
+                            dict["url"], dict["name"],
+                            dict["content"], dict["image"]
+                        );
                 }
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
