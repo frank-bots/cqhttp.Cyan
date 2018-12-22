@@ -1,4 +1,4 @@
-using cqhttp.Cyan.ApiCall.Responses.Base;
+using cqhttp.Cyan.ApiCall.Result.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -13,7 +13,7 @@ namespace cqhttp.Cyan.ApiCall.Requests.Base {
         /// <summary></summary>
         public string apiPath { get; private set; }
         /// <summary></summary>
-        public ApiResponse response;
+        public ApiResult response;
         /// <summary></summary>
         public ApiRequest (string r) => apiPath = r;
         /// <summary></summary>

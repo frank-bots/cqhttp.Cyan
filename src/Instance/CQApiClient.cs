@@ -2,13 +2,14 @@ using System;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Responses.Base;
+using cqhttp.Cyan.ApiCall.Result.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
+using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Instance {
     /// <summary></summary>
@@ -42,18 +43,17 @@ namespace cqhttp.Cyan.Instance {
             if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
         }
         private async Task<bool> Initiate () {
-            ApiResponse loginInfo = await SendRequestAsync (new GetLoginInfoRequest ());
-            if (loginInfo.retcode != 0) return false;
-            this.self_id = loginInfo.data["user_id"].ToObject<long> ();
-            this.self_nick = loginInfo.data["nickname"].ToString ();
+            ApiResult loginInfo = await SendRequestAsync (new GetLoginInfoRequest ());
+            this.self_id = loginInfo.raw_data["user_id"].ToObject<long> ();
+            this.self_nick = loginInfo.raw_data["nickname"].ToString ();
             return true;
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
-        public virtual Task<ApiResponse> SendRequestAsync (ApiRequest x) {
+        public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
             throw new NotImplementedException ();
         }
         /// <summary>发送消息(自行构造)</summary>
-        public async Task<ApiResponse> SendMessageAsync (
+        public async Task<ApiResult> SendMessageAsync (
             MessageType messageType,
             long target,
             Message message
@@ -61,7 +61,7 @@ namespace cqhttp.Cyan.Instance {
             return await SendRequestAsync (new SendmsgRequest (messageType, target, message));
         }
         /// <summary>发送纯文本消息</summary>
-        public async Task<ApiResponse> SendTextAsync (
+        public async Task<ApiResult> SendTextAsync (
             MessageType messageType,
             long target,
             string text
@@ -91,7 +91,7 @@ namespace cqhttp.Cyan.Instance {
                         alive = true;
                     else alive = false;
                 }
-                Logger.Log(Verbosity.INFO,$"根据元事件判定cqhttp状态是否正常:{alive}");
+                Logger.Log (Verbosity.INFO, $"根据元事件判定cqhttp状态是否正常:{alive}");
                 return new Events.CQEvents.CQResponses.EmptyResponse ();
             }
             return OnEventDelegate (this, event_);

@@ -2,14 +2,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using cqhttp.Cyan.ApiCall;
 using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Responses.Base;
+using cqhttp.Cyan.ApiCall.Result.Base;
 using cqhttp.Cyan.Enums;
-using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Instance {
     /// <summary>以HTTP协议调用API</summary>
@@ -23,12 +18,12 @@ namespace cqhttp.Cyan.Instance {
                 }
             }
         /// <summary>发送API请求</summary>
-        public override async Task<ApiResponse> SendRequestAsync (ApiRequest x) {
+        public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
             return await PostJsonAsync (
                 accessUrl, x, accessToken
             );
         }
-        private async static Task<ApiResponse> PostJsonAsync (string host, ApiRequest request, string apiToken = "") {
+        private async static Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string apiToken = "") {
             HttpResponseMessage response = new HttpResponseMessage ();
             using (HttpContent content = new StringContent (
                 request.content, Encoding.UTF8, "application/json"))
@@ -57,15 +52,10 @@ namespace cqhttp.Cyan.Instance {
                     throw new Exceptions.NetworkFailureException ($"POST调用api出错");
                 }
             }
-            try {
-                request.response = JToken.Parse (
-                    await response.Content.ReadAsStringAsync ()
-                ).ToObject<ApiResponse> ();
-                return request.response;
-            } catch (JsonException) {
-                Logger.Log (Verbosity.ERROR, $"调用api{request.apiPath}时返回值无法反序列化");
-                throw new Exceptions.ErrorApicallException ($"返回值无法反序列化");
-            }
+            request.response.Parse (
+                await response.Content.ReadAsStringAsync ()
+            );
+            return request.response;
         }
     }
 

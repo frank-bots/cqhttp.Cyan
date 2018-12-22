@@ -1,4 +1,5 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
+using cqhttp.Cyan.ApiCall.Result;
 using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
@@ -10,6 +11,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         /// <summary></summary>
         public SendmsgRequest (MessageType messageType, long target_id, Messages.Message toSend):
             base ("/send_msg") {
+                this.response = new Result.SendmsgResult ();
                 this.messageType = messageType;
                 this.toSend = toSend;
                 this.target_id = target_id;

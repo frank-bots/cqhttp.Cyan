@@ -70,4 +70,11 @@ namespace cqhttp.Cyan.Exceptions {
         /// <summary></summary>
         public ErrorResponseException (string message) : base (message) { }
     }
+    ///
+    public class ErrorUtilOperationException : Exception {
+        ///
+        public ErrorUtilOperationException () : base() { }
+        ///
+        public ErrorUtilOperationException (string message) : base (message) { }
+    }
 }

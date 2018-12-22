@@ -5,6 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Messages.CQElements;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Utils {
     /// <summary>
@@ -83,6 +85,95 @@ namespace cqhttp.Cyan.Utils {
         /// <summary></summary>
         public void GetMessageId (string pattern) {
             //不知道怎么写好
+        }
+    }
+    /// <summary>群成员信息</summary>
+    [JsonObject]
+    public class GroupMemberInfo {
+        ///
+        [JsonProperty ("user_id")]
+        public long user_id;
+        /// <summary>QQ昵称</summary>
+        [JsonProperty ("nickname")]
+        public string nickname;
+        /// <summary>群名片</summary>
+        [JsonProperty ("card")]
+        public string card;
+        ///
+        [JsonProperty ("sex")]
+        public string sex;
+        ///
+        [JsonProperty ("age")]
+        public int age;
+        ///
+        [JsonProperty ("area")]
+        public string area;
+        ///
+        [JsonProperty ("join_time")]
+        public int join_time;
+        ///
+        [JsonProperty ("last_sent_time")]
+        public int last_sent_time;
+        /// <summary>成员等级</summary>
+        [JsonProperty ("level")]
+        public string level;
+        ///
+        [JsonProperty ("role")]
+        public string role;
+        /// <summary>是否有不良记录</summary>
+        [JsonProperty ("unfriendly")]
+        public bool unfriendly;
+        /// <summary>专属头衔</summary>
+        [JsonProperty ("title")]
+        public string title;
+        ///
+        [JsonProperty ("title_expire_time")]
+        public int title_expire_time;
+        ///
+        [JsonProperty ("card_changeable")]
+        public bool card_changeable;
+    }
+    ///
+    public class GroupTable : IEnumerable {
+        ///
+        public class GroupInfo {
+            ///
+            public string group_name;
+            ///
+            public Dictionary<long, GroupMemberInfo> group_member;
+            /// <summary>附加成员</summary>
+            public static GroupInfo operator + (
+                GroupInfo groupInfo, JToken member
+            ) {
+                groupInfo.group_member.Add (
+                    member["user_id"].ToObject<long> (),
+                    member.ToObject<GroupMemberInfo> ()
+                );
+                return groupInfo;
+            }
+        }
+        Dictionary<long, GroupInfo> table;
+        ///
+        public IEnumerator GetEnumerator () {
+            throw new NotImplementedException ();
+        }
+        ///
+        public object this [long i] {
+            get {
+                if (table[i] == null)
+                    table[i] = new GroupInfo ();
+                return table[i];
+            }
+            set {
+                if (table[i] == null)
+                    table[i] = new GroupInfo ();
+                if (value is string)
+                    table[i].group_name = (value as string);
+                else if (value is Dictionary<long, GroupMemberInfo>)
+                    table[i].group_member = value as Dictionary<long, GroupMemberInfo>;
+                else throw new Exceptions.ErrorUtilOperationException ("待描述");
+                //TODO: 描述这个不可描述的错误
+            }
         }
     }
 }

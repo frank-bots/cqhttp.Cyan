@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Responses.Base;
+using cqhttp.Cyan.ApiCall.Result.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.EventListener;
-using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Instance {
     /// <summary>websocket协议调用api</summary>
@@ -22,7 +21,7 @@ namespace cqhttp.Cyan.Instance {
                 }
             }
         /// <summary></summary>
-        public override async Task<ApiResponse> SendRequestAsync (ApiRequest x) {
+        public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
                 return await WSSendJson (accessUrl, x, accessToken);
             }
             /// <summary></summary>
@@ -31,8 +30,8 @@ namespace cqhttp.Cyan.Instance {
             }
         private static Dictionary<string, ClientWebSocket> pool =
             new Dictionary<string, ClientWebSocket> ();
-        private static async Task<ApiResponse> WSSendJson (string host, ApiRequest request, string apiToken = "") {
-            string dest = host + "/api/" + 
+        private static async Task<ApiResult> WSSendJson (string host, ApiRequest request, string apiToken = "") {
+            string dest = host + "/api/" +
                 (apiToken == "" ? "" : "?access_token=" + apiToken);
             ClientWebSocket current;
             if (pool.ContainsKey (dest) == false) {
@@ -60,7 +59,8 @@ namespace cqhttp.Cyan.Instance {
                 recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
                 constructor += Encoding.UTF8.GetString (buffer);
             }
-            return JToken.Parse (constructor).ToObject<ApiResponse> ();
+            request.response.Parse (constructor);
+            return request.response;
         }
         private async static void CleanUp () {
             Logger.Log (Verbosity.INFO, "开始关闭Websocket连接");
