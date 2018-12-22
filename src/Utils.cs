@@ -152,7 +152,7 @@ namespace cqhttp.Cyan.Utils {
                 return groupInfo;
             }
         }
-        Dictionary<long, GroupInfo> table;
+        Dictionary<long, GroupInfo> table = new Dictionary<long, GroupInfo> ();
         ///
         public IEnumerator GetEnumerator () {
             throw new NotImplementedException ();
