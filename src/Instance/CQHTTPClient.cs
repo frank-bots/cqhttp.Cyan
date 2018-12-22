@@ -19,9 +19,11 @@ namespace cqhttp.Cyan.Instance {
             }
         /// <summary>发送API请求</summary>
         public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
-            return await PostJsonAsync (
+            var ret = await PostJsonAsync (
                 accessUrl, x, accessToken
             );
+            await base.SendRequestAsync(x);
+            return ret;
         }
         private async static Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string apiToken = "") {
             HttpResponseMessage response = new HttpResponseMessage ();
