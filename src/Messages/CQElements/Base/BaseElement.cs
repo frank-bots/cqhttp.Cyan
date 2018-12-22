@@ -29,6 +29,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public static bool operator == (Element a, Element b) {
             if (a is null && b is null) return true;
             if (a is null || b is null) return false;
+            if(a.type!=b.type)return false;
             var i = a.data.GetEnumerator ();
             var j = b.data.GetEnumerator ();
             while (i.Current.Key == j.Current.Key && i.Current.Value == j.Current.Value) {
