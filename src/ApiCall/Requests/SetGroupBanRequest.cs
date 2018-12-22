@@ -11,7 +11,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         /// <param name="duration">禁言时长</param>
         public SetGroupBanRequest (long group_id, long user_id, long duration):
             base ("/set_group_ban", group_id, user_id) {
-                this.response=new Result.SetGroupBanResult();
+                this.response=new Result.EmptyResult();
                 this.duration = duration;
             }
         /// <summary></summary>

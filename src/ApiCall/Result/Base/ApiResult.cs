@@ -32,7 +32,8 @@ namespace cqhttp.Cyan.ApiCall.Result.Base {
         public Newtonsoft.Json.Linq.JToken raw_data { get; private set; }
         ///
         public virtual void Parse (string result) {
-            throw new NotImplementedException ();
+            Base.ApiResult i = PreCheck (result);
+            return;
         }
         ///
         protected ApiResult PreCheck (string result) {

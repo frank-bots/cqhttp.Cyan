@@ -11,6 +11,7 @@ namespace cqhttp.Cyan.ApiCall.Requests
         /// <param name="card">设置的群名片</param>
         public SetGroupCardRequest(long group_id, long user_id,string card) : base("/set_group_card", group_id, user_id)
         {
+            this.response = new Result.EmptyResult();
             this.card = card;
         }
         /// <summary></summary>
