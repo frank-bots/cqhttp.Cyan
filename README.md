@@ -79,7 +79,7 @@ namespace YourNS {
 |事件|```CQEvent```|.Events.CQEvents(.Base)|
 |事件响应|```CQResponse```|.Events.CQResponse(.Base)|
 |Api调用|```ApiRequest```|.ApiCall.Requests(.Base)|
-|Api响应|```ApiResponse```|.ApiCall.Requests(.Base)|
+|Api响应|```ApiResponse```|.ApiCall.Responses(.Base)|
 
 ------------------------------
 
@@ -160,7 +160,6 @@ static void Main() {
 * ```ElementShare()```*
 * ```ElementAnnonymous()```*
 
-> 出于不知道什么原因ElementShake()只有在以非json发送消息时才有效
 > 星标Element最好使用CommonMessages中的对象构造
 
 ------------------------------

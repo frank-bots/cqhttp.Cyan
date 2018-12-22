@@ -4,7 +4,9 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     public class GetGroupListRequest : ApiCall.Requests.Base.ApiRequest {
         ///
-        public GetGroupListRequest () : base ("/get_group_list") { }
+        public GetGroupListRequest () : base ("/get_group_list") {
+            this.response = new Result.GetGroupListResult();
+        }
         ///
         override public string content {
             get { return "{}"; }
