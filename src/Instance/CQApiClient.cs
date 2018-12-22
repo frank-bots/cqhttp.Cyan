@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Requests.Base;
+using cqhttp.Cyan.ApiCall.Result;
 using cqhttp.Cyan.ApiCall.Result.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents.Base;
@@ -50,7 +51,12 @@ namespace cqhttp.Cyan.Instance {
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
         public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
-            throw new NotImplementedException ();
+            if (x is GetGroupListRequest) {
+                GetGroupListResult res = x.response as GetGroupListResult;
+                foreach (var i in res.groupList)
+                    Utils.GroupTable.groupTable[i.Item1] = i.Item2;
+            }
+            return null;
         }
         /// <summary>发送消息(自行构造)</summary>
         public async Task<ApiResult> SendMessageAsync (

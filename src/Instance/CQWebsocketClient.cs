@@ -22,12 +22,15 @@ namespace cqhttp.Cyan.Instance {
             }
         /// <summary></summary>
         public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
-                return await WSSendJson (accessUrl, x, accessToken);
-            }
-            /// <summary></summary>
-            ~CQWebsocketClient () {
-                CleanUp ();
-            }
+            var ret = await WSSendJson (accessUrl, x, accessToken);
+            await base.SendRequestAsync (x);
+            return ret;
+        }
+        
+        /// <summary></summary>
+        ~CQWebsocketClient () {
+            CleanUp ();
+        }
         private static Dictionary<string, ClientWebSocket> pool =
             new Dictionary<string, ClientWebSocket> ();
         private static async Task<ApiResult> WSSendJson (string host, ApiRequest request, string apiToken = "") {

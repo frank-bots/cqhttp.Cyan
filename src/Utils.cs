@@ -133,8 +133,14 @@ namespace cqhttp.Cyan.Utils {
         [JsonProperty ("card_changeable")]
         public bool card_changeable;
     }
-    ///
+    
+    /// <remark>
+    /// do not create any other instances other than the static member
+    /// <see cref="GroupTable.groupTable"/>!!!!
+    /// </remark>
     public class GroupTable : IEnumerable {
+        /// <summary>the one and ONLY one instance</summary>
+        public static GroupTable groupTable = new GroupTable();
         ///
         public class GroupInfo {
             ///
