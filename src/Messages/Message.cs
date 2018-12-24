@@ -20,6 +20,8 @@ namespace cqhttp.Cyan.Messages {
         public Message (params Element[] elements) {
             this.data = new List<Element> (elements);
         }
+        /// <summary>纯文本的默认构造</summary>
+        public Message (string text) : this (new ElementText (text)) { }
         /// <summary>
         /// 拼接消息
         /// </summary>
