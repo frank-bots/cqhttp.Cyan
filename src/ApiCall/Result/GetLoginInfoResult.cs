@@ -10,7 +10,7 @@ namespace cqhttp.Cyan.ApiCall.Result {
             Base.ApiResult i = base.PreCheck (result);
             try {
                 user_id =
-                    i.raw_data["user_id"].ToObject<int> ();
+                    i.raw_data["user_id"].ToObject<long> ();
                 nickname =
                     i.raw_data["nickname"].ToString ();
             } catch {

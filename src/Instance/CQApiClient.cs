@@ -49,9 +49,10 @@ namespace cqhttp.Cyan.Instance {
             if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
         }
         private async Task<bool> Initiate () {
-            ApiResult loginInfo = await SendRequestAsync (new GetLoginInfoRequest ());
-            this.self_id = loginInfo.raw_data["user_id"].ToObject<long> ();
-            this.self_nick = loginInfo.raw_data["nickname"].ToString ();
+            GetLoginInfoResult loginInfo = 
+                await SendRequestAsync (new GetLoginInfoRequest ()) as GetLoginInfoResult;
+            this.self_id = loginInfo.user_id;
+            this.self_nick = loginInfo.nickname;
             return true;
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>

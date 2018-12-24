@@ -156,6 +156,7 @@ static void Main() {
 * ........................```(byte[] resourse, bool useCache = false)```
 * ```ElementRecord(string url,bool useCache = false)```
 * ..........................```(byte[] resourse, bool useCache = false)```
+* ```ElementMusic(string type, string keyword)```其中type为163,qq,xiami之一
 * ```ElementShake()```*
 * ```ElementShare()```*
 * ```ElementAnnonymous()```*
