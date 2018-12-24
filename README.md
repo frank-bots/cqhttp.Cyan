@@ -164,6 +164,25 @@ static void Main() {
 
 ------------------------------
 
+## Facts
+
+### CQApiClient的参数
+
+`CQHTTPClient`的参数中除accessUrl外皆为可选参数，即你可以实例化一个“仅发送API请求”的Client对象。
+
+### 多实例
+
+你可以实例化多个Client对象以连接到不同的酷Q实例，以完成各种骚操作
+
+### using cqhttp.Cyan.Utils
+
+Utils命名空间中有很多好用的工具  
+比如  
+
+> 持久化存储群列表与群员信息`GroupTable`,  
+> 持久化存储两分钟内发送的消息`MessageTable`,  
+> 还有各种用于转换消息用的函数`Convert.*`(如`Convert.ToEmoji(id)`可以将QQ表情转换为相似的Emoji，便于发送奇怪的表情)
+
 ## 文档
 
 <http://www.std-frank.club/cqhttp.Cyan>
