@@ -180,6 +180,7 @@ Utils命名空间中有很多好用的工具
 比如  
 
 > 持久化存储群列表与群员信息`GroupTable`,  
+* 使用方式: 对于任意CQApiClient对象i,将一个GroupTable对象赋给i.groupTable后,在这个Client示例调用GetGroupList API时将自动向此对象记录获得的群组信息
 > 持久化存储两分钟内发送的消息`MessageTable`,  
 > 还有各种用于转换消息用的函数`Convert.*`(如`Convert.ToEmoji(id)`可以将QQ表情转换为相似的Emoji，便于发送奇怪的表情)
 
