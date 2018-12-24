@@ -40,7 +40,7 @@ namespace cqhttp.Cyan.ApiCall.Result.Base {
             JToken parsed = JToken.Parse (result);
             switch (parsed["retcode"].ToObject<int> ()) {
                 case 0:
-                    this.raw_data = parsed;
+                    this.raw_data = parsed["data"];
                     return this;
                 case 1:
                 default:

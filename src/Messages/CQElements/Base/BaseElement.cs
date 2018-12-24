@@ -57,7 +57,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         }
         /// <summary></summary>
         public override int GetHashCode () {
-            return 1;
+            int hash = 1;
+            foreach (var i in data)
+                hash ^= i.GetHashCode();
+            return hash;
         }
         /// <summary>
         /// builds the value when constructing CQCode
