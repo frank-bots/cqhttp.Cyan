@@ -37,6 +37,11 @@ namespace cqhttp.Cyan.Instance {
         /// </summary>
         public bool alive { get; private set; }
 
+        /// <summary>
+        /// 指向本实例的群组记录对象
+        /// </summary>
+        public Utils.GroupTable groupTable = null;
+
         /// <summary></summary>
         public CQApiClient (string accessUrl, string accessToken = "") {
             this.accessToken = accessToken;
@@ -51,10 +56,12 @@ namespace cqhttp.Cyan.Instance {
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
         public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
-            if (x is GetGroupListRequest) {
-                GetGroupListResult res = x.response as GetGroupListResult;
-                foreach (var i in res.groupList)
-                    Utils.GroupTable.groupTable[i.Item1] = i.Item2;
+            if (groupTable != null) {
+                if (x is GetGroupListRequest) {
+                    GetGroupListResult res = x.response as GetGroupListResult;
+                    foreach (var i in res.groupList)
+                        groupTable[i.Item1] = i.Item2;
+                }
             }
             return null;
         }

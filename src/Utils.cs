@@ -133,14 +133,9 @@ namespace cqhttp.Cyan.Utils {
         [JsonProperty ("card_changeable")]
         public bool card_changeable;
     }
-    
-    /// <remark>
-    /// do not create any other instances other than the static member
-    /// <see cref="GroupTable.groupTable"/>!!!!
-    /// </remark>
+
+    ///
     public class GroupTable : IEnumerable {
-        /// <summary>the one and ONLY one instance</summary>
-        public static GroupTable groupTable = new GroupTable();
         ///
         public class GroupInfo {
             ///
@@ -151,10 +146,15 @@ namespace cqhttp.Cyan.Utils {
             public static GroupInfo operator + (
                 GroupInfo groupInfo, JToken member
             ) {
-                groupInfo.group_member.Add (
-                    member["user_id"].ToObject<long> (),
-                    member.ToObject<GroupMemberInfo> ()
-                );
+                try {
+                    groupInfo.group_member.Add (
+                        member["user_id"].ToObject<long> (),
+                        member.ToObject<GroupMemberInfo> ()
+                    );
+                } catch (IndexOutOfRangeException) {
+                    //supress warnings
+                    // 必要么？
+                }
                 return groupInfo;
             }
         }
