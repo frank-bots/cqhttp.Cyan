@@ -67,12 +67,12 @@ namespace cqhttp.Cyan.Instance {
         }
         /// <summary>发送消息(自行构造)</summary>
         public async Task<ApiResult> SendMessageAsync (
-            MessageType messageType,
-            long target,
-            Message message
-        ) {
-            return await SendRequestAsync (new SendmsgRequest (messageType, target, message));
-        }
+                MessageType messageType,
+                long target,
+                Message message
+            ) =>
+            await SendRequestAsync (new SendmsgRequest (messageType, target, message));
+
         /// <summary>发送纯文本消息</summary>
         public async Task<ApiResult> SendTextAsync (
             MessageType messageType,
