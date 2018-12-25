@@ -30,7 +30,7 @@ namespace cqhttp.Cyan.ApiCall.Result.Base {
         /// <see>https://cqhttp.cc/docs/4.6/#/API</see>
         /// </summary>
         public Newtonsoft.Json.Linq.JToken raw_data { get; private set; }
-        ///
+        /// <summary>将收到的消息保存到this中</summary>
         public virtual void Parse (string result) {
             Base.ApiResult i = PreCheck (result);
             return;
