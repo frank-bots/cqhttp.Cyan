@@ -49,7 +49,7 @@ namespace cqhttp.Cyan.Instance {
             if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
         }
         private async Task<bool> Initiate () {
-            GetLoginInfoResult loginInfo = 
+            GetLoginInfoResult loginInfo =
                 await SendRequestAsync (new GetLoginInfoRequest ()) as GetLoginInfoResult;
             this.self_id = loginInfo.user_id;
             this.self_nick = loginInfo.nickname;
@@ -59,9 +59,11 @@ namespace cqhttp.Cyan.Instance {
         public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
             if (groupTable != null) {
                 if (x is GetGroupListRequest) {
-                    GetGroupListResult res = x.response as GetGroupListResult;
-                    foreach (var i in res.groupList)
+                    foreach (var i in (x.response as GetGroupListResult).groupList)
                         groupTable[i.Item1] = i.Item2;
+                } else if (x is GetGroupMemberInfoRequest) {
+                    groupTable[(x.response as GetGroupMemberInfoResult).memberInfo.user_id] =
+                        (x.response as GetGroupMemberInfoResult).memberInfo;
                 }
             }
             return null;

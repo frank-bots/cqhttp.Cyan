@@ -144,15 +144,17 @@ namespace cqhttp.Cyan.Utils {
             public Dictionary<long, GroupMemberInfo> group_member;
             /// <summary>附加成员</summary>
             public static GroupInfo operator + (
-                GroupInfo groupInfo, JToken member
+                GroupInfo groupInfo, GroupMemberInfo member
             ) {
                 try {
-                    groupInfo.group_member.Add (
-                        member["user_id"].ToObject<long> (),
-                        member.ToObject<GroupMemberInfo> ()
+                    if (groupInfo.group_member.ContainsKey (member.user_id)) {
+                        groupInfo.group_member[member.user_id] = member;
+                    } else groupInfo.group_member.Add (
+                        member.user_id,
+                        member
                     );
                 } catch (IndexOutOfRangeException) {
-                    //supress warnings
+                    //supress exceptions here
                     // 必要么？
                 }
                 return groupInfo;
