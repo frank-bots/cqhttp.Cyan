@@ -20,7 +20,7 @@ namespace cqhttp.Cyan.Messages.CQElements {
                     ) {
                         return "511728615"; // 404 Not Found(Prod.by CashMoneyAP)
                     }
-                    Logger.Log (Enums.Verbosity.INFO, $"解析了163音乐搜索{keyword}的搜索结果");
+                    Logger.Log (Enums.Verbosity.DEBUG, $"解析了163音乐搜索{keyword}的搜索结果");
                     return res["result"]["songs"][0]["id"].ToString ();
                 }
             // else if (type == "qq")

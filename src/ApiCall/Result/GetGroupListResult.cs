@@ -5,7 +5,7 @@ namespace cqhttp.Cyan.ApiCall.Result {
     ///
     public class GetGroupListResult : Base.ApiResult {
         ///
-        public List < (long, string) > groupList;
+        public List < (long, string) > groupList = new List < (long, string) > ();
         ///
         public override void Parse (string result) {
             Base.ApiResult i = base.PreCheck (result);
