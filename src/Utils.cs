@@ -91,6 +91,9 @@ namespace cqhttp.Cyan.Utils {
     [JsonObject]
     public class GroupMemberInfo {
         ///
+        [JsonProperty ("group_id")]
+        public long group_id;
+        ///
         [JsonProperty ("user_id")]
         public long user_id;
         /// <summary>QQ昵称</summary>
@@ -142,22 +145,36 @@ namespace cqhttp.Cyan.Utils {
             public string group_name;
             ///
             public Dictionary<long, GroupMemberInfo> group_member;
+
             /// <summary>附加成员</summary>
-            public static GroupInfo operator + (
-                GroupInfo groupInfo, GroupMemberInfo member
+            [Obsolete ("请使用this[long user_id]", true)]
+            public void Add (
+                GroupMemberInfo member
             ) {
                 try {
-                    if (groupInfo.group_member.ContainsKey (member.user_id)) {
-                        groupInfo.group_member[member.user_id] = member;
-                    } else groupInfo.group_member.Add (
+                    if (group_member.ContainsKey (member.user_id)) {
+                        group_member[member.user_id] = member;
+                    } else group_member.Add (
                         member.user_id,
                         member
                     );
-                } catch (IndexOutOfRangeException) {
+                } catch (ArgumentNullException) {
                     //supress exceptions here
                     // 必要么？
                 }
-                return groupInfo;
+            }
+            ///
+            public GroupMemberInfo this [long user_id] {
+                get {
+                    if (group_member.ContainsKey (user_id))
+                        return group_member[user_id];
+                    else return null;
+                }
+                set {
+                    if (group_member.ContainsKey (user_id))
+                        group_member[user_id] = value;
+                    else group_member.Add (user_id, value);
+                }
             }
         }
         Dictionary<long, GroupInfo> table = new Dictionary<long, GroupInfo> ();
@@ -166,21 +183,16 @@ namespace cqhttp.Cyan.Utils {
             throw new NotImplementedException ();
         }
         ///
-        public object this [long i] {
+        public GroupInfo this [long group_id] {
             get {
-                if (table[i] == null)
-                    table[i] = new GroupInfo ();
-                return table[i];
+                if (table[group_id] == null)
+                    table[group_id] = new GroupInfo ();
+                return table[group_id];
             }
             set {
-                if (table[i] == null)
-                    table[i] = new GroupInfo ();
-                if (value is string)
-                    table[i].group_name = (value as string);
-                else if (value is Dictionary<long, GroupMemberInfo>)
-                    table[i].group_member = value as Dictionary<long, GroupMemberInfo>;
-                else throw new Exceptions.ErrorUtilOperationException ("待描述");
-                //TODO: 描述这个不可描述的错误
+                if (table[group_id] == null)
+                    table[group_id] = new GroupInfo ();
+                table[group_id] = value;
             }
         }
     }
