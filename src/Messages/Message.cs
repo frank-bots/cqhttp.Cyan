@@ -171,9 +171,9 @@ namespace cqhttp.Cyan.Messages {
         private static string SerializeToJsonArray (Message message) {
             string jsonBuild = "[";
             foreach (var i in message.data) {
-                if (i.isSingle)
-                    jsonBuild += i.raw_data_json + ',';
-                else throw new Exceptions.ErrorMessageException ($"{i.type}消息段只能单独发送");
+                //if (!i.isSingle)
+                jsonBuild += i.raw_data_json + ',';
+                //else throw new Exceptions.ErrorMessageException ($"{i.type}消息段只能单独发送");
             }
             return jsonBuild.TrimEnd (' ', ',') + ']';
         }

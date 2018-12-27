@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using cqhttp.Cyan.Events.CQEvents.Base;
+using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Utils {
     /// <summary>
@@ -59,32 +59,24 @@ namespace cqhttp.Cyan.Utils {
     /// 记录发送的消息
     /// </summary>
     public class MessageTable {
-        Queue<MessageEvent> queue = new Queue<MessageEvent> ();
-        Task monitor;
-        CancellationTokenSource monitorCanceller = new CancellationTokenSource ();
-        /// <summary></summary>
-        ~MessageTable () {
-            monitorCanceller.Cancel ();
-        }
-        /// <summary></summary>
-        public MessageTable () {
-            monitor = Task.Run (() => {
-                while (true) {
-                    Thread.Sleep (1000);
-                    if (queue.Count > 0) {
-                        if (queue.Peek ().time - DateTime.Now.ToFileTime () > 2 * 1)
-                            queue.Dequeue ();
-
-                    }
-                }
-            }, monitorCanceller.Token);
-        }
+        List < (long, Message) > messageList = new List < (long, Message) > ();
         /// <summary>对消息进行记录以便后续撤回</summary>
-        public void Log (MessageEvent event_) =>
-            queue.Enqueue (event_);
+        public void Log (long mid, Message event_) {
+            messageList.Add ((mid, event_));
+            Task.Run (() => {
+                Thread.Sleep (120000);
+                try { messageList.Remove ((mid, event_)); } catch { }
+            });
+        }
         /// <summary></summary>
-        public void GetMessageId (string pattern) {
-            //不知道怎么写好
+        public long GetMessageId (string pattern) {
+            Regex pat = new Regex (pattern);
+            foreach (var i in messageList) {
+                if (pat.IsMatch (i.Item2.raw_data_cq)) {
+                    return i.Item1;
+                }
+            }
+            throw new Exceptions.NullEventException ("未发现满足条件的消息");
         }
     }
     /// <summary>群成员信息</summary>
@@ -180,7 +172,7 @@ namespace cqhttp.Cyan.Utils {
         Dictionary<long, GroupInfo> table = new Dictionary<long, GroupInfo> ();
         ///
         public IEnumerator GetEnumerator () {
-            throw new NotImplementedException ();
+            return table.GetEnumerator ();
         }
         ///
         public GroupInfo this [long group_id] {
