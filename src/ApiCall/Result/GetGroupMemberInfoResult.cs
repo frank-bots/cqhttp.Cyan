@@ -8,8 +8,8 @@ namespace cqhttp.Cyan.ApiCall.Result {
         public Utils.GroupMemberInfo memberInfo { get; private set; }
         ///
         public override void Parse (string result) {
-            Base.ApiResult i = base.PreCheck (result);
-            memberInfo = JObject.Parse (result).ToObject<Utils.GroupMemberInfo> ();
+            Base.ApiResult i = PreCheck (result);
+            memberInfo = i.raw_data.ToObject<Utils.GroupMemberInfo> ();
         }
     }
 }

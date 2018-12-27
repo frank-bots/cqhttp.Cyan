@@ -15,7 +15,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         ///
         override public string content {
             get {
-                return $"{{\"group_id\":{group_id},\"user_id\":{user_id},\"no_cache\":{no_cache}}}";
+                return $"{{\"group_id\":{group_id},\"user_id\":{user_id},\"no_cache\":{(no_cache?"true":"false")}}}";
             }
         }
     }

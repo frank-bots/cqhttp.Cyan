@@ -5,7 +5,7 @@ namespace cqhttp.Cyan.ApiCall.Result {
         public int message_id { get; private set; }
         ///
         public override void Parse (string result) {
-            Base.ApiResult i = base.PreCheck (result);
+            Base.ApiResult i = PreCheck (result);
             try {
                 message_id =
                     i.raw_data["message_id"].ToObject<int> ();
