@@ -15,6 +15,7 @@ namespace cqhttp.Cyan.Instance {
                 if (listen_port != -1) {
                     this.__eventListener = new Events.EventListener.HttpEventListener (listen_port, secret);
                     this.__eventListener.StartListen (__HandleEvent);
+                    Logger.Log (Verbosity.INFO, $"开始在{listen_port}端口上监听上报消息");
                 }
             }
         /// <summary>发送API请求</summary>

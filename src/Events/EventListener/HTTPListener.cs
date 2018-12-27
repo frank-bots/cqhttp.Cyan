@@ -20,10 +20,6 @@ namespace cqhttp.Cyan.Events.EventListener {
         public HttpEventListener (int port, string secret = "") : base (secret) {
             listener = new HttpListener ();
             listener.Prefixes.Add ($"http://+:{port}/");
-            Logger.Log (
-                Verbosity.INFO,
-                $"准备监听来自端口{port}的http连接"
-            );
         }
         /// <summary></summary>
         public override void StartListen (Func<CQEvent, CQResponse> callback) {
