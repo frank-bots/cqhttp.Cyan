@@ -47,6 +47,7 @@ namespace cqhttp.Cyan.Instance {
             this.accessToken = accessToken;
             this.accessUrl = accessUrl;
             if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
+            Logger.Log (Verbosity.INFO, $"成功连接到{accessUrl}");
         }
         private async Task<bool> Initiate () {
             GetLoginInfoResult loginInfo =
@@ -57,6 +58,7 @@ namespace cqhttp.Cyan.Instance {
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
         public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
+            Logger.Log (Verbosity.INFO, $"进行了{x.GetType()}请求");
             if (groupTable != null) {
                 if (x is GetGroupListRequest) {
                     foreach (var i in (x.response as GetGroupListResult).groupList)
@@ -100,7 +102,7 @@ namespace cqhttp.Cyan.Instance {
         public event OnEvent OnEventDelegate;
         /// <summary></summary>
         protected CQResponse __HandleEvent (CQEvent event_) {
-            Logger.Log (Verbosity.INFO, $"收到了完整的上报事件{event_.postType}");
+            Logger.Log (Verbosity.DEBUG, $"收到了完整的上报事件{event_.postType}");
             if (event_ is MetaEvent) {
                 if (event_ is HeartbeatEvent) {
                     if ((event_ as HeartbeatEvent).status.online)
