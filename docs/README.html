@@ -65,7 +65,7 @@
 <pre><code>Cyan---青
 </code></pre>
 <h2 id="快速上手">快速上手</h2>
-<h3 id="1搭建一个酷q示例并开启事件上报">1.搭建一个酷Q示例并开启事件上报</h3>
+<h3 id="1搭建一个酷q实例并开启事件上报">1.搭建一个酷Q实例并开启事件上报</h3>
 <p>请参考<br>
 <a href="https://cqp.cc">酷Q官网</a><br>
 <a href="https://cqhttp.cc/docs/4.7/#/?id=%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">cqhttp插件文档</a></p>
@@ -155,7 +155,7 @@ namespace YourNS {
 <tr>
 <td style="text-align: right;">Api响应</td>
 <td style="text-align: center;"><code>ApiResponse</code></td>
-<td style="text-align: center;">.ApiCall.Requests(.Base)</td>
+<td style="text-align: center;">.ApiCall.Responses(.Base)</td>
 </tr>
 </tbody>
 </table>
@@ -219,15 +219,33 @@ Console.WriteLine(a == c);//False
 <li>........................<code>(byte[] resourse, bool useCache = false)</code></li>
 <li><code>ElementRecord(string url,bool useCache = false)</code></li>
 <li>..........................<code>(byte[] resourse, bool useCache = false)</code></li>
+<li><code>ElementMusic(string type, string keyword)</code>其中type为163,qq,xiami之一</li>
 <li><code>ElementShake()</code>*</li>
 <li><code>ElementShare()</code>*</li>
 <li><code>ElementAnnonymous()</code>*</li>
 </ul>
 <blockquote>
-<p>出于不知道什么原因ElementShake()只有在以非json发送消息时才有效
-星标Element最好使用CommonMessages中的对象构造</p>
+<p>星标Element最好使用CommonMessages中的对象构造</p>
 </blockquote>
 <hr>
+<h2 id="facts">Facts</h2>
+<h3 id="cqapiclient的参数">CQApiClient的参数</h3>
+<p><code>CQHTTPClient</code>的参数中除accessUrl外皆为可选参数，即你可以实例化一个“仅发送API请求”的Client对象。</p>
+<h3 id="多实例">多实例</h3>
+<p>你可以实例化多个Client对象以连接到不同的酷Q实例，以完成各种骚操作</p>
+<h3 id="using-cqhttpcyanutils">using cqhttp.Cyan.Utils</h3>
+<p>Utils命名空间中有很多好用的工具<br>
+比如</p>
+<blockquote>
+<p>持久化存储群列表与群员信息<code>GroupTable</code>,</p>
+</blockquote>
+<ul>
+<li>使用方式: 对于任意CQApiClient对象i,将一个GroupTable对象赋给i.groupTable后,在这个Client示例调用GetGroupList API时将自动向此对象记录获得的群组信息</li>
+</ul>
+<blockquote>
+<p>持久化存储两分钟内发送的消息<code>MessageTable</code>,<br>
+还有各种用于转换消息用的函数<code>Convert.*</code>(如<code>Convert.ToEmoji(id)</code>可以将QQ表情转换为相似的Emoji，便于发送奇怪的表情)</p>
+</blockquote>
 <h2 id="文档">文档</h2>
 <p><a href="http://www.std-frank.club/cqhttp.Cyan">http://www.std-frank.club/cqhttp.Cyan</a></p>
 <h2 id="事件列表对应cqevent">事件列表(对应CQEvent)</h2>
