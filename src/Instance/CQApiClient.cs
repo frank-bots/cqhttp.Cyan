@@ -62,8 +62,12 @@ namespace cqhttp.Cyan.Instance {
                     foreach (var i in (x.response as GetGroupListResult).groupList)
                         groupTable[i.Item1].group_name = i.Item2;
                 } else if (x is GetGroupMemberInfoRequest) {
-                    GetGroupMemberInfoResult r = x.response as GetGroupMemberInfoResult;
+                    var r = x.response as GetGroupMemberInfoResult;
                     groupTable[r.memberInfo.group_id][r.memberInfo.user_id] = r.memberInfo;
+                } else if (x is GetGroupMemberListRequest) {
+                    foreach (var i in (x.response as GetGroupMemberListResult).memberInfo) {
+                        groupTable[i.group_id][i.user_id] = i;
+                    }
                 }
             }
             return null;
