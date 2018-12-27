@@ -8,7 +8,7 @@ namespace cqhttp.Cyan.ApiCall.Result {
         public List < (long, string) > groupList = new List < (long, string) > ();
         ///
         public override void Parse (string result) {
-            Base.ApiResult i = base.PreCheck (result);
+            Base.ApiResult i = PreCheck (result);
             try {
                 foreach (var j in i.raw_data as JArray) {
                     groupList.Add (
