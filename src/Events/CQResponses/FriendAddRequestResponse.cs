@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.Events.CQEvents.CQResponses {
+namespace cqhttp.Cyan.Events.CQResponses {
     /// <summary>是否同意好友请求响应</summary>
     public class FriendAddResponse : Base.CQResponse {
         bool approve;

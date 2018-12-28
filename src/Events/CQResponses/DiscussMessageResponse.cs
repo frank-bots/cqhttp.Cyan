@@ -1,6 +1,6 @@
 using cqhttp.Cyan.Messages;
 
-namespace cqhttp.Cyan.Events.CQEvents.CQResponses {
+namespace cqhttp.Cyan.Events.CQResponses {
     /// <summary>
     /// 讨论组消息回复
     /// </summary>

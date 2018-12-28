@@ -6,7 +6,7 @@ using cqhttp.Cyan.ApiCall.Result;
 using cqhttp.Cyan.ApiCall.Result.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
+using cqhttp.Cyan.Events.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
@@ -114,7 +114,7 @@ namespace cqhttp.Cyan.Instance {
                     else alive = false;
                 }
                 Logger.Log (Verbosity.INFO, $"根据元事件判定cqhttp状态是否正常:{alive}");
-                return new Events.CQEvents.CQResponses.EmptyResponse ();
+                return new Events.CQResponses.EmptyResponse ();
             }
             return OnEventDelegate (this, event_);
         }

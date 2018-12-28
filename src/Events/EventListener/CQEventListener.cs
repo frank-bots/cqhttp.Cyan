@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
+using cqhttp.Cyan.Events.CQResponses.Base;
 
 namespace cqhttp.Cyan.Events.EventListener
 {
@@ -22,7 +22,7 @@ namespace cqhttp.Cyan.Events.EventListener
             this.secret = (secret == "" ? null : Encoding.UTF8.GetBytes (secret));
         }
         /// <summary></summary>
-        public virtual void StartListen (Func<CQEvents.Base.CQEvent, Events.CQEvents.CQResponses.Base.CQResponse> callback) { }
+        public virtual void StartListen (Func<CQEvents.Base.CQEvent, CQResponses.Base.CQResponse> callback) { }
         /// <summary></summary>
         protected static bool Verify (byte[] secret, string signature, byte[] buffer, int offset, int length) {
             if (secret is null)
