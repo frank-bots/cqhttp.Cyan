@@ -1,6 +1,6 @@
 using System;
 using cqhttp.Cyan.Events.CQEvents;
-using cqhttp.Cyan.Events.CQEvents.CQResponses;
+using cqhttp.Cyan.Events.CQResponses;
 using cqhttp.Cyan.Instance;
 using cqhttp.Cyan.Messages;
 using cqhttp.Cyan.Messages.CQElements;

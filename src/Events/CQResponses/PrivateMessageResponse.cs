@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.Events.CQEvents.CQResponses {
+namespace cqhttp.Cyan.Events.CQResponses {
     /// <summary></summary>
     public class PrivateMessageResponse : Base.CQReplyMessageResponse {
         /// <param name="reply">回复的消息内容</param>

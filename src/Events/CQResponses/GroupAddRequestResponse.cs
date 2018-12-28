@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.Events.CQEvents.CQResponses {
+namespace cqhttp.Cyan.Events.CQResponses {
     /// <summary>是否同意加群</summary>
     public class GroupAddRequestResponse : Base.CQResponse {
         bool approve;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Events.CQEvents.CQResponses.Base;
+using cqhttp.Cyan.Events.CQResponses.Base;
 
 namespace cqhttp.Cyan.Events.EventListener {
     /// <summary>

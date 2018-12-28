@@ -1,6 +1,6 @@
 using cqhttp.Cyan.Messages;
 
-namespace cqhttp.Cyan.Events.CQEvents.CQResponses {
+namespace cqhttp.Cyan.Events.CQResponses {
     /// <summary>群消息回复</summary>
     public class GroupMessageResponse : Base.CQReplyMessageResponse {
         /// <summary></summary>

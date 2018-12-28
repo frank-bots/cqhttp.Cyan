@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.Events.CQEvents.CQResponses.Base {
+namespace cqhttp.Cyan.Events.CQResponses.Base {
     /// <summary></summary>
     public abstract class CQResponse {
         /// <summary></summary>
