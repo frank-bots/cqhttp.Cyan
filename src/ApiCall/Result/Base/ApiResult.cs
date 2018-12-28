@@ -38,14 +38,18 @@ namespace cqhttp.Cyan.ApiCall.Result.Base {
         ///
         protected ApiResult PreCheck (string result) {
             JToken parsed = JToken.Parse (result);
-            switch (parsed["retcode"].ToObject<int> ()) {
+            int retcode = parsed["retcode"].ToObject<int> ();
+            switch (retcode) {
                 case 0:
-                    this.raw_data = parsed["data"];
-                    return this;
                 case 1:
+                    this.raw_data = parsed["data"];
+                    break;
+
                 default:
-                    throw new Exceptions.ErrorApicallException ();
+                    ErrorHandler.Handle (retcode);
+                    break;
             }
+            return this;
         }
     }
 }
