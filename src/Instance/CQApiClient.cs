@@ -33,6 +33,10 @@ namespace cqhttp.Cyan.Instance {
         /// </summary>
         public string self_nick { get; private set; }
         /// <summary>
+        /// 连接到的实例是否为酷Q pro
+        /// </summary>
+        public bool is_pro { get; private set; }
+        /// <summary>
         /// 表示插件是否正常运行
         /// </summary>
         public bool alive { get; private set; }
@@ -51,9 +55,14 @@ namespace cqhttp.Cyan.Instance {
         }
         private async Task<bool> Initiate () {
             GetLoginInfoResult loginInfo =
-                await SendRequestAsync (new GetLoginInfoRequest ()) as GetLoginInfoResult;
+                await SendRequestAsync (new GetLoginInfoRequest ())
+            as GetLoginInfoResult;
+            GetVersionInfoResult versionInfo =
+                await SendRequestAsync (new GetVersionInfoRequest ())
+            as GetVersionInfoResult;
             this.self_id = loginInfo.user_id;
             this.self_nick = loginInfo.nickname;
+            this.is_pro = (versionInfo.instanceVersionInfo.coolq_edition == "pro");
             return true;
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
