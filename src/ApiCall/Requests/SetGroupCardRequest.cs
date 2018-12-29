@@ -12,7 +12,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 long group_id, long user_id,
                 string card, bool isRateLimited = false):
             base ("/set_group_card", group_id, user_id, isRateLimited) {
-                this.response = new Result.EmptyResult ();
+                this.response = new Results.EmptyResult ();
                 this.card = card;
             }
         /// <summary></summary>

@@ -7,7 +7,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         ///
         public GetGroupMemberInfoRequest (long group_id, long user_id, bool no_cache = false):
             base ("/get_group_member_info") {
-                this.response = new Result.GetGroupMemberInfoResult ();
+                this.response = new Results.GetGroupMemberInfoResult ();
                 this.group_id = group_id;
                 this.user_id = user_id;
                 this.no_cache = no_cache;

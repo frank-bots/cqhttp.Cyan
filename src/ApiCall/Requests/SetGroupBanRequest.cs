@@ -12,7 +12,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         /// <param name="isRateLimited">是否为限速调用</param>
         public SetGroupBanRequest (long group_id, long user_id, long duration, bool isRateLimited = false):
             base ("/set_group_ban", group_id, user_id, isRateLimited) {
-                this.response = new Result.EmptyResult ();
+                this.response = new Results.EmptyResult ();
                 this.duration = duration;
             }
         /// <summary></summary>

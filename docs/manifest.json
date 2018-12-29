@@ -12,7 +12,7 @@
           "hash": "waKgwd8heJeU0EZrlCo3zA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.ErrorHandler.html",
-          "hash": "23T1j9CA383d+Eu4CV5cbw=="
+          "hash": "bztL17LfW6UH9+eqMeVAfg=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,19 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html",
-          "hash": "7kmOsNVLejXLEADBDFfT4A=="
+          "hash": "P5CQ3HbNobIcAPmBqyYm1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Requests.Base.RateLimitableRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.Base.RateLimitableRequest.html",
+          "hash": "6hVyf7omBS2M7b4EEws1Kg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.html",
-          "hash": "q4RqQn7PqUSCLd6OLziHgQ=="
+          "hash": "xX0bgaJrOt+YhrslJ5za1g=="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.Base.html",
-          "hash": "lESaIwON3VXI+74Cvl44yw=="
+          "hash": "JJJdEDlRaaxcYSixTO73pA=="
         }
       },
       "is_incremental": false,
@@ -125,11 +137,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.html",
+          "hash": "CfVq3xvqEo33xz+/sDEGxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.yml",
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.html",
-          "hash": "Yhim934adyqVejhl8Yhtig=="
+          "hash": "+IFoo3UO9KArHRx4b+PiSw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html",
-          "hash": "xFUJvIdY3wKfCdN0fycu0A=="
+          "hash": "mhVELli4JId8cp/UnXao+g=="
         }
       },
       "is_incremental": false,
@@ -153,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html",
-          "hash": "FlyQ8yOdHiSgXCsjypNAfQ=="
+          "hash": "aJG4WWTn7b2OiwRgMagqdw=="
         }
       },
       "is_incremental": false,
@@ -165,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html",
-          "hash": "6zyPa4vQSWJa97xF+xf5iA=="
+          "hash": "xLZAuHmyUW/qDbbrWdd40A=="
         }
       },
       "is_incremental": false,
@@ -177,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.ApiCall.Requests.html",
-          "hash": "n86Y7/GICfar8uunZ3hw3w=="
+          "hash": "AmoGkrQ3nJj6VmoZfDdOCg=="
         }
       },
       "is_incremental": false,
@@ -185,11 +209,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.Base.ApiResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.Base.ApiResult.html",
-          "hash": "ub92U++savORFVAknm6iTQ=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html",
+          "hash": "QIo3TYY7xTeRSJY6eOf31Q=="
         }
       },
       "is_incremental": false,
@@ -197,11 +221,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.Base.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.Base.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.Base.html",
-          "hash": "OjfJfHNposcRU2EsR7d65w=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.Base.html",
+          "hash": "LKJ/nbDq1y5Ut3PWO5qOwg=="
         }
       },
       "is_incremental": false,
@@ -209,11 +233,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.EmptyResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.EmptyResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.EmptyResult.html",
-          "hash": "V6gusccQD8yZkHhlJ5P1LA=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.EmptyResult.html",
+          "hash": "/I4fUakmFhOtU9Fg4R8LYg=="
         }
       },
       "is_incremental": false,
@@ -221,11 +245,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetGroupListResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetGroupListResult.html",
-          "hash": "BgMUTR41088vauYXIv6JZQ=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.html",
+          "hash": "v56mi2xvyoWM9pYcaGhaiA=="
         }
       },
       "is_incremental": false,
@@ -233,11 +257,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetGroupMemberInfoResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetGroupMemberInfoResult.html",
-          "hash": "MrDFv43lTjdmImnD31WJLg=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.html",
+          "hash": "ZOT7yYrLMQwDbDE+T3L1Xg=="
         }
       },
       "is_incremental": false,
@@ -245,11 +269,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetGroupMemberListResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetGroupMemberListResult.html",
-          "hash": "tvoaVAaBhRN1u6tShZzLIQ=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.html",
+          "hash": "52wcb/mB1FTtIZqQoCTPxw=="
         }
       },
       "is_incremental": false,
@@ -257,11 +281,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetLoginInfoResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.GetLoginInfoResult.html",
-          "hash": "mHbMPX5LrzYmUpPBQwfafg=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.html",
+          "hash": "5BvlndumMwIYni7cZe9+XA=="
         }
       },
       "is_incremental": false,
@@ -269,11 +293,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.SendmsgResult.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.SendmsgResult.html",
-          "hash": "iOL3tmGAUmi7qeCTpmtdhg=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html",
+          "hash": "0jQ2lgE7J2sBwWlY5Vf3Fw=="
         }
       },
       "is_incremental": false,
@@ -281,11 +305,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Result.yml",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/cqhttp.Cyan.ApiCall.Result.html",
-          "hash": "0sEasKe2RAI/NLmF34p0XA=="
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html",
+          "hash": "0oQlQ2U8AnpLCyy9+hSzhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.SendmsgResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.SendmsgResult.html",
+          "hash": "WOm950pzNC3qVXuxphESLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.ApiCall.Results.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.ApiCall.Results.html",
+          "hash": "xzY/xmJm6001zsXOIfuN4Q=="
         }
       },
       "is_incremental": false,
@@ -473,126 +521,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQReplyMessageResponse.html",
-          "hash": "gLq28YKcQypqToTHZmrXXQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.Base.CQResponse.html",
-          "hash": "Y7XKSVxFlVE/4tNKEW+JkQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.Base.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.Base.html",
-          "hash": "mIAbTGjt+o/Y9zuFtqzurw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.DiscussMessageResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.DiscussMessageResponse.html",
-          "hash": "eIrRUe2BYOnDRCbOO0xhJA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.EmptyResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.EmptyResponse.html",
-          "hash": "rOS6UgUKnsmK/7b5R0ihcQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.FriendAddResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.FriendAddResponse.html",
-          "hash": "2y4esVDFCAa3dVilovIhlA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.GroupAddRequestResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.GroupAddRequestResponse.html",
-          "hash": "P+YTR4b7ZK7T3XpHJ+a0Xg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.GroupMessageResponse.html",
-          "hash": "W6W+6ApcuSBew9V5Euymzg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.PrivateMessageResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.PrivateMessageResponse.html",
-          "hash": "ADYXGqpuaiycplHFizhFeQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/cqhttp.Cyan.Events.CQEvents.CQResponses.html",
-          "hash": "2plkmFx8muq8TNmj8rteNw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.yml",
       "output": {
         ".html": {
@@ -737,11 +665,131 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.html",
+          "hash": "we3sxyH8oRjVGQA1+RRXIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.Base.CQResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.Base.CQResponse.html",
+          "hash": "PI4TxoCdmfXdMGCEME697g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.Base.html",
+          "hash": "kuZO+YORG/BOxpwoKlE3XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.html",
+          "hash": "2E1eHlTIgh5Huhpfziudyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.EmptyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.EmptyResponse.html",
+          "hash": "JirC6xw7TWbEDWn1QeJsfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.html",
+          "hash": "P95KhNKnl1WGy7qWMmcqaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.html",
+          "hash": "XYRpaXY4vuM7uJtKmeF4JA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html",
+          "hash": "YXlVAhG4IXuprbZjmRl1ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.html",
+          "hash": "P0GuQxBCPo+4qs1KSs0wDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/cqhttp.Cyan.Events.CQResponses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/cqhttp.Cyan.Events.CQResponses.html",
+          "hash": "M4FrGzAyfOCXZR/4yLT8nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/cqhttp.Cyan.Events.EventListener.CQEventListener.yml",
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Events.EventListener.CQEventListener.html",
-          "hash": "8jXfT+vsh3XQxbm4AmKK5Q=="
+          "hash": "yPq88NbYCeNe1SaOM21EWA=="
         }
       },
       "is_incremental": false,
@@ -753,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Events.EventListener.HttpEventListener.html",
-          "hash": "pkmXE0skY3pFLFINMQGSZg=="
+          "hash": "5g9t88QU0NmOr+uX+716+A=="
         }
       },
       "is_incremental": false,
@@ -765,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html",
-          "hash": "runZc+9wQH1IJfsUZ4ee9Q=="
+          "hash": "bkYKyUPI4Dnj2KE0Oie5kw=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Instance.CQApiClient.OnEvent.html",
-          "hash": "J+MXAqW/BWHV8TRl4dXIig=="
+          "hash": "HgzK3DH3xx482kv1FVCMmw=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Instance.CQApiClient.html",
-          "hash": "wX5VgiBh2VnOfkxMAIfIZw=="
+          "hash": "5/b0EU8e+QZ9vOeUC0btEg=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Instance.CQHTTPClient.html",
-          "hash": "PsrqnGE1ZECn8nkaNCsUUg=="
+          "hash": "xrH8SdxmM7vHSmOCWjOxgw=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Instance.CQWebsocketClient.html",
-          "hash": "daoAlwKDRRwqV7GYk++/Lw=="
+          "hash": "8CF/CbgKA01dkwUiWxgnfg=="
         }
       },
       "is_incremental": false,
@@ -1389,7 +1437,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Utils.GroupMemberInfo.html",
-          "hash": "vOxTTceKHp7pS+UzNKWRBA=="
+          "hash": "a94KUUhE2WN1yQXd0GrXfQ=="
         }
       },
       "is_incremental": false,
@@ -1401,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Utils.GroupTable.GroupInfo.html",
-          "hash": "l/g4oe2r+J/0KrCeUEhH0g=="
+          "hash": "HOpjzpfzoeRo8D3S5qykwQ=="
         }
       },
       "is_incremental": false,
@@ -1413,7 +1461,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Utils.GroupTable.html",
-          "hash": "n1lY49p1Ob/iXRu2aaIdrQ=="
+          "hash": "QGLggIZMDiHEleofdqBxjw=="
         }
       },
       "is_incremental": false,
@@ -1425,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/cqhttp.Cyan.Utils.MessageTable.html",
-          "hash": "gIMa1e6Ry//8TmwdssX4fA=="
+          "hash": "E+YvWdpxQRH97uBbsmdFVw=="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "y3SdiSHfUfHvzBJcLkjF3Q=="
+          "hash": "J6hCJ/a5gD+inPxgDI2QEg=="
         }
       },
       "is_incremental": false,
@@ -1535,17 +1583,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

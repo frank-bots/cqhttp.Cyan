@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.ApiCall.Result {
+namespace cqhttp.Cyan.ApiCall.Results {
     /// <summary>
     /// 空API回复
     /// </summary>
