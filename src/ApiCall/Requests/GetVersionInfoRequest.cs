@@ -7,5 +7,11 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         public GetVersionInfoRequest () : base ("/get_version_info") {
             this.response = new Results.GetVersionInfoResult ();
         }
+        ///
+        override public string content{
+            get{
+                return "{}";
+            }
+        }
     }
 }
