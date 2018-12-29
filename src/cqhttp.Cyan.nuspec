@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>cqhttp.Cyan</id>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <authors>Frank</authors>
     <owners>Frank</owners>
     <description>see https://github.com/frankli0324/cqhttp.Cyan</description>
 
-    <licenseUrl>https://github.com/frankli0324/cqhttp.Cyan/blob/master/LICENSE</licenseUrl>
+    <license type="expression">GPL-3.0-or-later</license>
     <dependencies>
       <group targetFramework=".NETCoreApp2.1">
         <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
