@@ -1,4 +1,4 @@
-using cqhttp.Cyan.ApiCall.Result.Base;
+using cqhttp.Cyan.ApiCall.Results.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

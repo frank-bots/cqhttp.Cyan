@@ -8,7 +8,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         int message_id;
         /// <summary></summary>
         public DeleteMsgRequest (int message_id) : base ("/delete_msg") {
-            this.response = new Result.EmptyResult();
+            this.response = new Results.EmptyResult();
             this.message_id = message_id;
         }
         /// <summary></summary>

@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.ApiCall.Result {
+namespace cqhttp.Cyan.ApiCall.Results {
     ///
     public class GetGroupMemberInfoResult : Base.ApiResult {
         /// <summary>获取到的群成员信息</summary>

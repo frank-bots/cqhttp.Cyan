@@ -1,4 +1,4 @@
-using cqhttp.Cyan.ApiCall.Result;
+using cqhttp.Cyan.ApiCall.Results;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary></summary>

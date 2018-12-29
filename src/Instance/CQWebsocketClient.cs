@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Result.Base;
+using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.EventListener;
 

@@ -11,7 +11,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
             base ("/get_group_member_list") {
                 if (no_cache)
                     throw new Exceptions.ErrorApicallException ("暂不支持此API调用不启用缓存，请逐次调用GetGroupMemberInfoRequest");
-                this.response = new Result.GetGroupMemberListResult();
+                this.response = new Results.GetGroupMemberListResult();
                 this.group_id = group_id;
             }
         /// 

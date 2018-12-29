@@ -1,4 +1,4 @@
-namespace cqhttp.Cyan.ApiCall.Result {
+namespace cqhttp.Cyan.ApiCall.Results {
     ///
     public class SendmsgResult : Base.ApiResult {
         ///<summary>用于撤回消息的消息ID</summary>

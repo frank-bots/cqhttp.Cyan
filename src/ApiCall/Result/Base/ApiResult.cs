@@ -2,7 +2,7 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.ApiCall.Result.Base {
+namespace cqhttp.Cyan.ApiCall.Results.Base {
     /// <summary>
     /// 调用API时cqhttp的响应
     /// </summary>

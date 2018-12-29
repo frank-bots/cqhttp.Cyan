@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.ApiCall.Result {
+namespace cqhttp.Cyan.ApiCall.Results {
     ///
     public class GetGroupListResult : Base.ApiResult {
         ///

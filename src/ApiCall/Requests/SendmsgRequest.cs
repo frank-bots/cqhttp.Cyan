@@ -1,5 +1,5 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Result;
+using cqhttp.Cyan.ApiCall.Results;
 using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
@@ -12,7 +12,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         public SendmsgRequest (MessageType messageType, long target_id, Messages.Message toSend, bool isRateLimited = false):
             base ("/send_msg", isRateLimited) {
                 if (!isRateLimited)
-                    this.response = new Result.SendmsgResult ();
+                    this.response = new Results.SendmsgResult ();
                 else this.response = new EmptyResult ();
                 this.messageType = messageType;
                 this.toSend = toSend;

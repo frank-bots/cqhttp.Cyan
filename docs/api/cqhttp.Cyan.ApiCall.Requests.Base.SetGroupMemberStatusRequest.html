@@ -79,10 +79,11 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html">ApiRequest</a></div>
-    <div class="level2"><span class="xref">SetGroupMemberStatusRequest</span></div>
-      <div class="level3"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html">SetGroupBanRequest</a></div>
-      <div class="level3"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html">SetGroupCardRequest</a></div>
-      <div class="level3"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html">SetGroupKickRequest</a></div>
+    <div class="level2"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.RateLimitableRequest.html">RateLimitableRequest</a></div>
+    <div class="level3"><span class="xref">SetGroupMemberStatusRequest</span></div>
+      <div class="level4"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html">SetGroupBanRequest</a></div>
+      <div class="level4"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html">SetGroupCardRequest</a></div>
+      <div class="level4"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html">SetGroupKickRequest</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -121,24 +122,24 @@
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
   <h5 id="cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SetGroupMemberStatusRequest : ApiRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public class SetGroupMemberStatusRequest : RateLimitableRequest</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_System_String_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.%23ctor(System.String%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_System_String_System_Int64_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.%23ctor(System.String%2CSystem.Int64%2CSystem.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/ApiCall/Requests/Base/SetGroupMemberStatusRequest.cs/#L7">View Source</a>
   </span>
   <a id="cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_" data-uid="cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor*"></a>
-  <h4 id="cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_System_String_System_Int64_System_Int64_" data-uid="cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor(System.String,System.Int64,System.Int64)">SetGroupMemberStatusRequest(String, Int64, Int64)</h4>
+  <h4 id="cqhttp_Cyan_ApiCall_Requests_Base_SetGroupMemberStatusRequest__ctor_System_String_System_Int64_System_Int64_System_Boolean_" data-uid="cqhttp.Cyan.ApiCall.Requests.Base.SetGroupMemberStatusRequest.#ctor(System.String,System.Int64,System.Int64,System.Boolean)">SetGroupMemberStatusRequest(String, Int64, Int64, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SetGroupMemberStatusRequest(string apiPath, long group_id, long user_id)</code></pre>
+    <pre><code class="lang-csharp hljs">public SetGroupMemberStatusRequest(string apiPath, long group_id, long user_id, bool isRateLimited)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,6 +164,11 @@
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">user_id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isRateLimited</span></td>
         <td></td>
       </tr>
     </tbody>

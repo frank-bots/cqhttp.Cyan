@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Result.Base;
+using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.Instance {
