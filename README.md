@@ -105,14 +105,16 @@ static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
 }
 ```
 
-消息之间可以进行相等判断
+消息之间可以进行相等判断、相加操作
 
 ```csharp
 Message a = new Message(new ElementText("asdf"), new ElementFace(4));
-Message b = new Message(new ElementText("asdf"), new ElementFace(4));
+Message b = new Message(new ElementText("asdf"));
+b += new ElementFace(4);
 Console.WriteLine(a == b);//True
 Message c = new Message(new ElementText("asdf"), new ElementFace(3));
 Console.WriteLine(a == c);//False
+a + c;//asdf[CQ:face, id=4]asdf[CQ:face, id=3]
 ```
 
 ....也就是说....你可以很轻松地写一个复读鸡emmmmmmm
