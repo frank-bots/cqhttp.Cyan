@@ -11,12 +11,14 @@ namespace cqhttp.Cyan.ApiCall.Requests.Base {
     /// </summary>
     public abstract class ApiRequest {
         /// <summary></summary>
-        public string apiPath { get; private set; }
+        public string apiPath { get; protected set; }
         /// <summary></summary>
         public ApiResult response;
         /// <summary></summary>
         public ApiRequest (string r) => apiPath = r;
         /// <summary></summary>
-        virtual public string content { get { throw new Exceptions.NullApicallException (); } }
+        virtual public string content {
+            get { throw new Exceptions.NullApicallException (); }
+        }
     }
 }
