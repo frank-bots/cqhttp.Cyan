@@ -11,6 +11,8 @@ namespace cqhttp.Cyan {
         public const int networkMaxFailure = 3;
         /// <summary>网络请求超时秒数</summary>
         public const int timeOut = 5;
+        /// <summary>检查连接是否存活的间隔</summary>
+        public const int checkAliveInterval = 10000;//10秒
 
         /// <summary>匹配CQ码</summary>
         public static readonly Regex matchCqCode

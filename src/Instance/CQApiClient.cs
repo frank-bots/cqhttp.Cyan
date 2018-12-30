@@ -70,8 +70,9 @@ namespace cqhttp.Cyan.Instance {
             Logger.Log (Verbosity.INFO, $"进行了{x.GetType()}请求");
             if (groupTable != null) {
                 if (x is GetGroupListRequest) {
-                    foreach (var i in (x.response as GetGroupListResult).groupList)
+                    foreach (var i in (x.response as GetGroupListResult).groupList) {
                         groupTable[i.Item1].group_name = i.Item2;
+                    }
                 } else if (x is GetGroupMemberInfoRequest) {
                     var r = x.response as GetGroupMemberInfoResult;
                     groupTable[r.memberInfo.group_id][r.memberInfo.user_id] = r.memberInfo;
@@ -84,23 +85,25 @@ namespace cqhttp.Cyan.Instance {
             return null;
         }
         /// <summary>发送消息(自行构造)</summary>
-        public async Task<ApiResult> SendMessageAsync (
-                MessageType messageType,
-                long target,
-                Message message
-            ) =>
-            await SendRequestAsync (new SendmsgRequest (messageType, target, message));
+        public async Task<SendmsgResult> SendMessageAsync (
+            MessageType messageType,
+            long target,
+            Message message
+        ) => await SendRequestAsync (
+            new SendmsgRequest (messageType, target, message)
+        ) as SendmsgResult;
 
         /// <summary>发送纯文本消息</summary>
         public async Task<SendmsgResult> SendTextAsync (
             MessageType messageType,
             long target,
             string text
-        ) {
-            return await SendRequestAsync (new SendmsgRequest (messageType, target,
-                new Message { data = new System.Collections.Generic.List<Messages.CQElements.Base.Element> { new Messages.CQElements.ElementText (text) } }
-            )) as SendmsgResult;
-        }
+        ) => await SendRequestAsync (
+            new SendmsgRequest (
+                messageType, target,
+                new Message (new Messages.CQElements.ElementText (text))
+            )
+        ) as SendmsgResult;
 
         //////////////////////////////////////////////////////////////////////////////////////
         /// <summary></summary>

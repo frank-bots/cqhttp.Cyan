@@ -14,25 +14,32 @@ namespace cqhttp.Cyan.LoadBalance {
     /// </summary>
     public class LBClient {
         List<CQApiClient> bots = new List<CQApiClient> ();
-        List<int> normal_bots;
+        List<int> normal_bots = new List<int> ();
         object update_normal_bots_lock = new object ();
         System.Random x = new System.Random ((int) System.DateTime.Now.ToFileTime ());
         ///
-        public static LBClient operator + (LBClient cli, CQApiClient acli) {
-            cli.bots.Add (acli);
-            return cli;
+        void Add (CQApiClient singleClient) {
+            bots.Add (singleClient);
+            singleClient.OnEvent += (client, e) => OnEvent (client, e);
+        }
+        ///
+        public static LBClient operator + (LBClient lbClient, CQApiClient singleClient) {
+            lbClient.Add (singleClient);
+            return lbClient;
         }
         ///
         public LBClient (params CQApiClient[] init_clients) {
             Task.Run (() => {
                 while (true) {
-                    Thread.Sleep (100000);
+                    normal_bots.Clear ();
+                    Thread.Sleep (Config.checkAliveInterval);
                     lock (update_normal_bots_lock) {
                         for (int i = 0; i < bots.Count; i++)
                             if (bots[i].alive) normal_bots.Add (i);
                     }
                 }
             });
+            foreach (var i in init_clients) Add (i);
         }
         /// <summary>
         /// 负载均衡地发送请求
@@ -60,7 +67,19 @@ namespace cqhttp.Cyan.LoadBalance {
             }
             return await current.SendTextAsync (messageType, target, text);
         }
-        public delegate CQResponse OnEventDelegate (CQApiClient client, CQEvent eventObj);
-        public event OnEventDelegate OnEvent;
+        ///
+        public async Task<SendmsgResult> SendMessageAsync (
+            Enums.MessageType messageType,
+            long target,
+            Messages.Message message
+        ) {
+            CQApiClient current;
+            lock (update_normal_bots_lock) {
+                current = bots[x.Next (normal_bots.Count)];
+            }
+            return await current.SendMessageAsync (messageType, target, message);
+        }
+        ///
+        public event CQApiClient.OnEventDelegate OnEvent;
     }
 }
