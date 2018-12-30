@@ -92,23 +92,23 @@ namespace cqhttp.Cyan.Instance {
             await SendRequestAsync (new SendmsgRequest (messageType, target, message));
 
         /// <summary>发送纯文本消息</summary>
-        public async Task<ApiResult> SendTextAsync (
+        public async Task<SendmsgResult> SendTextAsync (
             MessageType messageType,
             long target,
             string text
         ) {
             return await SendRequestAsync (new SendmsgRequest (messageType, target,
                 new Message { data = new System.Collections.Generic.List<Messages.CQElements.Base.Element> { new Messages.CQElements.ElementText (text) } }
-            ));
+            )) as SendmsgResult;
         }
 
         //////////////////////////////////////////////////////////////////////////////////////
         /// <summary></summary>
         protected CQEventListener __eventListener;
         /// <summary></summary>
-        public delegate CQResponse OnEvent (CQApiClient client, CQEvent eventObj);
+        public delegate CQResponse OnEventDelegate (CQApiClient client, CQEvent eventObj);
         /// <summary></summary>
-        public event OnEvent OnEventDelegate;
+        public event OnEventDelegate OnEvent;
         /// <summary></summary>
         protected CQResponse __HandleEvent (CQEvent event_) {
             Logger.Log (Verbosity.DEBUG, $"收到了完整的上报事件{event_.postType}");
@@ -125,7 +125,7 @@ namespace cqhttp.Cyan.Instance {
                 Logger.Log (Verbosity.INFO, $"根据元事件判定cqhttp状态是否正常:{alive}");
                 return new Events.CQResponses.EmptyResponse ();
             }
-            return OnEventDelegate (this, event_);
+            return OnEvent (this, event_);
         }
     }
 }

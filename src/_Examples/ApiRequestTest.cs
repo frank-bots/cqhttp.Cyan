@@ -22,7 +22,7 @@ namespace cqhttp.Cyan.Examples
                 listen_port : 256,                  //本地监听端口
                 secret: "secret"                    //消息上报secret
             );
-            clientHttp.OnEventDelegate += (cli, e) => {
+            clientHttp.OnEvent += (cli, e) => {
                 Console.WriteLine ((e as GroupMessageEvent).message.raw_data_json);
                 return new EmptyResponse ();
             };
