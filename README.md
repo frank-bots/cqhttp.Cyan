@@ -51,7 +51,7 @@ namespace YourNS {
             );
             //client构造后会发送一条get_login_info请求，则可以通过
             //判断是否成功获取登陆的账号的QQ与昵称判断API是否可访问
-            client.OnEventDelegate += (client, e) => {
+            client.OnEvent += (client, e) => {
                 //process (CQEvent e)
                 return new CQEmptyResponse ();
             };
@@ -94,7 +94,7 @@ namespace YourNS {
 ```csharp
 static void Main() {
     var client = new HTTPApiClient(...);
-    client.OnEventDelegate += HandleEvent;
+    client.OnEvent += HandleEvent;
 }
 static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
     if(e is MessageEvent) {
