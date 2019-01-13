@@ -324,6 +324,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.GetVersionInfoRequest
   nameWithType: GetVersionInfoRequest.GetVersionInfoRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.content
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.html#cqhttp_Cyan_ApiCall_Requests_GetVersionInfoRequest_content
+  commentId: P:cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.content
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.content
+  nameWithType: GetVersionInfoRequest.content
+- uid: cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.content*
+  name: content
+  href: api/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.html#cqhttp_Cyan_ApiCall_Requests_GetVersionInfoRequest_content_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.content
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.content
+  nameWithType: GetVersionInfoRequest.content
 - uid: cqhttp.Cyan.ApiCall.Requests.SendmsgRequest
   name: SendmsgRequest
   href: api/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.html
@@ -816,6 +829,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Config.asJsonStringVariable
   nameWithType: Config.asJsonStringVariable
+- uid: cqhttp.Cyan.Config.checkAliveInterval
+  name: checkAliveInterval
+  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_checkAliveInterval
+  commentId: F:cqhttp.Cyan.Config.checkAliveInterval
+  fullName: cqhttp.Cyan.Config.checkAliveInterval
+  nameWithType: Config.checkAliveInterval
 - uid: cqhttp.Cyan.Config.isSendJson
   name: isSendJson
   href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_isSendJson
@@ -1021,6 +1040,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEventHandler.HandleEvent
   nameWithType: CQEventHandler.HandleEvent
+- uid: cqhttp.Cyan.Events.CQEventHandler.testFunc
+  name: testFunc()
+  href: api/cqhttp.Cyan.Events.CQEventHandler.html#cqhttp_Cyan_Events_CQEventHandler_testFunc
+  commentId: M:cqhttp.Cyan.Events.CQEventHandler.testFunc
+  fullName: cqhttp.Cyan.Events.CQEventHandler.testFunc()
+  nameWithType: CQEventHandler.testFunc()
+- uid: cqhttp.Cyan.Events.CQEventHandler.testFunc*
+  name: testFunc
+  href: api/cqhttp.Cyan.Events.CQEventHandler.html#cqhttp_Cyan_Events_CQEventHandler_testFunc_
+  commentId: Overload:cqhttp.Cyan.Events.CQEventHandler.testFunc
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEventHandler.testFunc
+  nameWithType: CQEventHandler.testFunc
 - uid: cqhttp.Cyan.Events.CQEvents
   name: cqhttp.Cyan.Events.CQEvents
   href: api/cqhttp.Cyan.Events.CQEvents.html
@@ -2804,18 +2836,43 @@ references:
   commentId: F:cqhttp.Cyan.Instance.CQApiClient.groupTable
   fullName: cqhttp.Cyan.Instance.CQApiClient.groupTable
   nameWithType: CQApiClient.groupTable
+- uid: cqhttp.Cyan.Instance.CQApiClient.is_pro
+  name: is_pro
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_is_pro
+  commentId: P:cqhttp.Cyan.Instance.CQApiClient.is_pro
+  fullName: cqhttp.Cyan.Instance.CQApiClient.is_pro
+  nameWithType: CQApiClient.is_pro
+- uid: cqhttp.Cyan.Instance.CQApiClient.is_pro*
+  name: is_pro
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_is_pro_
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.is_pro
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Instance.CQApiClient.is_pro
+  nameWithType: CQApiClient.is_pro
 - uid: cqhttp.Cyan.Instance.CQApiClient.OnEvent
-  name: CQApiClient.OnEvent
-  href: api/cqhttp.Cyan.Instance.CQApiClient.OnEvent.html
-  commentId: T:cqhttp.Cyan.Instance.CQApiClient.OnEvent
+  name: OnEvent
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_OnEvent
+  commentId: E:cqhttp.Cyan.Instance.CQApiClient.OnEvent
   fullName: cqhttp.Cyan.Instance.CQApiClient.OnEvent
   nameWithType: CQApiClient.OnEvent
+- uid: cqhttp.Cyan.Instance.CQApiClient.OnEventAsync
+  name: OnEventAsync
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_OnEventAsync
+  commentId: E:cqhttp.Cyan.Instance.CQApiClient.OnEventAsync
+  fullName: cqhttp.Cyan.Instance.CQApiClient.OnEventAsync
+  nameWithType: CQApiClient.OnEventAsync
 - uid: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
-  name: OnEventDelegate
-  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_OnEventDelegate
-  commentId: E:cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
+  name: CQApiClient.OnEventDelegate
+  href: api/cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate.html
+  commentId: T:cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
   fullName: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate
   nameWithType: CQApiClient.OnEventDelegate
+- uid: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegateAsync
+  name: CQApiClient.OnEventDelegateAsync
+  href: api/cqhttp.Cyan.Instance.CQApiClient.OnEventDelegateAsync.html
+  commentId: T:cqhttp.Cyan.Instance.CQApiClient.OnEventDelegateAsync
+  fullName: cqhttp.Cyan.Instance.CQApiClient.OnEventDelegateAsync
+  nameWithType: CQApiClient.OnEventDelegateAsync
 - uid: cqhttp.Cyan.Instance.CQApiClient.self_id
   name: self_id
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_self_id
@@ -2958,6 +3015,92 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Instance.CQWebsocketClient.SendRequestAsync
   nameWithType: CQWebsocketClient.SendRequestAsync
+- uid: cqhttp.Cyan.LoadBalance
+  name: cqhttp.Cyan.LoadBalance
+  href: api/cqhttp.Cyan.LoadBalance.html
+  commentId: N:cqhttp.Cyan.LoadBalance
+  fullName: cqhttp.Cyan.LoadBalance
+  nameWithType: cqhttp.Cyan.LoadBalance
+- uid: cqhttp.Cyan.LoadBalance.LBClient
+  name: LBClient
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html
+  commentId: T:cqhttp.Cyan.LoadBalance.LBClient
+  fullName: cqhttp.Cyan.LoadBalance.LBClient
+  nameWithType: LBClient
+- uid: cqhttp.Cyan.LoadBalance.LBClient.#ctor(cqhttp.Cyan.Instance.CQApiClient[])
+  name: LBClient(CQApiClient[])
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient__ctor_cqhttp_Cyan_Instance_CQApiClient___
+  commentId: M:cqhttp.Cyan.LoadBalance.LBClient.#ctor(cqhttp.Cyan.Instance.CQApiClient[])
+  name.vb: LBClient(CQApiClient())
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.LBClient(cqhttp.Cyan.Instance.CQApiClient[])
+  fullName.vb: cqhttp.Cyan.LoadBalance.LBClient.LBClient(cqhttp.Cyan.Instance.CQApiClient())
+  nameWithType: LBClient.LBClient(CQApiClient[])
+  nameWithType.vb: LBClient.LBClient(CQApiClient())
+- uid: cqhttp.Cyan.LoadBalance.LBClient.#ctor*
+  name: LBClient
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient__ctor_
+  commentId: Overload:cqhttp.Cyan.LoadBalance.LBClient.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.LBClient
+  nameWithType: LBClient.LBClient
+- uid: cqhttp.Cyan.LoadBalance.LBClient.OnEvent
+  name: OnEvent
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_OnEvent
+  commentId: E:cqhttp.Cyan.LoadBalance.LBClient.OnEvent
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.OnEvent
+  nameWithType: LBClient.OnEvent
+- uid: cqhttp.Cyan.LoadBalance.LBClient.op_Addition(cqhttp.Cyan.LoadBalance.LBClient,cqhttp.Cyan.Instance.CQApiClient)
+  name: Addition(LBClient, CQApiClient)
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_op_Addition_cqhttp_Cyan_LoadBalance_LBClient_cqhttp_Cyan_Instance_CQApiClient_
+  commentId: M:cqhttp.Cyan.LoadBalance.LBClient.op_Addition(cqhttp.Cyan.LoadBalance.LBClient,cqhttp.Cyan.Instance.CQApiClient)
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.Addition(cqhttp.Cyan.LoadBalance.LBClient, cqhttp.Cyan.Instance.CQApiClient)
+  nameWithType: LBClient.Addition(LBClient, CQApiClient)
+- uid: cqhttp.Cyan.LoadBalance.LBClient.op_Addition*
+  name: Addition
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_op_Addition_
+  commentId: Overload:cqhttp.Cyan.LoadBalance.LBClient.op_Addition
+  isSpec: "True"
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.Addition
+  nameWithType: LBClient.Addition
+- uid: cqhttp.Cyan.LoadBalance.LBClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
+  name: SendMessageAsync(MessageType, Int64, Message)
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_SendMessageAsync_cqhttp_Cyan_Enums_MessageType_System_Int64_cqhttp_Cyan_Messages_Message_
+  commentId: M:cqhttp.Cyan.LoadBalance.LBClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType, System.Int64, cqhttp.Cyan.Messages.Message)
+  nameWithType: LBClient.SendMessageAsync(MessageType, Int64, Message)
+- uid: cqhttp.Cyan.LoadBalance.LBClient.SendMessageAsync*
+  name: SendMessageAsync
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_SendMessageAsync_
+  commentId: Overload:cqhttp.Cyan.LoadBalance.LBClient.SendMessageAsync
+  isSpec: "True"
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.SendMessageAsync
+  nameWithType: LBClient.SendMessageAsync
+- uid: cqhttp.Cyan.LoadBalance.LBClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  name: SendRequestAsync(ApiRequest)
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_SendRequestAsync_cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_
+  commentId: M:cqhttp.Cyan.LoadBalance.LBClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  nameWithType: LBClient.SendRequestAsync(ApiRequest)
+- uid: cqhttp.Cyan.LoadBalance.LBClient.SendRequestAsync*
+  name: SendRequestAsync
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_SendRequestAsync_
+  commentId: Overload:cqhttp.Cyan.LoadBalance.LBClient.SendRequestAsync
+  isSpec: "True"
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.SendRequestAsync
+  nameWithType: LBClient.SendRequestAsync
+- uid: cqhttp.Cyan.LoadBalance.LBClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
+  name: SendTextAsync(MessageType, Int64, String)
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_SendTextAsync_cqhttp_Cyan_Enums_MessageType_System_Int64_System_String_
+  commentId: M:cqhttp.Cyan.LoadBalance.LBClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType, System.Int64, System.String)
+  nameWithType: LBClient.SendTextAsync(MessageType, Int64, String)
+- uid: cqhttp.Cyan.LoadBalance.LBClient.SendTextAsync*
+  name: SendTextAsync
+  href: api/cqhttp.Cyan.LoadBalance.LBClient.html#cqhttp_Cyan_LoadBalance_LBClient_SendTextAsync_
+  commentId: Overload:cqhttp.Cyan.LoadBalance.LBClient.SendTextAsync
+  isSpec: "True"
+  fullName: cqhttp.Cyan.LoadBalance.LBClient.SendTextAsync
+  nameWithType: LBClient.SendTextAsync
 - uid: cqhttp.Cyan.Logger
   name: Logger
   href: api/cqhttp.Cyan.Logger.html
@@ -3851,6 +3994,38 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.Convert.ToEmoji
   nameWithType: Convert.ToEmoji
+- uid: cqhttp.Cyan.Utils.Get
+  name: Get
+  href: api/cqhttp.Cyan.Utils.Get.html
+  commentId: T:cqhttp.Cyan.Utils.Get
+  fullName: cqhttp.Cyan.Utils.Get
+  nameWithType: Get
+- uid: cqhttp.Cyan.Utils.Get.GroupAvatarUrl(System.Int64)
+  name: GroupAvatarUrl(Int64)
+  href: api/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_GroupAvatarUrl_System_Int64_
+  commentId: M:cqhttp.Cyan.Utils.Get.GroupAvatarUrl(System.Int64)
+  fullName: cqhttp.Cyan.Utils.Get.GroupAvatarUrl(System.Int64)
+  nameWithType: Get.GroupAvatarUrl(Int64)
+- uid: cqhttp.Cyan.Utils.Get.GroupAvatarUrl*
+  name: GroupAvatarUrl
+  href: api/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_GroupAvatarUrl_
+  commentId: Overload:cqhttp.Cyan.Utils.Get.GroupAvatarUrl
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.Get.GroupAvatarUrl
+  nameWithType: Get.GroupAvatarUrl
+- uid: cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.Int64)
+  name: UserAvatarUrl(Int64)
+  href: api/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_UserAvatarUrl_System_Int64_
+  commentId: M:cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.Int64)
+  fullName: cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.Int64)
+  nameWithType: Get.UserAvatarUrl(Int64)
+- uid: cqhttp.Cyan.Utils.Get.UserAvatarUrl*
+  name: UserAvatarUrl
+  href: api/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_UserAvatarUrl_
+  commentId: Overload:cqhttp.Cyan.Utils.Get.UserAvatarUrl
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.Get.UserAvatarUrl
+  nameWithType: Get.UserAvatarUrl
 - uid: cqhttp.Cyan.Utils.GroupMemberInfo
   name: GroupMemberInfo
   href: api/cqhttp.Cyan.Utils.GroupMemberInfo.html

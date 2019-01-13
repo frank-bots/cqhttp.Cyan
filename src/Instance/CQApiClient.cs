@@ -110,8 +110,14 @@ namespace cqhttp.Cyan.Instance {
         protected CQEventListener __eventListener;
         /// <summary></summary>
         public delegate CQResponse OnEventDelegate (CQApiClient client, CQEvent eventObj);
+        ///
+        public delegate Task<CQResponse> OnEventDelegateAsync (CQApiClient client, CQEvent eventObj);
         /// <summary></summary>
         public event OnEventDelegate OnEvent;
+        /// <summary>
+        /// 异步执行命令，忽略返回值
+        /// </summary>
+        public event OnEventDelegateAsync OnEventAsync;
         /// <summary></summary>
         protected CQResponse __HandleEvent (CQEvent event_) {
             Logger.Log (Verbosity.DEBUG, $"收到了完整的上报事件{event_.postType}");
@@ -128,7 +134,14 @@ namespace cqhttp.Cyan.Instance {
                 Logger.Log (Verbosity.INFO, $"根据元事件判定cqhttp状态是否正常:{alive}");
                 return new Events.CQResponses.EmptyResponse ();
             }
-            return OnEvent (this, event_);
+            try {
+                OnEventAsync (this, event_);
+            } catch (NullReferenceException) { }
+
+            try {
+                return OnEvent (this, event_);
+            } catch (NullReferenceException) { }
+            return new Events.CQResponses.EmptyResponse ();
         }
     }
 }

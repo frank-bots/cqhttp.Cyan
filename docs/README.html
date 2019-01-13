@@ -8,7 +8,7 @@
     <title>cqhttp.Cyan </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="cqhttp.Cyan ">
-    <meta name="generator" content="docfx 2.40.6.0">
+    <meta name="generator" content="docfx 2.40.7.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -64,6 +64,14 @@
 
 <pre><code>Cyan---青
 </code></pre>
+<h2 id="使用本插件你能做到什么">使用本插件你能做到什么？</h2>
+<ol>
+<li>写一个复读机</li>
+<li>写一个点歌机器人</li>
+<li>写一个自定义回复机器人</li>
+<li>管理多个QQ号，进行类似“负载均衡”的操作</li>
+<li>进行任何使用C#语言能够做到的事。（写一个QQ客户端（误（律师函警告</li>
+</ol>
 <h2 id="快速上手">快速上手</h2>
 <h3 id="1搭建一个酷q实例并开启事件上报">1.搭建一个酷Q实例并开启事件上报</h3>
 <p>请参考<br>
@@ -100,7 +108,7 @@ namespace YourNS {
             );
             //client构造后会发送一条get_login_info请求，则可以通过
             //判断是否成功获取登陆的账号的QQ与昵称判断API是否可访问
-            client.OnEventDelegate += (client, e) =&gt; {
+            client.OnEvent += (client, e) =&gt; {
                 //process (CQEvent e)
                 return new CQEmptyResponse ();
             };
@@ -166,7 +174,7 @@ namespace YourNS {
 <p>在事件处理函数中可通过<code>(e is MessageEvent)</code>判断收到的是否为消息事件，如下：</p>
 <pre><code class="lang-csharp">static void Main() {
     var client = new HTTPApiClient(...);
-    client.OnEventDelegate += HandleEvent;
+    client.OnEvent += HandleEvent;
 }
 static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
     if(e is MessageEvent) {
@@ -176,12 +184,14 @@ static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
     }
 }
 </code></pre>
-<p>消息之间可以进行相等判断</p>
+<p>消息之间可以进行相等判断、相加操作</p>
 <pre><code class="lang-csharp">Message a = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(4));
-Message b = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(4));
+Message b = new Message(new ElementText(&quot;asdf&quot;));
+b += new ElementFace(4);
 Console.WriteLine(a == b);//True
 Message c = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(3));
 Console.WriteLine(a == c);//False
+a + c;//asdf[CQ:face, id=4]asdf[CQ:face, id=3]
 </code></pre>
 <p>....也就是说....你可以很轻松地写一个复读鸡emmmmmmm</p>
 <h3 id="消息发送">消息发送</h3>

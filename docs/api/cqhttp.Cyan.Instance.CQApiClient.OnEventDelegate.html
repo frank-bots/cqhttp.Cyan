@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace cqhttp.Cyan.Events.MetaEvents
+    <title>Delegate CQApiClient.OnEventDelegate
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace cqhttp.Cyan.Events.MetaEvents
+    <meta name="title" content="Delegate CQApiClient.OnEventDelegate
    ">
     <meta name="generator" content="docfx 2.40.7.0">
     
@@ -68,23 +68,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.Events.MetaEvents">
+            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate">
   
-  <h1 id="cqhttp_Cyan_Events_MetaEvents" data-uid="cqhttp.Cyan.Events.MetaEvents" class="text-break">Namespace cqhttp.Cyan.Events.MetaEvents
+  
+  <h1 id="cqhttp_Cyan_Instance_CQApiClient_OnEventDelegate" data-uid="cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate" class="text-break">Delegate CQApiClient.OnEventDelegate
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent.html">HeartbeatEvent</a></h4>
-      <section><p>心跳包，请在设置中开启</p>
-</section>
-      <h4><a class="xref" href="cqhttp.Cyan.Events.MetaEvents.LifecycleEvent.html">LifecycleEvent</a></h4>
-      <section></section>
-      <h4><a class="xref" href="cqhttp.Cyan.Events.MetaEvents.MetaEvent.html">MetaEvent</a></h4>
-      <section><p>midware, dont care</p>
-</section>
+  <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Instance.html">cqhttp.Cyan.Instance</a></h6>
+  <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
+  <h5 id="cqhttp_Cyan_Instance_CQApiClient_OnEventDelegate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate CQResponse OnEventDelegate(CQApiClient client, CQEvent eventObj);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="cqhttp.Cyan.Instance.CQApiClient.html">CQApiClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html">CQEvent</a></td>
+        <td><span class="parametername">eventObj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="cqhttp.Cyan.Events.CQResponses.Base.CQResponse.html">CQResponse</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -92,6 +125,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_OnEventDelegate.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L112" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
