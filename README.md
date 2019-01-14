@@ -75,6 +75,7 @@ namespace YourNS {
 ```
 
     在Examples文件夹下有更详细的示例
+    <https://github.com/frankli0324/cqhttp.Cyan/tree/master/src/_Examples>
 
 ------------------------------
 
