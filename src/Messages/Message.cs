@@ -229,6 +229,15 @@ namespace cqhttp.Cyan.Messages {
                             dict["content"],
                             dict["style"]
                         );
+                    case "contact":
+                        return new ElementContact (
+                            dict["type"] == "private" ?
+                            Enums.MessageType.private_ :
+                            dict["type"] == "group" ?
+                            Enums.MessageType.group_ :
+                            Enums.MessageType.discuss_,
+                            long.Parse (dict["id"])
+                        );
                 }
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
