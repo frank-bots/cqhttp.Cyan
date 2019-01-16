@@ -221,6 +221,14 @@ namespace cqhttp.Cyan.Messages {
                             dict["url"], dict["name"],
                             dict["content"], dict["image"]
                         );
+                    case "location":
+                        return new ElementLocation (
+                            float.Parse (dict["lat"]),
+                            float.Parse (dict["lon"]),
+                            dict["title"],
+                            dict["content"],
+                            dict["style"]
+                        );
                 }
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
