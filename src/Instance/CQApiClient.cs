@@ -93,6 +93,14 @@ namespace cqhttp.Cyan.Instance {
             new SendmsgRequest (messageType, target, message)
         ) as SendmsgResult;
 
+        /// <summary>发送消息(自行构造)</summary>
+        public async Task<SendmsgResult> SendMessageAsync (
+            (MessageType, long) target,
+            Message message
+        ) => await SendRequestAsync (
+            new SendmsgRequest (target.Item1, target.Item2, message)
+        ) as SendmsgResult;
+
         /// <summary>发送纯文本消息</summary>
         public async Task<SendmsgResult> SendTextAsync (
             MessageType messageType,
@@ -101,6 +109,17 @@ namespace cqhttp.Cyan.Instance {
         ) => await SendRequestAsync (
             new SendmsgRequest (
                 messageType, target,
+                new Message (new Messages.CQElements.ElementText (text))
+            )
+        ) as SendmsgResult;
+
+        /// <summary>发送纯文本消息</summary>
+        public async Task<SendmsgResult> SendTextAsync (
+            (MessageType, long) target,
+            string text
+        ) => await SendRequestAsync (
+            new SendmsgRequest (
+                target.Item1, target.Item2,
                 new Message (new Messages.CQElements.ElementText (text))
             )
         ) as SendmsgResult;
