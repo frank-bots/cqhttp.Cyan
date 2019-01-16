@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Messages;
 
-namespace src.Utils {
+namespace cqhttp.Cyan.Utils {
     /// <summary>
     /// 记录发送的消息
     /// </summary>
