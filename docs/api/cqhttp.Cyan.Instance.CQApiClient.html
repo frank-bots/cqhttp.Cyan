@@ -158,7 +158,7 @@
     <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient___eventListener.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.__eventListener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L110">View Source</a>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L129">View Source</a>
   </span>
   <h4 id="cqhttp_Cyan_Instance_CQApiClient___eventListener" data-uid="cqhttp.Cyan.Instance.CQApiClient.__eventListener">__eventListener</h4>
   <div class="markdown level1 summary"></div>
@@ -406,7 +406,7 @@
     <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient___HandleEvent_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L122">View Source</a>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L141">View Source</a>
   </span>
   <a id="cqhttp_Cyan_Instance_CQApiClient___HandleEvent_" data-uid="cqhttp.Cyan.Instance.CQApiClient.__HandleEvent*"></a>
   <h4 id="cqhttp_Cyan_Instance_CQApiClient___HandleEvent_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_" data-uid="cqhttp.Cyan.Instance.CQApiClient.__HandleEvent(cqhttp.Cyan.Events.CQEvents.Base.CQEvent)">__HandleEvent(CQEvent)</h4>
@@ -508,6 +508,59 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_SendMessageAsync_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__cqhttp_Cyan_Messages_Message_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(System.ValueTuple%7Bcqhttp.Cyan.Enums.MessageType%2CSystem.Int64%7D%2Ccqhttp.Cyan.Messages.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L97">View Source</a>
+  </span>
+  <a id="cqhttp_Cyan_Instance_CQApiClient_SendMessageAsync_" data-uid="cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync*"></a>
+  <h4 id="cqhttp_Cyan_Instance_CQApiClient_SendMessageAsync_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__cqhttp_Cyan_Messages_Message_" data-uid="cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},cqhttp.Cyan.Messages.Message)">SendMessageAsync((MessageType, Int64), Message)</h4>
+  <div class="markdown level1 summary"><p>发送消息(自行构造)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SendmsgResult&gt; SendMessageAsync((MessageType, long)target, Message message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="cqhttp.Cyan.Enums.MessageType.html">MessageType</a>, <span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="cqhttp.Cyan.Messages.Message.html">Message</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="cqhttp.Cyan.ApiCall.Results.SendmsgResult.html">SendmsgResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_SendRequestAsync_cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -559,7 +612,7 @@
     <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_cqhttp_Cyan_Enums_MessageType_System_Int64_System_String_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType%2CSystem.Int64%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L97">View Source</a>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L105">View Source</a>
   </span>
   <a id="cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_" data-uid="cqhttp.Cyan.Instance.CQApiClient.SendTextAsync*"></a>
   <h4 id="cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_cqhttp_Cyan_Enums_MessageType_System_Int64_System_String_" data-uid="cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)">SendTextAsync(MessageType, Int64, String)</h4>
@@ -612,6 +665,59 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__System_String_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(System.ValueTuple%7Bcqhttp.Cyan.Enums.MessageType%2CSystem.Int64%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L117">View Source</a>
+  </span>
+  <a id="cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_" data-uid="cqhttp.Cyan.Instance.CQApiClient.SendTextAsync*"></a>
+  <h4 id="cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__System_String_" data-uid="cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},System.String)">SendTextAsync((MessageType, Int64), String)</h4>
+  <div class="markdown level1 summary"><p>发送纯文本消息</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SendmsgResult&gt; SendTextAsync((MessageType, long)target, string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="cqhttp.Cyan.Enums.MessageType.html">MessageType</a>, <span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="cqhttp.Cyan.ApiCall.Results.SendmsgResult.html">SendmsgResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="events">Events
   </h3>
   <span class="small pull-right mobile-hide">
@@ -619,7 +725,7 @@
     <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_OnEvent.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.OnEvent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L116">View Source</a>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L135">View Source</a>
   </span>
   <h4 id="cqhttp_Cyan_Instance_CQApiClient_OnEvent" data-uid="cqhttp.Cyan.Instance.CQApiClient.OnEvent">OnEvent</h4>
   <div class="markdown level1 summary"></div>
@@ -648,7 +754,7 @@
     <a href="https://github.com/frankli0324/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Instance_CQApiClient_OnEventAsync.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Instance.CQApiClient.OnEventAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L120">View Source</a>
+    <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Instance/CQApiClient.cs/#L139">View Source</a>
   </span>
   <h4 id="cqhttp_Cyan_Instance_CQApiClient_OnEventAsync" data-uid="cqhttp.Cyan.Instance.CQApiClient.OnEventAsync">OnEventAsync</h4>
   <div class="markdown level1 summary"><p>异步执行命令，忽略返回值</p>

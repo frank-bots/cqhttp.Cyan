@@ -1040,19 +1040,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEventHandler.HandleEvent
   nameWithType: CQEventHandler.HandleEvent
-- uid: cqhttp.Cyan.Events.CQEventHandler.testFunc
-  name: testFunc()
-  href: api/cqhttp.Cyan.Events.CQEventHandler.html#cqhttp_Cyan_Events_CQEventHandler_testFunc
-  commentId: M:cqhttp.Cyan.Events.CQEventHandler.testFunc
-  fullName: cqhttp.Cyan.Events.CQEventHandler.testFunc()
-  nameWithType: CQEventHandler.testFunc()
-- uid: cqhttp.Cyan.Events.CQEventHandler.testFunc*
-  name: testFunc
-  href: api/cqhttp.Cyan.Events.CQEventHandler.html#cqhttp_Cyan_Events_CQEventHandler_testFunc_
-  commentId: Overload:cqhttp.Cyan.Events.CQEventHandler.testFunc
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQEventHandler.testFunc
-  nameWithType: CQEventHandler.testFunc
 - uid: cqhttp.Cyan.Events.CQEvents
   name: cqhttp.Cyan.Events.CQEvents
   href: api/cqhttp.Cyan.Events.CQEvents.html
@@ -2429,82 +2416,44 @@ references:
   commentId: N:cqhttp.Cyan.Examples
   fullName: cqhttp.Cyan.Examples
   nameWithType: cqhttp.Cyan.Examples
-- uid: cqhttp.Cyan.Examples.ApiRequestTest
-  name: ApiRequestTest
-  href: api/cqhttp.Cyan.Examples.ApiRequestTest.html
-  commentId: T:cqhttp.Cyan.Examples.ApiRequestTest
-  fullName: cqhttp.Cyan.Examples.ApiRequestTest
-  nameWithType: ApiRequestTest
-- uid: cqhttp.Cyan.Examples.ApiRequestTest.Test
-  name: Test()
-  href: api/cqhttp.Cyan.Examples.ApiRequestTest.html#cqhttp_Cyan_Examples_ApiRequestTest_Test
-  commentId: M:cqhttp.Cyan.Examples.ApiRequestTest.Test
-  fullName: cqhttp.Cyan.Examples.ApiRequestTest.Test()
-  nameWithType: ApiRequestTest.Test()
-- uid: cqhttp.Cyan.Examples.ApiRequestTest.Test*
-  name: Test
-  href: api/cqhttp.Cyan.Examples.ApiRequestTest.html#cqhttp_Cyan_Examples_ApiRequestTest_Test_
-  commentId: Overload:cqhttp.Cyan.Examples.ApiRequestTest.Test
+- uid: cqhttp.Cyan.Examples.LoadBalance
+  name: LoadBalance
+  href: api/cqhttp.Cyan.Examples.LoadBalance.html
+  commentId: T:cqhttp.Cyan.Examples.LoadBalance
+  fullName: cqhttp.Cyan.Examples.LoadBalance
+  nameWithType: LoadBalance
+- uid: cqhttp.Cyan.Examples.LoadBalance.Main_
+  name: Main_()
+  href: api/cqhttp.Cyan.Examples.LoadBalance.html#cqhttp_Cyan_Examples_LoadBalance_Main_
+  commentId: M:cqhttp.Cyan.Examples.LoadBalance.Main_
+  fullName: cqhttp.Cyan.Examples.LoadBalance.Main_()
+  nameWithType: LoadBalance.Main_()
+- uid: cqhttp.Cyan.Examples.LoadBalance.Main_*
+  name: Main_
+  href: api/cqhttp.Cyan.Examples.LoadBalance.html#cqhttp_Cyan_Examples_LoadBalance_Main__
+  commentId: Overload:cqhttp.Cyan.Examples.LoadBalance.Main_
   isSpec: "True"
-  fullName: cqhttp.Cyan.Examples.ApiRequestTest.Test
-  nameWithType: ApiRequestTest.Test
-- uid: cqhttp.Cyan.Examples.DeserializationTest
-  name: DeserializationTest
-  href: api/cqhttp.Cyan.Examples.DeserializationTest.html
-  commentId: T:cqhttp.Cyan.Examples.DeserializationTest
-  fullName: cqhttp.Cyan.Examples.DeserializationTest
-  nameWithType: DeserializationTest
-- uid: cqhttp.Cyan.Examples.DeserializationTest.Test
-  name: Test()
-  href: api/cqhttp.Cyan.Examples.DeserializationTest.html#cqhttp_Cyan_Examples_DeserializationTest_Test
-  commentId: M:cqhttp.Cyan.Examples.DeserializationTest.Test
-  fullName: cqhttp.Cyan.Examples.DeserializationTest.Test()
-  nameWithType: DeserializationTest.Test()
-- uid: cqhttp.Cyan.Examples.DeserializationTest.Test*
-  name: Test
-  href: api/cqhttp.Cyan.Examples.DeserializationTest.html#cqhttp_Cyan_Examples_DeserializationTest_Test_
-  commentId: Overload:cqhttp.Cyan.Examples.DeserializationTest.Test
+  fullName: cqhttp.Cyan.Examples.LoadBalance.Main_
+  nameWithType: LoadBalance.Main_
+- uid: cqhttp.Cyan.Examples.Repeater
+  name: Repeater
+  href: api/cqhttp.Cyan.Examples.Repeater.html
+  commentId: T:cqhttp.Cyan.Examples.Repeater
+  fullName: cqhttp.Cyan.Examples.Repeater
+  nameWithType: Repeater
+- uid: cqhttp.Cyan.Examples.Repeater.Main_
+  name: Main_()
+  href: api/cqhttp.Cyan.Examples.Repeater.html#cqhttp_Cyan_Examples_Repeater_Main_
+  commentId: M:cqhttp.Cyan.Examples.Repeater.Main_
+  fullName: cqhttp.Cyan.Examples.Repeater.Main_()
+  nameWithType: Repeater.Main_()
+- uid: cqhttp.Cyan.Examples.Repeater.Main_*
+  name: Main_
+  href: api/cqhttp.Cyan.Examples.Repeater.html#cqhttp_Cyan_Examples_Repeater_Main__
+  commentId: Overload:cqhttp.Cyan.Examples.Repeater.Main_
   isSpec: "True"
-  fullName: cqhttp.Cyan.Examples.DeserializationTest.Test
-  nameWithType: DeserializationTest.Test
-- uid: cqhttp.Cyan.Examples.ElementBuild
-  name: ElementBuild
-  href: api/cqhttp.Cyan.Examples.ElementBuild.html
-  commentId: T:cqhttp.Cyan.Examples.ElementBuild
-  fullName: cqhttp.Cyan.Examples.ElementBuild
-  nameWithType: ElementBuild
-- uid: cqhttp.Cyan.Examples.ElementBuild.Test
-  name: Test()
-  href: api/cqhttp.Cyan.Examples.ElementBuild.html#cqhttp_Cyan_Examples_ElementBuild_Test
-  commentId: M:cqhttp.Cyan.Examples.ElementBuild.Test
-  fullName: cqhttp.Cyan.Examples.ElementBuild.Test()
-  nameWithType: ElementBuild.Test()
-- uid: cqhttp.Cyan.Examples.ElementBuild.Test*
-  name: Test
-  href: api/cqhttp.Cyan.Examples.ElementBuild.html#cqhttp_Cyan_Examples_ElementBuild_Test_
-  commentId: Overload:cqhttp.Cyan.Examples.ElementBuild.Test
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Examples.ElementBuild.Test
-  nameWithType: ElementBuild.Test
-- uid: cqhttp.Cyan.Examples.MessageBuild
-  name: MessageBuild
-  href: api/cqhttp.Cyan.Examples.MessageBuild.html
-  commentId: T:cqhttp.Cyan.Examples.MessageBuild
-  fullName: cqhttp.Cyan.Examples.MessageBuild
-  nameWithType: MessageBuild
-- uid: cqhttp.Cyan.Examples.MessageBuild.Test
-  name: Test()
-  href: api/cqhttp.Cyan.Examples.MessageBuild.html#cqhttp_Cyan_Examples_MessageBuild_Test
-  commentId: M:cqhttp.Cyan.Examples.MessageBuild.Test
-  fullName: cqhttp.Cyan.Examples.MessageBuild.Test()
-  nameWithType: MessageBuild.Test()
-- uid: cqhttp.Cyan.Examples.MessageBuild.Test*
-  name: Test
-  href: api/cqhttp.Cyan.Examples.MessageBuild.html#cqhttp_Cyan_Examples_MessageBuild_Test_
-  commentId: Overload:cqhttp.Cyan.Examples.MessageBuild.Test
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Examples.MessageBuild.Test
-  nameWithType: MessageBuild.Test
+  fullName: cqhttp.Cyan.Examples.Repeater.Main_
+  nameWithType: Repeater.Main_
 - uid: cqhttp.Cyan.Exceptions
   name: cqhttp.Cyan.Exceptions
   href: api/cqhttp.Cyan.Exceptions.html
@@ -2905,6 +2854,13 @@ references:
   commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,cqhttp.Cyan.Messages.Message)
   fullName: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(cqhttp.Cyan.Enums.MessageType, System.Int64, cqhttp.Cyan.Messages.Message)
   nameWithType: CQApiClient.SendMessageAsync(MessageType, Int64, Message)
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},cqhttp.Cyan.Messages.Message)
+  name: SendMessageAsync((MessageType, Int64), Message)
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_SendMessageAsync_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__cqhttp_Cyan_Messages_Message_
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},cqhttp.Cyan.Messages.Message)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(System.ValueTuple<cqhttp.Cyan.Enums.MessageType, System.Int64>, cqhttp.Cyan.Messages.Message)
+  fullName.vb: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync(System.ValueTuple(Of cqhttp.Cyan.Enums.MessageType, System.Int64), cqhttp.Cyan.Messages.Message)
+  nameWithType: CQApiClient.SendMessageAsync((MessageType, Int64), Message)
 - uid: cqhttp.Cyan.Instance.CQApiClient.SendMessageAsync*
   name: SendMessageAsync
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_SendMessageAsync_
@@ -2931,6 +2887,13 @@ references:
   commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType,System.Int64,System.String)
   fullName: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(cqhttp.Cyan.Enums.MessageType, System.Int64, System.String)
   nameWithType: CQApiClient.SendTextAsync(MessageType, Int64, String)
+- uid: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},System.String)
+  name: SendTextAsync((MessageType, Int64), String)
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__System_String_
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},System.String)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(System.ValueTuple<cqhttp.Cyan.Enums.MessageType, System.Int64>, System.String)
+  fullName.vb: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync(System.ValueTuple(Of cqhttp.Cyan.Enums.MessageType, System.Int64), System.String)
+  nameWithType: CQApiClient.SendTextAsync((MessageType, Int64), String)
 - uid: cqhttp.Cyan.Instance.CQApiClient.SendTextAsync*
   name: SendTextAsync
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_SendTextAsync_
@@ -3513,6 +3476,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementAt.ElementAt
   nameWithType: ElementAt.ElementAt
+- uid: cqhttp.Cyan.Messages.CQElements.ElementContact
+  name: ElementContact
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementContact.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementContact
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementContact
+  nameWithType: ElementContact
+- uid: cqhttp.Cyan.Messages.CQElements.ElementContact.#ctor(cqhttp.Cyan.Enums.MessageType,System.Int64)
+  name: ElementContact(MessageType, Int64)
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementContact.html#cqhttp_Cyan_Messages_CQElements_ElementContact__ctor_cqhttp_Cyan_Enums_MessageType_System_Int64_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementContact.#ctor(cqhttp.Cyan.Enums.MessageType,System.Int64)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementContact.ElementContact(cqhttp.Cyan.Enums.MessageType, System.Int64)
+  nameWithType: ElementContact.ElementContact(MessageType, Int64)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementContact.#ctor*
+  name: ElementContact
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementContact.html#cqhttp_Cyan_Messages_CQElements_ElementContact__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementContact.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementContact.ElementContact
+  nameWithType: ElementContact.ElementContact
 - uid: cqhttp.Cyan.Messages.CQElements.ElementEmoji
   name: ElementEmoji
   href: api/cqhttp.Cyan.Messages.CQElements.ElementEmoji.html
@@ -3579,6 +3561,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementImage.ElementImage
   nameWithType: ElementImage.ElementImage
+- uid: cqhttp.Cyan.Messages.CQElements.ElementLocation
+  name: ElementLocation
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementLocation.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementLocation
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementLocation
+  nameWithType: ElementLocation
+- uid: cqhttp.Cyan.Messages.CQElements.ElementLocation.#ctor(System.Single,System.Single,System.String,System.String,System.String)
+  name: ElementLocation(Single, Single, String, String, String)
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementLocation.html#cqhttp_Cyan_Messages_CQElements_ElementLocation__ctor_System_Single_System_Single_System_String_System_String_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementLocation.#ctor(System.Single,System.Single,System.String,System.String,System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementLocation.ElementLocation(System.Single, System.Single, System.String, System.String, System.String)
+  nameWithType: ElementLocation.ElementLocation(Single, Single, String, String, String)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementLocation.#ctor*
+  name: ElementLocation
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementLocation.html#cqhttp_Cyan_Messages_CQElements_ElementLocation__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementLocation.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementLocation.ElementLocation
+  nameWithType: ElementLocation.ElementLocation
 - uid: cqhttp.Cyan.Messages.CQElements.ElementMusic
   name: ElementMusic
   href: api/cqhttp.Cyan.Messages.CQElements.ElementMusic.html
