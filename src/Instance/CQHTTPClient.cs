@@ -23,7 +23,9 @@ namespace cqhttp.Cyan.Instance {
             var ret = await PostJsonAsync (
                 accessUrl, x, accessToken
             );
-            try { await base.SendRequestAsync (x); } catch { }
+            var t = base.SendRequestAsync(x);
+            if (t != null)
+                await t;
             return ret;
         }
         private async static Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string apiToken = "") {

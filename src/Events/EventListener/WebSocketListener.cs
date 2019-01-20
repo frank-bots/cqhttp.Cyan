@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,22 +27,33 @@ namespace cqhttp.Cyan.Events.EventListener {
                     byte[] recv_buffer = new byte[2048];
                     List<byte> message = new List<byte> ();
                     while (true) {
-                        while (!client.ReceiveAsync (
-                                recv_buffer,
-                                new System.Threading.CancellationToken ()
-                            ).Result.EndOfMessage) {
-                            message.AddRange (recv_buffer);
+                        if (client.State == WebSocketState.Open)
+                        {
+                            var t = client.ReceiveAsync(
+                                    recv_buffer,
+                                    new System.Threading.CancellationToken()
+                                );
+                            if(!t.Result.EndOfMessage)
+                            {
+                                message.AddRange(recv_buffer);
+                            }
+                            else
+                            {
+                                message.AddRange(recv_buffer.ToList().GetRange(0, t.Result.Count));
+                                Process(System.Text.Encoding.UTF8.GetString(message.ToArray()));
+                                message.Clear();
+                            }
                         }
-                        message.AddRange (recv_buffer);
-                        Process (message.ToArray ());
                     }
                 });
             }
         }
-        private async void Process (byte[] message) {
+        private async void Process (string message) {
             try {
+                if (string.IsNullOrEmpty(message))
+                    return;
                 await Task.Run (() =>
-                    listen_callback (CQEventHandler.HandleEvent (Encoding.UTF8.GetString (message)))
+                    listen_callback (CQEventHandler.HandleEvent (message))
                 ); //Websocket下不会处理响应！！！！！
             } catch (System.Exception e) {
                 Logger.Log (

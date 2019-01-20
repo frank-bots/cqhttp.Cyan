@@ -212,6 +212,7 @@ namespace cqhttp.Cyan.Messages {
                     case "record":
                         return new ElementRecord (dict["file"]);
                     case "face":
+                        return new ElementFace(int.Parse(dict["id"]));
                     case "emoji":
                         return new ElementEmoji (int.Parse (dict["id"]));
                     case "shake":
