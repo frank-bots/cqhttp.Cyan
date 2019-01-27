@@ -15,7 +15,8 @@ namespace cqhttp.Cyan.Instance {
         /// <summary></summary>
         public CQWebsocketClient (string accessUrl, string accessToken = "", string eventUrl = ""):
             base (accessUrl, accessToken) {
-                if (eventUrl.Length != 0) {
+                if (!string.IsNullOrEmpty(eventUrl)) {
+                eventUrl += !string.IsNullOrEmpty(accessToken) ? "?access_token=" + accessToken : "";
                     this.__eventListener = new WebSocketListener (eventUrl);
                     this.__eventListener.StartListen (__HandleEvent);
                 }
@@ -23,7 +24,9 @@ namespace cqhttp.Cyan.Instance {
         /// <summary></summary>
         public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
             var ret = await WSSendJson (accessUrl, x, accessToken);
-            await base.SendRequestAsync (x);
+            var t = base.SendRequestAsync (x);
+            if (t != null)
+                await t;
             return ret;
         }
         

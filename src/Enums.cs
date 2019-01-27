@@ -40,4 +40,19 @@ namespace cqhttp.Cyan.Enums {
     public enum Verbosity {
         /**<summary/>*/OFF,/**<summary/>*/FATAL,/**<summary/>*/ERROR,/**<summary/>*/WARN,/**<summary/>*/INFO,/**<summary/>*/DEBUG,/**<summary/>*/ALL
     }
+
+    /// <summary>
+    /// 日志输出方式
+    /// </summary>
+    public enum LogType
+    {
+        /// <summary>
+        /// 文件
+        /// </summary>
+        File =1,
+        /// <summary>
+        /// 控制台
+        /// </summary>
+        Console=2,
+    }
 }
