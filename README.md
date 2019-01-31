@@ -12,6 +12,14 @@
 
 ## 快速上手
 
+### 0.开始之前
+
+需要下载的内容：
+
+1. [酷Q](https://cqp.cc)  
+2. [cqhttp插件](https://cqhttp.cc)
+3. [dotnet core](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install)
+
 ### 1.搭建一个酷Q实例并开启事件上报
 
 请参考  
