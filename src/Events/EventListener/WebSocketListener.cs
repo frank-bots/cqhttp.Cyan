@@ -3,6 +3,8 @@ using System.Linq;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
+using cqhttp.Cyan.ApiCall.Requests.Base;
+using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.Events.EventListener {
@@ -10,6 +12,10 @@ namespace cqhttp.Cyan.Events.EventListener {
     public class WebSocketListener : CQEventListener {
         private ClientWebSocket client;
         private string dest_url;
+        /// <summary>
+        /// 处理快速回复的时候需要调用
+        /// </summary>
+        public System.Func<ApiRequest, Task<ApiResult>> api_call_func;
         /// <summary></summary>
         public WebSocketListener (string dest_url) : base ("") {
             this.dest_url = dest_url;
@@ -27,21 +33,17 @@ namespace cqhttp.Cyan.Events.EventListener {
                     byte[] recv_buffer = new byte[2048];
                     List<byte> message = new List<byte> ();
                     while (true) {
-                        if (client.State == WebSocketState.Open)
-                        {
-                            var t = client.ReceiveAsync(
-                                    recv_buffer,
-                                    new System.Threading.CancellationToken()
-                                );
-                            if(!t.Result.EndOfMessage)
-                            {
-                                message.AddRange(recv_buffer);
-                            }
-                            else
-                            {
-                                message.AddRange(recv_buffer.ToList().GetRange(0, t.Result.Count));
-                                Process(System.Text.Encoding.UTF8.GetString(message.ToArray()));
-                                message.Clear();
+                        if (client.State == WebSocketState.Open) {
+                            var t = client.ReceiveAsync (
+                                recv_buffer,
+                                new System.Threading.CancellationToken ()
+                            );
+                            if (!t.Result.EndOfMessage) {
+                                message.AddRange (recv_buffer);
+                            } else {
+                                message.AddRange (recv_buffer.ToList ().GetRange (0, t.Result.Count));
+                                Process (System.Text.Encoding.UTF8.GetString (message.ToArray ()));
+                                message.Clear ();
                             }
                         }
                     }
@@ -50,11 +52,15 @@ namespace cqhttp.Cyan.Events.EventListener {
         }
         private async void Process (string message) {
             try {
-                if (string.IsNullOrEmpty(message))
+                if (string.IsNullOrEmpty (message))
                     return;
-                await Task.Run (() =>
-                    listen_callback (CQEventHandler.HandleEvent (message))
-                ); //Websocket下不会处理响应！！！！！
+                await Task.Run (() => {
+                    var response = listen_callback (CQEventHandler.HandleEvent (message));
+                    api_call_func (new ApiCall.Requests.HandleQuickOperationRequest (
+                        context: message,
+                        operation: response.content
+                    ));
+                });
             } catch (System.Exception e) {
                 Logger.Log (
                     Verbosity.ERROR,
