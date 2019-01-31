@@ -88,36 +88,11 @@
       <div class="level2"><a class="xref" href="cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html">GetVersionInfoResult</a></div>
       <div class="level2"><a class="xref" href="cqhttp.Cyan.ApiCall.Results.SendmsgResult.html">SendmsgResult</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.ApiCall.Results.Base.html">cqhttp.Cyan.ApiCall.Results.Base</a></h6>
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
   <h5 id="cqhttp_Cyan_ApiCall_Results_Base_ApiResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonObject]
-public abstract class ApiResult</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ApiResult : object</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -136,7 +111,7 @@ public abstract class ApiResult</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JToken raw_data { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Newtonsoft.Json.Linq.JToken raw_data { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,9 +143,7 @@ public abstract class ApiResult</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;&#25910;&#21040;&#38169;&#35823;&#30340;API&#21709;&#24212;&#23558;&#25243;&#20986;&#24322;&#24120;,&#19981;&#29992;&#22312;&#27492;&#20316;&#20986;&#21028;&#26029;&quot;, true)]
-[JsonProperty(&quot;retcode&quot;)]
-public int retcode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int retcode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,9 +175,7 @@ public int retcode { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;&#25910;&#21040;&#38169;&#35823;&#30340;API&#21709;&#24212;&#23558;&#25243;&#20986;&#24322;&#24120;,&#19981;&#29992;&#22312;&#27492;&#20316;&#20986;&#21028;&#26029;&quot;, true)]
-[JsonProperty(&quot;status&quot;)]
-public string status { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string status { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
