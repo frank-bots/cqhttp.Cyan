@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>cqhttp.Cyan</id>
-    <version>1.0.5-rc</version>
+    <version>1.0.5</version>
     <authors>Frank</authors>
     <owners>Frank</owners>
     <description>see https://github.com/frankli0324/cqhttp.Cyan</description>
@@ -16,8 +16,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="/Users/Frank/VisualStudioProjects/cqhttp.Cyan/src/bin/Release/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json" target="lib/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json" />
-    <file src="/Users/Frank/VisualStudioProjects/cqhttp.Cyan/src/bin/Release/netcoreapp2.1/cqhttp.Cyan.dll" target="lib/netcoreapp2.1/cqhttp.Cyan.dll" />
-    <file src="/Users/Frank/VisualStudioProjects/cqhttp.Cyan/src/bin/Release/netcoreapp2.1/cqhttp.Cyan.xml" target="lib/netcoreapp2.1/cqhttp.Cyan.xml" />
+    <file src="bin/Release/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json" target="lib/netcoreapp2.1/cqhttp.Cyan.runtimeconfig.json" />
+    <file src="bin/Release/netcoreapp2.1/cqhttp.Cyan.dll" target="lib/netcoreapp2.1/cqhttp.Cyan.dll" />
+    <file src="bin/Release/netcoreapp2.1/cqhttp.Cyan.xml" target="lib/netcoreapp2.1/cqhttp.Cyan.xml" />
   </files>
 </package>
