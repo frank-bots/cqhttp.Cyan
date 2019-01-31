@@ -58,7 +58,7 @@ namespace cqhttp.Cyan.Events {
             throw new Exceptions.NullEventException ($"未能解析type为{post_type}的event");
         }
 
-        private static MessageEvent HandleMessage (ref JObject e) {
+        private static CQEvent HandleMessage (ref JObject e) {
             string sub_type = e["message_type"].ToString ();
             switch (sub_type) {
                 case "private":
@@ -85,12 +85,18 @@ namespace cqhttp.Cyan.Events {
                         e["message_id"].ToObject<int> (),
                         e["discuss_id"].ToObject<long> ()
                     );
+                default:
+                    Logger.Log (
+                        Verbosity.ERROR,
+                        $"未能解析消息事件{e.ToString()}"
+                    );
+                    return new UnknownEvent (
+                        e["time"].ToObject<long> (),
+                        PostType.message,
+                        e.ToString ()
+                    );
             }
-            Logger.Log (
-                Verbosity.ERROR,
-                $"未能解析消息事件{e.ToString()}"
-            );
-            throw new Exceptions.ErrorEventException ("未能解析消息(message)事件");
+            //throw new Exceptions.ErrorEventException ("未能解析消息(message)事件");
         }
         private static CQEvent HandleRequest (ref JObject e) {
             string request_type = e["request_type"].ToString ();
@@ -110,12 +116,18 @@ namespace cqhttp.Cyan.Events {
                         e["comment"].ToString (),
                         e["flag"].ToString ()
                     );
+                default:
+                    Logger.Log (
+                        Verbosity.ERROR,
+                        $"未能解析请求事件{e.ToString()}"
+                    );
+                    return new UnknownEvent (
+                        e["time"].ToObject<long> (),
+                        PostType.request,
+                        e.ToString ()
+                    );
             }
-            Logger.Log (
-                Verbosity.ERROR,
-                $"未能解析请求事件{e.ToString()}"
-            );
-            throw new Exceptions.ErrorEventException ("未能解析请求(request)事件");
+            //throw new Exceptions.ErrorEventException ("未能解析请求(request)事件");
         }
 
         private static CQEvent HandleNotice (ref JObject e) {
@@ -150,12 +162,19 @@ namespace cqhttp.Cyan.Events {
                         e["time"].ToObject<long> (),
                         e["user_id"].ToObject<long> ()
                     );
+                default:
+                    Logger.Log (
+                        Verbosity.ERROR,
+                        $"未能解析提醒事件{e.ToString()}"
+                    );
+                    return new UnknownEvent (
+                        e["time"].ToObject<long> (),
+                        PostType.notice,
+                        e.ToString ()
+                    );
+
             }
-            Logger.Log (
-                Verbosity.ERROR,
-                $"未能解析提醒事件{e.ToString()}"
-            );
-            throw new Exceptions.ErrorEventException ("未能解析提醒(notice)事件");
+            // throw new Exceptions.ErrorEventException ("未能解析提醒(notice)事件");
         }
 
     }
