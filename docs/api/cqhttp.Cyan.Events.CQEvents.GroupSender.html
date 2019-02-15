@@ -96,12 +96,34 @@
     <div>
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.Sender.html#cqhttp_Cyan_Events_CQEvents_Base_Sender_age">Sender.age</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Events.CQEvents.html">cqhttp.Cyan.Events.CQEvents</a></h6>
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
   <h5 id="cqhttp_Cyan_Events_CQEvents_GroupSender_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GroupSender : Sender</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonObject]
+public class GroupSender : Sender</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -119,7 +141,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string area { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;area&quot;)]
+public string area { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +173,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string level { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;level&quot;)]
+public string level { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +205,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string role { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;role&quot;)]
+public string role { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,7 +237,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string title { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;title&quot;)]
+public string title { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

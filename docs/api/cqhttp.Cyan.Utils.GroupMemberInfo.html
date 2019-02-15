@@ -81,11 +81,36 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GroupMemberInfo</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Utils.html">cqhttp.Cyan.Utils</a></h6>
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
   <h5 id="cqhttp_Cyan_Utils_GroupMemberInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GroupMemberInfo : object</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonObject]
+public class GroupMemberInfo</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -101,7 +126,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int age</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;age&quot;)]
+public int age</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,7 +156,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string area</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;area&quot;)]
+public string area</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,7 +187,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string card</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;card&quot;)]
+public string card</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +217,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool card_changeable</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;card_changeable&quot;)]
+public bool card_changeable</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -218,7 +247,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long group_id</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;group_id&quot;)]
+public long group_id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,7 +277,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int join_time</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;join_time&quot;)]
+public int join_time</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,7 +307,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int last_sent_time</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;last_sent_time&quot;)]
+public int last_sent_time</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,7 +338,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string level</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;level&quot;)]
+public string level</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,7 +369,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string nickname</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;nickname&quot;)]
+public string nickname</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,7 +399,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string role</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;role&quot;)]
+public string role</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,7 +429,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string sex</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;sex&quot;)]
+public string sex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,7 +460,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string title</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;title&quot;)]
+public string title</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,7 +490,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int title_expire_time</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;title_expire_time&quot;)]
+public int title_expire_time</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +521,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool unfriendly</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;unfriendly&quot;)]
+public bool unfriendly</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -512,7 +551,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long user_id</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;user_id&quot;)]
+public long user_id</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">

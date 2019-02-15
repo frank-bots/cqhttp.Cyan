@@ -2269,13 +2269,13 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.secret
   nameWithType: CQEventListener.secret
-- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
   name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+  href: api/cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
+  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
   name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
   nameWithType: CQEventListener.StartListen(Func<CQEvent, CQResponse>)
   nameWithType.vb: CQEventListener.StartListen(Func(Of CQEvent, CQResponse))
 - uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen*
@@ -2320,13 +2320,13 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.HttpEventListener
   nameWithType: HttpEventListener.HttpEventListener
-- uid: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+- uid: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
   name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.HttpEventListener.html#cqhttp_Cyan_Events_EventListener_HttpEventListener_StartListen_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+  href: api/cqhttp.Cyan.Events.EventListener.HttpEventListener.html#cqhttp_Cyan_Events_EventListener_HttpEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
+  commentId: M:cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
   name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
+  fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
   nameWithType: HttpEventListener.StartListen(Func<CQEvent, CQResponse>)
   nameWithType.vb: HttpEventListener.StartListen(Func(Of CQEvent, CQResponse))
 - uid: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen*
@@ -2362,14 +2362,14 @@ references:
   fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.api_call_func
   nameWithType: WebSocketListener.api_call_func
 - uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name: StartListen(System.Func<CQEvent, CQResponse>)
+  name: StartListen(Func<CQEvent, CQResponse>)
   href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
   commentId: M:cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name.vb: StartListen(System.Func(Of CQEvent, CQResponse))
+  name.vb: StartListen(Func(Of CQEvent, CQResponse))
   fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
   fullName.vb: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
-  nameWithType: WebSocketListener.StartListen(System.Func<CQEvent, CQResponse>)
-  nameWithType.vb: WebSocketListener.StartListen(System.Func(Of CQEvent, CQResponse))
+  nameWithType: WebSocketListener.StartListen(Func<CQEvent, CQResponse>)
+  nameWithType.vb: WebSocketListener.StartListen(Func(Of CQEvent, CQResponse))
 - uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen*
   name: StartListen
   href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_
@@ -3286,13 +3286,13 @@ references:
   commentId: T:cqhttp.Cyan.Messages.CQElements.Base.Element
   fullName: cqhttp.Cyan.Messages.CQElements.Base.Element
   nameWithType: Element
-- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,Dictionary{System.String,System.String})
+- uid: cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
   name: Element(String, Dictionary<String, String>)
-  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element__ctor_System_String_Dictionary_System_String_System_String__
-  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,Dictionary{System.String,System.String})
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.Element.html#cqhttp_Cyan_Messages_CQElements_Base_Element__ctor_System_String_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
   name.vb: Element(String, Dictionary(Of String, String))
-  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Element(System.String, Dictionary<System.String, System.String>)
-  fullName.vb: cqhttp.Cyan.Messages.CQElements.Base.Element.Element(System.String, Dictionary(Of System.String, System.String))
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.Element.Element(System.String, System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: cqhttp.Cyan.Messages.CQElements.Base.Element.Element(System.String, System.Collections.Generic.Dictionary(Of System.String, System.String))
   nameWithType: Element.Element(String, Dictionary<String, String>)
   nameWithType.vb: Element.Element(String, Dictionary(Of String, String))
 - uid: cqhttp.Cyan.Messages.CQElements.Base.Element.#ctor(System.String,System.ValueTuple{System.String,System.String}[])
@@ -3440,15 +3440,6 @@ references:
   commentId: T:cqhttp.Cyan.Messages.CQElements.Base.ElementFile
   fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile
   nameWithType: ElementFile
-- uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,Dictionary{System.String,System.String})
-  name: ElementFile(String, Dictionary<String, String>)
-  href: api/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html#cqhttp_Cyan_Messages_CQElements_Base_ElementFile__ctor_System_String_Dictionary_System_String_System_String__
-  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,Dictionary{System.String,System.String})
-  name.vb: ElementFile(String, Dictionary(Of String, String))
-  fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.ElementFile(System.String, Dictionary<System.String, System.String>)
-  fullName.vb: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.ElementFile(System.String, Dictionary(Of System.String, System.String))
-  nameWithType: ElementFile.ElementFile(String, Dictionary<String, String>)
-  nameWithType.vb: ElementFile.ElementFile(String, Dictionary(Of String, String))
 - uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.Byte[],System.Boolean)
   name: ElementFile(String, Byte[], Boolean)
   href: api/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html#cqhttp_Cyan_Messages_CQElements_Base_ElementFile__ctor_System_String_System_Byte___System_Boolean_
@@ -3458,6 +3449,15 @@ references:
   fullName.vb: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.ElementFile(System.String, System.Byte(), System.Boolean)
   nameWithType: ElementFile.ElementFile(String, Byte[], Boolean)
   nameWithType.vb: ElementFile.ElementFile(String, Byte(), Boolean)
+- uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  name: ElementFile(String, Dictionary<String, String>)
+  href: api/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html#cqhttp_Cyan_Messages_CQElements_Base_ElementFile__ctor_System_String_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: ElementFile(String, Dictionary(Of String, String))
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.ElementFile(System.String, System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.ElementFile(System.String, System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: ElementFile.ElementFile(String, Dictionary<String, String>)
+  nameWithType.vb: ElementFile.ElementFile(String, Dictionary(Of String, String))
 - uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.#ctor(System.String,System.String,System.Boolean)
   name: ElementFile(String, String, Boolean)
   href: api/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html#cqhttp_Cyan_Messages_CQElements_Base_ElementFile__ctor_System_String_System_String_System_Boolean_

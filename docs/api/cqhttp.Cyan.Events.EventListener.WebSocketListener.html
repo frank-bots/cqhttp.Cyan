@@ -96,10 +96,28 @@
       <a class="xref" href="cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_listen_lock">CQEventListener.listen_lock</a>
     </div>
     <div>
-      <a class="xref" href="cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__">CQEventListener.StartListen(Func&lt;CQEvent, CQResponse&gt;)</a>
+      <a class="xref" href="cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_Verify_System_Byte___System_String_System_Byte___System_Int32_System_Int32_">CQEventListener.Verify(Byte[], String, Byte[], Int32, Int32)</a>
     </div>
     <div>
-      <a class="xref" href="cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_Verify_System_Byte___System_String_System_Byte___System_Int32_System_Int32_">CQEventListener.Verify(Byte[], String, Byte[], Int32, Int32)</a>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Events.EventListener.html">cqhttp.Cyan.Events.EventListener</a></h6>
@@ -157,7 +175,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public System.Func&lt;ApiRequest, Task&lt;ApiResult&gt;&gt; api_call_func</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;ApiRequest, Task&lt;ApiResult&gt;&gt; api_call_func</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +187,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html">ApiRequest</a>, <span class="xref">Task</span>&lt;<a class="xref" href="cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html">ApiResult</a>&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html">ApiRequest</a>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html">ApiResult</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -184,12 +202,12 @@
     <a href="https://github.com/frankli0324/cqhttp.Cyan/blob/master/src/Events/EventListener/WebSocketListener.cs/#L25">View Source</a>
   </span>
   <a id="cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_" data-uid="cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen*"></a>
-  <h4 id="cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__" data-uid="cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})">StartListen(System.Func&lt;CQEvent, CQResponse&gt;)</h4>
+  <h4 id="cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__" data-uid="cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})">StartListen(Func&lt;CQEvent, CQResponse&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void StartListen(System.Func&lt;CQEvent, CQResponse&gt; callback)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void StartListen(Func&lt;CQEvent, CQResponse&gt; callback)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,6 +226,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__">CQEventListener.StartListen(Func&lt;CQEvent, CQResponse&gt;)</a></div>
 </article>
           </div>
           
