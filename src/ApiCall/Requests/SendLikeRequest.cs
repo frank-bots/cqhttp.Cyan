@@ -4,11 +4,11 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary>
     /// 给好友的名片点个赞👍
     /// </summary>
-    public class SendLikeRequest : ApiRequest {
+    public class SendLikeRequest : RateLimitableRequest {
         long user_id;
         int times;
         ///
-        public SendLikeRequest (long user_id, int times) : base ("/send_like") {
+        public SendLikeRequest (long user_id, int times, bool limit_rate = false) : base ("/send_like", limit_rate) {
             this.response = new Results.EmptyResult ();
             this.user_id = user_id;
             this.times = times;
