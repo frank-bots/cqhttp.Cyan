@@ -14,8 +14,6 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         public SetGroupKickRequest (long group_id, long user_id, bool reject_add_request = false, bool isRateLimited = false):
             base ("/set_group_kick", group_id, user_id, isRateLimited) {
                 this.response = new Results.EmptyResult ();
-                this.group_id = group_id;
-                this.user_id = user_id;
                 this.reject_add_request = reject_add_request;
             }
         /// <summary></summary>
