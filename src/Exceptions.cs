@@ -63,6 +63,13 @@ namespace cqhttp.Cyan.Exceptions {
         /// <summary></summary>
         public ErrorApicallException (string message) : base (message) { }
     }
+    /// <summary>正常状况，表示限速调用</summary>
+    public class AsyncApicallException : Exception {
+        /// <summary></summary>
+        public AsyncApicallException () : base () { }
+        /// <summary></summary>
+        public AsyncApicallException (string message) : base (message) { }
+    }
     /// <summary></summary>
     public class ErrorResponseException : Exception {
         /// <summary></summary>

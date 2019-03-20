@@ -41,10 +41,10 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
             int retcode = parsed["retcode"].ToObject<int> ();
             switch (retcode) {
                 case 0:
-                case 1:
                     this.raw_data = parsed["data"];
                     break;
-
+                case 1:
+                    throw new Exceptions.AsyncApicallException ("限速调用返回" + this.GetType ().Name);
                 default:
                     ErrorHandler.Handle (retcode);
                     break;
