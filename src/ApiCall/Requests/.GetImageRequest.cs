@@ -15,7 +15,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         ///
         public override string content {
             get {
-                return $"{{\"filename\"={filename}}}";
+                return $"{{\"filename\"=\"{Config.asJsonStringVariable(filename)}\"}}";
             }
         }
     }
