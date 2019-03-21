@@ -75,7 +75,8 @@ namespace cqhttp.Cyan.Events {
                         Message.Parse (e["message"].ToString ()),
                         e["sender"].ToObject<GroupSender> (),
                         e["message_id"].ToObject<int> (),
-                        e["group_id"].ToObject<long> ()
+                        e["group_id"].ToObject<long> (),
+                        e["anonymous"].ToObject<AnonymousInfo> ()
                     );
                 case "discuss":
                     return new DiscussMessageEvent (

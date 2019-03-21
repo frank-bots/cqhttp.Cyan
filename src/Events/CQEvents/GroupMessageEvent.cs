@@ -23,12 +23,27 @@ namespace cqhttp.Cyan.Events.CQEvents {
                 Message message,
                 GroupSender sender,
                 int message_id,
-                long group_id
+                long group_id,
+                AnonymousInfo anonymous
             ):
             base (time, Enums.MessageType.group_, sender, message, message_id) {
                 this.group_id = group_id;
                 this.sub_type = sub_type;
             }
+    }
+
+    ///
+    [JsonObject]
+    public class AnonymousInfo {
+        /// <summary>匿名用户id</summary>
+        [JsonProperty ("id")]
+        public long id { get; private set; }
+        /// <summary>匿名用户名称</summary>
+        [JsonProperty ("name")]
+        public string name { get; private set; }
+        /// <summary>匿名用户 flag，在调用禁言 API 时需要传入</summary>
+        [JsonProperty ("flag")]
+        public string flag { get; private set; }
     }
     /// <summary>
     /// 群消息发送者信息，匿名时无参考价值
