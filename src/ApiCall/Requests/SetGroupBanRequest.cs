@@ -10,7 +10,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         /// <param name="user_id">用户QQ</param>
         /// <param name="duration">禁言时长</param>
         /// <param name="isRateLimited">是否为限速调用</param>
-        public SetGroupBanRequest (long group_id, long user_id, long duration, bool isRateLimited = false):
+        public SetGroupBanRequest (long group_id, long user_id, long duration = 1800, bool isRateLimited = false):
             base ("/set_group_ban", isRateLimited) {
                 this.group_id = group_id;
                 this.user_id = user_id;

@@ -1,4 +1,3 @@
-
 using cqhttp.Cyan.ApiCall.Requests.Base;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
@@ -6,11 +5,15 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// 群组匿名用户禁言
     /// </summary>
     public class SetGroupAnonymousBanRequest : ApiRequest {
-        long group_id;string flag;long duration;
+        long group_id;
+        string flag;
+        long duration;
         ///
-        public SetGroupAnonymousBanRequest (long group_id,string flag,long duration) : base ("/set_group_anonymous_ban") {
-            this.response = new Results.EmptyResult();
-            this.group_id = group_id;this.flag = flag;this.duration = duration;
+        public SetGroupAnonymousBanRequest (long group_id, string flag, long duration = 1800) : base ("/set_group_anonymous_ban") {
+            this.response = new Results.EmptyResult ();
+            this.group_id = group_id;
+            this.flag = flag;
+            this.duration = duration;
         }
         ///
         public override string content {
