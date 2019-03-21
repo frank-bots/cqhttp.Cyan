@@ -14,7 +14,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         ///
         public override string content {
             get {
-                return $"{{\"data_dir\":{Config.asJsonStringVariable(data_dir)}}}";
+                return $"{{\"data_dir\":\"{Config.asJsonStringVariable(data_dir)}\"}}";
             }
         }
     }
