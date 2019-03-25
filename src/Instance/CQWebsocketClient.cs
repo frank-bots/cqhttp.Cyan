@@ -22,8 +22,13 @@ namespace cqhttp.Cyan.Instance {
                         = this.SendRequestAsync;
                     this.__eventListener.StartListen (__HandleEvent);
                 }
+                if (accessUrl.EndsWith ("/api")) {
+                    this.accessUrl += '/';
+                } else if (!accessUrl.EndsWith ("/api/")) {
+                    this.accessToken += "/api/";
+                }
             }
-        
+
         /// <summary></summary>
         public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
             var ret = await WSSendJson (accessUrl, x, accessToken);
@@ -32,7 +37,7 @@ namespace cqhttp.Cyan.Instance {
                 await t;
             return ret;
         }
-        
+
         /// <summary></summary>
         ~CQWebsocketClient () {
             CleanUp ();
@@ -40,7 +45,7 @@ namespace cqhttp.Cyan.Instance {
         private static Dictionary<string, ClientWebSocket> pool =
             new Dictionary<string, ClientWebSocket> ();
         private static async Task<ApiResult> WSSendJson (string host, ApiRequest request, string apiToken = "") {
-            string dest = host + "/api/" +
+            string dest = host +
                 (apiToken == "" ? "" : "?access_token=" + apiToken);
             ClientWebSocket current;
             if (pool.ContainsKey (dest) == false) {
