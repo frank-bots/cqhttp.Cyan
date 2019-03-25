@@ -69,6 +69,8 @@ namespace cqhttp.Cyan.Instance {
             constructor = "";
             var recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
             constructor += Encoding.UTF8.GetString (buffer);
+            if (constructor.Contains ("authorization failed"))
+                throw new Exceptions.ErrorApicallException ("身份验证失败");
             while (recvResult.EndOfMessage == false) {
                 recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
                 constructor += Encoding.UTF8.GetString (buffer);
