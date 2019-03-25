@@ -42,6 +42,8 @@ namespace cqhttp.Cyan.Instance {
         ~CQWebsocketClient () {
             CleanUp ();
         }
+        static String NullString500 = new String ('\0', 500);
+        static String NullString50 = new String ('\0', 50);
         private static Dictionary<string, ClientWebSocket> pool =
             new Dictionary<string, ClientWebSocket> ();
         private static async Task<ApiResult> WSSendJson (string host, ApiRequest request, string apiToken = "") {
@@ -68,12 +70,18 @@ namespace cqhttp.Cyan.Instance {
             byte[] buffer = new byte[1024];
             constructor = "";
             var recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
-            constructor += Encoding.UTF8.GetString (buffer);
+            constructor += Encoding.UTF8.GetString (buffer)
+                .Replace (NullString500, "")
+                .Replace (NullString50, "")
+                .Replace ("\0", "");
             if (constructor.Contains ("authorization failed"))
                 throw new Exceptions.ErrorApicallException ("身份验证失败");
             while (recvResult.EndOfMessage == false) {
                 recvResult = await current.ReceiveAsync (buffer, new CancellationToken ());
-                constructor += Encoding.UTF8.GetString (buffer);
+                constructor += Encoding.UTF8.GetString (buffer)
+                    .Replace (NullString500, "")
+                    .Replace (NullString50, "")
+                    .Replace ("\0", "");;
             }
             request.response.Parse (constructor);
             return request.response;
