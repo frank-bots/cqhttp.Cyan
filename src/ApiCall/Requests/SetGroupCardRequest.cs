@@ -15,6 +15,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
             base ("/set_group_card", isRateLimited) {
                 this.response = new Results.EmptyResult ();
                 this.card = card;
+                this.group_id = group_id;
+                this.user_id = user_id;
             }
         /// <summary></summary>
         override public string content {

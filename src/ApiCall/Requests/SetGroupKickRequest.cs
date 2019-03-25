@@ -14,6 +14,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         /// <remark>注意此处的isAsync指的是酷Q端的异步！</remark>
         public SetGroupKickRequest (long group_id, long user_id, bool reject_add_request = false, bool isRateLimited = false):
             base ("/set_group_kick", isRateLimited) {
+                this.group_id = group_id;
+                this.user_id = user_id;
                 this.response = new Results.EmptyResult ();
                 this.reject_add_request = reject_add_request;
             }
