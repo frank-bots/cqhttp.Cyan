@@ -25,7 +25,7 @@ namespace cqhttp.Cyan.Instance {
                 if (accessUrl.EndsWith ("/api")) {
                     this.accessUrl += '/';
                 } else if (!accessUrl.EndsWith ("/api/")) {
-                    this.accessToken += "/api/";
+                    this.accessUrl += "/api/";
                 }
             }
 
