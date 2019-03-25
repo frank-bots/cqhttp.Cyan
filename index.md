@@ -15,6 +15,15 @@ m gf's n c t w "Cyan"
 
     Make C# QQ bot developers concentrate on bot logic instead of struggling with network communication with cqhttp.
 
+## 你需要重点关注哪些部分
+
+* [这里](https://www.std-frank.club/cqhttp.Cyan/api/cqhttp.Cyan.Instance.html) 是在你应当在编写bot逻辑之前应当声明的Client的prototype
+* [这里](https://www.std-frank.club/cqhttp.Cyan/api/cqhttp.Cyan.Messages.CQElements.html) 是以Element*的命名形式命名的能够用来构造Message的消息段
+* [这里](https://www.std-frank.club/cqhttp.Cyan/api/cqhttp.Cyan.Messages.CommonMessages.html) 是可以直接拿来当成 ```Message``` 使用的常用消息
+* [这里](https://www.std-frank.club/cqhttp.Cyan/api/cqhttp.Cyan.Events.CQEvents.CQResponses.html) 是对上报消息的快速回复
+* [这里](https://www.std-frank.club/cqhttp.Cyan/api/cqhttp.Cyan.Events.CQEvents.html) 是各种消息上报类型```Events```
+* [这里](https://github.com/frankli0324/cqhttp.Cyan/tree/master/src/_Examples) 是你可以拿来参考的示例代码
+
 ## What You Should Care in this Doc
 
 * [Here](https://www.std-frank.club/cqhttp.Cyan/api/cqhttp.Cyan.Instance.html) are Clients that you can create in the beginning of your code
