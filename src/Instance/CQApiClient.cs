@@ -65,8 +65,8 @@ namespace cqhttp.Cyan.Instance {
             this.is_pro = (versionInfo.instanceVersionInfo.coolq_edition == "pro");
             return true;
         }
-        /// <summary>通用发送请求函数，一般不需调用</summary>
-        public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
+        ///
+        protected void RequestPreprocess(ApiRequest x){
             Logger.Log (Verbosity.INFO, $"进行了{x.GetType()}请求");
             if (groupTable != null) {
                 if (x is GetGroupListRequest) {
@@ -82,7 +82,10 @@ namespace cqhttp.Cyan.Instance {
                     }
                 }
             }
-            return null;
+        }
+        /// <summary>通用发送请求函数，一般不需调用</summary>
+        public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
+            throw new Exceptions.ErrorApicallException ("未指定Client类型(HTTP/WebSocket)");
         }
         /// <summary>发送消息(自行构造)</summary>
         public async Task<SendmsgResult> SendMessageAsync (
@@ -154,11 +157,11 @@ namespace cqhttp.Cyan.Instance {
                 return new Events.CQResponses.EmptyResponse ();
             }
 
-            OnEventAsync?.Invoke(this, event_);
+            OnEventAsync?.Invoke (this, event_);
             if (OnEvent != null)
-                return OnEvent(this, event_);
+                return OnEvent (this, event_);
             else
-                return new Events.CQResponses.EmptyResponse();
+                return new Events.CQResponses.EmptyResponse ();
         }
     }
 }
