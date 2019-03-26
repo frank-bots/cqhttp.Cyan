@@ -45,13 +45,24 @@ namespace cqhttp.Cyan.Instance {
         /// 指向本实例的群组记录对象
         /// </summary>
         public Utils.GroupTable groupTable = null;
+        /// <summary>
+        /// 消息记录
+        /// </summary>
+        public Utils.MessageTable messageTable = null;
 
         /// <summary></summary>
-        public CQApiClient (string accessUrl, string accessToken = "") {
+        public CQApiClient (
+            string accessUrl,
+            string accessToken = "",
+            bool use_group_table = false,
+            bool use_message_table = false
+        ) {
             this.accessToken = accessToken;
             this.accessUrl = accessUrl;
             if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
             Logger.Log (Verbosity.INFO, $"成功连接到{accessUrl}");
+            if (use_group_table) this.groupTable = new Utils.GroupTable ();
+            if (use_message_table) this.messageTable = new Utils.MessageTable ();
         }
         private async Task<bool> Initiate () {
             GetLoginInfoResult loginInfo =
@@ -66,7 +77,7 @@ namespace cqhttp.Cyan.Instance {
             return true;
         }
         ///
-        protected void RequestPreprocess(ApiRequest x){
+        protected void RequestPreprocess (ApiRequest x) {
             Logger.Log (Verbosity.INFO, $"进行了{x.GetType()}请求");
             if (groupTable != null) {
                 if (x is GetGroupListRequest) {

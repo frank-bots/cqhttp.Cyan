@@ -10,8 +10,15 @@ namespace cqhttp.Cyan.Instance {
     /// <summary>以HTTP协议调用API</summary>
     public class CQHTTPClient : CQApiClient {
         /// <summary></summary>
-        public CQHTTPClient (string accessUrl, string accessToken = "", int listen_port = -1, string secret = ""):
-            base (accessUrl, accessToken) {
+        public CQHTTPClient (
+                string accessUrl,
+                string accessToken = "",
+                int listen_port = -1,
+                string secret = "",
+                bool use_group_table = false,
+                bool use_message_table = false
+            ):
+            base (accessUrl, accessToken, use_group_table, use_message_table) {
                 if (listen_port != -1) {
                     this.__eventListener = new Events.EventListener.HttpEventListener (listen_port, secret);
                     this.__eventListener.StartListen (__HandleEvent);

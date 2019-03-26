@@ -13,8 +13,14 @@ namespace cqhttp.Cyan.Instance {
     /// <summary>websocket协议调用api</summary>
     public class CQWebsocketClient : CQApiClient {
         /// <summary></summary>
-        public CQWebsocketClient (string accessUrl, string accessToken = "", string eventUrl = ""):
-            base (accessUrl, accessToken) {
+        public CQWebsocketClient (
+                string accessUrl,
+                string accessToken = "",
+                string eventUrl = "",
+                bool use_group_table = false,
+                bool use_message_table = false
+            ):
+            base (accessUrl, accessToken, use_group_table, use_message_table) {
                 if (!string.IsNullOrEmpty (eventUrl)) {
                     eventUrl += !string.IsNullOrEmpty (accessToken) ? "?access_token=" + accessToken : "";
                     this.__eventListener = new WebSocketListener (eventUrl);
