@@ -7,7 +7,10 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     public class SendmsgRequest : RateLimitableRequest {
         long target_id;
         MessageType messageType;
-        Messages.Message toSend;
+        /// <summary>
+        /// 消息本身
+        /// </summary>
+        public Messages.Message message;
         /// <summary></summary>
         public SendmsgRequest (MessageType messageType, long target_id, Messages.Message toSend, bool isRateLimited = false):
             base ("/send_msg", isRateLimited) {
@@ -15,7 +18,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                     this.response = new Results.SendmsgResult ();
                 else this.response = new EmptyResult ();
                 this.messageType = messageType;
-                this.toSend = toSend;
+                this.message = toSend;
                 this.target_id = target_id;
             }
         /// <summary></summary>
@@ -44,7 +47,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 string constructer =
                     $"{{\"message_type\":\"{messageType}\","+
                     $"\"{idKey}\":{this.target_id},"+
-                    $"\"message\":{toSend.ToString()}}}";
+                    $"\"message\":{message.ToString()}}}";
 
                 return constructer;
             }
