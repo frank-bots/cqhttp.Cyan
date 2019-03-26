@@ -93,6 +93,12 @@ namespace cqhttp.Cyan.Instance {
                     }
                 }
             }
+            if (messageTable != null) {
+                if (x.response is SendmsgResult) {
+                    var i = x.response as SendmsgResult;
+                    messageTable.Log (i.message_id, (x as SendmsgRequest).message);
+                }
+            }
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
         public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
