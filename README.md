@@ -83,7 +83,7 @@ namespace YourNS {
 ```
 
     在Examples文件夹下有更详细的示例
-<https://github.com/frankli0324/cqhttp.Cyan/tree/master/src/_Examples>
+<https://github.com/frank-bots/cqhttp.Cyan/tree/master/src/_Examples>
 
 ------------------------------
 
@@ -206,7 +206,7 @@ Utils命名空间中有很多好用的工具
 
 ## 文档
 
-<http://www.std-frank.club/cqhttp.Cyan>
+<http://frank-bots.github.io>
 
 ## 事件列表(对应CQEvent)
 
