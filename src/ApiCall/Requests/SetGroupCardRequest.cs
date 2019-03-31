@@ -1,10 +1,13 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
+using Newtonsoft.Json;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary></summary>
+    [JsonObject]
     public class SetGroupCardRequest : RateLimitableRequest {
-        string card;
-        long group_id, user_id;
+        [JsonProperty ("card")] string card;
+        [JsonProperty ("group_id")] long group_id;
+        [JsonProperty ("user_id")] long user_id;
         /// <param name="group_id"></param>
         /// <param name="user_id"></param>
         /// <param name="card">设置的群名片</param>
@@ -18,13 +21,5 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 this.group_id = group_id;
                 this.user_id = user_id;
             }
-        /// <summary></summary>
-        override public string content {
-            get {
-                return $"{{\"group_id\":{group_id},"+
-                    $"\"user_id\":{user_id},"+
-                    $"\"card\":\"{Config.asJsonStringVariable(card)}\"}}";
-            }
-        }
     }
 }

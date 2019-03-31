@@ -4,11 +4,12 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary>
     /// 设置群组专属头衔
     /// </summary>
+    [Newtonsoft.Json.JsonObject]
     public class SetGroupSpecialTitleRequest : ApiRequest {
-        long group_id;
-        long user_id;
-        string special_title;
-        long duration;
+        [Newtonsoft.Json.JsonProperty ("group_id")] long group_id;
+        [Newtonsoft.Json.JsonProperty ("user_id")] long user_id;
+        [Newtonsoft.Json.JsonProperty ("special_title")] string special_title;
+        [Newtonsoft.Json.JsonProperty ("duration")] long duration;
         /// <param name="group_id">群号</param>
         /// <param name="user_id">要设置的 QQ 号</param>
         /// <param name="special_title">专属头衔，不填或空字符串表示删除专属头衔</param>
@@ -19,12 +20,6 @@ namespace cqhttp.Cyan.ApiCall.Requests {
             this.user_id = user_id;
             this.special_title = special_title;
             this.duration = duration;
-        }
-        ///
-        public override string content {
-            get {
-                return $"{{\"group_id\":{group_id},\"user_id\":{user_id},\"special_title\":\"{Config.asJsonStringVariable(special_title)}\",\"duration\":{duration}}}";
-            }
         }
     }
 }

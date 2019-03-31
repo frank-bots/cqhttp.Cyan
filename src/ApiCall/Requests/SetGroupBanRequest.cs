@@ -1,11 +1,15 @@
 using cqhttp.Cyan.ApiCall.Requests.Base;
+using Newtonsoft.Json;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary>
     /// 堵上一个用户的嘴
     /// </summary>
+    [JsonObject]
     public class SetGroupBanRequest : RateLimitableRequest {
-        long duration, group_id, user_id;
+        [JsonProperty ("duration")] long duration;
+        [JsonProperty ("group_id")] long group_id;
+        [JsonProperty ("user_id")] long user_id;
         /// <param name="group_id">群号</param>
         /// <param name="user_id">用户QQ</param>
         /// <param name="duration">禁言时长</param>
@@ -17,13 +21,5 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 this.response = new Results.EmptyResult ();
                 this.duration = duration;
             }
-        /// <summary></summary>
-        override public string content {
-            get {
-                return $"{{\"group_id\":{group_id},"+
-                    $"\"user_id\":{user_id},"+
-                    $"\"duration\":{duration}}}";
-            }
-        }
     }
 }

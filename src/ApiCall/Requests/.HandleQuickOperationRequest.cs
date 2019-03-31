@@ -1,23 +1,22 @@
+using Newtonsoft.Json;
+
 namespace cqhttp.Cyan.ApiCall.Requests {
 
     /// <summary>
     /// 响应事件
     /// </summary>
+    [JsonObject]
     public class HandleQuickOperationRequest : Base.ApiRequest {
-        string context, operation;
+        [JsonProperty ("context")]
+        string context;
+        [JsonProperty ("operation")]
+        string operation;
         ///
         public HandleQuickOperationRequest (string context, string operation):
             base ("/.handle_quick_operation") {
-                this.response = new Results.EmptyResult();
+                this.response = new Results.EmptyResult ();
                 this.context = context;
                 this.operation = operation;
             }
-
-        ///
-        public override string content {
-            get {
-                return $"{{\"context\":{context},\"operation\":{operation}}}";
-            }
-        }
     }
 }

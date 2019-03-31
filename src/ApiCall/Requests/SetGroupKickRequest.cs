@@ -4,9 +4,14 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary>
     /// 群组踢人
     /// </summary>
+    [Newtonsoft.Json.JsonObject]
     public class SetGroupKickRequest : RateLimitableRequest {
+        [Newtonsoft.Json.JsonProperty ("reject_add_request")]
         bool reject_add_request;
-        long group_id, user_id;
+        [Newtonsoft.Json.JsonProperty ("group_id")]
+        long group_id;
+        [Newtonsoft.Json.JsonProperty ("user_id")]
+        long user_id;
         /// <param name="group_id">群号码</param>
         /// <param name="user_id">要踢的用户QQ号</param>
         /// <param name="reject_add_request">是否拒绝加群请求</param>
@@ -19,11 +24,5 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 this.response = new Results.EmptyResult ();
                 this.reject_add_request = reject_add_request;
             }
-        /// <summary></summary>
-        override public string content {
-            get {
-                return $"{{\"group_id\":{group_id},\"user_id\":{user_id},\"reject_add_request\":{reject_add_request}}}";;
-            }
-        }
     }
 }
