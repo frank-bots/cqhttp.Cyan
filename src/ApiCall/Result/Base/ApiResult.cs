@@ -45,6 +45,9 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
                     break;
                 case 1:
                     throw new Exceptions.AsyncApicallException ("限速调用返回" + this.GetType ().Name);
+                    // 此处选择抛出异常原因有二:
+                    //  1: PreCheck后必定会处理parsed内容, 而异步调用并没返回任何内容, 抛异常可以跳过后面的步骤
+                    //  2: 让用户明确知道自己在进行异步调用
                 default:
                     ErrorHandler.Handle (retcode);
                     break;
