@@ -64,5 +64,8 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// <summary>头衔</summary>
         [JsonProperty ("title")]
         public string title { get; private set; }
+        /// <summary>群名片／备注</summary>
+        [JsonProperty ("card")]
+        public string card { get; private set; }
     }
 }
