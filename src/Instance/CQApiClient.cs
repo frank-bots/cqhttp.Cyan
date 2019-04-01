@@ -172,11 +172,14 @@ namespace cqhttp.Cyan.Instance {
                 }
                 Logger.Log (Verbosity.INFO, $"根据元事件判定cqhttp状态是否正常:{alive}");
                 return new Events.CQResponses.EmptyResponse ();
-            } else if (event_ is MessageEvent && messageTable != null) {
-                messageTable.Log (
-                    (event_ as MessageEvent).message_id,
-                    (event_ as MessageEvent).message
-                );
+            } else if (event_ is MessageEvent) {
+                if (messageTable != null)
+                    messageTable.Log (
+                        (event_ as MessageEvent).message_id,
+                        (event_ as MessageEvent).message
+                    );
+                if (Utils.DialoguePool.Handle (this, event_ as MessageEvent))
+                    return new Events.CQResponses.EmptyResponse ();
             }
 
             OnEventAsync?.Invoke (this, event_);
