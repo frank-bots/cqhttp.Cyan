@@ -5,6 +5,7 @@ using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results;
 using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Enums;
+using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
@@ -180,12 +181,28 @@ namespace cqhttp.Cyan.Instance {
                 if (Utils.DialoguePool.Handle (this, event_ as MessageEvent))
                     return new Events.CQResponses.EmptyResponse ();
             }
-
             OnEventAsync?.Invoke (this, event_);
-            if (OnEvent != null)
-                return OnEvent (this, event_);
-            else
+            //TODO: 捕获Async调用中的InvokeDialogueException
+            try {
+                if (OnEvent != null)
+                    return OnEvent (this, event_);
+                else
+                    return new Events.CQResponses.EmptyResponse ();
+            } catch (Utils.InvokeDialogueException e) {
+                Logger.Log (Verbosity.DEBUG, "got a dialogue");
+                long bid =
+                    (event_ is GroupMessageEvent) ? (event_ as GroupMessageEvent).group_id :
+                    (event_ is DiscussMessageEvent) ? (event_ as DiscussMessageEvent).discuss_id :
+                    -1;
+                long uid = (event_ as MessageEvent).sender.user_id;
+                if (e.acceptAll && bid != -1) {
+                    Utils.DialoguePool.Join (bid, bid, e.content);
+                    return new Events.CQResponses.EmptyResponse ();
+                }
+                if (bid == -1) bid = uid;
+                Utils.DialoguePool.Join (uid, bid, e.content);
                 return new Events.CQResponses.EmptyResponse ();
+            }
         }
     }
 }

@@ -16,7 +16,16 @@ namespace cqhttp.Cyan.Utils {
     /// 当然, 直接调用<see cref="Utils.DialoguePool.Join"/>置入也是可以的
     /// </summary>
     public class InvokeDialogueException : Exception {
-
+        ///
+        public bool acceptAll { get; private set; }
+        ///
+        public Dialogue content { get; private set; }
+        /// <param name="dialogue">向DialoguePool中加入的对话</param>
+        /// <param name="acceptAll">表示在多人对话中是否接受同一群组内所有人的消息, 仅当当前event为群组消息或讨论组消息时有效</param>
+        public InvokeDialogueException (Dialogue dialogue, bool acceptAll = false) {
+            content = dialogue;
+            this.acceptAll = acceptAll;
+        }
     }
     /// <summary>
     /// 表示一段对话
