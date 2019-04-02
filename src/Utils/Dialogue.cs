@@ -7,6 +7,18 @@ using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Utils {
     /// <summary>
+    /// 一个非常特殊的Exception
+    /// 
+    /// 在执行OnEvent函数时, 若此SDKcatch到了这个Exception, 
+    /// 则将此Exception内的Dialogue置入DialoguePool。
+    /// 这是使用Dialogue的较为方便的方式之一。
+    /// 
+    /// 当然, 直接调用<see cref="Utils.DialoguePool.Join"/>置入也是可以的
+    /// </summary>
+    public class InvokeDialogueException : Exception {
+
+    }
+    /// <summary>
     /// 表示一段对话
     /// 
     /// 其本质上是一个FSM, 其状态由一字符串表示
@@ -77,10 +89,22 @@ namespace cqhttp.Cyan.Utils {
             }
             long hash = (uid >> 1) ^ (gid << 1);
             if (pool.ContainsKey (hash)) {
-                pool[hash].update (cli, e.message);
+                if (pool[hash].update (cli, e.message) == false) {
+                    pool.Remove (hash);
+                    return false;
+                }
                 return pool[hash].blockEvent;
             }
             return false;
+        }
+        /// <summary>
+        /// 添加Dialogue, 每次收到MessageEvent时都会检查
+        /// </summary>
+        /// <param name="uid">用户QQ号</param>
+        /// <param name="gid">群号或讨论组号, 私聊的话与uid相同</param>
+        /// <param name="d">需要添加的Dialogue</param>
+        public static void Join (long uid, long gid, Dialogue d) {
+            pool[(uid >> 1) ^ (gid << 1)] = d;
         }
     }
 }
