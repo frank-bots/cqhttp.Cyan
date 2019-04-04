@@ -39,18 +39,14 @@ namespace cqhttp.Cyan.Events.CQEvents.Base
     [JsonObject]
     public class Sender {
         /// <summary>QQ号</summary>
-        [JsonProperty ("user_id")]
         public long user_id { get; private set; }
         /// <summary>QQ昵称</summary>
-        [JsonProperty ("nickname")]
         public string nickname { get; private set; }
         /// <summary></summary>
 
-        [JsonProperty ("sex")]
         public string sex { get; private set; }
         /// <summary></summary>
 
-        [JsonProperty ("age")]
         public int age { get; private set; }
     }
 }

@@ -9,22 +9,16 @@ namespace cqhttp.Cyan {
     [JsonObject]
     public class Status {
         /// 
-        [JsonProperty("app_initialized")]
         public bool app_initialized { get; private set; }
         /// 
-        [JsonProperty("app_enabled")]
         public bool app_enabled { get; private set; }
         ///
-        [JsonProperty("plugins_good")]
         public Dictionary<string,bool> plugins_good { get; private set; }
         ///
-        [JsonProperty("app_good")]
         public bool app_good { get; private set; }
         ///
-        [JsonProperty("online")]
         public bool online { get; private set; }
         ///
-        [JsonProperty("good")]
         public bool good { get; private set; }
     }
 }

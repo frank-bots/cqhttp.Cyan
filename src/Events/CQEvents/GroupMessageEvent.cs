@@ -36,13 +36,10 @@ namespace cqhttp.Cyan.Events.CQEvents {
     [JsonObject]
     public class AnonymousInfo {
         /// <summary>匿名用户id</summary>
-        [JsonProperty ("id")]
         public long id { get; private set; }
         /// <summary>匿名用户名称</summary>
-        [JsonProperty ("name")]
         public string name { get; private set; }
         /// <summary>匿名用户 flag，在调用禁言 API 时需要传入</summary>
-        [JsonProperty ("flag")]
         public string flag { get; private set; }
     }
     /// <summary>
@@ -51,21 +48,16 @@ namespace cqhttp.Cyan.Events.CQEvents {
     [JsonObject]
     public class GroupSender : Sender {
         /// <summary>来自</summary>
-        [JsonProperty ("area")]
         public string area { get; private set; }
 
         /// <summary>成员等级</summary>
-        [JsonProperty ("level")]
         public string level { get; private set; }
 
         /// <summary>身份(owner/admin/member)</summary>
-        [JsonProperty ("role")]
         public string role { get; private set; }
         /// <summary>头衔</summary>
-        [JsonProperty ("title")]
         public string title { get; private set; }
         /// <summary>群名片／备注</summary>
-        [JsonProperty ("card")]
         public string card { get; private set; }
     }
 }

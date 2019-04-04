@@ -18,19 +18,15 @@ namespace cqhttp.Cyan.Events.CQEvents {
     [JsonObject]
     public class FileInfo {
         /// <summary></summary>
-        [JsonProperty ("id")]
         public string id { get; private set; }
         /// <summary>文件名</summary>
 
-        [JsonProperty ("name")]
         public string name { get; private set; }
         /// <summary></summary>
 
-        [JsonProperty ("size")]
         public long size { get; private set; }
         /// <summary>cqhttp作者也不知道，我也不知道是干啥的(总线id？那是啥)</summary>
 
-        [JsonProperty ("busid")]
         public long busid { get; private set; }
     }
 }

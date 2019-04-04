@@ -14,7 +14,6 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
         /// </summary>
         /// <value></value>
         [Obsolete ("收到错误的API响应将抛出异常,不用在此作出判断", true)]
-        [JsonProperty ("status")]
         public string status { get; private set; } //"ok","async","failed"
 
         /// <summary>
@@ -22,7 +21,6 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
         /// <see>https://d.cqp.me/Pro/%E5%BC%80%E5%8F%91/Error</see>
         /// </summary>
         [Obsolete ("收到错误的API响应将抛出异常,不用在此作出判断", true)]
-        [JsonProperty ("retcode")]
         public int retcode { get; private set; }
 
         /// <summary>
