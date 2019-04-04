@@ -206,7 +206,7 @@ Utils命名空间中有很多好用的工具
 
 ## 文档
 
-<http://frank-bots.github.io>
+<http://frank-bots.github.io/cqhttp.Cyan>
 
 ## 事件列表(对应CQEvent)
 

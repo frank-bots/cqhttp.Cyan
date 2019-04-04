@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SetGroupKickRequest
+    <title>Class DialoguePool
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SetGroupKickRequest
+    <meta name="title" content="Class DialoguePool
    ">
     <meta name="generator" content="docfx 2.40.12.0">
     
@@ -68,32 +68,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest">
+            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.Utils.DialoguePool">
   
   
-  <h1 id="cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest" data-uid="cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest" class="text-break">Class SetGroupKickRequest
+  <h1 id="cqhttp_Cyan_Utils_DialoguePool" data-uid="cqhttp.Cyan.Utils.DialoguePool" class="text-break">Class DialoguePool
   </h1>
-  <div class="markdown level0 summary"><p>群组踢人</p>
+  <div class="markdown level0 summary"><p>用于标记某一对话的作用范围</p>
+<p>某群/某人/某群中对某人</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html">ApiRequest</a></div>
-    <div class="level2"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.RateLimitableRequest.html">RateLimitableRequest</a></div>
-    <div class="level3"><span class="xref">SetGroupKickRequest</span></div>
+    <div class="level1"><span class="xref">DialoguePool</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_apiPath">ApiRequest.apiPath</a>
-    </div>
-    <div>
-      <a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_response">ApiRequest.response</a>
-    </div>
-    <div>
-      <a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html#cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_content">ApiRequest.content</a>
-    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -116,29 +106,84 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.ApiCall.Requests.html">cqhttp.Cyan.ApiCall.Requests</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Utils.html">cqhttp.Cyan.Utils</a></h6>
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
-  <h5 id="cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest_syntax">Syntax</h5>
+  <h5 id="cqhttp_Cyan_Utils_DialoguePool_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonObject]
-public class SetGroupKickRequest : RateLimitableRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public static class DialoguePool</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest__ctor_System_Int64_System_Int64_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.%23ctor(System.Int64%2CSystem.Int64%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Utils_DialoguePool_Handle_cqhttp_Cyan_Instance_CQApiClient_cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Utils.DialoguePool.Handle(cqhttp.Cyan.Instance.CQApiClient%2Ccqhttp.Cyan.Events.CQEvents.Base.MessageEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/ApiCall/Requests/SetGroupKickRequest.cs/#L17">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Utils/Dialogue.cs/#L88">View Source</a>
   </span>
-  <a id="cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest__ctor_" data-uid="cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.#ctor*"></a>
-  <h4 id="cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest__ctor_System_Int64_System_Int64_System_Boolean_System_Boolean_" data-uid="cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.#ctor(System.Int64,System.Int64,System.Boolean,System.Boolean)">SetGroupKickRequest(Int64, Int64, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="cqhttp_Cyan_Utils_DialoguePool_Handle_" data-uid="cqhttp.Cyan.Utils.DialoguePool.Handle*"></a>
+  <h4 id="cqhttp_Cyan_Utils_DialoguePool_Handle_cqhttp_Cyan_Instance_CQApiClient_cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_" data-uid="cqhttp.Cyan.Utils.DialoguePool.Handle(cqhttp.Cyan.Instance.CQApiClient,cqhttp.Cyan.Events.CQEvents.Base.MessageEvent)">Handle(CQApiClient, MessageEvent)</h4>
+  <div class="markdown level1 summary"><p>是否存在某一段正在进行的对话</p>
+<p>请勿调用!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SetGroupKickRequest(long group_id, long user_id, bool reject_add_request = false, bool isRateLimited = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Handle(CQApiClient cli, MessageEvent e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="cqhttp.Cyan.Instance.CQApiClient.html">CQApiClient</a></td>
+        <td><span class="parametername">cli</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html">MessageEvent</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>是否将此消息时间继续向用户逻辑传递</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Utils_DialoguePool_Join_System_Int64_System_Int64_cqhttp_Cyan_Utils_Dialogue_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Utils.DialoguePool.Join(System.Int64%2CSystem.Int64%2Ccqhttp.Cyan.Utils.Dialogue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Utils/Dialogue.cs/#L115">View Source</a>
+  </span>
+  <a id="cqhttp_Cyan_Utils_DialoguePool_Join_" data-uid="cqhttp.Cyan.Utils.DialoguePool.Join*"></a>
+  <h4 id="cqhttp_Cyan_Utils_DialoguePool_Join_System_Int64_System_Int64_cqhttp_Cyan_Utils_Dialogue_" data-uid="cqhttp.Cyan.Utils.DialoguePool.Join(System.Int64,System.Int64,cqhttp.Cyan.Utils.Dialogue)">Join(Int64, Int64, Dialogue)</h4>
+  <div class="markdown level1 summary"><p>添加Dialogue, 每次收到MessageEvent时都会检查</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Join(long uid, long gid, Dialogue d)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,26 +197,20 @@ public class SetGroupKickRequest : RateLimitableRequest</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">group_id</span></td>
-        <td><p>群号码</p>
+        <td><span class="parametername">uid</span></td>
+        <td><p>用户QQ号</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">user_id</span></td>
-        <td><p>要踢的用户QQ号</p>
+        <td><span class="parametername">gid</span></td>
+        <td><p>群号或讨论组号, 私聊的话与uid相同</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">reject_add_request</span></td>
-        <td><p>是否拒绝加群请求</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isRateLimited</span></td>
-        <td><p>是否为限速调用</p>
+        <td><a class="xref" href="cqhttp.Cyan.Utils.Dialogue.html">Dialogue</a></td>
+        <td><span class="parametername">d</span></td>
+        <td><p>需要添加的Dialogue</p>
 </td>
       </tr>
     </tbody>
@@ -184,10 +223,10 @@ public class SetGroupKickRequest : RateLimitableRequest</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_SetGroupKickRequest.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Utils_DialoguePool.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Utils.DialoguePool%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/ApiCall/Requests/SetGroupKickRequest.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Utils/Dialogue.cs/#L80" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

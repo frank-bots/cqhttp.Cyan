@@ -589,6 +589,44 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Requests.SetGroupWholeBanRequest.SetGroupWholeBanRequest
   nameWithType: SetGroupWholeBanRequest.SetGroupWholeBanRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest
+  name: SetRestartPluginRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest
+  nameWithType: SetRestartPluginRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.#ctor(System.Int64)
+  name: SetRestartPluginRequest(Int64)
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.html#cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest__ctor_System_Int64_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.#ctor(System.Int64)
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.SetRestartPluginRequest(System.Int64)
+  nameWithType: SetRestartPluginRequest.SetRestartPluginRequest(Int64)
+- uid: cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.#ctor*
+  name: SetRestartPluginRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.html#cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.SetRestartPluginRequest
+  nameWithType: SetRestartPluginRequest.SetRestartPluginRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetRestartRequest
+  name: SetRestartRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.SetRestartRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetRestartRequest
+  nameWithType: SetRestartRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.#ctor(System.Boolean,System.Boolean,System.Boolean)
+  name: SetRestartRequest(Boolean, Boolean, Boolean)
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.html#cqhttp_Cyan_ApiCall_Requests_SetRestartRequest__ctor_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.#ctor(System.Boolean,System.Boolean,System.Boolean)
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.SetRestartRequest(System.Boolean, System.Boolean, System.Boolean)
+  nameWithType: SetRestartRequest.SetRestartRequest(Boolean, Boolean, Boolean)
+- uid: cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.#ctor*
+  name: SetRestartRequest
+  href: api/cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.html#cqhttp_Cyan_ApiCall_Requests_SetRestartRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.SetRestartRequest
+  nameWithType: SetRestartRequest.SetRestartRequest
 - uid: cqhttp.Cyan.ApiCall.Results
   name: cqhttp.Cyan.ApiCall.Results
   href: api/cqhttp.Cyan.ApiCall.Results.html
@@ -1951,6 +1989,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.area
   nameWithType: GroupSender.area
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.card
+  name: card
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupSender.html#cqhttp_Cyan_Events_CQEvents_GroupSender_card
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupSender.card
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.card
+  nameWithType: GroupSender.card
+- uid: cqhttp.Cyan.Events.CQEvents.GroupSender.card*
+  name: card
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupSender.html#cqhttp_Cyan_Events_CQEvents_GroupSender_card_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupSender.card
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupSender.card
+  nameWithType: GroupSender.card
 - uid: cqhttp.Cyan.Events.CQEvents.GroupSender.level
   name: level
   href: api/cqhttp.Cyan.Events.CQEvents.GroupSender.html#cqhttp_Cyan_Events_CQEvents_GroupSender_level
@@ -4313,6 +4364,32 @@ references:
   commentId: T:cqhttp.Cyan.Utils.Dialogue
   fullName: cqhttp.Cyan.Utils.Dialogue
   nameWithType: Dialogue
+- uid: cqhttp.Cyan.Utils.Dialogue.#ctor(System.Boolean)
+  name: Dialogue(Boolean)
+  href: api/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue__ctor_System_Boolean_
+  commentId: M:cqhttp.Cyan.Utils.Dialogue.#ctor(System.Boolean)
+  fullName: cqhttp.Cyan.Utils.Dialogue.Dialogue(System.Boolean)
+  nameWithType: Dialogue.Dialogue(Boolean)
+- uid: cqhttp.Cyan.Utils.Dialogue.#ctor*
+  name: Dialogue
+  href: api/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue__ctor_
+  commentId: Overload:cqhttp.Cyan.Utils.Dialogue.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.Dialogue.Dialogue
+  nameWithType: Dialogue.Dialogue
+- uid: cqhttp.Cyan.Utils.Dialogue.blockEvent
+  name: blockEvent
+  href: api/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue_blockEvent
+  commentId: P:cqhttp.Cyan.Utils.Dialogue.blockEvent
+  fullName: cqhttp.Cyan.Utils.Dialogue.blockEvent
+  nameWithType: Dialogue.blockEvent
+- uid: cqhttp.Cyan.Utils.Dialogue.blockEvent*
+  name: blockEvent
+  href: api/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue_blockEvent_
+  commentId: Overload:cqhttp.Cyan.Utils.Dialogue.blockEvent
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.Dialogue.blockEvent
+  nameWithType: Dialogue.blockEvent
 - uid: cqhttp.Cyan.Utils.Dialogue.Item(System.String)
   name: Item[String]
   href: api/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue_Item_System_String_
@@ -4342,6 +4419,38 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.Dialogue.update
   nameWithType: Dialogue.update
+- uid: cqhttp.Cyan.Utils.DialoguePool
+  name: DialoguePool
+  href: api/cqhttp.Cyan.Utils.DialoguePool.html
+  commentId: T:cqhttp.Cyan.Utils.DialoguePool
+  fullName: cqhttp.Cyan.Utils.DialoguePool
+  nameWithType: DialoguePool
+- uid: cqhttp.Cyan.Utils.DialoguePool.Handle(cqhttp.Cyan.Instance.CQApiClient,cqhttp.Cyan.Events.CQEvents.Base.MessageEvent)
+  name: Handle(CQApiClient, MessageEvent)
+  href: api/cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Handle_cqhttp_Cyan_Instance_CQApiClient_cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_
+  commentId: M:cqhttp.Cyan.Utils.DialoguePool.Handle(cqhttp.Cyan.Instance.CQApiClient,cqhttp.Cyan.Events.CQEvents.Base.MessageEvent)
+  fullName: cqhttp.Cyan.Utils.DialoguePool.Handle(cqhttp.Cyan.Instance.CQApiClient, cqhttp.Cyan.Events.CQEvents.Base.MessageEvent)
+  nameWithType: DialoguePool.Handle(CQApiClient, MessageEvent)
+- uid: cqhttp.Cyan.Utils.DialoguePool.Handle*
+  name: Handle
+  href: api/cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Handle_
+  commentId: Overload:cqhttp.Cyan.Utils.DialoguePool.Handle
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.DialoguePool.Handle
+  nameWithType: DialoguePool.Handle
+- uid: cqhttp.Cyan.Utils.DialoguePool.Join(System.Int64,System.Int64,cqhttp.Cyan.Utils.Dialogue)
+  name: Join(Int64, Int64, Dialogue)
+  href: api/cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Join_System_Int64_System_Int64_cqhttp_Cyan_Utils_Dialogue_
+  commentId: M:cqhttp.Cyan.Utils.DialoguePool.Join(System.Int64,System.Int64,cqhttp.Cyan.Utils.Dialogue)
+  fullName: cqhttp.Cyan.Utils.DialoguePool.Join(System.Int64, System.Int64, cqhttp.Cyan.Utils.Dialogue)
+  nameWithType: DialoguePool.Join(Int64, Int64, Dialogue)
+- uid: cqhttp.Cyan.Utils.DialoguePool.Join*
+  name: Join
+  href: api/cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Join_
+  commentId: Overload:cqhttp.Cyan.Utils.DialoguePool.Join
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.DialoguePool.Join
+  nameWithType: DialoguePool.Join
 - uid: cqhttp.Cyan.Utils.Get
   name: Get
   href: api/cqhttp.Cyan.Utils.Get.html
@@ -4552,6 +4661,51 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.GroupTable.Item
   nameWithType: GroupTable.Item
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException
+  name: InvokeDialogueException
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html
+  commentId: T:cqhttp.Cyan.Utils.InvokeDialogueException
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException
+  nameWithType: InvokeDialogueException
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.#ctor(cqhttp.Cyan.Utils.Dialogue,System.Boolean)
+  name: InvokeDialogueException(Dialogue, Boolean)
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException__ctor_cqhttp_Cyan_Utils_Dialogue_System_Boolean_
+  commentId: M:cqhttp.Cyan.Utils.InvokeDialogueException.#ctor(cqhttp.Cyan.Utils.Dialogue,System.Boolean)
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.InvokeDialogueException(cqhttp.Cyan.Utils.Dialogue, System.Boolean)
+  nameWithType: InvokeDialogueException.InvokeDialogueException(Dialogue, Boolean)
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.#ctor*
+  name: InvokeDialogueException
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException__ctor_
+  commentId: Overload:cqhttp.Cyan.Utils.InvokeDialogueException.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.InvokeDialogueException
+  nameWithType: InvokeDialogueException.InvokeDialogueException
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
+  name: acceptAll
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_acceptAll
+  commentId: P:cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
+  nameWithType: InvokeDialogueException.acceptAll
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll*
+  name: acceptAll
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_acceptAll_
+  commentId: Overload:cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
+  nameWithType: InvokeDialogueException.acceptAll
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.content
+  name: content
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_content
+  commentId: P:cqhttp.Cyan.Utils.InvokeDialogueException.content
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.content
+  nameWithType: InvokeDialogueException.content
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.content*
+  name: content
+  href: api/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_content_
+  commentId: Overload:cqhttp.Cyan.Utils.InvokeDialogueException.content
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.content
+  nameWithType: InvokeDialogueException.content
 - uid: cqhttp.Cyan.Utils.MessageTable
   name: MessageTable
   href: api/cqhttp.Cyan.Utils.MessageTable.html

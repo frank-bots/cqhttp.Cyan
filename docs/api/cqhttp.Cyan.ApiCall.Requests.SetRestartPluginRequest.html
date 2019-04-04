@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CleanDataDirRequest
+    <title>Class SetRestartPluginRequest
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CleanDataDirRequest
+    <meta name="title" content="Class SetRestartPluginRequest
    ">
     <meta name="generator" content="docfx 2.40.12.0">
     
@@ -68,19 +68,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest">
+            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest">
   
   
-  <h1 id="cqhttp_Cyan_ApiCall_Requests_CleanDataDirRequest" data-uid="cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest" class="text-break">Class CleanDataDirRequest
+  <h1 id="cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest" data-uid="cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest" class="text-break">Class SetRestartPluginRequest
   </h1>
-  <div class="markdown level0 summary"><p>用于清空插件的日志文件。</p>
+  <div class="markdown level0 summary"><p>重启 HTTP API 插件</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html">ApiRequest</a></div>
-    <div class="level2"><span class="xref">CleanDataDirRequest</span></div>
+    <div class="level2"><span class="xref">SetRestartPluginRequest</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -117,27 +117,26 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.ApiCall.Requests.html">cqhttp.Cyan.ApiCall.Requests</a></h6>
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
-  <h5 id="cqhttp_Cyan_ApiCall_Requests_CleanDataDirRequest_syntax">Syntax</h5>
+  <h5 id="cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonObject]
-public class CleanDataDirRequest : ApiRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public class SetRestartPluginRequest : ApiRequest</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_CleanDataDirRequest__ctor_System_String_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest__ctor_System_Int64_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.%23ctor(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/ApiCall/Requests/CleanDataDirRequest.cs/#L12">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/ApiCall/Requests/SetRestartPluginRequest.cs/#L10">View Source</a>
   </span>
-  <a id="cqhttp_Cyan_ApiCall_Requests_CleanDataDirRequest__ctor_" data-uid="cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest.#ctor*"></a>
-  <h4 id="cqhttp_Cyan_ApiCall_Requests_CleanDataDirRequest__ctor_System_String_" data-uid="cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest.#ctor(System.String)">CleanDataDirRequest(String)</h4>
+  <a id="cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest__ctor_" data-uid="cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.#ctor*"></a>
+  <h4 id="cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest__ctor_System_Int64_" data-uid="cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.#ctor(System.Int64)">SetRestartPluginRequest(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CleanDataDirRequest(string data_dir)</code></pre>
+    <pre><code class="lang-csharp hljs">public SetRestartPluginRequest(long delay = 0L)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,9 +149,10 @@ public class CleanDataDirRequest : ApiRequest</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">data_dir</span></td>
-        <td></td>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">delay</span></td>
+        <td><p>要延迟的毫秒数，如果默认情况下无法重启，可以尝试设置延迟为 2000 左右</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -164,10 +164,10 @@ public class CleanDataDirRequest : ApiRequest</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_CleanDataDirRequest.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_ApiCall_Requests_SetRestartPluginRequest.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/ApiCall/Requests/CleanDataDirRequest.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/ApiCall/Requests/SetRestartPluginRequest.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -81,9 +81,14 @@
       <section><p>一些常用的转换</p>
 </section>
       <h4><a class="xref" href="cqhttp.Cyan.Utils.Dialogue.html">Dialogue</a></h4>
-      <section><p>其本质上是一个FSM, 其状态由一字符串表示</p>
+      <section><p>表示一段对话</p>
+<p>其本质上是一个FSM, 其状态由一字符串表示</p>
 <p>FSM的初始状态为BEGIN, 可以自由设置中间状态</p>
 <p>当FSM进入某个没有定义操作的状态时, FSM停止并回收</p>
+</section>
+      <h4><a class="xref" href="cqhttp.Cyan.Utils.DialoguePool.html">DialoguePool</a></h4>
+      <section><p>用于标记某一对话的作用范围</p>
+<p>某群/某人/某群中对某人</p>
 </section>
       <h4><a class="xref" href="cqhttp.Cyan.Utils.Get.html">Get</a></h4>
       <section><p>一些有用的构造</p>
@@ -95,6 +100,13 @@
       <section></section>
       <h4><a class="xref" href="cqhttp.Cyan.Utils.GroupTable.GroupInfo.html">GroupTable.GroupInfo</a></h4>
       <section></section>
+      <h4><a class="xref" href="cqhttp.Cyan.Utils.InvokeDialogueException.html">InvokeDialogueException</a></h4>
+      <section><p>一个非常特殊的Exception</p>
+<p>在执行OnEvent函数时, 若此SDKcatch到了这个Exception,
+则将此Exception内的Dialogue置入DialoguePool。
+这是使用Dialogue的较为方便的方式之一。</p>
+<p>当然, 直接调用<a class="xref" href="cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Join_System_Int64_System_Int64_cqhttp_Cyan_Utils_Dialogue_">Join(Int64, Int64, Dialogue)</a>置入也是可以的</p>
+</section>
       <h4><a class="xref" href="cqhttp.Cyan.Utils.MessageTable.html">MessageTable</a></h4>
       <section><p>记录发送的消息</p>
 </section>
