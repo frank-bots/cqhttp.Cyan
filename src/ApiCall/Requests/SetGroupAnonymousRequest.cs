@@ -7,8 +7,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class SetGroupAnonymousRequest : ApiRequest {
-        [JsonProperty ("group_id")] long group_id;
-        [JsonProperty ("enable")] bool enable;
+        [JsonProperty] long group_id;
+        [JsonProperty] bool enable;
         ///
         public SetGroupAnonymousRequest (long group_id, bool enable = true) : base ("/set_group_anonymous") {
             this.response = new Results.EmptyResult ();

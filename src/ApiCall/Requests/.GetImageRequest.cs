@@ -6,8 +6,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [Newtonsoft.Json.JsonObject]
     public class GetImageRequest : ApiRequest {
-        [Newtonsoft.Json.JsonProperty ("filename")]
-        string filename;
+        [Newtonsoft.Json.JsonProperty] string filename;
         ///
         public GetImageRequest (string filename) : base ("/get_image") {
             this.response = new Results.GetImageResult ();

@@ -5,9 +5,9 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary></summary>
     [JsonObject]
     public class SetGroupCardRequest : RateLimitableRequest {
-        [JsonProperty ("card")] string card;
-        [JsonProperty ("group_id")] long group_id;
-        [JsonProperty ("user_id")] long user_id;
+        [JsonProperty] string card;
+        [JsonProperty] long group_id;
+        [JsonProperty] long user_id;
         /// <param name="group_id"></param>
         /// <param name="user_id"></param>
         /// <param name="card">设置的群名片</param>

@@ -7,9 +7,9 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class SetGroupBanRequest : RateLimitableRequest {
-        [JsonProperty ("duration")] long duration;
-        [JsonProperty ("group_id")] long group_id;
-        [JsonProperty ("user_id")] long user_id;
+        [JsonProperty] long duration;
+        [JsonProperty] long group_id;
+        [JsonProperty] long user_id;
         /// <param name="group_id">群号</param>
         /// <param name="user_id">用户QQ</param>
         /// <param name="duration">禁言时长</param>

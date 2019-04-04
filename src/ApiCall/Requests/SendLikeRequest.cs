@@ -6,8 +6,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [Newtonsoft.Json.JsonObject]
     public class SendLikeRequest : RateLimitableRequest {
-        [Newtonsoft.Json.JsonProperty ("user_id")] long user_id;
-        [Newtonsoft.Json.JsonProperty ("times")] int times;
+        [Newtonsoft.Json.JsonProperty] long user_id;
+        [Newtonsoft.Json.JsonProperty] int times;
         ///
         public SendLikeRequest (long user_id, int times, bool limit_rate = false) : base ("/send_like", limit_rate) {
             this.response = new Results.EmptyResult ();

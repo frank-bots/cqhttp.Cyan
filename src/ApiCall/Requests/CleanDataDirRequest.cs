@@ -7,8 +7,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class CleanDataDirRequest : ApiRequest {
-        [JsonProperty ("data_dir")]
-        string data_dir;
+        [JsonProperty] string data_dir;
         ///
         public CleanDataDirRequest (string data_dir) : base ("/clean_data_dir") {
             this.response = new Results.EmptyResult ();

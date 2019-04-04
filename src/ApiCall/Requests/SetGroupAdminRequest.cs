@@ -7,9 +7,9 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class SetGroupAdminRequest : ApiRequest {
-        [JsonProperty ("group_id")] long group_id;
-        [JsonProperty ("user_id")] long user_id;
-        [JsonProperty ("enable")] bool enable;
+        [JsonProperty] long group_id;
+        [JsonProperty] long user_id;
+        [JsonProperty] bool enable;
         ///
         public SetGroupAdminRequest (long group_id, long user_id, bool enable) : base ("/set_group_admin") {
             this.response = new Results.EmptyResult ();

@@ -8,12 +8,9 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class GetRecordRequest : Base.ApiRequest {
-        [JsonProperty ("file")]
-        string file;
-        [JsonProperty ("out_format")]
-        string out_format;
-        [JsonProperty ("full_path")]
-        bool full_path;
+        [JsonProperty] string file;
+        [JsonProperty] string out_format;
+        [JsonProperty] bool full_path;
         /// <param name="file">收到的语音文件名（CQ 码的 file 参数）</param>
         /// <param name="out_format">要转换到的格式，目前支持 mp3、amr、wma、m4a、spx、ogg、wav、flac</param>
         /// <param name="full_path">是否返回文件的绝对路径（Windows 环境下建议使用，Docker 中不建议）</param>

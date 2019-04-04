@@ -6,8 +6,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [Newtonsoft.Json.JsonObject]
     public class DeleteMsgRequest : ApiRequest {
-        [Newtonsoft.Json.JsonProperty ("message_id")]
-        int message_id;
+        [Newtonsoft.Json.JsonProperty] int message_id;
         /// <summary></summary>
         public DeleteMsgRequest (int message_id) : base ("/delete_msg") {
             this.response = new Results.EmptyResult ();

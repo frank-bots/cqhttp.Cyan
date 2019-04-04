@@ -7,10 +7,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class HandleQuickOperationRequest : Base.ApiRequest {
-        [JsonProperty ("context")]
-        string context;
-        [JsonProperty ("operation")]
-        string operation;
+        [JsonProperty] string context;
+        [JsonProperty] string operation;
         ///
         public HandleQuickOperationRequest (string context, string operation):
             base ("/.handle_quick_operation") {

@@ -7,9 +7,9 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class SetGroupAnonymousBanRequest : ApiRequest {
-        [JsonProperty ("group_id")] long group_id;
-        [JsonProperty ("flag")] string flag;
-        [JsonProperty ("duration")] long duration;
+        [JsonProperty] long group_id;
+        [JsonProperty] string flag;
+        [JsonProperty] long duration;
         ///
         public SetGroupAnonymousBanRequest (long group_id, string flag, long duration = 1800) : base ("/set_group_anonymous_ban") {
             this.response = new Results.EmptyResult ();

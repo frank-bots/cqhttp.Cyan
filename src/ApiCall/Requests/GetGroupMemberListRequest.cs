@@ -4,7 +4,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [Newtonsoft.Json.JsonObject]
     public class GetGroupMemberListRequest : Base.ApiRequest {
-        [Newtonsoft.Json.JsonProperty ("group_id")] long group_id;
+        [Newtonsoft.Json.JsonProperty] long group_id;
         /// <param name="group_id">群号码</param>
         /// <param name="no_cache">是否使用缓存</param>
         /// <returns></returns>

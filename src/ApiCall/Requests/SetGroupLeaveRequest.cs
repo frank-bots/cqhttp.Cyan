@@ -6,8 +6,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [Newtonsoft.Json.JsonObject]
     public class SetGroupLeaveRequest : ApiRequest {
-        [Newtonsoft.Json.JsonProperty ("group_id")] long group_id;
-        [Newtonsoft.Json.JsonProperty ("is_dismiss")] bool is_dismiss;
+        [Newtonsoft.Json.JsonProperty] long group_id;
+        [Newtonsoft.Json.JsonProperty] bool is_dismiss;
         /// <param name="group_id">群号</param>
         /// <param name="is_dismiss">是否解散，如果登录号是群主，则仅在此项为 true 时能够解散</param>
         public SetGroupLeaveRequest (long group_id, bool is_dismiss = false) : base ("/set_group_leave") {

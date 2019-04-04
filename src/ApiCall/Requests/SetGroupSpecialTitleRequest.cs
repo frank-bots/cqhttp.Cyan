@@ -6,10 +6,10 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [Newtonsoft.Json.JsonObject]
     public class SetGroupSpecialTitleRequest : ApiRequest {
-        [Newtonsoft.Json.JsonProperty ("group_id")] long group_id;
-        [Newtonsoft.Json.JsonProperty ("user_id")] long user_id;
-        [Newtonsoft.Json.JsonProperty ("special_title")] string special_title;
-        [Newtonsoft.Json.JsonProperty ("duration")] long duration;
+        [Newtonsoft.Json.JsonProperty] long group_id;
+        [Newtonsoft.Json.JsonProperty] long user_id;
+        [Newtonsoft.Json.JsonProperty] string special_title;
+        [Newtonsoft.Json.JsonProperty] long duration;
         /// <param name="group_id">群号</param>
         /// <param name="user_id">要设置的 QQ 号</param>
         /// <param name="special_title">专属头衔，不填或空字符串表示删除专属头衔</param>
