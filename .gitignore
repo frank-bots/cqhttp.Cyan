@@ -11,3 +11,4 @@
 /.vs
 .ropeproject
 AddRequest.py
+.DS_Store
