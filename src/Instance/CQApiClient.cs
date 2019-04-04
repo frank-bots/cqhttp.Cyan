@@ -181,14 +181,31 @@ namespace cqhttp.Cyan.Instance {
                 if (Utils.DialoguePool.Handle (this, event_ as MessageEvent))
                     return new Events.CQResponses.EmptyResponse ();
             }
-            OnEventAsync?.Invoke (this, event_);
-            //TODO: 捕获Async调用中的InvokeDialogueException
+            Task.Run (async () => {
+                try {
+                    if (OnEventAsync != null)
+                        await OnEventAsync (this, event_);
+                } catch (Utils.InvokeDialogueException e) {
+                    ComposeDialogue (ref e, ref event_);
+                    return;
+                }
+            });
             try {
                 if (OnEvent != null)
                     return OnEvent (this, event_);
                 else
                     return new Events.CQResponses.EmptyResponse ();
             } catch (Utils.InvokeDialogueException e) {
+                ComposeDialogue (ref e, ref event_);
+                return new Events.CQResponses.EmptyResponse ();
+            }
+        }
+        private static object dialoguePoolLock = new object ();
+        private static void ComposeDialogue (
+            ref Utils.InvokeDialogueException e,
+            ref CQEvent event_
+        ) {
+            lock (dialoguePoolLock) {
                 Logger.Log (Verbosity.DEBUG, "got a dialogue");
                 long bid =
                     (event_ is GroupMessageEvent) ? (event_ as GroupMessageEvent).group_id :
@@ -197,12 +214,12 @@ namespace cqhttp.Cyan.Instance {
                 long uid = (event_ as MessageEvent).sender.user_id;
                 if (e.acceptAll && bid != -1) {
                     Utils.DialoguePool.Join (bid, bid, e.content);
-                    return new Events.CQResponses.EmptyResponse ();
+                    return;
                 }
                 if (bid == -1) bid = uid;
                 Utils.DialoguePool.Join (uid, bid, e.content);
-                return new Events.CQResponses.EmptyResponse ();
             }
+            return;
         }
     }
 }
