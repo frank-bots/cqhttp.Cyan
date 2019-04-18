@@ -2,8 +2,7 @@ using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
 
-namespace cqhttp.Cyan.Events.CQEvents.Base
-{
+namespace cqhttp.Cyan.Events.CQEvents.Base {
     /// <summary></summary>
     public abstract class MessageEvent : CQEvent {
         /// <summary></summary>
@@ -39,14 +38,14 @@ namespace cqhttp.Cyan.Events.CQEvents.Base
     [JsonObject]
     public class Sender {
         /// <summary>QQ号</summary>
-        public long user_id { get; private set; }
+        [JsonProperty ("user_id")] public long user_id { get; private set; }
         /// <summary>QQ昵称</summary>
-        public string nickname { get; private set; }
+        [JsonProperty ("nickname")] public string nickname { get; private set; }
         /// <summary></summary>
 
-        public string sex { get; private set; }
+        [JsonProperty ("sex")] public string sex { get; private set; }
         /// <summary></summary>
 
-        public int age { get; private set; }
+        [JsonProperty ("age")] public int age { get; private set; }
     }
 }

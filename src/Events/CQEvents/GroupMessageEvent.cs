@@ -48,16 +48,16 @@ namespace cqhttp.Cyan.Events.CQEvents {
     [JsonObject]
     public class GroupSender : Sender {
         /// <summary>来自</summary>
-        public string area { get; private set; }
+        [JsonProperty ("area")] public string area { get; private set; }
 
         /// <summary>成员等级</summary>
-        public string level { get; private set; }
+        [JsonProperty ("level")] public string level { get; private set; }
 
         /// <summary>身份(owner/admin/member)</summary>
-        public string role { get; private set; }
+        [JsonProperty ("role")] public string role { get; private set; }
         /// <summary>头衔</summary>
-        public string title { get; private set; }
+        [JsonProperty ("title")] public string title { get; private set; }
         /// <summary>群名片／备注</summary>
-        public string card { get; private set; }
+        [JsonProperty ("card")] public string card { get; private set; }
     }
 }
