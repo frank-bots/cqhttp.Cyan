@@ -9,7 +9,7 @@ using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.Events.EventListener {
     /// <summary></summary>
-    public class WebSocketListener : CQEventListener {
+    public class WebsocketListener : CQEventListener {
         private ClientWebSocket client;
         private string dest_url;
         /// <summary>
@@ -17,7 +17,7 @@ namespace cqhttp.Cyan.Events.EventListener {
         /// </summary>
         public System.Func<ApiRequest, Task<ApiResult>> api_call_func;
         /// <summary></summary>
-        public WebSocketListener (string dest_url) : base ("") {
+        public WebsocketListener (string dest_url) : base ("") {
             this.dest_url = dest_url;
             client = new ClientWebSocket ();
         }

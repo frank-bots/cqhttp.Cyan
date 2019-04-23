@@ -23,8 +23,8 @@ namespace cqhttp.Cyan.Instance {
             base (accessUrl, accessToken, use_group_table, use_message_table) {
                 if (!string.IsNullOrEmpty (eventUrl)) {
                     eventUrl += !string.IsNullOrEmpty (accessToken) ? "?access_token=" + accessToken : "";
-                    this.__eventListener = new WebSocketListener (eventUrl);
-                    (this.__eventListener as WebSocketListener).api_call_func
+                    this.__eventListener = new WebsocketListener (eventUrl);
+                    (this.__eventListener as WebsocketListener).api_call_func
                         = this.SendRequestAsync;
                     this.__eventListener.StartListen (__HandleEvent);
                 }
