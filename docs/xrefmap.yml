@@ -3883,12 +3883,12 @@ references:
   commentId: T:cqhttp.Cyan.Messages.CQElements.ElementFace
   fullName: cqhttp.Cyan.Messages.CQElements.ElementFace
   nameWithType: ElementFace
-- uid: cqhttp.Cyan.Messages.CQElements.ElementFace.#ctor(System.Int32)
-  name: ElementFace(Int32)
-  href: api/cqhttp.Cyan.Messages.CQElements.ElementFace.html#cqhttp_Cyan_Messages_CQElements_ElementFace__ctor_System_Int32_
-  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementFace.#ctor(System.Int32)
-  fullName: cqhttp.Cyan.Messages.CQElements.ElementFace.ElementFace(System.Int32)
-  nameWithType: ElementFace.ElementFace(Int32)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFace.#ctor(System.Int32,System.String)
+  name: ElementFace(Int32, String)
+  href: api/cqhttp.Cyan.Messages.CQElements.ElementFace.html#cqhttp_Cyan_Messages_CQElements_ElementFace__ctor_System_Int32_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementFace.#ctor(System.Int32,System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFace.ElementFace(System.Int32, System.String)
+  nameWithType: ElementFace.ElementFace(Int32, String)
 - uid: cqhttp.Cyan.Messages.CQElements.ElementFace.#ctor*
   name: ElementFace
   href: api/cqhttp.Cyan.Messages.CQElements.ElementFace.html#cqhttp_Cyan_Messages_CQElements_ElementFace__ctor_
