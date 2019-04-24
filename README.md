@@ -250,6 +250,6 @@ Utils命名空间中有很多好用的工具
 * GroupAddRequestResponse 加群
 
 # TODO:
-添加Session机制
-添加用于生成Result与CQEvent的脚本
-修复issue #3 websocket不正常，检查潜在bug
+添加一些必要的测试  
+填上反向websocket的坑  
+为websocket添加消息队列  
