@@ -22,10 +22,6 @@ namespace cqhttp.Cyan.Instance {
         /// </summary>
         public string accessToken = "";
         /// <summary>
-        /// API地址
-        /// </summary>
-        public string accessUrl;
-        /// <summary>
         /// 当前实例的QQ号
         /// </summary>
         public long self_id { get; private set; }
@@ -53,15 +49,13 @@ namespace cqhttp.Cyan.Instance {
 
         /// <summary></summary>
         public CQApiClient (
-            string accessUrl,
             string accessToken = "",
             bool use_group_table = false,
             bool use_message_table = false
         ) {
             this.accessToken = accessToken;
-            this.accessUrl = accessUrl;
             if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
-            Logger.Log (Verbosity.INFO, $"成功连接到{accessUrl}");
+            Logger.Log (Verbosity.INFO, $"成功连接");
             if (use_group_table) this.groupTable = new Utils.GroupTable ();
             if (use_message_table) this.messageTable = new Utils.MessageTable ();
         }

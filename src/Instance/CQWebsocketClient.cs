@@ -12,6 +12,7 @@ using cqhttp.Cyan.Events.EventListener;
 namespace cqhttp.Cyan.Instance {
     /// <summary>websocket协议调用api</summary>
     public class CQWebsocketClient : CQApiClient {
+        private string accessUrl;
         /// <summary></summary>
         public CQWebsocketClient (
                 string accessUrl,
@@ -20,18 +21,24 @@ namespace cqhttp.Cyan.Instance {
                 bool use_group_table = false,
                 bool use_message_table = false
             ):
-            base (accessUrl, accessToken, use_group_table, use_message_table) {
+            base (accessToken, use_group_table, use_message_table) {
+                if (accessUrl.EndsWith ("/api")) {
+                    accessUrl += '/';
+                } else if (!accessUrl.EndsWith ("/api/")) {
+                    accessUrl += "/api/";
+                }
+                this.accessUrl = accessUrl;
                 if (!string.IsNullOrEmpty (eventUrl)) {
+                    if (eventUrl.EndsWith ("/event")) {
+                        eventUrl += '/';
+                    } else if (!eventUrl.EndsWith ("/event")) {
+                        eventUrl += "/event/";
+                    }
                     eventUrl += !string.IsNullOrEmpty (accessToken) ? "?access_token=" + accessToken : "";
                     this.__eventListener = new WebsocketListener (eventUrl);
                     (this.__eventListener as WebsocketListener).api_call_func
                         = this.SendRequestAsync;
                     this.__eventListener.StartListen (__HandleEvent);
-                }
-                if (accessUrl.EndsWith ("/api")) {
-                    this.accessUrl += '/';
-                } else if (!accessUrl.EndsWith ("/api/")) {
-                    this.accessUrl += "/api/";
                 }
             }
 

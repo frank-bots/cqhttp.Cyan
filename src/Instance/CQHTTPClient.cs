@@ -9,6 +9,7 @@ using cqhttp.Cyan.Enums;
 namespace cqhttp.Cyan.Instance {
     /// <summary>以HTTP协议调用API</summary>
     public class CQHTTPClient : CQApiClient {
+        private string accessUrl;
         /// <summary></summary>
         public CQHTTPClient (
                 string accessUrl,
@@ -18,7 +19,8 @@ namespace cqhttp.Cyan.Instance {
                 bool use_group_table = false,
                 bool use_message_table = false
             ):
-            base (accessUrl, accessToken, use_group_table, use_message_table) {
+            base (accessToken, use_group_table, use_message_table) {
+                this.accessUrl = accessUrl;
                 if (listen_port != -1) {
                     this.__eventListener = new Events.EventListener.HttpEventListener (listen_port, secret);
                     this.__eventListener.StartListen (__HandleEvent);
