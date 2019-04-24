@@ -13,15 +13,15 @@ namespace cqhttp.Cyan.Instance.WebsocketUtils {
     /// 作为websocket客户端
     /// </summary>
     static class ConnectionPool {
-        public static Dictionary<string, ClientWebSocket> pool =
+        private static Dictionary<string, ClientWebSocket> pool =
             new Dictionary<string, ClientWebSocket> ();
-        public static Dictionary<string, string> result =
+        private static Dictionary<string, string> result =
             new Dictionary<string, string> ();
-        public static Dictionary<string, object> resultLock =
+        private static Dictionary<string, object> resultLock =
             new Dictionary<string, object> ();
-        public static Dictionary<string, Action> receive =
+        private static Dictionary<string, Action> receive =
             new Dictionary<string, Action> ();
-        public static async Task Connect (string uri) {
+        private static async Task Connect (string uri) {
             pool[uri] = new ClientWebSocket ();
             await pool[uri].ConnectAsync (
                 new System.Uri (uri),
@@ -44,7 +44,7 @@ namespace cqhttp.Cyan.Instance.WebsocketUtils {
             };
         }
 
-        public static async Task EnsureConnected (string uri) {
+        private static async Task EnsureConnected (string uri) {
             if (pool.ContainsKey (uri)) {
                 int tryTimes = 0;
                 while (pool[uri].State == WebSocketState.Connecting) {
@@ -59,6 +59,9 @@ namespace cqhttp.Cyan.Instance.WebsocketUtils {
             }
             await Connect (uri);
         }
+        /// <summary>
+        /// 不要调用
+        /// </summary>
         public static async Task<int> SendJsonAsync (string uri, JObject obj) {
             await EnsureConnected (uri);
             int time = System.DateTime.Now.Millisecond;
