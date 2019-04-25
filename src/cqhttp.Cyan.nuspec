@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>cqhttp.Cyan</id>
-    <version>1.0.6-beta2</version>
+    <version>1.0.6-rc1</version>
     <authors>Frank</authors>
     <owners>Frank</owners>
     <description>see https://github.com/frankli0324/cqhttp.Cyan</description>
@@ -12,6 +12,7 @@
       <group targetFramework=".NETCoreApp2.1">
         <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
         <dependency id="Newtonsoft.Json" version="12.0.1" exclude="Build,Analyzers" />
+        <dependency id="Fleck" version="1.1.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
