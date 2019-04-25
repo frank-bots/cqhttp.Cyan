@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Instance.WebsocketUtils {
+namespace cqhttp.Cyan.WebsocketUtils {
     /// <summary>
-    /// 作为websocket客户端
+    /// As Websocket Client
     /// </summary>
     static class ConnectionPool {
         private static Dictionary<string, ClientWebSocket> pool =
@@ -33,7 +33,7 @@ namespace cqhttp.Cyan.Instance.WebsocketUtils {
                 while (true) {
                     var res = await pool[uri].ReceiveAsync (
                         buffer: buffer,
-                        new CancellationToken ()
+                        cancellationToken: new CancellationToken ()
                     );
                     lock (resultLock[uri]) {
                         result[uri] += buffer.ToString ().TrimEnd ('\0');
