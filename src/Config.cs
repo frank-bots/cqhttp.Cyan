@@ -47,7 +47,7 @@ namespace cqhttp.Cyan {
             int interval = 200
         ) {
             int cnt = 0;
-            while (condition () == false && cnt++ * interval < timeOut)
+            while (condition () == false && cnt++ * interval < timeOut * 1000)
                 await Task.Run (() => Thread.Sleep (interval));
             if (condition () == false) {
                 Logger.Log (Enums.Verbosity.ERROR, $"操作超时");

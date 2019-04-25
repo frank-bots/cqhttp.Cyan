@@ -23,6 +23,7 @@ namespace cqhttp.Cyan.Events.EventListener {
         public override void StartListen (
             Func<CQEvent, CQResponse> callback
         ) {
+            listen_callback = callback;
             if (server.socket.ConnectionInfo.Headers["Authorization"].Contains (accessToken))
                 server.socket.OnMessage = (m) => {
                     Process (m);
