@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Fleck;
 namespace cqhttp.Cyan.WebsocketUtils {
@@ -71,22 +72,12 @@ namespace cqhttp.Cyan.WebsocketUtils {
             ///
             public IWebSocketConnection socket {
                 get {
-                    int cnt = 0;
-                    while (
-                        pool.ContainsKey ((port, path)) == false &&
-                        cnt++ * 200 < Config.timeOut * 1000
-                    )
-                        Thread.Sleep (200);
-
-                    if (pool.ContainsKey ((port, path)) == false) {
-                        Logger.Log (
-                            Enums.Verbosity.ERROR,
-                            $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求\n请检查网络连通性或调整cqhttp.Cyan.Config.timeOut"
-                        );
-                        throw new Exceptions.NetworkFailureException (
+                    Config.TimeOut (
+                        () => pool.ContainsKey ((port, path)),
+                        new Exceptions.NetworkFailureException (
                             $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求"
-                        );
-                    }
+                        )
+                    ).Wait (); //请检查网络连通性或调整cqhttp.Cyan.Config.timeOut
                     return pool[(port, path)];
                 }
             }

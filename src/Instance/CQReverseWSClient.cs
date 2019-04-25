@@ -58,12 +58,10 @@ namespace cqhttp.Cyan.Instance {
             constructor["action"] = request.apiPath.Substring (1);
             constructor["params"] = request.content;
             await server.socket.Send (constructor.ToString (Formatting.None));
-            await Task.Run (() => {
-                Config.TimeOut (
-                    () => received == true,
-                    new Exceptions.NetworkFailureException ("API调用超时")
-                );
-            });
+            await Config.TimeOut (
+                () => received == true,
+                new Exceptions.NetworkFailureException ("API调用超时")
+            );
             lock (bufferLock) {
                 request.response.Parse (buffer);
                 received = false;

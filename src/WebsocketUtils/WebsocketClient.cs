@@ -46,12 +46,10 @@ namespace cqhttp.Cyan.WebsocketUtils {
 
         private static async Task EnsureConnected (string uri) {
             if (pool.ContainsKey (uri)) {
-                int tryTimes = 0;
-                while (pool[uri].State == WebSocketState.Connecting) {
-                    await Task.Run (() => Thread.Sleep (200));
-                    if (tryTimes++ * 200 > Config.timeOut * 1000)
-                        throw new Exceptions.NetworkFailureException ("websocket 连接超时");
-                }
+                await Config.TimeOut(
+                    ()=>pool[uri].State != WebSocketState.Connecting,
+                    new Exceptions.NetworkFailureException ("websocket 连接超时")
+                );
                 if (pool[uri].State == WebSocketState.Open)
                     return;
                 pool[uri].Abort ();
