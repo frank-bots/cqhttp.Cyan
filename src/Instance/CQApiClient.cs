@@ -54,12 +54,11 @@ namespace cqhttp.Cyan.Instance {
             bool use_message_table = false
         ) {
             this.accessToken = accessToken;
-            if (!Initiate ().Result) throw new Exceptions.ErrorApicallException ();
-            Logger.Log (Verbosity.INFO, $"成功连接");
             if (use_group_table) this.groupTable = new Utils.GroupTable ();
             if (use_message_table) this.messageTable = new Utils.MessageTable ();
         }
-        private async Task<bool> Initiate () {
+        ///
+        protected async Task<bool> Initiate () {
             GetLoginInfoResult loginInfo =
                 await SendRequestAsync (new GetLoginInfoRequest ())
             as GetLoginInfoResult;

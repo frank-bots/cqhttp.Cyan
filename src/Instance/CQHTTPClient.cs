@@ -26,6 +26,9 @@ namespace cqhttp.Cyan.Instance {
                     this.__eventListener.StartListen (__HandleEvent);
                     Logger.Log (Verbosity.INFO, $"开始在{listen_port}端口上监听上报消息");
                 }
+                if (base.Initiate ().Result == false)
+                    throw new Exceptions.ErrorApicallException ("初始化失败");
+                Logger.Log (Enums.Verbosity.INFO, $"成功连接");
             }
         /// <summary>发送API请求</summary>
         public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {

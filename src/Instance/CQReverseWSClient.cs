@@ -50,6 +50,9 @@ namespace cqhttp.Cyan.Instance {
                         received = true;
                     }
                 };
+                if (base.Initiate ().Result == false)
+                    throw new Exceptions.ErrorApicallException ("初始化失败");
+                Logger.Log (Enums.Verbosity.INFO, $"成功连接");
             });
         }
         ///
