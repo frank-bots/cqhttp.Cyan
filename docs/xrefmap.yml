@@ -1083,6 +1083,22 @@ references:
   commentId: F:cqhttp.Cyan.Config.timeOut
   fullName: cqhttp.Cyan.Config.timeOut
   nameWithType: Config.timeOut
+- uid: cqhttp.Cyan.Config.TimeOut(System.Func{System.Boolean},System.Exception,System.Int32)
+  name: TimeOut(Func<Boolean>, Exception, Int32)
+  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_TimeOut_System_Func_System_Boolean__System_Exception_System_Int32_
+  commentId: M:cqhttp.Cyan.Config.TimeOut(System.Func{System.Boolean},System.Exception,System.Int32)
+  name.vb: TimeOut(Func(Of Boolean), Exception, Int32)
+  fullName: cqhttp.Cyan.Config.TimeOut(System.Func<System.Boolean>, System.Exception, System.Int32)
+  fullName.vb: cqhttp.Cyan.Config.TimeOut(System.Func(Of System.Boolean), System.Exception, System.Int32)
+  nameWithType: Config.TimeOut(Func<Boolean>, Exception, Int32)
+  nameWithType.vb: Config.TimeOut(Func(Of Boolean), Exception, Int32)
+- uid: cqhttp.Cyan.Config.TimeOut*
+  name: TimeOut
+  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_TimeOut_
+  commentId: Overload:cqhttp.Cyan.Config.TimeOut
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Config.TimeOut
+  nameWithType: Config.TimeOut
 - uid: cqhttp.Cyan.Enums
   name: cqhttp.Cyan.Enums
   href: api/cqhttp.Cyan.Enums.html
@@ -2457,6 +2473,44 @@ references:
   commentId: N:cqhttp.Cyan.Events.EventListener
   fullName: cqhttp.Cyan.Events.EventListener
   nameWithType: cqhttp.Cyan.Events.EventListener
+- uid: cqhttp.Cyan.Events.EventListener._WebsocketProcessor
+  name: _WebsocketProcessor
+  href: api/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html
+  commentId: T:cqhttp.Cyan.Events.EventListener._WebsocketProcessor
+  fullName: cqhttp.Cyan.Events.EventListener._WebsocketProcessor
+  nameWithType: _WebsocketProcessor
+- uid: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.#ctor(System.String)
+  name: _WebsocketProcessor(String)
+  href: api/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html#cqhttp_Cyan_Events_EventListener__WebsocketProcessor__ctor_System_String_
+  commentId: M:cqhttp.Cyan.Events.EventListener._WebsocketProcessor.#ctor(System.String)
+  fullName: cqhttp.Cyan.Events.EventListener._WebsocketProcessor._WebsocketProcessor(System.String)
+  nameWithType: _WebsocketProcessor._WebsocketProcessor(String)
+- uid: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.#ctor*
+  name: _WebsocketProcessor
+  href: api/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html#cqhttp_Cyan_Events_EventListener__WebsocketProcessor__ctor_
+  commentId: Overload:cqhttp.Cyan.Events.EventListener._WebsocketProcessor.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.EventListener._WebsocketProcessor._WebsocketProcessor
+  nameWithType: _WebsocketProcessor._WebsocketProcessor
+- uid: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.api_call_func
+  name: api_call_func
+  href: api/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html#cqhttp_Cyan_Events_EventListener__WebsocketProcessor_api_call_func
+  commentId: F:cqhttp.Cyan.Events.EventListener._WebsocketProcessor.api_call_func
+  fullName: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.api_call_func
+  nameWithType: _WebsocketProcessor.api_call_func
+- uid: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.Process(System.String)
+  name: Process(String)
+  href: api/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html#cqhttp_Cyan_Events_EventListener__WebsocketProcessor_Process_System_String_
+  commentId: M:cqhttp.Cyan.Events.EventListener._WebsocketProcessor.Process(System.String)
+  fullName: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.Process(System.String)
+  nameWithType: _WebsocketProcessor.Process(String)
+- uid: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.Process*
+  name: Process
+  href: api/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html#cqhttp_Cyan_Events_EventListener__WebsocketProcessor_Process_
+  commentId: Overload:cqhttp.Cyan.Events.EventListener._WebsocketProcessor.Process
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.EventListener._WebsocketProcessor.Process
+  nameWithType: _WebsocketProcessor.Process
 - uid: cqhttp.Cyan.Events.EventListener.CQEventListener
   name: CQEventListener
   href: api/cqhttp.Cyan.Events.EventListener.CQEventListener.html
@@ -2574,47 +2628,76 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen
   nameWithType: HttpEventListener.StartListen
-- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener
-  name: WebSocketListener
-  href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html
-  commentId: T:cqhttp.Cyan.Events.EventListener.WebSocketListener
-  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener
-  nameWithType: WebSocketListener
-- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.#ctor(System.String)
-  name: WebSocketListener(String)
-  href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener__ctor_System_String_
-  commentId: M:cqhttp.Cyan.Events.EventListener.WebSocketListener.#ctor(System.String)
-  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.WebSocketListener(System.String)
-  nameWithType: WebSocketListener.WebSocketListener(String)
-- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.#ctor*
-  name: WebSocketListener
-  href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener__ctor_
-  commentId: Overload:cqhttp.Cyan.Events.EventListener.WebSocketListener.#ctor
+- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener
+  name: ReverseWSListener
+  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html
+  commentId: T:cqhttp.Cyan.Events.EventListener.ReverseWSListener
+  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener
+  nameWithType: ReverseWSListener
+- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.#ctor(System.Int32,System.String,System.String)
+  name: ReverseWSListener(Int32, String, String)
+  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener__ctor_System_Int32_System_String_System_String_
+  commentId: M:cqhttp.Cyan.Events.EventListener.ReverseWSListener.#ctor(System.Int32,System.String,System.String)
+  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.ReverseWSListener(System.Int32, System.String, System.String)
+  nameWithType: ReverseWSListener.ReverseWSListener(Int32, String, String)
+- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.#ctor*
+  name: ReverseWSListener
+  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener__ctor_
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.ReverseWSListener.#ctor
   isSpec: "True"
-  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.WebSocketListener
-  nameWithType: WebSocketListener.WebSocketListener
-- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.api_call_func
-  name: api_call_func
-  href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener_api_call_func
-  commentId: F:cqhttp.Cyan.Events.EventListener.WebSocketListener.api_call_func
-  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.api_call_func
-  nameWithType: WebSocketListener.api_call_func
-- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.ReverseWSListener
+  nameWithType: ReverseWSListener.ReverseWSListener
+- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
   name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
+  commentId: M:cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
   name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
-  nameWithType: WebSocketListener.StartListen(Func<CQEvent, CQResponse>)
-  nameWithType.vb: WebSocketListener.StartListen(Func(Of CQEvent, CQResponse))
-- uid: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen*
+  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
+  nameWithType: ReverseWSListener.StartListen(Func<CQEvent, CQResponse>)
+  nameWithType.vb: ReverseWSListener.StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen*
   name: StartListen
-  href: api/cqhttp.Cyan.Events.EventListener.WebSocketListener.html#cqhttp_Cyan_Events_EventListener_WebSocketListener_StartListen_
-  commentId: Overload:cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen
+  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen
   isSpec: "True"
-  fullName: cqhttp.Cyan.Events.EventListener.WebSocketListener.StartListen
-  nameWithType: WebSocketListener.StartListen
+  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen
+  nameWithType: ReverseWSListener.StartListen
+- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener
+  name: WebsocketListener
+  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html
+  commentId: T:cqhttp.Cyan.Events.EventListener.WebsocketListener
+  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener
+  nameWithType: WebsocketListener
+- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.#ctor(System.String)
+  name: WebsocketListener(String)
+  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener__ctor_System_String_
+  commentId: M:cqhttp.Cyan.Events.EventListener.WebsocketListener.#ctor(System.String)
+  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.WebsocketListener(System.String)
+  nameWithType: WebsocketListener.WebsocketListener(String)
+- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.#ctor*
+  name: WebsocketListener
+  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener__ctor_
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.WebsocketListener.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.WebsocketListener
+  nameWithType: WebsocketListener.WebsocketListener
+- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+  name: StartListen(Func<CQEvent, CQResponse>)
+  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
+  commentId: M:cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
+  name.vb: StartListen(Func(Of CQEvent, CQResponse))
+  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
+  nameWithType: WebsocketListener.StartListen(Func<CQEvent, CQResponse>)
+  nameWithType.vb: WebsocketListener.StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen*
+  name: StartListen
+  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_
+  commentId: Overload:cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen
+  nameWithType: WebsocketListener.StartListen
 - uid: cqhttp.Cyan.Events.MetaEvents
   name: cqhttp.Cyan.Events.MetaEvents
   href: api/cqhttp.Cyan.Events.MetaEvents.html
@@ -3041,12 +3124,12 @@ references:
   commentId: T:cqhttp.Cyan.Instance.CQApiClient
   fullName: cqhttp.Cyan.Instance.CQApiClient
   nameWithType: CQApiClient
-- uid: cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.String,System.Boolean,System.Boolean)
-  name: CQApiClient(String, String, Boolean, Boolean)
-  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient__ctor_System_String_System_String_System_Boolean_System_Boolean_
-  commentId: M:cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.String,System.Boolean,System.Boolean)
-  fullName: cqhttp.Cyan.Instance.CQApiClient.CQApiClient(System.String, System.String, System.Boolean, System.Boolean)
-  nameWithType: CQApiClient.CQApiClient(String, String, Boolean, Boolean)
+- uid: cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.Boolean,System.Boolean)
+  name: CQApiClient(String, Boolean, Boolean)
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient__ctor_System_String_System_Boolean_System_Boolean_
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.#ctor(System.String,System.Boolean,System.Boolean)
+  fullName: cqhttp.Cyan.Instance.CQApiClient.CQApiClient(System.String, System.Boolean, System.Boolean)
+  nameWithType: CQApiClient.CQApiClient(String, Boolean, Boolean)
 - uid: cqhttp.Cyan.Instance.CQApiClient.#ctor*
   name: CQApiClient
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient__ctor_
@@ -3079,12 +3162,6 @@ references:
   commentId: F:cqhttp.Cyan.Instance.CQApiClient.accessToken
   fullName: cqhttp.Cyan.Instance.CQApiClient.accessToken
   nameWithType: CQApiClient.accessToken
-- uid: cqhttp.Cyan.Instance.CQApiClient.accessUrl
-  name: accessUrl
-  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_accessUrl
-  commentId: F:cqhttp.Cyan.Instance.CQApiClient.accessUrl
-  fullName: cqhttp.Cyan.Instance.CQApiClient.accessUrl
-  nameWithType: CQApiClient.accessUrl
 - uid: cqhttp.Cyan.Instance.CQApiClient.alive
   name: alive
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_alive
@@ -3271,6 +3348,38 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Instance.CQHTTPClient.SendRequestAsync
   nameWithType: CQHTTPClient.SendRequestAsync
+- uid: cqhttp.Cyan.Instance.CQReverseWSClient
+  name: CQReverseWSClient
+  href: api/cqhttp.Cyan.Instance.CQReverseWSClient.html
+  commentId: T:cqhttp.Cyan.Instance.CQReverseWSClient
+  fullName: cqhttp.Cyan.Instance.CQReverseWSClient
+  nameWithType: CQReverseWSClient
+- uid: cqhttp.Cyan.Instance.CQReverseWSClient.#ctor(System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)
+  name: CQReverseWSClient(Int32, String, String, String, Boolean, Boolean)
+  href: api/cqhttp.Cyan.Instance.CQReverseWSClient.html#cqhttp_Cyan_Instance_CQReverseWSClient__ctor_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_
+  commentId: M:cqhttp.Cyan.Instance.CQReverseWSClient.#ctor(System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)
+  fullName: cqhttp.Cyan.Instance.CQReverseWSClient.CQReverseWSClient(System.Int32, System.String, System.String, System.String, System.Boolean, System.Boolean)
+  nameWithType: CQReverseWSClient.CQReverseWSClient(Int32, String, String, String, Boolean, Boolean)
+- uid: cqhttp.Cyan.Instance.CQReverseWSClient.#ctor*
+  name: CQReverseWSClient
+  href: api/cqhttp.Cyan.Instance.CQReverseWSClient.html#cqhttp_Cyan_Instance_CQReverseWSClient__ctor_
+  commentId: Overload:cqhttp.Cyan.Instance.CQReverseWSClient.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Instance.CQReverseWSClient.CQReverseWSClient
+  nameWithType: CQReverseWSClient.CQReverseWSClient
+- uid: cqhttp.Cyan.Instance.CQReverseWSClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  name: SendRequestAsync(ApiRequest)
+  href: api/cqhttp.Cyan.Instance.CQReverseWSClient.html#cqhttp_Cyan_Instance_CQReverseWSClient_SendRequestAsync_cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_
+  commentId: M:cqhttp.Cyan.Instance.CQReverseWSClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  fullName: cqhttp.Cyan.Instance.CQReverseWSClient.SendRequestAsync(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
+  nameWithType: CQReverseWSClient.SendRequestAsync(ApiRequest)
+- uid: cqhttp.Cyan.Instance.CQReverseWSClient.SendRequestAsync*
+  name: SendRequestAsync
+  href: api/cqhttp.Cyan.Instance.CQReverseWSClient.html#cqhttp_Cyan_Instance_CQReverseWSClient_SendRequestAsync_
+  commentId: Overload:cqhttp.Cyan.Instance.CQReverseWSClient.SendRequestAsync
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Instance.CQReverseWSClient.SendRequestAsync
+  nameWithType: CQReverseWSClient.SendRequestAsync
 - uid: cqhttp.Cyan.Instance.CQWebsocketClient
   name: CQWebsocketClient
   href: api/cqhttp.Cyan.Instance.CQWebsocketClient.html
@@ -4738,3 +4847,47 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.MessageTable.Log
   nameWithType: MessageTable.Log
+- uid: cqhttp.Cyan.WebsocketUtils
+  name: cqhttp.Cyan.WebsocketUtils
+  href: api/cqhttp.Cyan.WebsocketUtils.html
+  commentId: N:cqhttp.Cyan.WebsocketUtils
+  fullName: cqhttp.Cyan.WebsocketUtils
+  nameWithType: cqhttp.Cyan.WebsocketUtils
+- uid: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon
+  name: WebsocketDaemon
+  href: api/cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.html
+  commentId: T:cqhttp.Cyan.WebsocketUtils.WebsocketDaemon
+  fullName: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon
+  nameWithType: WebsocketDaemon
+- uid: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance
+  name: WebsocketDaemon.WebsocketServerInstance
+  href: api/cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.html
+  commentId: T:cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance
+  fullName: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance
+  nameWithType: WebsocketDaemon.WebsocketServerInstance
+- uid: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.#ctor(System.Int32,System.String)
+  name: WebsocketServerInstance(Int32, String)
+  href: api/cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.html#cqhttp_Cyan_WebsocketUtils_WebsocketDaemon_WebsocketServerInstance__ctor_System_Int32_System_String_
+  commentId: M:cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.#ctor(System.Int32,System.String)
+  fullName: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.WebsocketServerInstance(System.Int32, System.String)
+  nameWithType: WebsocketDaemon.WebsocketServerInstance.WebsocketServerInstance(Int32, String)
+- uid: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.#ctor*
+  name: WebsocketServerInstance
+  href: api/cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.html#cqhttp_Cyan_WebsocketUtils_WebsocketDaemon_WebsocketServerInstance__ctor_
+  commentId: Overload:cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.WebsocketServerInstance
+  nameWithType: WebsocketDaemon.WebsocketServerInstance.WebsocketServerInstance
+- uid: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.socket
+  name: socket
+  href: api/cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.html#cqhttp_Cyan_WebsocketUtils_WebsocketDaemon_WebsocketServerInstance_socket
+  commentId: P:cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.socket
+  fullName: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.socket
+  nameWithType: WebsocketDaemon.WebsocketServerInstance.socket
+- uid: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.socket*
+  name: socket
+  href: api/cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.html#cqhttp_Cyan_WebsocketUtils_WebsocketDaemon_WebsocketServerInstance_socket_
+  commentId: Overload:cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.socket
+  isSpec: "True"
+  fullName: cqhttp.Cyan.WebsocketUtils.WebsocketDaemon.WebsocketServerInstance.socket
+  nameWithType: WebsocketDaemon.WebsocketServerInstance.socket

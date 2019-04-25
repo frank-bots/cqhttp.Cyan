@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class WebsocketListener
+    <title>Class ReverseWSListener
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class WebsocketListener
+    <meta name="title" content="Class ReverseWSListener
    ">
     <meta name="generator" content="docfx 2.40.12.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.Events.EventListener.WebsocketListener">
+            <article class="content wrap" id="_content" data-uid="cqhttp.Cyan.Events.EventListener.ReverseWSListener">
   
   
-  <h1 id="cqhttp_Cyan_Events_EventListener_WebsocketListener" data-uid="cqhttp.Cyan.Events.EventListener.WebsocketListener" class="text-break">Class WebsocketListener
+  <h1 id="cqhttp_Cyan_Events_EventListener_ReverseWSListener" data-uid="cqhttp.Cyan.Events.EventListener.ReverseWSListener" class="text-break">Class ReverseWSListener
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -80,7 +80,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="cqhttp.Cyan.Events.EventListener.CQEventListener.html">CQEventListener</a></div>
     <div class="level2"><a class="xref" href="cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html">_WebsocketProcessor</a></div>
-    <div class="level3"><span class="xref">WebsocketListener</span></div>
+    <div class="level3"><span class="xref">ReverseWSListener</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -129,26 +129,26 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Events.EventListener.html">cqhttp.Cyan.Events.EventListener</a></h6>
   <h6><strong>Assembly</strong>: cqhttp.Cyan.dll</h6>
-  <h5 id="cqhttp_Cyan_Events_EventListener_WebsocketListener_syntax">Syntax</h5>
+  <h5 id="cqhttp_Cyan_Events_EventListener_ReverseWSListener_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WebsocketListener : _WebsocketProcessor</code></pre>
+    <pre><code class="lang-csharp hljs">public class ReverseWSListener : _WebsocketProcessor</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_EventListener_WebsocketListener__ctor_System_String_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.EventListener.WebsocketListener.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_EventListener_ReverseWSListener__ctor_System_Int32_System_String_System_String_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.EventListener.ReverseWSListener.%23ctor(System.Int32%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Events/EventListener/WebSocketListener.cs/#L17">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Events/EventListener/ReverseWSListener.cs/#L14">View Source</a>
   </span>
-  <a id="cqhttp_Cyan_Events_EventListener_WebsocketListener__ctor_" data-uid="cqhttp.Cyan.Events.EventListener.WebsocketListener.#ctor*"></a>
-  <h4 id="cqhttp_Cyan_Events_EventListener_WebsocketListener__ctor_System_String_" data-uid="cqhttp.Cyan.Events.EventListener.WebsocketListener.#ctor(System.String)">WebsocketListener(String)</h4>
+  <a id="cqhttp_Cyan_Events_EventListener_ReverseWSListener__ctor_" data-uid="cqhttp.Cyan.Events.EventListener.ReverseWSListener.#ctor*"></a>
+  <h4 id="cqhttp_Cyan_Events_EventListener_ReverseWSListener__ctor_System_Int32_System_String_System_String_" data-uid="cqhttp.Cyan.Events.EventListener.ReverseWSListener.#ctor(System.Int32,System.String,System.String)">ReverseWSListener(Int32, String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WebsocketListener(string dest_url)</code></pre>
+    <pre><code class="lang-csharp hljs">public ReverseWSListener(int bind_port, string path, string accessToken = &quot;&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,8 +161,18 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bind_port</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">dest_url</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accessToken</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -171,13 +181,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func%7Bcqhttp.Cyan.Events.CQEvents.Base.CQEvent%2Ccqhttp.Cyan.Events.CQResponses.Base.CQResponse%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func%7Bcqhttp.Cyan.Events.CQEvents.Base.CQEvent%2Ccqhttp.Cyan.Events.CQResponses.Base.CQResponse%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Events/EventListener/WebSocketListener.cs/#L22">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Events/EventListener/ReverseWSListener.cs/#L23">View Source</a>
   </span>
-  <a id="cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_" data-uid="cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen*"></a>
-  <h4 id="cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__" data-uid="cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})">StartListen(Func&lt;CQEvent, CQResponse&gt;)</h4>
+  <a id="cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_" data-uid="cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen*"></a>
+  <h4 id="cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__" data-uid="cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})">StartListen(Func&lt;CQEvent, CQResponse&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -211,10 +221,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_EventListener_WebsocketListener.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.EventListener.WebsocketListener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_EventListener_ReverseWSListener.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.EventListener.ReverseWSListener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Events/EventListener/WebSocketListener.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/src/Events/EventListener/ReverseWSListener.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
