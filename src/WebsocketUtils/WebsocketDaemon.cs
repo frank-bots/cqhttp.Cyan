@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using Fleck;
 namespace cqhttp.Cyan.WebsocketUtils {
 
@@ -32,14 +33,18 @@ namespace cqhttp.Cyan.WebsocketUtils {
         /// <summary>
         /// 
         /// </summary>
+        /// <remark>不要实例化</remark>
         public class WebsocketServerInstance {
-            string port, path;
+            int port;
+            string path;
             /// <summary>
             /// 
             /// </summary>
             /// <param name="port"></param>
             /// <param name="path"></param>
             public WebsocketServerInstance (int port, string path) {
+                this.port = port;
+                this.path = path;
                 if (servers.ContainsKey (port) == false) {
                     servers[port] = new WebSocketServer ($"ws://0.0.0.0:{port}");
                     servers[port].RestartAfterListenError = true;
@@ -52,6 +57,28 @@ namespace cqhttp.Cyan.WebsocketUtils {
                             pool[(port, socket.ConnectionInfo.Path.Trim ('/'))] = socket;
                         };
                     });
+                }
+            }
+            ///
+            public IWebSocketConnection socket {
+                get {
+                    int cnt = 0;
+                    while (
+                        pool.ContainsKey ((port, path)) == false &&
+                        cnt++ * 200 < Config.timeOut * 1000
+                    )
+                        Thread.Sleep (200);
+
+                    if (pool.ContainsKey ((port, path)) == false) {
+                        Logger.Log (
+                            Enums.Verbosity.ERROR,
+                            $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求\n请检查网络连通性或调整cqhttp.Cyan.Config.timeOut"
+                        );
+                        throw new Exceptions.NetworkFailureException (
+                            $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求"
+                        );
+                    }
+                    return pool[(port, path)];
                 }
             }
         }

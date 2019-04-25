@@ -1,14 +1,15 @@
 using System;
 using System.Threading.Tasks;
-using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Results.Base;
+using cqhttp.Cyan.Events.CQEvents.Base;
+using cqhttp.Cyan.Events.CQResponses.Base;
+using cqhttp.Cyan.WebsocketUtils;
 
 namespace cqhttp.Cyan.Events.EventListener {
 
     /// <summary></summary>
-    public class ReverseWSListener : CQEventListener {
+    public class ReverseWSListener : _WebsocketProcessor {
         string accessToken;
-        string path;
+        WebsocketDaemon.WebsocketServerInstance server;
         /// <summary></summary>
         public ReverseWSListener (
             int bind_port,
@@ -16,15 +17,17 @@ namespace cqhttp.Cyan.Events.EventListener {
             string accessToken = ""
         ) : base ("") {
             this.accessToken = accessToken;
-            this.path = path;
-            throw new NotImplementedException ();
+            server = new WebsocketDaemon.WebsocketServerInstance (bind_port, path);
         }
         /// <summary></summary>
-        public override void StartListen (System.Func<CQEvents.Base.CQEvent, CQResponses.Base.CQResponse> callback) {
-            throw new NotImplementedException ();
-        }
-        private void Process (string message) {
-            throw new NotImplementedException ();
+        public override void StartListen (
+            Func<CQEvent, CQResponse> callback
+        ) {
+            if (server.socket.ConnectionInfo.Headers["Authorization"].Contains (accessToken))
+                server.socket.OnMessage = (m) => {
+                    Process (m);
+                };
+            else throw new Exceptions.ErrorEventException ("access token认证失败");
         }
     }
 }

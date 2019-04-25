@@ -9,13 +9,10 @@ using cqhttp.Cyan.Enums;
 
 namespace cqhttp.Cyan.Events.EventListener {
     /// <summary></summary>
-    public class WebsocketListener : CQEventListener {
+    public class WebsocketListener : _WebsocketProcessor {
         private ClientWebSocket client;
         private string dest_url;
-        /// <summary>
-        /// 处理快速回复的时候需要调用
-        /// </summary>
-        public System.Func<ApiRequest, Task<ApiResult>> api_call_func;
+
         /// <summary></summary>
         public WebsocketListener (string dest_url) : base ("") {
             this.dest_url = dest_url;
@@ -48,24 +45,6 @@ namespace cqhttp.Cyan.Events.EventListener {
                         }
                     }
                 });
-            }
-        }
-        private async void Process (string message) {
-            try {
-                if (string.IsNullOrEmpty (message))
-                    return;
-                await Task.Run (() => {
-                    var response = listen_callback (CQEventHandler.HandleEvent (message));
-                    api_call_func (new ApiCall.Requests.HandleQuickOperationRequest (
-                        context: message,
-                        operation: response.content
-                    ));
-                });
-            } catch (System.Exception e) {
-                Logger.Log (
-                    Verbosity.ERROR,
-                    $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
-                );
             }
         }
     }
