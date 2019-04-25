@@ -7,8 +7,10 @@ namespace cqhttp.Cyan.WebsocketUtils {
     /// As Websocket Server
     /// </summary>
     public static class WebsocketDaemon {
-        static Dictionary<int, WebSocketServer> servers;
-        static Dictionary < (int, string), IWebSocketConnection > pool;
+        static Dictionary<int, WebSocketServer> servers =
+            new Dictionary<int, WebSocketServer> ();
+        static Dictionary < (int, string), IWebSocketConnection > pool =
+            new Dictionary < (int, string), IWebSocketConnection > ();
         //                  port, path
         static WebsocketDaemon () {
             Fleck.FleckLog.LogAction = (level, m, e) => {
@@ -55,6 +57,13 @@ namespace cqhttp.Cyan.WebsocketUtils {
                                 $"来自{socket.ConnectionInfo.ClientIpAddress}的连接"
                             );
                             pool[(port, socket.ConnectionInfo.Path.Trim ('/'))] = socket;
+                        };
+                        socket.OnClose = () => {
+                            Logger.Log (
+                                Enums.Verbosity.DEBUG,
+                                $"{socket.ConnectionInfo.ClientIpAddress}关闭连接"
+                            );
+                            pool.Remove ((port, socket.ConnectionInfo.Path.Trim ('/')));
                         };
                     });
                 }
