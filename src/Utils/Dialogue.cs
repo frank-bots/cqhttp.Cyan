@@ -84,7 +84,7 @@ namespace cqhttp.Cyan.Utils {
         /// 
         /// 请勿调用!
         /// </summary>
-        /// <returns>是否将此消息时间继续向用户逻辑传递</returns>
+        /// <returns>是否阻止此消息向用户逻辑传递</returns>
         public static bool Handle (CQApiClient cli, MessageEvent e) {
             if (pool.Count == 0) return false;
             long uid = e.sender.user_id;

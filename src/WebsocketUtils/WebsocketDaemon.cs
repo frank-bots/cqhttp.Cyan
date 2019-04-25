@@ -46,7 +46,7 @@ namespace cqhttp.Cyan.WebsocketUtils {
             /// <param name="path"></param>
             public WebsocketServerInstance (int port, string path) {
                 this.port = port;
-                this.path = path;
+                this.path = path.Trim ('/');
                 if (servers.ContainsKey (port) == false) {
                     servers[port] = new WebSocketServer ($"ws://0.0.0.0:{port}");
                     servers[port].RestartAfterListenError = true;
