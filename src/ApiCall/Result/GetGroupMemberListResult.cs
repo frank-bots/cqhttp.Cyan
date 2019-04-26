@@ -9,9 +9,9 @@ namespace cqhttp.Cyan.ApiCall.Results {
         /// <value></value>
         public Utils.GroupMemberInfo[] memberInfo { get; private set; }
         ///
-        public override void Parse (string result) {
-            var i = PreCheck (result);
-            memberInfo = (i.raw_data as JArray).ToObject<Utils.GroupMemberInfo[]> ();
+        public override void Parse (JToken result) {
+            PreCheck (result);
+            memberInfo = (raw_data as JArray).ToObject<Utils.GroupMemberInfo[]> ();
         }
     }
 }

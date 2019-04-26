@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.ApiCall.Results {
     ///
@@ -11,9 +12,9 @@ namespace cqhttp.Cyan.ApiCall.Results {
         /// </summary>
         public InstanceVersionInfo instanceVersionInfo { get; private set; }
         ///
-        override public void Parse (string result) {
-            var res = this.PreCheck (result);
-            instanceVersionInfo = res.raw_data.ToObject<InstanceVersionInfo> ();
+        override public void Parse (JToken result) {
+            this.PreCheck (result);
+            instanceVersionInfo = raw_data.ToObject<InstanceVersionInfo> ();
         }
     }
     /// <summary>

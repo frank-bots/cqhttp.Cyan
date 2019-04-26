@@ -4,11 +4,11 @@ namespace cqhttp.Cyan.ApiCall.Results {
         ///<summary>用于撤回消息的消息ID</summary>
         public int message_id { get; private set; }
         ///
-        public override void Parse (string result) {
+        public override void Parse (Newtonsoft.Json.Linq.JToken result) {
             try {
-                Base.ApiResult i = PreCheck (result);
+                PreCheck (result);
                 message_id =
-                    i.raw_data["message_id"].ToObject<int> ();
+                    raw_data["message_id"].ToObject<int> ();
             } catch (Exceptions.AsyncApicallException) {
                 Logger.Warn ("以限速方式调用发送消息API, 未返回message_id");
             } catch {

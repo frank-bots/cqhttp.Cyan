@@ -7,9 +7,9 @@ namespace cqhttp.Cyan.ApiCall.Results {
         /// <summary>获取到的群成员信息</summary>
         public Utils.GroupMemberInfo memberInfo { get; private set; }
         ///
-        public override void Parse (string result) {
-            Base.ApiResult i = PreCheck (result);
-            memberInfo = i.raw_data.ToObject<Utils.GroupMemberInfo> ();
+        public override void Parse (JToken result) {
+            PreCheck (result);
+            memberInfo = raw_data.ToObject<Utils.GroupMemberInfo> ();
         }
     }
 }

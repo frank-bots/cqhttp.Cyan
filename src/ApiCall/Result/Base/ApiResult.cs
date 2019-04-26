@@ -29,13 +29,12 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
         /// </summary>
         public Newtonsoft.Json.Linq.JToken raw_data { get; private set; }
         /// <summary>将收到的消息保存到this中</summary>
-        public virtual void Parse (string result) {
-            Base.ApiResult i = PreCheck (result);
+        public virtual void Parse (JToken result) {
+            PreCheck (result);
             return;
         }
         ///
-        protected ApiResult PreCheck (string result) {
-            JToken parsed = JToken.Parse (result);
+        protected void PreCheck (JToken parsed) {
             int retcode = parsed["retcode"].ToObject<int> ();
             switch (retcode) {
                 case 0:
@@ -50,7 +49,6 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
                     ErrorHandler.Handle (retcode);
                     break;
             }
-            return this;
         }
     }
 }

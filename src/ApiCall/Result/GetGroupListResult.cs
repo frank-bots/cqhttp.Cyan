@@ -7,10 +7,10 @@ namespace cqhttp.Cyan.ApiCall.Results {
         ///
         public List < (long, string) > groupList = new List < (long, string) > ();
         ///
-        public override void Parse (string result) {
-            Base.ApiResult i = PreCheck (result);
+        public override void Parse (JToken result) {
+            PreCheck (result);
             try {
-                foreach (var j in i.raw_data as JArray) {
+                foreach (var j in raw_data as JArray) {
                     groupList.Add (
                         (j["group_id"].ToObject<long> (), j["group_name"].ToString ())
                     );

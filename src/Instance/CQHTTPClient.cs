@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
 
-namespace cqhttp.Cyan.Instance
-{
+namespace cqhttp.Cyan.Instance {
     /// <summary>以HTTP协议调用API</summary>
     public class CQHTTPClient : CQApiClient {
         private string accessUrl;
@@ -65,7 +64,9 @@ namespace cqhttp.Cyan.Instance
                 }
             }
             request.response.Parse (
-                await response.Content.ReadAsStringAsync ()
+                Newtonsoft.Json.Linq.JToken.Parse (
+                    await response.Content.ReadAsStringAsync ()
+                )
             );
             return request.response;
         }

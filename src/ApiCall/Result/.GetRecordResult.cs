@@ -8,10 +8,10 @@ namespace cqhttp.Cyan.ApiCall.Results {
         /// </summary>
         public string file;
         ///
-        public override void Parse (string result) {
-            var i = this.PreCheck (result);
+        public override void Parse (JToken result) {
+            PreCheck (result);
             try {
-                file = i.raw_data["file"].ToString ();
+                file = raw_data["file"].ToString ();
             } catch {
                 Logger.Error ("调用get_record API未返回file");
                 throw new Exceptions.ErrorApicallException ();

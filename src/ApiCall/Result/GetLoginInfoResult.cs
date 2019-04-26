@@ -6,13 +6,13 @@ namespace cqhttp.Cyan.ApiCall.Results {
         ///
         public string nickname { get; private set; }
         ///
-        public override void Parse (string result) {
-            Base.ApiResult i = PreCheck (result);
+        public override void Parse (Newtonsoft.Json.Linq.JToken result) {
+            PreCheck (result);
             try {
                 user_id =
-                    i.raw_data["user_id"].ToObject<long> ();
+                    raw_data["user_id"].ToObject<long> ();
                 nickname =
-                    i.raw_data["nickname"].ToString ();
+                    raw_data["nickname"].ToString ();
             } catch {
                 Logger.Error ("调用发送消息API未返回必要的参数");
                 throw new Exceptions.ErrorApicallException ();

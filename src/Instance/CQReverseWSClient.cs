@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
@@ -13,8 +15,7 @@ namespace cqhttp.Cyan.Instance {
     public class CQReverseWSClient : CQApiClient {
 
         WebsocketDaemon.WebsocketServerInstance server;
-        string buffer;
-        bool received = false;
+        Dictionary<long, JToken> buffer = new Dictionary<long, JToken> ();
         object bufferLock = new object ();
         /// <summary>
         /// 当cqhttp中use_ws_reverse配置项为true时使用
@@ -41,12 +42,14 @@ namespace cqhttp.Cyan.Instance {
             (this.__eventListener as ReverseWSListener).api_call_func = SendRequestAsync;
             this.__eventListener.StartListen (this.__HandleEvent);
             Task.Run (() => {
+                JToken t;
                 if (server.socket.ConnectionInfo.Headers["Authorization"].Contains (accessToken) == false)
                     throw new Exceptions.ErrorApicallException ("身份验证失败");
                 server.socket.OnMessage = (m) => {
                     lock (bufferLock) {
-                        buffer = m;
-                        received = true;
+                        Logger.Debug ($"[reverse websocket received API response]:\n{m}");
+                        t = JToken.Parse (m);
+                        buffer[t["echo"].ToObject<long> ()] = t;
                     }
                 };
                 if (base.Initiate ().Result == false)
@@ -57,16 +60,18 @@ namespace cqhttp.Cyan.Instance {
         ///
         public override async Task<ApiResult> SendRequestAsync (ApiRequest request) {
             JObject constructor = new JObject ();
+            long echo = DateTime.Now.ToBinary ();
             constructor["action"] = request.apiPath.Substring (1);
             constructor["params"] = JObject.Parse (request.content);
+            constructor["echo"] = echo;
             await server.socket.Send (constructor.ToString (Formatting.None));
             await Config.TimeOut (
-                () => received == true,
+                () => buffer.ContainsKey (echo),
                 "API调用超时"
             );
             lock (bufferLock) {
-                request.response.Parse (buffer);
-                received = false;
+                request.response.Parse (buffer[echo]);
+                buffer.Remove (echo);
             }
             RequestPreprocess (request);
             return request.response;
