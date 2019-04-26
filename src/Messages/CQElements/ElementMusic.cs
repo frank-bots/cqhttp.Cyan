@@ -1,10 +1,10 @@
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Messages.CQElements {
+namespace cqhttp.Cyan.Messages.CQElements
+{
     ///
     public class ElementMusic : Base.Element {
         static Regex musicIdRe = new Regex ("<a href=\"/song?id=([0-9]+)\">");
@@ -20,14 +20,14 @@ namespace cqhttp.Cyan.Messages.CQElements {
                     ) {
                         return "511728615"; // 404 Not Found(Prod.by CashMoneyAP)
                     }
-                    Logger.Log (Enums.Verbosity.DEBUG, $"解析了163音乐搜索{keyword}的搜索结果");
+                    Logger.Debug ($"解析了163音乐搜索{keyword}的搜索结果");
                     return res["result"]["songs"][0]["id"].ToString ();
                 }
             // else if (type == "qq")
 
             // else if (type == "xiami")
             else if (type == "qq" || type == "xiami") {
-                Logger.Log (Enums.Verbosity.ERROR, "暂未实现163与xiami搜索结果的解析");
+                Logger.Error ("暂未实现163与xiami搜索结果的解析");
                 throw new System.NotImplementedException ("由于作者太菜,还没掌握qq和虾米音乐的搜索技巧，所以抱歉,这里抛出了一个微小的异常");
             }
             throw new Exceptions.ErrorElementException ("请将type设为163,qq,xiami之一");

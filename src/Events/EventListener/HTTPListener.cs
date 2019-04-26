@@ -1,15 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using cqhttp.Cyan.Enums;
-using cqhttp.Cyan.Events;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
 
-namespace cqhttp.Cyan.Events.EventListener {
+namespace cqhttp.Cyan.Events.EventListener
+{
     /// <summary>
     /// HTTP监听上报消息
     /// </summary>
@@ -50,8 +47,7 @@ namespace cqhttp.Cyan.Events.EventListener {
                             responseObject =
                                 listen_callback (CQEventHandler.HandleEvent (requestContent));
                         } catch (Exception e) {
-                            Logger.Log (
-                                Verbosity.ERROR,
+                            Logger.Error (
                                 $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
                             );
                         }
@@ -69,10 +65,7 @@ namespace cqhttp.Cyan.Events.EventListener {
                     }
                 });
             } catch (Exception e) {
-                Logger.Log (
-                    Verbosity.ERROR,
-                    $"网络出现未知错误{e}"
-                );
+                Logger.Error ($"网络出现未知错误{e}\n{e.Message}");
             }
         }
         private static string GetContent (byte[] secret, HttpListenerRequest request) {

@@ -4,9 +4,9 @@ using System.Text;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
-using cqhttp.Cyan.Enums;
 
-namespace cqhttp.Cyan.Instance {
+namespace cqhttp.Cyan.Instance
+{
     /// <summary>以HTTP协议调用API</summary>
     public class CQHTTPClient : CQApiClient {
         private string accessUrl;
@@ -24,11 +24,11 @@ namespace cqhttp.Cyan.Instance {
                 if (listen_port != -1) {
                     this.__eventListener = new Events.EventListener.HttpEventListener (listen_port, secret);
                     this.__eventListener.StartListen (__HandleEvent);
-                    Logger.Log (Verbosity.INFO, $"开始在{listen_port}端口上监听上报消息");
+                    Logger.Info ($"开始在{listen_port}端口上监听上报消息");
                 }
                 if (base.Initiate ().Result == false)
                     throw new Exceptions.ErrorApicallException ("初始化失败");
-                Logger.Log (Enums.Verbosity.INFO, $"成功连接");
+                Logger.Info ("成功连接");
             }
         /// <summary>发送API请求</summary>
         public override async Task<ApiResult> SendRequestAsync (ApiRequest x) {
@@ -54,15 +54,11 @@ namespace cqhttp.Cyan.Instance {
                         response = await httpClient.PostAsync (host + request.apiPath, content);
                     }
                 } catch (HttpRequestException) {
-                    Logger.Log (
-                        Verbosity.ERROR,
-                        "HTTP API连接错误"
-                    );
+                    Logger.Error ("HTTP API连接错误");
                     throw new Exceptions.NetworkFailureException ("您有没有忘记插网线emmmmmm?");
                 }
                 if (response.IsSuccessStatusCode == false) {
-                    Logger.Log (
-                        Verbosity.ERROR,
+                    Logger.Error (
                         $"调用HTTP API{await content.ReadAsStringAsync()}得到了错误的返回值{response.StatusCode}"
                     );
                     throw new Exceptions.NetworkFailureException ($"POST调用api出错");

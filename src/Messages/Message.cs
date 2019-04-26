@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages.CQElements;
 using cqhttp.Cyan.Messages.CQElements.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Messages {
+namespace cqhttp.Cyan.Messages
+{
     /// <summary>
     /// 由消息段构成的消息
     /// </summary>
@@ -115,13 +115,12 @@ namespace cqhttp.Cyan.Messages {
         private static Message Deserialize (string message, out short result) {
             Message ret = new Message { data = new List<Element> () };
 
-            Logger.Log (
-                Verbosity.DEBUG,
+            Logger.Debug (
                 $"反序列化消息{(message.Length>5?message.Substring(0,5)+"...":message)}"
             );
             try {
                 JArray ifParse = JArray.Parse (message);
-                Logger.Log (Verbosity.DEBUG, "收到的消息为json格式");
+                Logger.Debug ("收到的消息为json格式");
                 tempDict.Clear ();
                 foreach (var i in ifParse) {
                     tempDict = i["data"].ToObject<Dictionary<string, string>> ();
@@ -133,7 +132,7 @@ namespace cqhttp.Cyan.Messages {
                 return ret;
             } catch (JsonException) {
                 Match match = Config.matchCqCode.Match (message);
-                Logger.Log (Verbosity.DEBUG, "收到的消息为字符串格式");
+                Logger.Debug ("收到的消息为字符串格式");
                 if (match.Success) {
                     while (match.Success) {
                         if (match.Index > 0)
@@ -191,7 +190,7 @@ namespace cqhttp.Cyan.Messages {
         }
 
         private static Element BuildCQElement (string cqcode) {
-            Logger.Log (Verbosity.DEBUG, $"正在为CQ码{cqcode}构筑消息段");
+            Logger.Debug ($"正在为CQ码{cqcode}构筑消息段");
             string type = Config.parseCqCode.Match (cqcode).Groups[1].Value;
             tempDict.Clear ();
             foreach (Match i in Config.paramCqCode.Matches (cqcode))
@@ -242,7 +241,7 @@ namespace cqhttp.Cyan.Messages {
                             long.Parse (dict["id"])
                         );
                     default:
-                        Logger.Log (Verbosity.WARN, $"未能解析type为{type}的元素");
+                        Logger.Warn ($"未能解析type为{type}的元素");
                         return new Element (type, dict);
                 }
             } catch (KeyNotFoundException) {

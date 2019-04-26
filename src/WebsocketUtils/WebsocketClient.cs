@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.WebsocketUtils {
+namespace cqhttp.Cyan.WebsocketUtils
+{
     /// <summary>
     /// As Websocket Client
     /// </summary>
@@ -72,9 +72,9 @@ namespace cqhttp.Cyan.WebsocketUtils {
                     cancellationToken: new CancellationToken () //not going to cancel
                 );
             } catch (System.Exception e) {
-                Logger.Log (Enums.Verbosity.ERROR, "Websocket调用API失败");
-                Logger.Log (Enums.Verbosity.DEBUG, "调用:" + obj.ToString ());
-                Logger.Log (Enums.Verbosity.DEBUG, "Traceback:" + e.StackTrace);
+                Logger.Error ("Websocket调用API失败");
+                Logger.Debug ("调用:" + obj.ToString ());
+                Logger.Debug ("Traceback:" + e.StackTrace);
                 throw new Exceptions.NetworkFailureException ("调用API失败");
             }
             return time;

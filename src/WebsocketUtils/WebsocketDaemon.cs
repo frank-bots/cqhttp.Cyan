@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
 using Fleck;
-namespace cqhttp.Cyan.WebsocketUtils {
+namespace cqhttp.Cyan.WebsocketUtils
+{
 
     /// <summary>
     /// As Websocket Server
@@ -15,22 +14,20 @@ namespace cqhttp.Cyan.WebsocketUtils {
         //                  port, path
         static WebsocketDaemon () {
             Fleck.FleckLog.LogAction = (level, m, e) => {
-                Enums.Verbosity v = Enums.Verbosity.INFO;
                 switch (level) {
                     case LogLevel.Info:
-                        v = Enums.Verbosity.INFO;
+                        Logger.Info (m);
                         break;
                     case LogLevel.Warn:
-                        v = Enums.Verbosity.WARN;
+                        Logger.Warn (m);
                         break;
                     case LogLevel.Error:
-                        v = Enums.Verbosity.ERROR;
+                        Logger.Error (m);
                         break;
                     case LogLevel.Debug:
-                        v = Enums.Verbosity.DEBUG;
+                        Logger.Debug (m);
                         break;
                 }
-                Logger.Log (v, m);
             }; // unify logs
         }
         /// <summary>
@@ -53,15 +50,13 @@ namespace cqhttp.Cyan.WebsocketUtils {
                     servers[port].RestartAfterListenError = true;
                     servers[port].Start (socket => {
                         socket.OnOpen = () => {
-                            Logger.Log (
-                                Enums.Verbosity.DEBUG,
+                            Logger.Debug (
                                 $"来自{socket.ConnectionInfo.ClientIpAddress}的连接"
                             );
                             pool[(port, socket.ConnectionInfo.Path.Trim ('/'))] = socket;
                         };
                         socket.OnClose = () => {
-                            Logger.Log (
-                                Enums.Verbosity.DEBUG,
+                            Logger.Debug (
                                 $"{socket.ConnectionInfo.ClientIpAddress}关闭连接"
                             );
                             pool.Remove ((port, socket.ConnectionInfo.Path.Trim ('/')));

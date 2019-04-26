@@ -13,7 +13,7 @@ namespace cqhttp.Cyan.ApiCall.Results {
             try {
                 file = i.raw_data["file"].ToString();
             } catch {
-                Logger.Log (Enums.Verbosity.ERROR, "调用get_image API未返回file");
+                Logger.Error ("调用get_image API未返回file");
                 throw new Exceptions.ErrorApicallException ();
             }
         }

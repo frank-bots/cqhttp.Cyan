@@ -1,5 +1,3 @@
-using System;
-using cqhttp.Cyan;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
@@ -7,7 +5,8 @@ using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events {
+namespace cqhttp.Cyan.Events
+{
     /// <summary>
     /// 事件处理
     /// </summary>
@@ -23,7 +22,7 @@ namespace cqhttp.Cyan.Events {
             try {
                 eventJson = JObject.Parse (e);
             } catch (JsonException) {
-                Logger.Log (Verbosity.ERROR, $"收到了错误的上报消息{e}");
+                Logger.Error ($"收到了错误的上报消息{e}");
                 throw new Exceptions.ErrorEventException ("收到了错误的上报消息");
             }
             post_type = eventJson["post_type"].ToString ();
@@ -47,14 +46,13 @@ namespace cqhttp.Cyan.Events {
                                 eventJson["status"].ToObject<Status> ()
                             );
                         default:
-                            Logger.Log (
-                                Verbosity.ERROR,
+                            Logger.Error (
                                 $"未能解析元事件{eventJson.ToString()}"
                             );
                             throw new Exceptions.ErrorEventException ("未能解析元事件");
                     }
             }
-            Logger.Log (Verbosity.ERROR, $"未能解析type为{post_type}的event");
+            Logger.Error ($"未能解析type为{post_type}的event");
             throw new Exceptions.NullEventException ($"未能解析type为{post_type}的event");
         }
 
@@ -87,8 +85,7 @@ namespace cqhttp.Cyan.Events {
                         e["discuss_id"].ToObject<long> ()
                     );
                 default:
-                    Logger.Log (
-                        Verbosity.ERROR,
+                    Logger.Error (
                         $"未能解析消息事件{e.ToString()}"
                     );
                     return new UnknownEvent (
@@ -118,8 +115,7 @@ namespace cqhttp.Cyan.Events {
                         e["flag"].ToString ()
                     );
                 default:
-                    Logger.Log (
-                        Verbosity.ERROR,
+                    Logger.Error (
                         $"未能解析请求事件{e.ToString()}"
                     );
                     return new UnknownEvent (
@@ -164,8 +160,7 @@ namespace cqhttp.Cyan.Events {
                         e["user_id"].ToObject<long> ()
                     );
                 default:
-                    Logger.Log (
-                        Verbosity.ERROR,
+                    Logger.Error (
                         $"未能解析提醒事件{e.ToString()}"
                     );
                     return new UnknownEvent (

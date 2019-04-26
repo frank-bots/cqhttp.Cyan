@@ -24,8 +24,7 @@ namespace cqhttp.Cyan.Events.EventListener {
                     ));
                 });
             } catch (System.Exception e) {
-                Logger.Log (
-                    Enums.Verbosity.ERROR,
+                Logger.Error (
                     $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
                 );
             }

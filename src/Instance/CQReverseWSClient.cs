@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
@@ -7,7 +6,8 @@ using cqhttp.Cyan.WebsocketUtils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Instance {
+namespace cqhttp.Cyan.Instance
+{
     /// <summary>
     /// 反向websocket连接方式
     /// </summary>
@@ -52,7 +52,7 @@ namespace cqhttp.Cyan.Instance {
                 };
                 if (base.Initiate ().Result == false)
                     throw new Exceptions.ErrorApicallException ("初始化失败");
-                Logger.Log (Enums.Verbosity.INFO, $"成功连接");
+                Logger.Info ($"成功连接");
             });
         }
         ///

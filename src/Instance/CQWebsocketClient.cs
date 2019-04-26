@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Net.WebSockets;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
-using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.EventListener;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Instance {
+namespace cqhttp.Cyan.Instance
+{
     /// <summary>websocket协议调用api</summary>
     public class CQWebsocketClient : CQApiClient {
         private string accessUrl;
@@ -43,7 +38,7 @@ namespace cqhttp.Cyan.Instance {
                 }
                 if (base.Initiate ().Result == false)
                     throw new Exceptions.ErrorApicallException ("初始化失败");
-                Logger.Log (Enums.Verbosity.INFO, $"成功连接");
+                Logger.Info ("成功连接");
             }
 
         /// <summary></summary>
@@ -74,7 +69,7 @@ namespace cqhttp.Cyan.Instance {
             return request.response;
         }
         private async void CleanUp () {
-            Logger.Log (Verbosity.INFO, "开始关闭Websocket连接");
+            Logger.Info ("开始关闭Websocket连接");
             await WebsocketUtils.ConnectionPool.CloseAsync (
                 this.accessUrl + (this.accessToken == "" ? "" : "?access_token=" + this.accessToken)
             );

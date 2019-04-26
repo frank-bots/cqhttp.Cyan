@@ -78,7 +78,7 @@ namespace cqhttp.Cyan {
             }
         }
         /// <summary></summary>
-        public static void Log (Verbosity v, string message) {
+        static void Log (Verbosity v, string message) {
             if (v > logLevel)
                 return;
             if ((logType & LogType.Console) != 0)
@@ -87,6 +87,21 @@ namespace cqhttp.Cyan {
                 LogToFile (v, $"[{DateTime.Now.ToString("HH:mm:ss")}] [{v.ToString()}] {message}\r\n");
             LogEvent?.Invoke (v, message);
         }
+        ///
+        public static void Debug (string message) =>
+            Log (Verbosity.DEBUG, message);
+        ///
+        public static void Info (string message) =>
+            Log (Verbosity.INFO, message);
+        ///
+        public static void Warn (string message) =>
+            Log (Verbosity.WARN, message);
+        ///
+        public static void Error (string message) =>
+            Log (Verbosity.ERROR, message);
+        ///
+        public static void Fatal (string message) =>
+            Log (Verbosity.FATAL, message);
 
         /// <summary>
         /// 日志记录

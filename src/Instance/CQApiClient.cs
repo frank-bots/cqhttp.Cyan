@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Requests.Base;
@@ -11,9 +10,9 @@ using cqhttp.Cyan.Events.CQResponses.Base;
 using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
-using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Instance {
+namespace cqhttp.Cyan.Instance
+{
     /// <summary></summary>
     public abstract class CQApiClient {
         /// <summary>
@@ -72,7 +71,7 @@ namespace cqhttp.Cyan.Instance {
         }
         ///
         protected void RequestPreprocess (ApiRequest x) {
-            Logger.Log (Verbosity.INFO, $"进行了{x.GetType()}请求");
+            Logger.Info ($"进行了{x.GetType()}请求");
             if (groupTable != null) {
                 if (x is GetGroupListRequest) {
                     foreach (var i in (x.response as GetGroupListResult).groupList) {
@@ -153,7 +152,7 @@ namespace cqhttp.Cyan.Instance {
         public event OnEventDelegateAsync OnEventAsync;
         /// <summary></summary>
         protected CQResponse __HandleEvent (CQEvent event_) {
-            Logger.Log (Verbosity.DEBUG, $"收到了完整的上报事件{event_.postType}");
+            Logger.Debug ($"收到了完整的上报事件{event_.postType}");
             if (event_ is MetaEvent) {
                 if (event_ is HeartbeatEvent) {
                     if ((event_ as HeartbeatEvent).status.online)
@@ -199,7 +198,7 @@ namespace cqhttp.Cyan.Instance {
             ref CQEvent event_
         ) {
             lock (dialoguePoolLock) {
-                Logger.Log (Verbosity.DEBUG, "got a dialogue");
+                Logger.Debug ("got a dialogue");
                 long bid =
                     (event_ is GroupMessageEvent) ? (event_ as GroupMessageEvent).group_id :
                     (event_ is DiscussMessageEvent) ? (event_ as DiscussMessageEvent).discuss_id :

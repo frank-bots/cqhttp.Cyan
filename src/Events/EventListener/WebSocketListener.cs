@@ -1,13 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.WebSockets;
-using System.Text;
-using System.Threading.Tasks;
-using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Results.Base;
-using cqhttp.Cyan.Enums;
 
-namespace cqhttp.Cyan.Events.EventListener {
+namespace cqhttp.Cyan.Events.EventListener
+{
     /// <summary></summary>
     public class WebsocketListener : _WebsocketProcessor {
         private ClientWebSocket client;
@@ -20,7 +16,7 @@ namespace cqhttp.Cyan.Events.EventListener {
         }
         /// <summary></summary>
         public override void StartListen (System.Func<CQEvents.Base.CQEvent, CQResponses.Base.CQResponse> callback) {
-            Logger.Log (Verbosity.INFO, $"建立与事件上报服务器{dest_url}的websocket连接");
+            Logger.Info ($"建立与事件上报服务器{dest_url}的websocket连接");
             listen_callback = callback;
             lock (listen_lock) {
                 client.ConnectAsync (

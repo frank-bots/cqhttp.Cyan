@@ -16,7 +16,7 @@ namespace cqhttp.Cyan.ApiCall.Results {
                     );
                 }
             } catch {
-                Logger.Log (Enums.Verbosity.ERROR, "调用发送消息API未返回message_id");
+                Logger.Error ("调用发送消息API未返回message_id");
                 throw new Exceptions.ErrorApicallException ();
             }
         }

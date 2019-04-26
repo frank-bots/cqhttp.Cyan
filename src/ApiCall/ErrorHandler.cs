@@ -16,7 +16,7 @@ namespace cqhttp.Cyan.ApiCall {
                 case -26:
                     throw new Exceptions.ErrorApicallException ("发送消息过长, 请分条发送");
                 case -34:
-                    Logger.Log (Enums.Verbosity.WARN, "账号被禁言, 消息无法发送");
+                    Logger.Warn ("账号被禁言, 消息无法发送");
                     return;
             }
             throw new Exceptions.ErrorApicallException ($"调用API返回的结果有误(retcode:{apiRetcode})");
