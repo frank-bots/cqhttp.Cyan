@@ -12,7 +12,7 @@ namespace cqhttp.Cyan {
         /// <summary>网络错误时最多重试的次数</summary>
         public const int networkMaxFailure = 3;
         /// <summary>网络请求超时秒数</summary>
-        public const int timeOut = 5;
+        public static int timeOut = 10;
         /// <summary>检查连接是否存活的间隔</summary>
         public const int checkAliveInterval = 10000; //10秒
 
