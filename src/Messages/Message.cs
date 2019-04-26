@@ -59,7 +59,6 @@ namespace cqhttp.Cyan.Messages {
         /// </summary>
         public string raw_data_cq {
             get {
-                Logger.Log (Verbosity.DEBUG, "显式将消息转化为CQ码格式");
                 return Serialize (this, false);
             }
         }
@@ -68,7 +67,6 @@ namespace cqhttp.Cyan.Messages {
         /// </summary>
         public string raw_data_json {
             get {
-                Logger.Log (Verbosity.DEBUG, "显式将消息转化为json数组格式");
                 return Serialize (this, true);
             }
         }
@@ -243,12 +241,14 @@ namespace cqhttp.Cyan.Messages {
                             Enums.MessageType.discuss_,
                             long.Parse (dict["id"])
                         );
+                    default:
+                        Logger.Log (Verbosity.WARN, $"未能解析type为{type}的元素");
+                        return new Element (type, dict);
                 }
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
             }
-
-            throw new Exceptions.NullElementException ($"未能解析type为{type}的元素");
+            //throw new Exceptions.NullElementException ($"未能解析type为{type}的元素");
         }
     }
 

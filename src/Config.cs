@@ -43,15 +43,15 @@ namespace cqhttp.Cyan {
         /// <param name="interval">检查条件的间隔(毫秒)</param>
         public static async Task TimeOut (
             System.Func<bool> condition,
-            System.Exception e,
+            string e,
             int interval = 200
         ) {
             int cnt = 0;
             while (condition () == false && cnt++ * interval < timeOut * 1000)
                 await Task.Run (() => Thread.Sleep (interval));
             if (condition () == false) {
-                Logger.Log (Enums.Verbosity.ERROR, $"操作超时");
-                throw e;
+                Logger.Log (Enums.Verbosity.ERROR, $"操作超时: " + e);
+                throw new Exceptions.NetworkFailureException (e);
             }
         }
     }

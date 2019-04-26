@@ -63,7 +63,7 @@ namespace cqhttp.Cyan.Instance {
             await server.socket.Send (constructor.ToString (Formatting.None));
             await Config.TimeOut (
                 () => received == true,
-                new Exceptions.NetworkFailureException ("API调用超时")
+                "API调用超时"
             );
             lock (bufferLock) {
                 request.response.Parse (buffer);

@@ -74,9 +74,7 @@ namespace cqhttp.Cyan.WebsocketUtils {
                 get {
                     Config.TimeOut (
                         () => pool.ContainsKey ((port, path)),
-                        new Exceptions.NetworkFailureException (
-                            $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求"
-                        )
+                        $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求"
                     ).Wait (); //请检查网络连通性或调整cqhttp.Cyan.Config.timeOut
                     return pool[(port, path)];
                 }
