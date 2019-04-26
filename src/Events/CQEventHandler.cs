@@ -5,8 +5,7 @@ using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Events
-{
+namespace cqhttp.Cyan.Events {
     /// <summary>
     /// 事件处理
     /// </summary>
@@ -62,7 +61,7 @@ namespace cqhttp.Cyan.Events
                 case "private":
                     return new PrivateMessageEvent (
                         e["time"].ToObject<long> (),
-                        Message.Parse (e["message"].ToString ()),
+                        Message.Parse (e["message"].ToString (Formatting.None)),
                         e["sender"].ToObject<Sender> (),
                         e["message_id"].ToObject<int> ()
                     );
@@ -70,7 +69,7 @@ namespace cqhttp.Cyan.Events
                     return new GroupMessageEvent (
                         e["time"].ToObject<long> (),
                         e["sub_type"].ToString (),
-                        Message.Parse (e["message"].ToString ()),
+                        Message.Parse (e["message"].ToString (Formatting.None)),
                         e["sender"].ToObject<GroupSender> (),
                         e["message_id"].ToObject<int> (),
                         e["group_id"].ToObject<long> (),
@@ -79,7 +78,7 @@ namespace cqhttp.Cyan.Events
                 case "discuss":
                     return new DiscussMessageEvent (
                         e["time"].ToObject<long> (),
-                        Message.Parse (e["message"].ToString ()),
+                        Message.Parse (e["message"].ToString (Formatting.None)),
                         e["sender"].ToObject<Sender> (),
                         e["message_id"].ToObject<int> (),
                         e["discuss_id"].ToObject<long> ()
