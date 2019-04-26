@@ -4,8 +4,7 @@ using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Events.EventListener;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Instance
-{
+namespace cqhttp.Cyan.Instance {
     /// <summary>websocket协议调用api</summary>
     public class CQWebsocketClient : CQApiClient {
         private string accessUrl;
@@ -58,7 +57,7 @@ namespace cqhttp.Cyan.Instance
                 (apiToken == "" ? "" : "?access_token=" + apiToken);
             JObject constructor = new JObject ();
             constructor["action"] = request.apiPath.Substring (1);
-            constructor["params"] = request.content;
+            constructor["params"] = JObject.Parse (request.content);
             int timemark = await WebsocketUtils.ConnectionPool.SendJsonAsync (
                 dest, constructor
             ); // how to make use of timestamp?

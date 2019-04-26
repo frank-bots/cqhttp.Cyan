@@ -6,8 +6,7 @@ using cqhttp.Cyan.WebsocketUtils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Instance
-{
+namespace cqhttp.Cyan.Instance {
     /// <summary>
     /// 反向websocket连接方式
     /// </summary>
@@ -59,7 +58,7 @@ namespace cqhttp.Cyan.Instance
         public override async Task<ApiResult> SendRequestAsync (ApiRequest request) {
             JObject constructor = new JObject ();
             constructor["action"] = request.apiPath.Substring (1);
-            constructor["params"] = request.content;
+            constructor["params"] = JObject.Parse (request.content);
             await server.socket.Send (constructor.ToString (Formatting.None));
             await Config.TimeOut (
                 () => received == true,
