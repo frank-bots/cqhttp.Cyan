@@ -18,8 +18,8 @@ namespace cqhttp.Cyan.WebsocketUtils {
             new Dictionary<string, string> ();
         private static Dictionary<string, object> resultLock =
             new Dictionary<string, object> ();
-        private static Dictionary<string, Action> receive =
-            new Dictionary<string, Action> ();
+        private static Dictionary<string, Func<Task>> receive =
+            new Dictionary<string, Func<Task>> ();
         private static async Task Connect (string uri) {
             pool[uri] = new ClientWebSocket ();
             await pool[uri].ConnectAsync (
@@ -29,16 +29,16 @@ namespace cqhttp.Cyan.WebsocketUtils {
             receive[uri] = async () => {
                 byte[] buffer = new byte[1024 * 3];
                 result[uri] = "";
+                if (resultLock.ContainsKey (uri) == false) {
+                    resultLock.Add (uri, new object ());
+                }
                 while (true) {
                     var res = await pool[uri].ReceiveAsync (
                         buffer: buffer,
                         cancellationToken: new CancellationToken ()
                     );
-                    if (resultLock.ContainsKey (uri) == false) {
-                        resultLock.Add (uri, new object ());
-                    }
                     lock (resultLock[uri]) {
-                        result[uri] += buffer.ToString ().TrimEnd ('\0');
+                        result[uri] += Encoding.UTF8.GetString (buffer).TrimEnd ('\0');
                     }
                     if (res.EndOfMessage)
                         break;
@@ -82,7 +82,7 @@ namespace cqhttp.Cyan.WebsocketUtils {
             return time;
         }
         public static async Task<string> GetResponse (string uri) {
-            await Task.Run (receive[uri]);
+            await receive[uri] ();
             return result[uri];
         }
         public static async Task CloseAsync (string uri) {

@@ -64,7 +64,7 @@ namespace cqhttp.Cyan.Instance {
             string resp = await WebsocketUtils.ConnectionPool.GetResponse (dest);
             if (resp.Contains ("authorization failed"))
                 throw new Exceptions.ErrorApicallException ("身份验证失败");
-            request.response.Parse (resp);
+            request.response.Parse (JToken.Parse(resp));
             return request.response;
         }
         private async void CleanUp () {
