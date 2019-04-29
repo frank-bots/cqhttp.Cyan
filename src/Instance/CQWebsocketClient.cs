@@ -26,7 +26,7 @@ namespace cqhttp.Cyan.Instance {
                 if (!string.IsNullOrEmpty (eventUrl)) {
                     if (eventUrl.EndsWith ("/event")) {
                         eventUrl += '/';
-                    } else if (!eventUrl.EndsWith ("/event")) {
+                    } else if (!eventUrl.EndsWith ("/event/")) {
                         eventUrl += "/event/";
                     }
                     eventUrl += !string.IsNullOrEmpty (accessToken) ? "?access_token=" + accessToken : "";
