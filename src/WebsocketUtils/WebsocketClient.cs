@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.WebsocketUtils
-{
+namespace cqhttp.Cyan.WebsocketUtils {
     /// <summary>
     /// As Websocket Client
     /// </summary>
@@ -35,6 +34,9 @@ namespace cqhttp.Cyan.WebsocketUtils
                         buffer: buffer,
                         cancellationToken: new CancellationToken ()
                     );
+                    if (resultLock.ContainsKey (uri)) {
+                        resultLock.Add (uri, new object ());
+                    }
                     lock (resultLock[uri]) {
                         result[uri] += buffer.ToString ().TrimEnd ('\0');
                     }
