@@ -5,8 +5,7 @@ using cqhttp.Cyan.Messages.CQElements.Base;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace cqhttp.Cyan.Messages
-{
+namespace cqhttp.Cyan.Messages {
     /// <summary>
     /// 由消息段构成的消息
     /// </summary>

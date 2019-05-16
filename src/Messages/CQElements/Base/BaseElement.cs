@@ -29,7 +29,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public static bool operator == (Element a, Element b) {
             if (a is null && b is null) return true;
             if (a is null || b is null) return false;
-            if(a.type!=b.type)return false;
+            if (a.type != b.type) return false;
             var i = a.data.GetEnumerator ();
             var j = b.data.GetEnumerator ();
             while (i.Current.Key == j.Current.Key && i.Current.Value == j.Current.Value) {
@@ -59,7 +59,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public override int GetHashCode () {
             int hash = 1;
             foreach (var i in data)
-                hash ^= i.GetHashCode();
+                hash ^= i.GetHashCode ();
             return hash;
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public string raw_data_cq {
             get {
                 if (type == "text")
-                    return data["text"];
+                    return Encoder.EncodeText (data["text"]);
                 string paramBuilder = "";
                 foreach (var i in data)
                     if (i.Value.Length > 0)
@@ -118,9 +118,9 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         }
     }
     class Encoder {
-        public static string EncodeText (string enc) => enc.Replace ("&", "&amp").Replace ("[", "&#91").Replace ("]", "&#93");
-        public static string EncodeValue (string text) => EncodeText (text).Replace (",", "&#44");
-        public static string Decode (string enc) => enc.Replace ("&amp", "&").Replace ("&#91", "[")
-            .Replace ("&#93", "]").Replace ("&#44", ",");
+        public static string EncodeText (string enc) => enc.Replace ("&", "&amp;").Replace ("[", "&#91;").Replace ("]", "&#93;");
+        public static string EncodeValue (string text) => EncodeText (text).Replace (",", "&#44;");
+        public static string Decode (string enc) => enc.Replace ("&amp;", "&").Replace ("&#91;", "[")
+            .Replace ("&#93;", "]").Replace ("&#44;", ",");
     }
 }
