@@ -645,12 +645,12 @@ references:
   commentId: T:cqhttp.Cyan.ApiCall.Results.Base.ApiResult
   fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult
   nameWithType: ApiResult
-- uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse(System.String)
-  nameWithType: ApiResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: ApiResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_Parse_
@@ -658,12 +658,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.Parse
   nameWithType: ApiResult.Parse
-- uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck(System.String)
-  name: PreCheck(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_PreCheck_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck(System.String)
-  nameWithType: ApiResult.PreCheck(String)
+- uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck(Newtonsoft.Json.Linq.JToken)
+  name: PreCheck(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_PreCheck_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck(Newtonsoft.Json.Linq.JToken)
+  nameWithType: ApiResult.PreCheck(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.PreCheck*
   name: PreCheck
   href: api/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_PreCheck_
@@ -728,12 +728,12 @@ references:
   commentId: F:cqhttp.Cyan.ApiCall.Results.GetGroupListResult.groupList
   fullName: cqhttp.Cyan.ApiCall.Results.GetGroupListResult.groupList
   nameWithType: GetGroupListResult.groupList
-- uid: cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupListResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse(System.String)
-  nameWithType: GetGroupListResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupListResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetGroupListResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetGroupListResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupListResult_Parse_
@@ -760,12 +760,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.memberInfo
   nameWithType: GetGroupMemberInfoResult.memberInfo
-- uid: cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupMemberInfoResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse(System.String)
-  nameWithType: GetGroupMemberInfoResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupMemberInfoResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetGroupMemberInfoResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupMemberInfoResult_Parse_
@@ -792,12 +792,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.memberInfo
   nameWithType: GetGroupMemberListResult.memberInfo
-- uid: cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupMemberListResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse(System.String)
-  nameWithType: GetGroupMemberListResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupMemberListResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetGroupMemberListResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.html#cqhttp_Cyan_ApiCall_Results_GetGroupMemberListResult_Parse_
@@ -817,12 +817,12 @@ references:
   commentId: F:cqhttp.Cyan.ApiCall.Results.GetImageResult.file
   fullName: cqhttp.Cyan.ApiCall.Results.GetImageResult.file
   nameWithType: GetImageResult.file
-- uid: cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetImageResult.html#cqhttp_Cyan_ApiCall_Results_GetImageResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse(System.String)
-  nameWithType: GetImageResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetImageResult.html#cqhttp_Cyan_ApiCall_Results_GetImageResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetImageResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetImageResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetImageResult.html#cqhttp_Cyan_ApiCall_Results_GetImageResult_Parse_
@@ -849,12 +849,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.nickname
   nameWithType: GetLoginInfoResult.nickname
-- uid: cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetLoginInfoResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse(System.String)
-  nameWithType: GetLoginInfoResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetLoginInfoResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetLoginInfoResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetLoginInfoResult_Parse_
@@ -887,12 +887,12 @@ references:
   commentId: F:cqhttp.Cyan.ApiCall.Results.GetRecordResult.file
   fullName: cqhttp.Cyan.ApiCall.Results.GetRecordResult.file
   nameWithType: GetRecordResult.file
-- uid: cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetRecordResult.html#cqhttp_Cyan_ApiCall_Results_GetRecordResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse(System.String)
-  nameWithType: GetRecordResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetRecordResult.html#cqhttp_Cyan_ApiCall_Results_GetRecordResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetRecordResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetRecordResult.html#cqhttp_Cyan_ApiCall_Results_GetRecordResult_Parse_
@@ -932,12 +932,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.instanceVersionInfo
   nameWithType: GetVersionInfoResult.instanceVersionInfo
-- uid: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetVersionInfoResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse(System.String)
-  nameWithType: GetVersionInfoResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetVersionInfoResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetVersionInfoResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetVersionInfoResult_Parse_
@@ -1009,12 +1009,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.SendmsgResult.message_id
   nameWithType: SendmsgResult.message_id
-- uid: cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.ApiCall.Results.SendmsgResult.html#cqhttp_Cyan_ApiCall_Results_SendmsgResult_Parse_System_String_
-  commentId: M:cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse(System.String)
-  fullName: cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse(System.String)
-  nameWithType: SendmsgResult.Parse(String)
+- uid: cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.ApiCall.Results.SendmsgResult.html#cqhttp_Cyan_ApiCall_Results_SendmsgResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: SendmsgResult.Parse(JToken)
 - uid: cqhttp.Cyan.ApiCall.Results.SendmsgResult.Parse*
   name: Parse
   href: api/cqhttp.Cyan.ApiCall.Results.SendmsgResult.html#cqhttp_Cyan_ApiCall_Results_SendmsgResult_Parse_
@@ -1083,15 +1083,15 @@ references:
   commentId: F:cqhttp.Cyan.Config.timeOut
   fullName: cqhttp.Cyan.Config.timeOut
   nameWithType: Config.timeOut
-- uid: cqhttp.Cyan.Config.TimeOut(System.Func{System.Boolean},System.Exception,System.Int32)
-  name: TimeOut(Func<Boolean>, Exception, Int32)
-  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_TimeOut_System_Func_System_Boolean__System_Exception_System_Int32_
-  commentId: M:cqhttp.Cyan.Config.TimeOut(System.Func{System.Boolean},System.Exception,System.Int32)
-  name.vb: TimeOut(Func(Of Boolean), Exception, Int32)
-  fullName: cqhttp.Cyan.Config.TimeOut(System.Func<System.Boolean>, System.Exception, System.Int32)
-  fullName.vb: cqhttp.Cyan.Config.TimeOut(System.Func(Of System.Boolean), System.Exception, System.Int32)
-  nameWithType: Config.TimeOut(Func<Boolean>, Exception, Int32)
-  nameWithType.vb: Config.TimeOut(Func(Of Boolean), Exception, Int32)
+- uid: cqhttp.Cyan.Config.TimeOut(System.Func{System.Boolean},System.String,System.Int32)
+  name: TimeOut(Func<Boolean>, String, Int32)
+  href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_TimeOut_System_Func_System_Boolean__System_String_System_Int32_
+  commentId: M:cqhttp.Cyan.Config.TimeOut(System.Func{System.Boolean},System.String,System.Int32)
+  name.vb: TimeOut(Func(Of Boolean), String, Int32)
+  fullName: cqhttp.Cyan.Config.TimeOut(System.Func<System.Boolean>, System.String, System.Int32)
+  fullName.vb: cqhttp.Cyan.Config.TimeOut(System.Func(Of System.Boolean), System.String, System.Int32)
+  nameWithType: Config.TimeOut(Func<Boolean>, String, Int32)
+  nameWithType.vb: Config.TimeOut(Func(Of Boolean), String, Int32)
 - uid: cqhttp.Cyan.Config.TimeOut*
   name: TimeOut
   href: api/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_TimeOut_
@@ -3181,6 +3181,19 @@ references:
   commentId: F:cqhttp.Cyan.Instance.CQApiClient.groupTable
   fullName: cqhttp.Cyan.Instance.CQApiClient.groupTable
   nameWithType: CQApiClient.groupTable
+- uid: cqhttp.Cyan.Instance.CQApiClient.Initiate
+  name: Initiate()
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_Initiate
+  commentId: M:cqhttp.Cyan.Instance.CQApiClient.Initiate
+  fullName: cqhttp.Cyan.Instance.CQApiClient.Initiate()
+  nameWithType: CQApiClient.Initiate()
+- uid: cqhttp.Cyan.Instance.CQApiClient.Initiate*
+  name: Initiate
+  href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_Initiate_
+  commentId: Overload:cqhttp.Cyan.Instance.CQApiClient.Initiate
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Instance.CQApiClient.Initiate
+  nameWithType: CQApiClient.Initiate
 - uid: cqhttp.Cyan.Instance.CQApiClient.is_pro
   name: is_pro
   href: api/cqhttp.Cyan.Instance.CQApiClient.html#cqhttp_Cyan_Instance_CQApiClient_is_pro
@@ -3517,19 +3530,58 @@ references:
   commentId: T:cqhttp.Cyan.Logger
   fullName: cqhttp.Cyan.Logger
   nameWithType: Logger
-- uid: cqhttp.Cyan.Logger.Log(cqhttp.Cyan.Enums.Verbosity,System.String)
-  name: Log(Verbosity, String)
-  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Log_cqhttp_Cyan_Enums_Verbosity_System_String_
-  commentId: M:cqhttp.Cyan.Logger.Log(cqhttp.Cyan.Enums.Verbosity,System.String)
-  fullName: cqhttp.Cyan.Logger.Log(cqhttp.Cyan.Enums.Verbosity, System.String)
-  nameWithType: Logger.Log(Verbosity, String)
-- uid: cqhttp.Cyan.Logger.Log*
-  name: Log
-  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Log_
-  commentId: Overload:cqhttp.Cyan.Logger.Log
+- uid: cqhttp.Cyan.Logger.Debug(System.String)
+  name: Debug(String)
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Debug_System_String_
+  commentId: M:cqhttp.Cyan.Logger.Debug(System.String)
+  fullName: cqhttp.Cyan.Logger.Debug(System.String)
+  nameWithType: Logger.Debug(String)
+- uid: cqhttp.Cyan.Logger.Debug*
+  name: Debug
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Debug_
+  commentId: Overload:cqhttp.Cyan.Logger.Debug
   isSpec: "True"
-  fullName: cqhttp.Cyan.Logger.Log
-  nameWithType: Logger.Log
+  fullName: cqhttp.Cyan.Logger.Debug
+  nameWithType: Logger.Debug
+- uid: cqhttp.Cyan.Logger.Error(System.String)
+  name: Error(String)
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Error_System_String_
+  commentId: M:cqhttp.Cyan.Logger.Error(System.String)
+  fullName: cqhttp.Cyan.Logger.Error(System.String)
+  nameWithType: Logger.Error(String)
+- uid: cqhttp.Cyan.Logger.Error*
+  name: Error
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Error_
+  commentId: Overload:cqhttp.Cyan.Logger.Error
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Logger.Error
+  nameWithType: Logger.Error
+- uid: cqhttp.Cyan.Logger.Fatal(System.String)
+  name: Fatal(String)
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Fatal_System_String_
+  commentId: M:cqhttp.Cyan.Logger.Fatal(System.String)
+  fullName: cqhttp.Cyan.Logger.Fatal(System.String)
+  nameWithType: Logger.Fatal(String)
+- uid: cqhttp.Cyan.Logger.Fatal*
+  name: Fatal
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Fatal_
+  commentId: Overload:cqhttp.Cyan.Logger.Fatal
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Logger.Fatal
+  nameWithType: Logger.Fatal
+- uid: cqhttp.Cyan.Logger.Info(System.String)
+  name: Info(String)
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Info_System_String_
+  commentId: M:cqhttp.Cyan.Logger.Info(System.String)
+  fullName: cqhttp.Cyan.Logger.Info(System.String)
+  nameWithType: Logger.Info(String)
+- uid: cqhttp.Cyan.Logger.Info*
+  name: Info
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Info_
+  commentId: Overload:cqhttp.Cyan.Logger.Info
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Logger.Info
+  nameWithType: Logger.Info
 - uid: cqhttp.Cyan.Logger.LogAction
   name: Logger.LogAction
   href: api/cqhttp.Cyan.Logger.LogAction.html
@@ -3568,6 +3620,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Logger.LogType
   nameWithType: Logger.LogType
+- uid: cqhttp.Cyan.Logger.Warn(System.String)
+  name: Warn(String)
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Warn_System_String_
+  commentId: M:cqhttp.Cyan.Logger.Warn(System.String)
+  fullName: cqhttp.Cyan.Logger.Warn(System.String)
+  nameWithType: Logger.Warn(String)
+- uid: cqhttp.Cyan.Logger.Warn*
+  name: Warn
+  href: api/cqhttp.Cyan.Logger.html#cqhttp_Cyan_Logger_Warn_
+  commentId: Overload:cqhttp.Cyan.Logger.Warn
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Logger.Warn
+  nameWithType: Logger.Warn
 - uid: cqhttp.Cyan.Messages
   name: cqhttp.Cyan.Messages
   href: api/cqhttp.Cyan.Messages.html
