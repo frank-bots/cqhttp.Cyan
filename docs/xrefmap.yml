@@ -2152,32 +2152,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.CQReplyMessageResponse
   nameWithType: CQReplyMessageResponse.CQReplyMessageResponse
-- uid: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.auto_escape
-  name: auto_escape
-  href: api/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.html#cqhttp_Cyan_Events_CQResponses_Base_CQReplyMessageResponse_auto_escape
-  commentId: P:cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.auto_escape
-  fullName: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.auto_escape
-  nameWithType: CQReplyMessageResponse.auto_escape
-- uid: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.auto_escape*
-  name: auto_escape
-  href: api/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.html#cqhttp_Cyan_Events_CQResponses_Base_CQReplyMessageResponse_auto_escape_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.auto_escape
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.auto_escape
-  nameWithType: CQReplyMessageResponse.auto_escape
-- uid: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.reply
-  name: reply
-  href: api/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.html#cqhttp_Cyan_Events_CQResponses_Base_CQReplyMessageResponse_reply
-  commentId: P:cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.reply
-  fullName: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.reply
-  nameWithType: CQReplyMessageResponse.reply
-- uid: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.reply*
-  name: reply
-  href: api/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.html#cqhttp_Cyan_Events_CQResponses_Base_CQReplyMessageResponse_reply_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.reply
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.reply
-  nameWithType: CQReplyMessageResponse.reply
 - uid: cqhttp.Cyan.Events.CQResponses.Base.CQResponse
   name: CQResponse
   href: api/cqhttp.Cyan.Events.CQResponses.Base.CQResponse.html
@@ -2242,38 +2216,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.at_sender
   nameWithType: DiscussMessageResponse.at_sender
-- uid: cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.content
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.html#cqhttp_Cyan_Events_CQResponses_DiscussMessageResponse_content
-  commentId: P:cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.content
-  fullName: cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.content
-  nameWithType: DiscussMessageResponse.content
-- uid: cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.content*
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.html#cqhttp_Cyan_Events_CQResponses_DiscussMessageResponse_content_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.content
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.content
-  nameWithType: DiscussMessageResponse.content
 - uid: cqhttp.Cyan.Events.CQResponses.EmptyResponse
   name: EmptyResponse
   href: api/cqhttp.Cyan.Events.CQResponses.EmptyResponse.html
   commentId: T:cqhttp.Cyan.Events.CQResponses.EmptyResponse
   fullName: cqhttp.Cyan.Events.CQResponses.EmptyResponse
   nameWithType: EmptyResponse
-- uid: cqhttp.Cyan.Events.CQResponses.EmptyResponse.content
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.EmptyResponse.html#cqhttp_Cyan_Events_CQResponses_EmptyResponse_content
-  commentId: P:cqhttp.Cyan.Events.CQResponses.EmptyResponse.content
-  fullName: cqhttp.Cyan.Events.CQResponses.EmptyResponse.content
-  nameWithType: EmptyResponse.content
-- uid: cqhttp.Cyan.Events.CQResponses.EmptyResponse.content*
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.EmptyResponse.html#cqhttp_Cyan_Events_CQResponses_EmptyResponse_content_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.EmptyResponse.content
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.EmptyResponse.content
-  nameWithType: EmptyResponse.content
 - uid: cqhttp.Cyan.Events.CQResponses.FriendAddResponse
   name: FriendAddResponse
   href: api/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.html
@@ -2293,19 +2241,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQResponses.FriendAddResponse.FriendAddResponse
   nameWithType: FriendAddResponse.FriendAddResponse
-- uid: cqhttp.Cyan.Events.CQResponses.FriendAddResponse.content
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.html#cqhttp_Cyan_Events_CQResponses_FriendAddResponse_content
-  commentId: P:cqhttp.Cyan.Events.CQResponses.FriendAddResponse.content
-  fullName: cqhttp.Cyan.Events.CQResponses.FriendAddResponse.content
-  nameWithType: FriendAddResponse.content
-- uid: cqhttp.Cyan.Events.CQResponses.FriendAddResponse.content*
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.html#cqhttp_Cyan_Events_CQResponses_FriendAddResponse_content_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.FriendAddResponse.content
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.FriendAddResponse.content
-  nameWithType: FriendAddResponse.content
 - uid: cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse
   name: GroupAddRequestResponse
   href: api/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.html
@@ -2325,19 +2260,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.GroupAddRequestResponse
   nameWithType: GroupAddRequestResponse.GroupAddRequestResponse
-- uid: cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.content
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.html#cqhttp_Cyan_Events_CQResponses_GroupAddRequestResponse_content
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.content
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.content
-  nameWithType: GroupAddRequestResponse.content
-- uid: cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.content*
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.html#cqhttp_Cyan_Events_CQResponses_GroupAddRequestResponse_content_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.content
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.content
-  nameWithType: GroupAddRequestResponse.content
 - uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse
   name: GroupMessageResponse
   href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html
@@ -2357,84 +2279,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.GroupMessageResponse
   nameWithType: GroupMessageResponse.GroupMessageResponse
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban
-  name: admin_ban
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_ban
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban
-  nameWithType: GroupMessageResponse.admin_ban
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban*
-  name: admin_ban
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_ban_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban
-  nameWithType: GroupMessageResponse.admin_ban
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban_duration
-  name: admin_ban_duration
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_ban_duration
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban_duration
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban_duration
-  nameWithType: GroupMessageResponse.admin_ban_duration
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban_duration*
-  name: admin_ban_duration
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_ban_duration_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban_duration
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_ban_duration
-  nameWithType: GroupMessageResponse.admin_ban_duration
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_delete
-  name: admin_delete
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_delete
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_delete
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_delete
-  nameWithType: GroupMessageResponse.admin_delete
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_delete*
-  name: admin_delete
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_delete_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_delete
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_delete
-  nameWithType: GroupMessageResponse.admin_delete
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_kick
-  name: admin_kick
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_kick
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_kick
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_kick
-  nameWithType: GroupMessageResponse.admin_kick
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_kick*
-  name: admin_kick
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_admin_kick_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_kick
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.admin_kick
-  nameWithType: GroupMessageResponse.admin_kick
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.at_sender
-  name: at_sender
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_at_sender
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.at_sender
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.at_sender
-  nameWithType: GroupMessageResponse.at_sender
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.at_sender*
-  name: at_sender
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_at_sender_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.at_sender
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.at_sender
-  nameWithType: GroupMessageResponse.at_sender
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.content
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_content
-  commentId: P:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.content
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.content
-  nameWithType: GroupMessageResponse.content
-- uid: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.content*
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html#cqhttp_Cyan_Events_CQResponses_GroupMessageResponse_content_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.content
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.content
-  nameWithType: GroupMessageResponse.content
 - uid: cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse
   name: PrivateMessageResponse
   href: api/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.html
@@ -2454,19 +2298,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.PrivateMessageResponse
   nameWithType: PrivateMessageResponse.PrivateMessageResponse
-- uid: cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.content
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.html#cqhttp_Cyan_Events_CQResponses_PrivateMessageResponse_content
-  commentId: P:cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.content
-  fullName: cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.content
-  nameWithType: PrivateMessageResponse.content
-- uid: cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.content*
-  name: content
-  href: api/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.html#cqhttp_Cyan_Events_CQResponses_PrivateMessageResponse_content_
-  commentId: Overload:cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.content
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.content
-  nameWithType: PrivateMessageResponse.content
 - uid: cqhttp.Cyan.Events.EventListener
   name: cqhttp.Cyan.Events.EventListener
   href: api/cqhttp.Cyan.Events.EventListener.html
@@ -4365,12 +4196,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.Message.Inequality
   nameWithType: Message.Inequality
-- uid: cqhttp.Cyan.Messages.Message.Parse(System.String)
-  name: Parse(String)
-  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Parse_System_String_
-  commentId: M:cqhttp.Cyan.Messages.Message.Parse(System.String)
-  fullName: cqhttp.Cyan.Messages.Message.Parse(System.String)
-  nameWithType: Message.Parse(String)
+- uid: cqhttp.Cyan.Messages.Message.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.Messages.Message.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.Messages.Message.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: Message.Parse(JToken)
 - uid: cqhttp.Cyan.Messages.Message.Parse*
   name: Parse
   href: api/cqhttp.Cyan.Messages.Message.html#cqhttp_Cyan_Messages_Message_Parse_
