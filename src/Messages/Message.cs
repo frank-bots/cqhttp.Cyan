@@ -56,6 +56,7 @@ namespace cqhttp.Cyan.Messages {
         /// <summary>
         /// 将消息序列化为CQ码格式
         /// </summary>
+        [JsonIgnore]
         public string raw_data_cq {
             get {
                 return Serialize (this, false);
@@ -64,6 +65,7 @@ namespace cqhttp.Cyan.Messages {
         /// <summary>
         /// 将消息序列化为Json格式
         /// </summary>
+        [JsonIgnore]
         public string raw_data_json {
             get {
                 return Serialize (this, true);
@@ -98,59 +100,54 @@ namespace cqhttp.Cyan.Messages {
         /// <returns>序列化后的字符串</returns>
         private static string Serialize (Message message, bool isSendJson = true) {
             if (isSendJson) return SerializeToJsonArray (message);
-            else return "\"" + Config.asJsonStringVariable (SerializeToCQ (message)) + "\"";
+            else return SerializeToCQ (message);
         }
         /*
         asdf[CQ:image,file=DE69C8D4C54997FC5ECBE475153651BE.jpg,url=https://c2cpicdw.qpic.cn/offpic_new/745679136//73da0548-ac93-4d5e-abd8-71138f019b28/0?vuin=2956005355&amp;term=2]
          */
         /// <param name="message">字符串形式的消息</param>
-        public static Message Parse (string message) {
-            short temp; //suppress format result
-            return Deserialize (message, out temp);
+        public static Message Parse (JToken message) {
+            if (message.Type == JTokenType.String)
+                return DeserializeFromCQ (message.ToObject<string> ());
+            else if (message.Type == JTokenType.Array)
+                return DeserializeFromJson (message as JArray);
+            throw new Exceptions.ErrorEventException ("上报消息格式错误");
         }
-        /// <param name="result">返回反序列化的结果,原消息为Json则为1,含CQ码则为-1,纯文本则为0</param>
-        /// <returns>反序列化后的<c>Message</c>对象</returns>
-        /// <param name="message"/>
-        private static Message Deserialize (string message, out short result) {
+        private static Message DeserializeFromJson (JArray message) {
             Message ret = new Message { data = new List<Element> () };
-
+            Logger.Debug ("收到的消息为json格式");
+            tempDict.Clear ();
+            foreach (var i in message) {
+                tempDict = i["data"].ToObject<Dictionary<string, string>> ();
+                ret.data.Add (
+                    BuildElement (i["type"].ToString (), tempDict)
+                );
+            }
+            return ret;
+        }
+        private static Message DeserializeFromCQ (string message) {
+            Message ret = new Message { data = new List<Element> () };
             Logger.Debug (
                 $"反序列化消息{(message.Length>5?message.Substring(0,5)+"...":message)}"
             );
-            try {
-                JArray ifParse = JArray.Parse (message);
-                Logger.Debug ("收到的消息为json格式");
-                tempDict.Clear ();
-                foreach (var i in ifParse) {
-                    tempDict = i["data"].ToObject<Dictionary<string, string>> ();
-                    ret.data.Add (
-                        BuildElement (i["type"].ToString (), tempDict)
-                    );
+            Match match = Config.matchCqCode.Match (message);
+            Logger.Debug ("收到的消息为字符串格式");
+            if (match.Success) {
+                while (match.Success) {
+                    if (match.Index > 0)
+                        ret.data.Add (
+                            new ElementText (
+                                message.Substring (0, match.Index)
+                            )
+                        );
+                    //try { //for production
+                    ret.data.Add (BuildCQElement (match.Value));
+                    //} catch { }
+                    message = message.Substring (match.Index + match.Length);
+                    match = Config.matchCqCode.Match (message);
                 }
-                result = 1;
                 return ret;
-            } catch (JsonException) {
-                Match match = Config.matchCqCode.Match (message);
-                Logger.Debug ("收到的消息为字符串格式");
-                if (match.Success) {
-                    while (match.Success) {
-                        if (match.Index > 0)
-                            ret.data.Add (
-                                new ElementText (
-                                    message.Substring (0, match.Index)
-                                )
-                            );
-                        //try { //for production
-                        ret.data.Add (BuildCQElement (match.Value));
-                        //} catch { }
-                        message = message.Substring (match.Index + match.Length);
-                        match = Config.matchCqCode.Match (message);
-                    }
-                    result = -1;
-                    return ret;
-                }
             }
-            result = 0;
             return new Message { data = new List<Element> () { new ElementText (message) } };
         }
 

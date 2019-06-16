@@ -44,10 +44,13 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 }
                 if (messageType.Length == 0)
                     throw new Exceptions.ErrorApicallException ("what?");
+                string message = this.message.ToString ();
+                if (Config.isSendJson == false)
+                    message = '"' + Config.asJsonStringVariable (message) + '"';
                 string constructer =
                     $"{{\"message_type\":\"{messageType}\","+
                     $"\"{idKey}\":{this.target_id},"+
-                    $"\"message\":{message.ToString()}}}";
+                    $"\"message\":{message}}}";
 
                 return constructer;
             }

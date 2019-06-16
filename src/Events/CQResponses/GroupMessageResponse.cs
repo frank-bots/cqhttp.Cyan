@@ -2,17 +2,18 @@ using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Events.CQResponses {
     /// <summary>群消息回复</summary>
+    [Newtonsoft.Json.JsonObject]
     public class GroupMessageResponse : Base.CQReplyMessageResponse {
         /// <summary></summary>
-        public bool at_sender { get; private set; }
+        [Newtonsoft.Json.JsonProperty] bool at_sender;
         /// <summary></summary>
-        public bool admin_delete { get; private set; }
+        [Newtonsoft.Json.JsonProperty] bool admin_delete;
         /// <summary></summary>
-        public bool admin_kick { get; private set; }
+        [Newtonsoft.Json.JsonProperty] bool admin_kick;
         /// <summary></summary>
-        public bool admin_ban { get; private set; }
+        [Newtonsoft.Json.JsonProperty] bool admin_ban;
         /// <summary></summary>
-        public int admin_ban_duration { get; private set; }
+        [Newtonsoft.Json.JsonProperty] int admin_ban_duration;
 
         /// <param name="reply">回复的消息</param>
         /// <param name="auto_escape">是否转义字符串</param>
@@ -36,20 +37,6 @@ namespace cqhttp.Cyan.Events.CQResponses {
             this.admin_kick = kick;
             this.admin_ban = ban;
             this.admin_ban_duration = ban_duration;
-        }
-        /// <summary></summary>
-        public override string content {
-            get {
-                return "{" +
-                    $"\"reply\":{reply}," +
-                    $",\"auto_escape\":{auto_escape}" +
-                    (at_sender?$",\"at_sender\":{at_sender}": "") +
-                    (admin_delete?$",\"delete\":{admin_delete}": "") +
-                    (admin_kick?$",\"kick\":{admin_kick}": "") +
-                    (admin_ban?$",\"ban\":{admin_ban}": "") +
-                    (admin_ban?$",\"ban_duration\":{admin_ban_duration}": "") +
-                    "}";
-            }
         }
     }
 }

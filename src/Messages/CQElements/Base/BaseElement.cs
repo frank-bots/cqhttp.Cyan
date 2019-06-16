@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace cqhttp.Cyan.Messages.CQElements.Base {
     /// <summary>
@@ -68,6 +69,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// <see cref="CQElements.ElementText"/>
         /// </summary>
         /// <value>CQCode</value>
+        [JsonIgnore]
         public string raw_data_cq {
             get {
                 if (type == "text")
@@ -87,6 +89,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// builds the value when constructing EXTENDED CQCode
         /// <see>https://cqhttp.cc/docs/4.6/#/Message</see>
         /// </summary>
+        [JsonIgnore]
         public string raw_data_json {
             get {
                 string builder = $"{{\"type\":\"{type}\",\"data\":{{";
