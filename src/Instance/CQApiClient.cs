@@ -11,8 +11,7 @@ using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
 
-namespace cqhttp.Cyan.Instance
-{
+namespace cqhttp.Cyan.Instance {
     /// <summary></summary>
     public abstract class CQApiClient {
         /// <summary>
@@ -151,7 +150,7 @@ namespace cqhttp.Cyan.Instance
         /// </summary>
         public event OnEventDelegateAsync OnEventAsync;
         /// <summary></summary>
-        protected CQResponse __HandleEvent (CQEvent event_) {
+        protected async Task<CQResponse> __HandleEvent (CQEvent event_) {
             Logger.Debug ($"收到了完整的上报事件{event_.postType}");
             if (event_ is MetaEvent) {
                 if (event_ is HeartbeatEvent) {
@@ -170,18 +169,36 @@ namespace cqhttp.Cyan.Instance
                         (event_ as MessageEvent).message_id,
                         (event_ as MessageEvent).message
                     );
+                if (event_ is GroupMessageEvent) {
+                    var group_id = (event_ as GroupMessageEvent).group_id;
+                    if (groupTable == null || groupTable[group_id][self_id] == null) {
+                        try {
+                            var info = await SendRequestAsync (
+                                new GetGroupMemberInfoRequest (
+                                    group_id,
+                                    this.self_id,
+                                    no_cache : true
+                                )
+                            ) as GetGroupMemberInfoResult;
+                            if (groupTable != null)
+                                groupTable[group_id][self_id] = info.memberInfo;
+                            (event_ as GroupMessageEvent).self_info = info.memberInfo;
+                        } catch { }
+                    } else {
+                        (event_ as GroupMessageEvent).self_info
+                            = groupTable[group_id][self_id];
+                    }
+                }
                 if (Utils.DialoguePool.Handle (this, event_ as MessageEvent))
                     return new Events.CQResponses.EmptyResponse ();
             }
-            Task.Run (async () => {
-                try {
-                    if (OnEventAsync != null)
-                        await OnEventAsync (this, event_);
-                } catch (Utils.InvokeDialogueException e) {
-                    ComposeDialogue (ref e, ref event_);
-                    return;
-                }
-            });
+            try {
+                if (OnEventAsync != null)
+                    await OnEventAsync (this, event_);
+            } catch (Utils.InvokeDialogueException e) {
+                ComposeDialogue (ref e, ref event_);
+                return new Events.CQResponses.EmptyResponse ();
+            }
             try {
                 if (OnEvent != null)
                     return OnEvent (this, event_);

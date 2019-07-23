@@ -16,6 +16,11 @@ namespace cqhttp.Cyan.Events.CQEvents {
                 return sub_type == "anonymous";
             }
         }
+        /// <summary>
+        /// 表示机器人在消息所在群中的身份信息
+        /// 来自于groupTable缓存或GetGroupMemberList结果
+        /// </summary>
+        public Utils.GroupMemberInfo self_info = null;
         /// <summary></summary>
         public GroupMessageEvent (
                 long time,
