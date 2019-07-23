@@ -1973,6 +1973,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.isAnonymous
   nameWithType: GroupMessageEvent.isAnonymous
+- uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.self_info
+  name: self_info
+  href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_self_info
+  commentId: F:cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.self_info
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.self_info
+  nameWithType: GroupMessageEvent.self_info
 - uid: cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.sub_type
   name: sub_type
   href: api/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html#cqhttp_Cyan_Events_CQEvents_GroupMessageEvent_sub_type
@@ -2392,15 +2398,15 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.secret
   nameWithType: CQEventListener.secret
-- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
-  nameWithType: CQEventListener.StartListen(Func<CQEvent, CQResponse>)
-  nameWithType.vb: CQEventListener.StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name: StartListen(Func<CQEvent, Task<CQResponse>>)
+  href: api/cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_System_Threading_Tasks_Task_cqhttp_Cyan_Events_CQResponses_Base_CQResponse___
+  commentId: M:cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name.vb: StartListen(Func(Of CQEvent, Task(Of CQResponse)))
+  fullName: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task<cqhttp.Cyan.Events.CQResponses.Base.CQResponse>>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task(Of cqhttp.Cyan.Events.CQResponses.Base.CQResponse)))
+  nameWithType: CQEventListener.StartListen(Func<CQEvent, Task<CQResponse>>)
+  nameWithType.vb: CQEventListener.StartListen(Func(Of CQEvent, Task(Of CQResponse)))
 - uid: cqhttp.Cyan.Events.EventListener.CQEventListener.StartListen*
   name: StartListen
   href: api/cqhttp.Cyan.Events.EventListener.CQEventListener.html#cqhttp_Cyan_Events_EventListener_CQEventListener_StartListen_
@@ -2443,15 +2449,15 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.HttpEventListener
   nameWithType: HttpEventListener.HttpEventListener
-- uid: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.HttpEventListener.html#cqhttp_Cyan_Events_EventListener_HttpEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
-  nameWithType: HttpEventListener.StartListen(Func<CQEvent, CQResponse>)
-  nameWithType.vb: HttpEventListener.StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name: StartListen(Func<CQEvent, Task<CQResponse>>)
+  href: api/cqhttp.Cyan.Events.EventListener.HttpEventListener.html#cqhttp_Cyan_Events_EventListener_HttpEventListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_System_Threading_Tasks_Task_cqhttp_Cyan_Events_CQResponses_Base_CQResponse___
+  commentId: M:cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name.vb: StartListen(Func(Of CQEvent, Task(Of CQResponse)))
+  fullName: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task<cqhttp.Cyan.Events.CQResponses.Base.CQResponse>>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task(Of cqhttp.Cyan.Events.CQResponses.Base.CQResponse)))
+  nameWithType: HttpEventListener.StartListen(Func<CQEvent, Task<CQResponse>>)
+  nameWithType.vb: HttpEventListener.StartListen(Func(Of CQEvent, Task(Of CQResponse)))
 - uid: cqhttp.Cyan.Events.EventListener.HttpEventListener.StartListen*
   name: StartListen
   href: api/cqhttp.Cyan.Events.EventListener.HttpEventListener.html#cqhttp_Cyan_Events_EventListener_HttpEventListener_StartListen_
@@ -2478,15 +2484,15 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.ReverseWSListener
   nameWithType: ReverseWSListener.ReverseWSListener
-- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
-  nameWithType: ReverseWSListener.StartListen(Func<CQEvent, CQResponse>)
-  nameWithType.vb: ReverseWSListener.StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name: StartListen(Func<CQEvent, Task<CQResponse>>)
+  href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_System_Threading_Tasks_Task_cqhttp_Cyan_Events_CQResponses_Base_CQResponse___
+  commentId: M:cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name.vb: StartListen(Func(Of CQEvent, Task(Of CQResponse)))
+  fullName: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task<cqhttp.Cyan.Events.CQResponses.Base.CQResponse>>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task(Of cqhttp.Cyan.Events.CQResponses.Base.CQResponse)))
+  nameWithType: ReverseWSListener.StartListen(Func<CQEvent, Task<CQResponse>>)
+  nameWithType.vb: ReverseWSListener.StartListen(Func(Of CQEvent, Task(Of CQResponse)))
 - uid: cqhttp.Cyan.Events.EventListener.ReverseWSListener.StartListen*
   name: StartListen
   href: api/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html#cqhttp_Cyan_Events_EventListener_ReverseWSListener_StartListen_
@@ -2513,15 +2519,15 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.WebsocketListener
   nameWithType: WebsocketListener.WebsocketListener
-- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name: StartListen(Func<CQEvent, CQResponse>)
-  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_cqhttp_Cyan_Events_CQResponses_Base_CQResponse__
-  commentId: M:cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,cqhttp.Cyan.Events.CQResponses.Base.CQResponse})
-  name.vb: StartListen(Func(Of CQEvent, CQResponse))
-  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse>)
-  fullName.vb: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, cqhttp.Cyan.Events.CQResponses.Base.CQResponse))
-  nameWithType: WebsocketListener.StartListen(Func<CQEvent, CQResponse>)
-  nameWithType.vb: WebsocketListener.StartListen(Func(Of CQEvent, CQResponse))
+- uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name: StartListen(Func<CQEvent, Task<CQResponse>>)
+  href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_System_Func_cqhttp_Cyan_Events_CQEvents_Base_CQEvent_System_Threading_Tasks_Task_cqhttp_Cyan_Events_CQResponses_Base_CQResponse___
+  commentId: M:cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func{cqhttp.Cyan.Events.CQEvents.Base.CQEvent,System.Threading.Tasks.Task{cqhttp.Cyan.Events.CQResponses.Base.CQResponse}})
+  name.vb: StartListen(Func(Of CQEvent, Task(Of CQResponse)))
+  fullName: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func<cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task<cqhttp.Cyan.Events.CQResponses.Base.CQResponse>>)
+  fullName.vb: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen(System.Func(Of cqhttp.Cyan.Events.CQEvents.Base.CQEvent, System.Threading.Tasks.Task(Of cqhttp.Cyan.Events.CQResponses.Base.CQResponse)))
+  nameWithType: WebsocketListener.StartListen(Func<CQEvent, Task<CQResponse>>)
+  nameWithType.vb: WebsocketListener.StartListen(Func(Of CQEvent, Task(Of CQResponse)))
 - uid: cqhttp.Cyan.Events.EventListener.WebsocketListener.StartListen*
   name: StartListen
   href: api/cqhttp.Cyan.Events.EventListener.WebsocketListener.html#cqhttp_Cyan_Events_EventListener_WebsocketListener_StartListen_
