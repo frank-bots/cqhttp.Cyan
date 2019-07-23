@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
 
-namespace cqhttp.Cyan.Events.EventListener
-{
+namespace cqhttp.Cyan.Events.EventListener {
     /// <summary>
     /// HTTP监听上报消息
     /// </summary>
@@ -19,51 +20,46 @@ namespace cqhttp.Cyan.Events.EventListener
             listener.Prefixes.Add ($"http://+:{port}/");
         }
         /// <summary></summary>
-        public override void StartListen (Func<CQEvent, CQResponse> callback) {
+        public override void StartListen (Func<CQEvent, Task<CQResponse>> callback) {
             listen_callback = callback;
             lock (listen_lock) {
                 listener.Start ();
-                listen_task = Task.Run (() => {
+                listen_task = Task.Run (async () => {
                     while (true) {
                         var context = listener.GetContext ();
-                        ProcessContext (context);
+                        await ProcessContext (context);
                     }
                 });
             }
         }
-        private async void ProcessContext (HttpListenerContext context) {
+        private async Task ProcessContext (HttpListenerContext context) {
             try {
-                await Task.Run (() => {
-                    var request = context.Request;
-                    using (var response = context.Response) {
-                        if (!request.ContentType.StartsWith ("application/json", StringComparison.Ordinal))
-                            return;
+                var request = context.Request;
+                if (!request.ContentType.StartsWith ("application/json", StringComparison.Ordinal))
+                    return;
 
-                        string requestContent = GetContent (secret, request);
-                        if (string.IsNullOrEmpty (requestContent))
-                            return;
-                        CQResponse responseObject = null;
-                        try {
-                            responseObject =
-                                listen_callback (CQEventHandler.HandleEvent (requestContent));
-                        } catch (Exception e) {
-                            Logger.Error (
-                                $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
-                            );
-                        }
-
-                        response.ContentType = "application/json";
-                        if (responseObject != null) {
-                            using (var outStream = response.OutputStream)
-                            using (var streamWriter = new StreamWriter (outStream)) {
-                                string jsonResponse = responseObject.ToString ();
-                                streamWriter.Write (jsonResponse);
-                            }
-                        } else {
-                            response.StatusCode = 204;
-                        }
-                    }
-                });
+                string requestContent = GetContent (secret, request);
+                if (string.IsNullOrEmpty (requestContent))
+                    return;
+                CQResponse responseObject = null;
+                try {
+                    responseObject =
+                        await listen_callback (CQEventHandler.HandleEvent (requestContent));
+                } catch (Exception e) {
+                    Logger.Error (
+                        $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
+                    );
+                }
+                context.Response.ContentType = "application/json";
+                if (responseObject != null) {
+                    byte[] output = Encoding.UTF8.GetBytes (responseObject.ToString ());
+                    context.Response.ContentLength64 = output.Length;
+                    await context.Response.OutputStream.WriteAsync (
+                        output, 0, output.Length
+                    );
+                } else {
+                    context.Response.StatusCode = 204;
+                }
             } catch (Exception e) {
                 Logger.Error ($"网络出现未知错误{e}\n{e.Message}");
             }

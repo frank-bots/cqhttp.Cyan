@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.WebSockets;
@@ -15,7 +16,7 @@ namespace cqhttp.Cyan.Events.EventListener
             client = new ClientWebSocket ();
         }
         /// <summary></summary>
-        public override void StartListen (System.Func<CQEvents.Base.CQEvent, CQResponses.Base.CQResponse> callback) {
+        public override void StartListen (System.Func<CQEvents.Base.CQEvent, Task<CQResponses.Base.CQResponse>> callback) {
             Logger.Info ($"建立与事件上报服务器{dest_url}的websocket连接");
             listen_callback = callback;
             lock (listen_lock) {

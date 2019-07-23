@@ -16,8 +16,8 @@ namespace cqhttp.Cyan.Events.EventListener {
             try {
                 if (string.IsNullOrEmpty (message))
                     return;
+                var response = await listen_callback (CQEventHandler.HandleEvent (message));
                 await Task.Run (() => {
-                    var response = listen_callback (CQEventHandler.HandleEvent (message));
                     api_call_func (new ApiCall.Requests.HandleQuickOperationRequest (
                         context: message,
                         operation: response.content

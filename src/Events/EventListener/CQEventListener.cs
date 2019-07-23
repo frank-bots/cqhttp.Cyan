@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
 
-namespace cqhttp.Cyan.Events.EventListener
-{
+namespace cqhttp.Cyan.Events.EventListener {
     /// <summary></summary>
     public abstract class CQEventListener {
         /// <summary>用于验证消息真实性</summary>
         public byte[] secret { get; private set; }
         /// <summary></summary>
-        protected Func<CQEvent, CQResponse> listen_callback;
+        protected Func<CQEvent, Task<CQResponse>> listen_callback;
         /// <summary></summary>
         protected Task listen_task;
         /// <summary></summary>
@@ -22,7 +21,7 @@ namespace cqhttp.Cyan.Events.EventListener
             this.secret = (secret == "" ? null : Encoding.UTF8.GetBytes (secret));
         }
         /// <summary></summary>
-        public virtual void StartListen (Func<CQEvents.Base.CQEvent, CQResponses.Base.CQResponse> callback) { }
+        public virtual void StartListen (Func<CQEvents.Base.CQEvent, Task<CQResponses.Base.CQResponse>> callback) { }
         /// <summary></summary>
         protected static bool Verify (byte[] secret, string signature, byte[] buffer, int offset, int length) {
             if (secret is null)
