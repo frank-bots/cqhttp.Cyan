@@ -5,7 +5,7 @@ using cqhttp.Cyan.Messages.CQElements.Base;
 namespace cqhttp.Cyan.Messages.CQElements {
     /// <summary>表情</summary>
     public class ElementFace : Element {
-        int faceId;
+        string faceId;
         /// <summary>
         /// recommended constructor for qq faces
         /// </summary>
@@ -19,7 +19,7 @@ namespace cqhttp.Cyan.Messages.CQElements {
         /// 其中之一
         /// 具体请参考<a href="https://d.cqp.me/Pro/CQ%E7%A0%81">酷Q码文档</a>中相关部分
         /// </param>
-        public ElementFace (int id, string type = "face"):
-            base (type, ("id", id.ToString ())) { this.faceId = id; }
+        public ElementFace (string id, string type = "face"):
+            base (type, ("id", id)) { this.faceId = id; }
     }
 }

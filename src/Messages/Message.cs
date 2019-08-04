@@ -205,13 +205,13 @@ namespace cqhttp.Cyan.Messages {
                     case "record":
                         return new ElementRecord (dict["file"]);
                     case "face":
-                        return new ElementFace (int.Parse (dict["id"]));
+                        return new ElementFace (dict["id"]);
                     case "bface":
-                        return new ElementFace (int.Parse (dict["id"]), "bface");
+                        return new ElementFace (dict["id"], "bface");
                     case "sface":
-                        return new ElementFace (int.Parse (dict["id"]), "sface");
+                        return new ElementFace (dict["id"], "sface");
                     case "emoji":
-                        return new ElementFace (int.Parse (dict["id"]), "emoji");
+                        return new ElementFace (dict["id"], "emoji");
                     case "shake":
                         return new ElementShake ();
                     case "share":
