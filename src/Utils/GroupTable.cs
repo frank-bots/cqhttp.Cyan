@@ -9,7 +9,7 @@ using cqhttp.Cyan.Messages.CQElements;
 using Newtonsoft.Json;
 
 namespace cqhttp.Cyan.Utils {
-    
+
     /// <summary>群成员信息</summary>
     [JsonObject]
     public class GroupMemberInfo {
@@ -52,7 +52,8 @@ namespace cqhttp.Cyan.Utils {
             ///
             public string group_name;
             ///
-            public Dictionary<long, GroupMemberInfo> group_member;
+            public Dictionary<long, GroupMemberInfo> group_member =
+                new Dictionary<long, GroupMemberInfo> ();
 
             /// <summary>附加成员</summary>
             [Obsolete ("请使用this[long user_id]", true)]
@@ -93,12 +94,12 @@ namespace cqhttp.Cyan.Utils {
         ///
         public GroupInfo this [long group_id] {
             get {
-                if (table[group_id] == null)
+                if (!table.ContainsKey (group_id))
                     table[group_id] = new GroupInfo ();
                 return table[group_id];
             }
             set {
-                if (table[group_id] == null)
+                if (!table.ContainsKey (group_id))
                     table[group_id] = new GroupInfo ();
                 table[group_id] = value;
             }
