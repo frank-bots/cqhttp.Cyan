@@ -215,9 +215,16 @@ namespace cqhttp.Cyan.Messages {
                     case "shake":
                         return new ElementShake ();
                     case "share":
+                        string content, image;
+                        if (dict.ContainsKey ("content"))
+                            content = dict["content"];
+                        else content = "";
+                        if (dict.ContainsKey ("image"))
+                            image = dict["image"];
+                        else image = "";
                         return new ElementShare (
-                            dict["url"], dict["name"],
-                            dict["content"], dict["image"]
+                            dict["url"], dict["title"],
+                            content, image
                         );
                     case "location":
                         return new ElementLocation (
