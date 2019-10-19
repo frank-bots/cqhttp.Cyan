@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>cqhttp.Cyan</id>
-    <version>1.1.2</version>
+    <version>1.2.0</version>
     <authors>Frank</authors>
     <owners>Frank</owners>
     <description>see https://github.com/frankli0324/cqhttp.Cyan</description>
