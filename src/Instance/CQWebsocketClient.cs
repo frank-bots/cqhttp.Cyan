@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Net.WebSockets;
+using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
@@ -58,7 +61,7 @@ namespace cqhttp.Cyan.Instance {
             JObject constructor = new JObject ();
             constructor["action"] = request.apiPath.Substring (1);
             constructor["params"] = JObject.Parse (request.content);
-            var (timemark, resp) = await WebsocketUtils.ConnectionPool.SendJsonAsync (
+            var (timemark, resp) = await ConnectionPool.SendJsonAsync (
                 dest, constructor
             );
             if (resp.Contains ("authorization failed"))
@@ -68,7 +71,7 @@ namespace cqhttp.Cyan.Instance {
         }
         private async void CleanUp () {
             Logger.Info ("开始关闭Websocket连接");
-            await WebsocketUtils.ConnectionPool.CloseAsync (
+            await ConnectionPool.CloseAsync (
                 this.accessUrl + (this.accessToken == "" ? "" : "?access_token=" + this.accessToken)
             );
         }

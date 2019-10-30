@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Events.EventListener;
-using cqhttp.Cyan.WebsocketUtils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -38,7 +37,7 @@ namespace cqhttp.Cyan.Instance {
             eventPath = eventPath.Trim ('/');
             apiPath = apiPath.Trim ('/');
             this.__eventListener = new ReverseWSListener (bind_port, eventPath, accessToken);
-            server = new WebsocketDaemon.WebsocketServerInstance (bind_port, apiPath);
+            server = new WebsocketDaemon.WebsocketServerInstance(bind_port, apiPath);
             (this.__eventListener as ReverseWSListener).api_call_func = SendRequestAsync;
             this.__eventListener.StartListen (this.__HandleEvent);
             Task.Run (() => {

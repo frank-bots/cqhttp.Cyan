@@ -2,14 +2,14 @@ using System;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
-using cqhttp.Cyan.WebsocketUtils;
+using static cqhttp.Cyan.Instance.WebsocketDaemon;
 
 namespace cqhttp.Cyan.Events.EventListener {
 
     /// <summary></summary>
     public class ReverseWSListener : _WebsocketProcessor {
         string accessToken;
-        WebsocketDaemon.WebsocketServerInstance server;
+        WebsocketServerInstance server;
         /// <summary></summary>
         public ReverseWSListener (
             int bind_port,
@@ -17,7 +17,7 @@ namespace cqhttp.Cyan.Events.EventListener {
             string accessToken = ""
         ) : base ("") {
             this.accessToken = accessToken;
-            server = new WebsocketDaemon.WebsocketServerInstance (bind_port, path);
+            server = new WebsocketServerInstance (bind_port, path);
         }
         /// <summary></summary>
         public override void StartListen (
