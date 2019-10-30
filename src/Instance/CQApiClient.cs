@@ -164,6 +164,7 @@ namespace cqhttp.Cyan.Instance {
                 }
                 return new Events.CQResponses.EmptyResponse ();
             } else if (event_ is MessageEvent) {
+                alive = true;
                 if (messageTable != null)
                     messageTable.Log (
                         (event_ as MessageEvent).message_id,
