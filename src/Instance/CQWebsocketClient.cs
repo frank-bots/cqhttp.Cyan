@@ -1,3 +1,5 @@
+using System;
+using System.Threading;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results.Base;
@@ -58,13 +60,12 @@ namespace cqhttp.Cyan.Instance {
             JObject constructor = new JObject ();
             constructor["action"] = request.apiPath.Substring (1);
             constructor["params"] = JObject.Parse (request.content);
-            int timemark = await WebsocketUtils.ConnectionPool.SendJsonAsync (
+            var (timemark, resp) = await WebsocketUtils.ConnectionPool.SendJsonAsync (
                 dest, constructor
-            ); // how to make use of timestamp?
-            string resp = await WebsocketUtils.ConnectionPool.GetResponse (dest);
+            );
             if (resp.Contains ("authorization failed"))
                 throw new Exceptions.ErrorApicallException ("身份验证失败");
-            request.response.Parse (JToken.Parse(resp));
+            request.response.Parse (JToken.Parse (resp));
             return request.response;
         }
         private async void CleanUp () {
