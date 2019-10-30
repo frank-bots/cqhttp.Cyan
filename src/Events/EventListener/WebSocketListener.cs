@@ -1,10 +1,9 @@
-using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.WebSockets;
+using System.Threading.Tasks;
 
-namespace cqhttp.Cyan.Events.EventListener
-{
+namespace cqhttp.Cyan.Events.EventListener {
     /// <summary></summary>
     public class WebsocketListener : _WebsocketProcessor {
         private ClientWebSocket client;
@@ -23,19 +22,19 @@ namespace cqhttp.Cyan.Events.EventListener
                 client.ConnectAsync (
                     new System.Uri (dest_url), new System.Threading.CancellationToken ()
                 );
-                listen_task = System.Threading.Tasks.Task.Run (() => {
+                listen_task = System.Threading.Tasks.Task.Run (async () => {
                     byte[] recv_buffer = new byte[2048];
                     List<byte> message = new List<byte> ();
                     while (true) {
                         if (client.State == WebSocketState.Open) {
-                            var t = client.ReceiveAsync (
+                            var t = await client.ReceiveAsync (
                                 recv_buffer,
                                 new System.Threading.CancellationToken ()
                             );
-                            if (!t.Result.EndOfMessage) {
+                            if (!t.EndOfMessage) {
                                 message.AddRange (recv_buffer);
                             } else {
-                                message.AddRange (recv_buffer.ToList ().GetRange (0, t.Result.Count));
+                                message.AddRange (recv_buffer.ToList ().GetRange (0, t.Count));
                                 Process (System.Text.Encoding.UTF8.GetString (message.ToArray ()));
                                 message.Clear ();
                             }

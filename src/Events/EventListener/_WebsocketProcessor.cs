@@ -17,12 +17,13 @@ namespace cqhttp.Cyan.Events.EventListener {
                 if (string.IsNullOrEmpty (message))
                     return;
                 var response = await listen_callback (CQEventHandler.HandleEvent (message));
-                await Task.Run (() => {
-                    api_call_func (new ApiCall.Requests.HandleQuickOperationRequest (
-                        context: message,
-                        operation: response.content
-                    ));
-                });
+                if (response is CQResponses.EmptyResponse == false)
+                    await Task.Run (() => {
+                        api_call_func (new ApiCall.Requests.HandleQuickOperationRequest (
+                            context: message,
+                            operation: response.content
+                        ));
+                    });
             } catch (System.Exception e) {
                 Logger.Error (
                     $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
