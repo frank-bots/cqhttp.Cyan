@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
@@ -14,17 +13,9 @@ namespace cqhttp.Cyan.WebsocketUtils {
     static class ConnectionPool {
         private static Dictionary<string, ClientWebSocket> pool =
             new Dictionary<string, ClientWebSocket> ();
-        private static Dictionary<int, string> result =
-            new Dictionary<int, string> ();
-        private static Dictionary<string, bool> state =
-            new Dictionary<string, bool> ();
-        private static Dictionary<string, Queue<string>> send_queue =
-            new Dictionary<string, Queue<string>> ();
         static SemaphoreSlim lock_ = new SemaphoreSlim (1, 1);
         private static async Task Connect (string uri) {
             pool[uri] = new ClientWebSocket ();
-            state[uri] = false;
-            send_queue[uri] = new Queue<string> ();
             await pool[uri].ConnectAsync (
                 new System.Uri (uri),
                 new CancellationToken ()
@@ -67,11 +58,8 @@ namespace cqhttp.Cyan.WebsocketUtils {
                         cancellationToken: new CancellationToken ()
                     );
                     result += Encoding.UTF8.GetString (buffer).TrimEnd ('\0');
-
-                    if (res.EndOfMessage) {
-                        ConnectionPool.result[time] = result;
+                    if (res.EndOfMessage)
                         break;
-                    }
                 }
                 return (time, result);
             } catch (System.Exception e) {
