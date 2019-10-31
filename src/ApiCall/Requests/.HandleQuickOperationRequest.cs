@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
 
@@ -7,14 +8,14 @@ namespace cqhttp.Cyan.ApiCall.Requests {
     /// </summary>
     [JsonObject]
     public class HandleQuickOperationRequest : Base.ApiRequest {
-        [JsonProperty] string context;
-        [JsonProperty] string operation;
+        [JsonProperty] JObject context;
+        [JsonProperty] JObject operation;
         ///
         public HandleQuickOperationRequest (string context, string operation):
             base ("/.handle_quick_operation") {
                 this.response = new Results.EmptyResult ();
-                this.context = context;
-                this.operation = operation;
+                this.context = JObject.Parse(context);
+                this.operation = JObject.Parse(operation);
             }
     }
 }

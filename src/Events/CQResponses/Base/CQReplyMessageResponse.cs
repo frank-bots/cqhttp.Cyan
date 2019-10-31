@@ -12,7 +12,7 @@ namespace cqhttp.Cyan.Events.CQResponses.Base {
         bool auto_escape;
         /// <summary></summary>
         public CQReplyMessageResponse (Messages.Message reply, bool auto_escape) {
-            this.reply = JToken.Parse (reply.ToString ());
+            this.reply = reply.ToString ();
             this.auto_escape = auto_escape;
         }
     }
