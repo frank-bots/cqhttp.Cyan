@@ -1,16 +1,14 @@
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using cqhttp.Cyan.Messages.CQElements;
 using cqhttp.Cyan.Messages.CQElements.Base;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Messages {
     /// <summary>
     /// 由消息段构成的消息
     /// </summary>
+    [JsonConverter (typeof (MessageConverter))]
     public class Message {
-        //any cq code
         /// <summary>
         /// 消息段列表
         /// </summary>
@@ -54,28 +52,12 @@ namespace cqhttp.Cyan.Messages {
             return !(a == b);
         }
         /// <summary>
-        /// 将消息序列化为CQ码格式
-        /// </summary>
-        [JsonIgnore]
-        public string raw_data_cq {
-            get {
-                return Serialize (this, false);
-            }
-        }
-        /// <summary>
-        /// 将消息序列化为Json格式
-        /// </summary>
-        [JsonIgnore]
-        public string raw_data_json {
-            get {
-                return Serialize (this, true);
-            }
-        }
-        /// <summary>
         /// 按照默认设置序列化消息
         /// </summary>
         public override string ToString () {
-            return Serialize (this, Config.isSendJson);
+            if (Config.isSendJson)
+                return JsonConvert.SerializeObject (this);
+            return string.Join ("", data);
         }
         /// <summary></summary>
         public override int GetHashCode () {
@@ -93,165 +75,5 @@ namespace cqhttp.Cyan.Messages {
                 if (i is ElementFile)
                     await (i as ElementFile).Fix ();
         }
-        private static Dictionary<string, string> tempDict = new Dictionary<string, string> ();
-
-        /// <param name="message">待序列化的消息</param>
-        /// <param name="isSendJson">是否序列化为json格式，默认为true</param>
-        /// <returns>序列化后的字符串</returns>
-        private static string Serialize (Message message, bool isSendJson = true) {
-            if (isSendJson) return SerializeToJsonArray (message);
-            else return SerializeToCQ (message);
-        }
-        /*
-        asdf[CQ:image,file=DE69C8D4C54997FC5ECBE475153651BE.jpg,url=https://c2cpicdw.qpic.cn/offpic_new/745679136//73da0548-ac93-4d5e-abd8-71138f019b28/0?vuin=2956005355&amp;term=2]
-         */
-        /// <param name="message">字符串形式的消息</param>
-        public static Message Parse (JToken message) {
-            if (message.Type == JTokenType.String)
-                return DeserializeFromCQ (message.ToObject<string> ());
-            else if (message.Type == JTokenType.Array)
-                return DeserializeFromJson (message as JArray);
-            throw new Exceptions.ErrorEventException ("上报消息格式错误");
-        }
-        private static Message DeserializeFromJson (JArray message) {
-            Message ret = new Message { data = new List<Element> () };
-            Logger.Debug ("收到的消息为json格式");
-            tempDict.Clear ();
-            foreach (var i in message) {
-                tempDict = i["data"].ToObject<Dictionary<string, string>> ();
-                ret.data.Add (
-                    BuildElement (i["type"].ToString (), tempDict)
-                );
-            }
-            return ret;
-        }
-        private static Message DeserializeFromCQ (string message) {
-            Message ret = new Message { data = new List<Element> () };
-            Logger.Debug (
-                $"反序列化消息{(message.Length>5?message.Substring(0,5)+"...":message)}"
-            );
-            Match match = Config.matchCqCode.Match (message);
-            Logger.Debug ("收到的消息为字符串格式");
-            if (match.Success) {
-                while (match.Success) {
-                    if (match.Index > 0)
-                        ret.data.Add (
-                            new ElementText (
-                                message.Substring (0, match.Index)
-                            )
-                        );
-                    //try { //for production
-                    ret.data.Add (BuildCQElement (match.Value));
-                    //} catch { }
-                    message = message.Substring (match.Index + match.Length);
-                    match = Config.matchCqCode.Match (message);
-                }
-                return ret;
-            }
-            return new Message { data = new List<Element> () { new ElementText (message) } };
-        }
-
-        /// <summary>
-        /// 将消息序列化为Json格式，即
-        /// https://cqhttp.cc/docs/4.6/#/Message 中的
-        /// 数组格式
-        /// </summary>
-        /// <return>
-        /// 数组格式的消息
-        /// </return>
-        /// <param name="message"></param>
-        /// <returns>序列化后的json字符串</returns>
-        private static string SerializeToJsonArray (Message message) {
-            string jsonBuild = "[";
-            foreach (var i in message.data) {
-                //if (!i.isSingle)
-                jsonBuild += i.raw_data_json + ',';
-                //else throw new Exceptions.ErrorMessageException ($"{i.type}消息段只能单独发送");
-            }
-            return jsonBuild.TrimEnd (' ', ',') + ']';
-        }
-        /// <summary>
-        /// 将消息序列化为CQ码格式，即酷Q原生消息格式
-        /// 亦即<c>SerializeToJson</c>中页面所说的
-        /// 字符串格式
-        /// </summary>
-        /// <see cref="Message.SerializeToJsonArray(Message)"/>
-        /// <param name="message"></param>
-        /// <returns>序列化后的CQ码</returns>
-        private static string SerializeToCQ (Message message) {
-            string cqBuild = "";
-            foreach (Element i in message.data)
-                cqBuild += i.raw_data_cq;
-            return cqBuild;
-        }
-
-        private static Element BuildCQElement (string cqcode) {
-            Logger.Debug ($"正在为CQ码{cqcode}构筑消息段");
-            string type = Config.parseCqCode.Match (cqcode).Groups[1].Value;
-            tempDict.Clear ();
-            foreach (Match i in Config.paramCqCode.Matches (cqcode))
-                tempDict.Add (i.Groups[1].Value, i.Groups[2].Value);
-            return BuildElement (type, tempDict);
-        }
-        private static Element BuildElement (string type, Dictionary<string, string> dict) {
-            try {
-                switch (type) {
-                    case "text":
-                        return new ElementText (dict["text"]);
-                    case "image":
-                        return new ElementImage (dict["url"]);
-                    case "at":
-                        return new ElementAt (long.Parse (dict["qq"]));
-                    case "record":
-                        return new ElementRecord (dict["file"]);
-                    case "face":
-                        return new ElementFace (dict["id"]);
-                    case "bface":
-                        return new ElementFace (dict["id"], "bface");
-                    case "sface":
-                        return new ElementFace (dict["id"], "sface");
-                    case "emoji":
-                        return new ElementFace (dict["id"], "emoji");
-                    case "shake":
-                        return new ElementShake ();
-                    case "share":
-                        string content, image;
-                        if (dict.ContainsKey ("content"))
-                            content = dict["content"];
-                        else content = "";
-                        if (dict.ContainsKey ("image"))
-                            image = dict["image"];
-                        else image = "";
-                        return new ElementShare (
-                            dict["url"], dict["title"],
-                            content, image
-                        );
-                    case "location":
-                        return new ElementLocation (
-                            float.Parse (dict["lat"]),
-                            float.Parse (dict["lon"]),
-                            dict["title"],
-                            dict["content"],
-                            dict["style"]
-                        );
-                    case "contact":
-                        return new ElementContact (
-                            dict["type"] == "private" ?
-                            Enums.MessageType.private_ :
-                            dict["type"] == "group" ?
-                            Enums.MessageType.group_ :
-                            Enums.MessageType.discuss_,
-                            long.Parse (dict["id"])
-                        );
-                    default:
-                        Logger.Warn ($"未能解析type为{type}的元素");
-                        return new Element (type, dict);
-                }
-            } catch (KeyNotFoundException) {
-                throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
-            }
-            //throw new Exceptions.NullElementException ($"未能解析type为{type}的元素");
-        }
     }
-
 }

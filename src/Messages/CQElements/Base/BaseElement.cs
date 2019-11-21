@@ -8,14 +8,17 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
     /// <remarks>
     /// should NEVER be constructed or used directly
     /// </remarks>
+    [JsonObject (MemberSerialization.OptIn)]
     public class Element {
         /// <summary>
         /// 消息段类型
         /// </summary>
+        [JsonProperty]
         public string type { get; private set; }
         /// <summary>
         /// represents the true message 
         /// </summary>
+        [JsonProperty]
         public virtual Dictionary<string, string> data { get; private set; }
         /// <summary>
         /// 表示消息段是否只能单独发送
@@ -64,40 +67,21 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
             return hash;
         }
         /// <summary>
-        /// builds the value when constructing CQCode
-        /// <see>https://d.cqp.me/Pro/CQ%E7%A0%81</see>
-        /// <see cref="CQElements.ElementText"/>
+        /// 将消息段序列化为CQ码格式，即酷Q原生消息格式
+        /// <see>https://d.cqp.me/Pro/CQ码</see>
         /// </summary>
         /// <value>CQCode</value>
-        [JsonIgnore]
-        public string raw_data_cq {
-            get {
-                if (type == "text")
-                    return Encoder.EncodeText (data["text"]);
-                string paramBuilder = "";
-                foreach (var i in data)
-                    if (i.Value.Length > 0)
-                        paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
-                return string.Format (
-                    "[CQ:{0}{1}]",
-                    type, paramBuilder.TrimEnd (' ')
-                );
-            }
-        }
-
-        /// <summary>
-        /// builds the value when constructing EXTENDED CQCode
-        /// <see>https://cqhttp.cc/docs/4.6/#/Message</see>
-        /// </summary>
-        [JsonIgnore]
-        public string raw_data_json {
-            get {
-                string builder = $"{{\"type\":\"{type}\",\"data\":{{";
-                foreach (var i in data)
-                    builder += $"\"{i.Key}\":\"{Config.asJsonStringVariable(i.Value)}\",";
-                return builder.TrimEnd (',', ' ')+$"}}}}";
-                //。。。不这么写的话我的代码格式化插件就会崩掉
-            }
+        public override string ToString () {
+            if (type == "text")
+                return Encoder.EncodeText (data["text"]);
+            string paramBuilder = "";
+            foreach (var i in data)
+                if (i.Value.Length > 0)
+                    paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
+            return string.Format (
+                "[CQ:{0}{1}]",
+                type, paramBuilder.TrimEnd (' ')
+            );
         }
         /// <summary>
         /// 手动构造一个消息段，一般用不到
@@ -118,6 +102,70 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public Element (string type, Dictionary<string, string> dict) {
             this.type = type;
             data = dict;
+        }
+        /// <summary>
+        /// 构造一个类型为type的消息段
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="dict"></param>
+        /// <returns></returns>
+        public static Element GetElement (string type, Dictionary<string, string> dict) {
+            try {
+                switch (type) {
+                case "text":
+                    return new ElementText (dict["text"]);
+                case "image":
+                    return new ElementImage (dict["url"]);
+                case "at":
+                    return new ElementAt (long.Parse (dict["qq"]));
+                case "record":
+                    return new ElementRecord (dict["file"]);
+                case "face":
+                    return new ElementFace (dict["id"]);
+                case "bface":
+                    return new ElementFace (dict["id"], "bface");
+                case "sface":
+                    return new ElementFace (dict["id"], "sface");
+                case "emoji":
+                    return new ElementFace (dict["id"], "emoji");
+                case "shake":
+                    return new ElementShake ();
+                case "share":
+                    string content, image;
+                    if (dict.ContainsKey ("content"))
+                        content = dict["content"];
+                    else content = "";
+                    if (dict.ContainsKey ("image"))
+                        image = dict["image"];
+                    else image = "";
+                    return new ElementShare (
+                        dict["url"], dict["title"],
+                        content, image
+                    );
+                case "location":
+                    return new ElementLocation (
+                        float.Parse (dict["lat"]),
+                        float.Parse (dict["lon"]),
+                        dict["title"],
+                        dict["content"],
+                        dict["style"]
+                    );
+                case "contact":
+                    return new ElementContact (
+                        dict["type"] == "private" ?
+                        Enums.MessageType.private_ :
+                        dict["type"] == "group" ?
+                        Enums.MessageType.group_ :
+                        Enums.MessageType.discuss_,
+                        long.Parse (dict["id"])
+                    );
+                default:
+                    Logger.Warn ($"未能解析type为{type}的元素");
+                    return new Element (type, dict);
+                }
+            } catch (KeyNotFoundException) {
+                throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
+            }
         }
     }
     class Encoder {

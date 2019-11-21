@@ -22,9 +22,8 @@ namespace cqhttp.Cyan.Utils {
         public long GetMessageId (string pattern) {
             Regex pat = new Regex (pattern);
             foreach (var i in messageList) {
-                if (pat.IsMatch (i.Item2.raw_data_cq)) {
+                if (pat.IsMatch (i.Item2.ToString ()))
                     return i.Item1;
-                }
             }
             throw new cqhttp.Cyan.Exceptions.NullEventException ("未发现满足条件的消息");
         }
