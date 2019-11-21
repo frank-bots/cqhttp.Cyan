@@ -35,7 +35,7 @@ namespace cqhttp.Cyan.Instance {
         /// 表示插件是否正常运行
         /// </summary>
         public bool alive { get; private set; }
-
+        int alive_counter = 0;
         /// <summary>
         /// 指向本实例的群组记录对象
         /// </summary>
@@ -154,9 +154,17 @@ namespace cqhttp.Cyan.Instance {
             Logger.Debug ($"收到了完整的上报事件{event_.postType}");
             if (event_ is MetaEvent) {
                 if (event_ is HeartbeatEvent) {
-                    if ((event_ as HeartbeatEvent).status.online)
+                    if ((event_ as HeartbeatEvent).status.online) {
                         alive = true;
-                    else alive = false;
+                        alive_counter++;
+                        var task = Task.Run (() => {
+                            System.Threading.Thread.Sleep (
+                                (int) (event_ as HeartbeatEvent).interval
+                            );
+                            if (alive_counter-- == 0)
+                                alive = false;
+                        });
+                    } else alive = false;
                 } else if (event_ is LifecycleEvent) {
                     if ((event_ as LifecycleEvent).enabled)
                         alive = true;

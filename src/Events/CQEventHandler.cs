@@ -42,7 +42,8 @@ namespace cqhttp.Cyan.Events {
                         case "heartbeat":
                             return new MetaEvents.HeartbeatEvent (
                                 eventJson["time"].ToObject<long> (),
-                                eventJson["status"].ToObject<Status> ()
+                                eventJson["status"].ToObject<Status> (),
+                                eventJson["interval"].ToObject<long> ()
                             );
                         default:
                             Logger.Error (
