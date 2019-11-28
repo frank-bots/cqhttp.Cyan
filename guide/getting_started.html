@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hello World </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Hello World ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="hello-world">Hello World</h1>
+
+<h3 id="0开始之前">0.开始之前</h3>
+<p>需要下载的内容：</p>
+<ol>
+<li><a href="https://cqp.cc">酷Q</a></li>
+<li><a href="https://cqhttp.cc">cqhttp插件</a></li>
+<li><a href="https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install">dotnet core</a></li>
+</ol>
+<h3 id="1搭建一个酷q实例并开启事件上报">1.搭建一个酷Q实例并开启事件上报</h3>
+<p>请参考<br>
+<a href="https://cqp.cc">酷Q官网</a><br>
+<a href="https://cqhttp.cc/docs/4.7/#/?id=%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">cqhttp插件文档</a></p>
+<h3 id="2创建一个-net-console项目">2.创建一个 .NET console项目</h3>
+<p>在<a href="https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install">https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial#install</a>获取.NET工具包<br>
+在任意目录下创建项目文件夹，并在cmd中执行</p>
+<pre><code class="lang-sh">dotnet new console -o [给项目起的名字]
+</code></pre>
+<h3 id="3添加nuget包">3.添加nuget包</h3>
+<p>在项目目录下执行</p>
+<pre><code class="lang-shell">dotnet add package cqhttp.Cyan
+dotnet restore
+</code></pre>
+<h3 id="4掌握一定的c语言基础并在programcs中编写bot逻辑">4.掌握一定的C#语言基础，并在Program.cs中编写bot逻辑</h3>
+<pre><code class="lang-csharp">using cqhttp.Cyan;
+using cqhttp.Cyan.Instance;
+namespace YourNS {
+    class Program {
+        static void Main(string[] args) {
+            //CQApiClient client = CQWebsocketClient(
+            CQApiClient client = CQHTTPClient (
+                //accessUrl: &quot;ws://domain:port/api&quot;,
+                accessUrl: &quot;http://domain:port/path&quot;,
+                accessToken: &quot;your_token&quot;,
+                //listenUrl: &quot;ws://domain:port/events
+                listen_port: 8080,
+                //注意websocket无secret参数
+                secret: &quot;your_secret&quot;
+            )
+            Console.WriteLine(
+                $&quot;QQ:{client.self_id},昵称:{client.self_nick}&quot;
+            );
+            //client构造后会发送一条get_login_info请求，则可以通过
+            //判断是否成功获取登陆的账号的QQ与昵称判断API是否可访问
+            client.OnEvent += (client, e) =&gt; {
+                //process (CQEvent e)
+                return new CQEmptyResponse ();
+            };
+            client.SendTextAsync(
+                MessageType.private_,
+                12345678,
+                &quot;一条文字消息&quot;
+            );
+            Console.ReadLine();
+        }
+    }
+}
+</code></pre>
+<p>在<a href="https://github.com/frank-bots/cqhttp.Cyan/tree/master/Examples">Examples</a>下有更多示例</p>
+<h2 id="next-step">Next Step</h2>
+<p><a href="messages.html">消息的接收与处理</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/docs/guide/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

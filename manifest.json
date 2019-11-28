@@ -1,0 +1,1998 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/frankli/Projects/C#/cqhttp.Cyan/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/further_reading.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/further_reading.html",
+          "hash": "VZl3Qe2J5zXGwCkTHXM+Bg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/getting_started.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/getting_started.html",
+          "hash": "ALwBC6oS/GoSBaeqJrAD6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guide/messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/messages.html",
+          "hash": "hCWGzxJksbEWMu0c4bt8Tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "guide/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "guide/toc.html",
+          "hash": "WgIs8DnzIoF8Vz9xerzrFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "6fpiH9WSzL9OODqsrqqBmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.ErrorHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.ErrorHandler.html",
+          "hash": "53rnU6P20Ogu7iwDOFtdYA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest.html",
+          "hash": "hwMBNkC2psDsG4Sh9lyOTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.Base.RateLimitableRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.Base.RateLimitableRequest.html",
+          "hash": "skP1Fw7sVbCNHYMfa/RlZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.Base.html",
+          "hash": "BkY82JSxbAQus3UrFF5Npw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.CleanDataDirRequest.html",
+          "hash": "Xm9V/YkYI/u0uTt+7Pms7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.CleanPluginLogRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.CleanPluginLogRequest.html",
+          "hash": "ruo42ZwwazLjXhE6D4gbOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.DeleteMsgRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.DeleteMsgRequest.html",
+          "hash": "6WuS8wUJh5N/jztds91tCQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetGroupListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetGroupListRequest.html",
+          "hash": "hwiDdioa0e/8WNOWTgdseg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetGroupMemberInfoRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetGroupMemberInfoRequest.html",
+          "hash": "7W5WeU76I2HBd74QnbOkBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetGroupMemberListRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetGroupMemberListRequest.html",
+          "hash": "3mEv+omkFCjlOgL9D5GLaw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetImageRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetImageRequest.html",
+          "hash": "PKdU6/C0PQhfewGR0up6XA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetLoginInfoRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetLoginInfoRequest.html",
+          "hash": "IPA2I56eMJlb3tab6Pgw+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetRecordRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetRecordRequest.html",
+          "hash": "MK+qX3ERZnxJPwCkNrX67Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.html",
+          "hash": "FsFkvetmVEfA2RdiyGg9Yw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.HandleQuickOperationRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.HandleQuickOperationRequest.html",
+          "hash": "Y6K9BjtlIp+S4IglUigzsA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SendLikeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SendLikeRequest.html",
+          "hash": "e0nQMdGzifO3uUZgcqg4WA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SendmsgRequest.html",
+          "hash": "KQsUtOm6FLjA3d7OLvzzYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetDiscussLeaveRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetDiscussLeaveRequest.html",
+          "hash": "x8u5O7aKQ9aVgRyjgJabbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetFriendAddRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetFriendAddRequest.html",
+          "hash": "9sPmqtqX286Q1aBNhDGB6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupAdminRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupAdminRequest.html",
+          "hash": "JVB0RLl6McM+CqNPTRbGOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupAnonymousBanRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupAnonymousBanRequest.html",
+          "hash": "nGPF2kTR2DvihzNwZeYXlw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupAnonymousRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupAnonymousRequest.html",
+          "hash": "fqYwt5up9GyJC2dyNB097w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupBanRequest.html",
+          "hash": "vEfSDN/hvCVtbh5h0Hn+/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupCardRequest.html",
+          "hash": "eKJJxQ5Txgu+yO4EQkTv1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupKickRequest.html",
+          "hash": "pXoVq+yEELjoj5xR0QIRTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupLeaveRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupLeaveRequest.html",
+          "hash": "tw0upY5DqnHb3l8geb5qgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupSpecialTitleRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupSpecialTitleRequest.html",
+          "hash": "G3t8qqARp4wg8r6NG69J1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupWholeBanRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetGroupWholeBanRequest.html",
+          "hash": "t+XF0ihSE9N9Ius47VyrlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetRestartPluginRequest.html",
+          "hash": "B4pXgu3HjW5JRmH9S41+wA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.SetRestartRequest.html",
+          "hash": "Jkw4I05MTREqRa0zh18sHg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Requests.html",
+          "hash": "M57yNzUacsHV2JfdHpo7Rg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html",
+          "hash": "xiIjEpWyvErorMNcf2snyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.Base.html",
+          "hash": "yTNTpvyGZhfioWEL24jNTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.EmptyResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.EmptyResult.html",
+          "hash": "PYQZpoxjjsVBhGs21FZdrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.html",
+          "hash": "wQL6EzSKIHM0YaXLolfVSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetGroupMemberInfoResult.html",
+          "hash": "fVl6rmPHQK2XytVYO4o+9Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetGroupMemberListResult.html",
+          "hash": "Hzh5TwIAsPQhCo03d26cfA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetImageResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetImageResult.html",
+          "hash": "jKVSW0hp1RMrtnvOIivDnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetLoginInfoResult.html",
+          "hash": "/iXinPC/xyyBPMT+H/pJAA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetRecordResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetRecordResult.html",
+          "hash": "l85tppUfAkxJQsPkrzG58A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html",
+          "hash": "MmhRUt6vQUPepPXSQfixOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html",
+          "hash": "xCFUPg1CBDwV0i/a/1jP6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.SendmsgResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.SendmsgResult.html",
+          "hash": "m7jiUhTH8agwovP/xGOBMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.Results.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.Results.html",
+          "hash": "HV3/IFvtYrxTx8l1Bnpp7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.ApiCall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.ApiCall.html",
+          "hash": "4pvTgtqsMD2QL/VcEJ7DbQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Config.html",
+          "hash": "3IJfBa90Kci4JRQrx3uULQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Enums.LogType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Enums.LogType.html",
+          "hash": "aFXNNoMNsScwQ9WbNqTu/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Enums.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Enums.MessageType.html",
+          "hash": "gS4lMAaxEZQM21zVbSNOLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Enums.NoticeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Enums.NoticeType.html",
+          "hash": "2paJhQA2lj+r03jbiG7aOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Enums.PostType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Enums.PostType.html",
+          "hash": "F2MpoxNt9QPffcFzyHrz3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Enums.Verbosity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Enums.Verbosity.html",
+          "hash": "7NsJT0TNl7j/ZgqvFk7X6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Enums.html",
+          "hash": "xc3/FHhbbEHFCVRABPRMDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEventHandler.html",
+          "hash": "GBFWOG/71X0gez9R4XB28w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.AnonymousInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.AnonymousInfo.html",
+          "hash": "oeJTyc0/MLvZIFWy6+ZUdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.CQEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html",
+          "hash": "gbAbyV3nQbPJbWEk8uRF+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.html",
+          "hash": "jXGy7TzW5ZMAqtUyo6GBpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html",
+          "hash": "t1JGW5xlEzRq99vBmgc4DQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.html",
+          "hash": "duaO7ra6h1RS1gq+JNILmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.html",
+          "hash": "883JA/Lq+fjcgNZlcuSi2g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.Sender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.Sender.html",
+          "hash": "QuZ2VFX3WMWxZ+V3TtqRHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.Base.html",
+          "hash": "goFxzHVmh7YwpkKu3Afkgg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.DiscussMessageEvent.html",
+          "hash": "/dwuljxYMojHEFGwRm/oyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.FileInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.FileInfo.html",
+          "hash": "dS6R8u6OhIfkVThmS9d9qQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.FriendAddEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.FriendAddEvent.html",
+          "hash": "Td0PwTQ7qvBAqbjG4MbEBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.html",
+          "hash": "oKL5xhIynjdJ2cTJMsAgJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupAddRequestEvent.html",
+          "hash": "QDz6fAguIluPiXuznjuy4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.html",
+          "hash": "INg95WWb7JrAJgcxXSiIsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.html",
+          "hash": "usygQ9r28ns6O1Uyic1Kmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupMessageEvent.html",
+          "hash": "t87TYVndqYXH+Zr+dkh6yQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupSender.html",
+          "hash": "phL0tBMiLMJKjuO/EaM1zQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.GroupUploadEvent.html",
+          "hash": "B0SdjtiykVlVV0BWf4nxnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.html",
+          "hash": "iBXCGAfgaTr0Kklqwe8f2A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQEvents.html",
+          "hash": "VfY7yZ9a9P4kl9WMc0JWzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.Base.CQReplyMessageResponse.html",
+          "hash": "uIhwxJmYjOieOMHifsuVoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.Base.CQResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.Base.CQResponse.html",
+          "hash": "r9AH4da6bebKYuzButi+AQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.Base.html",
+          "hash": "sAksNKJNhcribfnQmpWrJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.DiscussMessageResponse.html",
+          "hash": "oMCQHJWPYbLabv4Hq75n8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.EmptyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.EmptyResponse.html",
+          "hash": "M/BljTbsCmtE0Xss2XUjnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.FriendAddResponse.html",
+          "hash": "LIzqZsZMcN09xLq3rTxZoQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.GroupAddRequestResponse.html",
+          "hash": "Dc01dibbf4+F/I4m4Mcw6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.GroupMessageResponse.html",
+          "hash": "GWRG3Kwp2cSFMrqdk4SMaA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.PrivateMessageResponse.html",
+          "hash": "EOTBIuYf9EkKzl9DH1Uz6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.CQResponses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.CQResponses.html",
+          "hash": "GkHdHmPUC0mt5mYVMIlWTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.EventListener.CQEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.EventListener.CQEventListener.html",
+          "hash": "+ICS9vYAjsHsYVh68Tj+Iw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.EventListener.HttpEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.EventListener.HttpEventListener.html",
+          "hash": "z+Ya5yiq6xjfu1QuZisPlg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.EventListener.ReverseWSListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.EventListener.ReverseWSListener.html",
+          "hash": "vApoBTN4FW85WuPKeC8ZAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.EventListener.WebsocketListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.EventListener.WebsocketListener.html",
+          "hash": "pHO+3QGefHq4nfSpG9OhLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.EventListener._WebsocketProcessor.html",
+          "hash": "0PbFoDHjfHsOttpsgNSNJA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.EventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.EventListener.html",
+          "hash": "UE2HbHkQg9uf4Ibv5skp4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.HeartbeatEvent.html",
+          "hash": "d3kfne0NBIPP/hgm5LngPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.LifecycleEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.LifecycleEvent.html",
+          "hash": "xuXUwUHTwYB+3ET2aBXNcw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.MetaEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.MetaEvent.html",
+          "hash": "JRA8NqWRh5qwky7txJ7F6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.MetaEvents.html",
+          "hash": "LDRNqz6HfoIzYZam3ZKgLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Events.html",
+          "hash": "JIt/EhGmbsaTimhLzEv3Dg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.AsyncApicallException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.AsyncApicallException.html",
+          "hash": "iSkBAoek2wiPkDLh+cgr6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorApicallException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorApicallException.html",
+          "hash": "AAalycUSlk7sR9ag3n5JBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorElementException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorElementException.html",
+          "hash": "fBAGQHzkhfGF6xOtmUXkiA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorEventException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorEventException.html",
+          "hash": "em0iPeo7sLC/yE+oI+O+jQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorMessageException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorMessageException.html",
+          "hash": "vp4Zbfv1svI1CUyEPhQJNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorResponseException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorResponseException.html",
+          "hash": "8oD7q9d0j1zLWKzoD3+sdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorUtilOperationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.ErrorUtilOperationException.html",
+          "hash": "WSsOK6rNUUXJFD11ua3kNg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.NetworkFailureException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.NetworkFailureException.html",
+          "hash": "/X2gIh0qb660dazHCFTFDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.NullApicallException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.NullApicallException.html",
+          "hash": "Ji+2XO7C+bK0u4HqtqokMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.NullElementException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.NullElementException.html",
+          "hash": "ne7WLFo/lm4ufj8uveuwBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.NullEventException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.NullEventException.html",
+          "hash": "KFlzSt+Wu80CrnMW6PVm8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Exceptions.html",
+          "hash": "tdb43rBNox738N6NS7gHTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.CQApiClient.OnEventDelegate.html",
+          "hash": "nFly0Zn2gvBMyTx3Ub1Odw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.CQApiClient.OnEventDelegateAsync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.CQApiClient.OnEventDelegateAsync.html",
+          "hash": "bvGzVP65AtHgLvW4uW25dw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.CQApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.CQApiClient.html",
+          "hash": "D6TmWFV5BbCK+Xd8GEUOoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.CQHTTPClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.CQHTTPClient.html",
+          "hash": "05bJPnuqKcn3MghkzqDhbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.CQReverseWSClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.CQReverseWSClient.html",
+          "hash": "5JKwqpVkUhub2zqRNmqrfw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.CQWebsocketClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.CQWebsocketClient.html",
+          "hash": "2si+KLSdthSDGESgEdulYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.WebsocketDaemon.WebsocketServerInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.WebsocketDaemon.WebsocketServerInstance.html",
+          "hash": "vQPL4IvaU+UCI6Ko2Yrb6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.WebsocketDaemon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.WebsocketDaemon.html",
+          "hash": "D7T6bVUMIn2WoZXDX76eOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Instance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Instance.html",
+          "hash": "9BNDH21d6DRZYlLHADBXmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Logger.LogAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Logger.LogAction.html",
+          "hash": "GbuJ6uJB3CpX2cZgfBoB/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Logger.html",
+          "hash": "V9NQlMxqtEXEAvG7seSorg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.BaseElementShare.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.BaseElementShare.html",
+          "hash": "XfXCb9GhjjFw3z9EQ5cWbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.Element.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.Element.html",
+          "hash": "nyHzaWyzs3RfN2vu2TOejA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html",
+          "hash": "I+z1pgY4wmXp6B+zZw1bRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.Base.html",
+          "hash": "GL5h29gYAOlTwt4JtAXtEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.html",
+          "hash": "c4W0mFVSi3XeOkVlL/CFnA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementAt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementAt.html",
+          "hash": "NWmhgRSI2cYfm8Swv6DhFQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementContact.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementContact.html",
+          "hash": "Kd4xMVGV8JTuUkM+zAjCzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementEmoji.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementEmoji.html",
+          "hash": "9S7HrbSQmwfXNgaFIS9KVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementFace.html",
+          "hash": "Qa7/p4q8eiEwPiB6BtHw0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementImage.html",
+          "hash": "TGNYvD0g1TtcHmW3gUc1GA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementLocation.html",
+          "hash": "BAwtO8eOktzx+ukMLkEUyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementMusic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementMusic.html",
+          "hash": "JD6uA6eC8fGrPxK9pddRVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementMusicCustom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementMusicCustom.html",
+          "hash": "COFauCPtekAQFtwinYAO2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementRecord.html",
+          "hash": "BSvcJOun+qBFDCvj6OAQpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementShake.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementShake.html",
+          "hash": "eri7QZ+1qY8dKAzxd1fAuA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementShare.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementShare.html",
+          "hash": "/sAOVZkypW560Q4hpx0bkw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.ElementText.html",
+          "hash": "9VMGMRyJ9Qh4kym4I+V0gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CQElements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CQElements.html",
+          "hash": "01LKsTo0IezTVVLJsD8SEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageAnnonymous.html",
+          "hash": "4mBUe7NrndpGe/gdDo52yg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageOnlineImage.html",
+          "hash": "HnmT2OdZdO7e/QNsAgsV/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageShake.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageShake.html",
+          "hash": "xT6HzNLdA9YTkNtWQdjwfw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageShare.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.MessageShare.html",
+          "hash": "eL6OPVxr+ToBe11KtzLURA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.CommonMessages.html",
+          "hash": "M2I3QOJjQ/dqWzJQbS7G/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.Message.html",
+          "hash": "01DXAOajjgg/PHyiJT3/JQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Messages.html",
+          "hash": "7ixmi9fWyIxUvjMuygmaGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Status.html",
+          "hash": "hHqYziUqEt3eSQCF7+U6yg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.Convert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.Convert.html",
+          "hash": "DWlKIpD1wxh2pPQZMLSeBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.Dialogue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.Dialogue.html",
+          "hash": "tf3A8xh7tiw4sw35/D0Fjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.DialoguePool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.DialoguePool.html",
+          "hash": "NtHCzWhBaPN12brec8B9Gg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.Get.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.Get.html",
+          "hash": "T5B+NmQKrywtbEFaLuqaCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.GroupMemberInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.GroupMemberInfo.html",
+          "hash": "NCshhU50GZMawHoP+C2cdw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.GroupTable.GroupInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.GroupTable.GroupInfo.html",
+          "hash": "CwuUSaO1RxOlFf+onxn/9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.GroupTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.GroupTable.html",
+          "hash": "3B/v60451bokF1EOPq+5BQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.InvokeDialogueException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.InvokeDialogueException.html",
+          "hash": "c/5G8uzpAdwnQU4G03JC5A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.MessageTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.MessageTable.html",
+          "hash": "kV5YatASM6aXX+Gfor9Y7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.Utils.html",
+          "hash": "QUCi6KkxEHe6zICzAmzrmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "meta/cqhttp.Cyan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/cqhttp.Cyan.html",
+          "hash": "KkpGAAz6gEIkkgYkx7gobw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "meta/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "meta/index.html",
+          "hash": "e5aYKk0jdLVolgN9U7Z69Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "meta/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "meta/toc.html",
+          "hash": "pLL8ZDN1Kl5zaBWvEip8/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "5UgMFHWvlhpVYqT/aFQ/dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 4
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 154,
+          "skipped_file_count": 154
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
