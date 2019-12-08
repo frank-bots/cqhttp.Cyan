@@ -62,7 +62,7 @@ namespace cqhttp.Cyan.Events {
                 case "private":
                     return new PrivateMessageEvent (
                         e["time"].ToObject<long> (),
-                        e["time"].ToObject<Message> (),
+                        e["message"].ToObject<Message> (),
                         e["sender"].ToObject<Sender> (),
                         e["message_id"].ToObject<int> ()
                     );
@@ -70,7 +70,7 @@ namespace cqhttp.Cyan.Events {
                     return new GroupMessageEvent (
                         e["time"].ToObject<long> (),
                         e["sub_type"].ToString (),
-                        e["time"].ToObject<Message> (),
+                        e["message"].ToObject<Message> (),
                         e["sender"].ToObject<GroupSender> (),
                         e["message_id"].ToObject<int> (),
                         e["group_id"].ToObject<long> (),
@@ -79,7 +79,7 @@ namespace cqhttp.Cyan.Events {
                 case "discuss":
                     return new DiscussMessageEvent (
                         e["time"].ToObject<long> (),
-                        e["time"].ToObject<Message> (),
+                        e["message"].ToObject<Message> (),
                         e["sender"].ToObject<Sender> (),
                         e["message_id"].ToObject<int> (),
                         e["discuss_id"].ToObject<long> ()
