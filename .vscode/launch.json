@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/cqhttp.Cyan.Tests/bin/Debug/netcoreapp2.1/cqhttp.Cyan.Tests.dll",
+            "program": "${workspaceFolder}/cqhttp.Cyan.Tests/bin/Debug/netcoreapp3.0/cqhttp.Cyan.Tests.dll",
             "args": [],
             "cwd": "${workspaceFolder}/cqhttp.Cyan.Tests",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
