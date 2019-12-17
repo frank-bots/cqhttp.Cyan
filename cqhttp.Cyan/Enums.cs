@@ -31,6 +31,10 @@ namespace cqhttp.Cyan.Enums {
         group_decrease,
         /// <summary>群成员增加</summary>
         group_increase,
+        /// <summary>群员被禁言</summary>
+        group_ban,
+        /// <summary></summary>
+        group_lift_ban,
         /// <summary>好友申请</summary>
         friend_add
     }
@@ -44,8 +48,7 @@ namespace cqhttp.Cyan.Enums {
     /// <summary>
     /// 日志输出方式
     /// </summary>
-    public enum LogType
-    {
+    public enum LogType {
         /// <summary>
         /// 文件
         /// </summary>

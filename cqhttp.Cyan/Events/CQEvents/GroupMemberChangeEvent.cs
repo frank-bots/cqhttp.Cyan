@@ -13,11 +13,11 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public long operator_id { get; private set; }
         /// <summary></summary>
         public GroupMemberChangeEvent (
-            long time, long group_id, long user_id, 
-            long operator_id, bool isAdd, string sub_type):
+                long time, long group_id, long user_id,
+                long operator_id, bool is_add, string sub_type):
             base (
                 time,
-                isAdd? Enums.NoticeType.group_increase:
+                is_add? Enums.NoticeType.group_increase:
                 Enums.NoticeType.group_decrease,
                 group_id,
                 user_id
