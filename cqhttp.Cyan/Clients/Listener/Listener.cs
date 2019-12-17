@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
+using Newtonsoft.Json;
 
 namespace cqhttp.Cyan.Clients.Listeners {
     class Listener : IListener {
@@ -16,7 +17,7 @@ namespace cqhttp.Cyan.Clients.Listeners {
             foreach (var handler in handlers) {
                 try {
                     response = await handler (
-                        Events.CQEventHandler.ParseEvent (message)
+                        JsonConvert.DeserializeObject<CQEvent> (message)
                     );
                 } catch (Exception e) {
                     Logger.Error ("处理事件时出现异常");

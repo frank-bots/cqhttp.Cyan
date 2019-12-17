@@ -1,12 +1,11 @@
 using cqhttp.Cyan.Enums;
 
-namespace cqhttp.Cyan.Events.CQEvents.Base
-{
-
+namespace cqhttp.Cyan.Events.CQEvents.Base {
     /// <summary>
-    /// Event指“事件上报”中的事件
+    /// “事件上报”中的事件
     /// <see>https://cqhttp.cc/docs/4.6/#/Post</see>
     /// </summary>
+    [Newtonsoft.Json.JsonConverter (typeof (EventConverter))]
     public abstract class CQEvent {
         /// <summary>
         /// 时间戳
