@@ -7,19 +7,36 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/cqhttp.Cyan.csproj"
+                "${workspaceFolder}/cqhttp.Cyan.Tests/cqhttp.Cyan.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build_release",
+            "label": "publish",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "build",
-                "${workspaceFolder}/src/cqhttp.Cyan.csproj",
-                "-c", "Release"
-            ]
+                "publish",
+                "${workspaceFolder}/cqhttp.Cyan.Tests/cqhttp.Cyan.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/cqhttp.Cyan.Tests/cqhttp.Cyan.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
