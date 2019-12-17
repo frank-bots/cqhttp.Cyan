@@ -2,22 +2,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>cqhttp.Cyan</id>
-    <version>1.2.1-beta2</version>
+    <version>2.0.0-beta</version>
     <authors>Frank</authors>
     <owners>Frank</owners>
     <description>see https://github.com/frank-bots/cqhttp.Cyan</description>
 
     <license type="expression">GPL-3.0-or-later</license>
     <dependencies>
-      <group targetFramework=".NETCoreApp2.1">
-        <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
-        <dependency id="Newtonsoft.Json" version="12.0.1" exclude="Build,Analyzers" />
+      <group targetFramework=".NETCoreApp3.0">
+        <dependency id="Microsoft.NETCore.App" version="3.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
         <dependency id="Fleck" version="1.1.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="bin/Release/netcoreapp3.0/cqhttp.Cyan.runtimeconfig.json" target="lib/netcoreapp3.0/cqhttp.Cyan.runtimeconfig.json" />
     <file src="bin/Release/netcoreapp3.0/cqhttp.Cyan.dll" target="lib/netcoreapp3.0/cqhttp.Cyan.dll" />
     <file src="bin/Release/netcoreapp3.0/cqhttp.Cyan.xml" target="lib/netcoreapp3.0/cqhttp.Cyan.xml" />
   </files>
