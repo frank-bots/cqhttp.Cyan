@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Instance;
+using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Utils {

@@ -15,7 +15,7 @@ namespace cqhttp.Cyan.Events {
         /// </summary>
         /// <param name="e">上报事件</param>
         /// <returns>处理后的事件对象</returns>
-        public static CQEvent HandleEvent (string e) {
+        public static CQEvent ParseEvent (string e) {
             string post_type;
             JObject eventJson;
             try {

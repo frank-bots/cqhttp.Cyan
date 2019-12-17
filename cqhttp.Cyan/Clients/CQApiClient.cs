@@ -7,18 +7,12 @@ using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses.Base;
-using cqhttp.Cyan.Events.EventListener;
 using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
 
-namespace cqhttp.Cyan.Instance {
+namespace cqhttp.Cyan.Clients {
     /// <summary></summary>
-    public abstract class CQApiClient {
-        /// <summary>
-        /// 酷Q配置中的access_token
-        /// <see>https://cqhttp.cc/docs/4.6/#/API?id=%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F</see>
-        /// </summary>
-        public string accessToken = "";
+    public class CQApiClient {
         /// <summary>
         /// 当前实例的QQ号
         /// </summary>
@@ -45,13 +39,20 @@ namespace cqhttp.Cyan.Instance {
         /// </summary>
         public Utils.MessageTable messageTable = null;
 
+        ///
+        protected Callers.ICaller caller;
+        ///
+        protected Listeners.IListener listener;
+
         /// <summary></summary>
         public CQApiClient (
-            string accessToken = "",
+            Callers.ICaller caller,
+            Listeners.IListener listener,
             bool use_group_table = false,
             bool use_message_table = false
         ) {
-            this.accessToken = accessToken;
+            this.caller = caller;
+            this.listener = listener;
             if (use_group_table) this.groupTable = new Utils.GroupTable ();
             if (use_message_table) this.messageTable = new Utils.MessageTable ();
         }
@@ -93,8 +94,10 @@ namespace cqhttp.Cyan.Instance {
             }
         }
         /// <summary>通用发送请求函数，一般不需调用</summary>
-        public virtual Task<ApiResult> SendRequestAsync (ApiRequest x) {
-            throw new Exceptions.ErrorApicallException ("未指定Client类型(HTTP/WebSocket)");
+        public async Task<ApiResult> SendRequestAsync (ApiRequest x) {
+            var result = await caller.SendRequestAsync (x);
+            RequestPreprocess (x);
+            return result;
         }
         /// <summary>发送消息(自行构造)</summary>
         public async Task<SendmsgResult> SendMessageAsync (
@@ -137,8 +140,7 @@ namespace cqhttp.Cyan.Instance {
         ) as SendmsgResult;
 
         //////////////////////////////////////////////////////////////////////////////////////
-        /// <summary></summary>
-        protected CQEventListener __eventListener;
+        
         /// <summary></summary>
         public delegate CQResponse OnEventDelegate (CQApiClient client, CQEvent eventObj);
         ///
@@ -150,36 +152,36 @@ namespace cqhttp.Cyan.Instance {
         /// </summary>
         public event OnEventDelegateAsync OnEventAsync;
         /// <summary></summary>
-        protected async Task<CQResponse> __HandleEvent (CQEvent event_) {
-            Logger.Debug ($"收到了完整的上报事件{event_.postType}");
-            if (event_ is MetaEvent) {
-                if (event_ is HeartbeatEvent) {
-                    if ((event_ as HeartbeatEvent).status.online) {
+        protected async Task<CQResponse> HandleEvent (CQEvent e) {
+            Logger.Debug ($"收到了完整的上报事件{e.postType}");
+            if (e is MetaEvent) {
+                if (e is HeartbeatEvent) {
+                    if ((e as HeartbeatEvent).status.online) {
                         alive = true;
                         alive_counter++;
                         var task = Task.Run (() => {
                             System.Threading.Thread.Sleep (
-                                (int) (event_ as HeartbeatEvent).interval
+                                (int) (e as HeartbeatEvent).interval
                             );
                             if (alive_counter-- == 0)
                                 alive = false;
                         });
                     } else alive = false;
-                } else if (event_ is LifecycleEvent) {
-                    if ((event_ as LifecycleEvent).enabled)
+                } else if (e is LifecycleEvent) {
+                    if ((e as LifecycleEvent).enabled)
                         alive = true;
                     else alive = false;
                 }
                 return new Events.CQResponses.EmptyResponse ();
-            } else if (event_ is MessageEvent) {
+            } else if (e is MessageEvent) {
                 alive = true;
                 if (messageTable != null)
                     messageTable.Log (
-                        (event_ as MessageEvent).message_id,
-                        (event_ as MessageEvent).message
+                        (e as MessageEvent).message_id,
+                        (e as MessageEvent).message
                     );
-                if (event_ is GroupMessageEvent) {
-                    var group_id = (event_ as GroupMessageEvent).group_id;
+                if (e is GroupMessageEvent) {
+                    var group_id = (e as GroupMessageEvent).group_id;
                     if (groupTable == null || groupTable[group_id][self_id] == null) {
                         try {
                             var info = await SendRequestAsync (
@@ -191,51 +193,44 @@ namespace cqhttp.Cyan.Instance {
                             ) as GetGroupMemberInfoResult;
                             if (groupTable != null)
                                 groupTable[group_id][self_id] = info.memberInfo;
-                            (event_ as GroupMessageEvent).self_info = info.memberInfo;
+                            (e as GroupMessageEvent).self_info = info.memberInfo;
                         } catch { }
                     } else {
-                        (event_ as GroupMessageEvent).self_info
+                        (e as GroupMessageEvent).self_info
                             = groupTable[group_id][self_id];
                     }
                 }
-                if (Utils.DialoguePool.Handle (this, event_ as MessageEvent))
+                if (Utils.DialoguePool.Handle (this, (e as MessageEvent)))
                     return new Events.CQResponses.EmptyResponse ();
             }
             try {
                 if (OnEventAsync != null)
-                    await OnEventAsync (this, event_);
-            } catch (Utils.InvokeDialogueException e) {
-                ComposeDialogue (ref e, ref event_);
-                return new Events.CQResponses.EmptyResponse ();
-            }
-            try {
+                    await OnEventAsync (this, e);
+
                 if (OnEvent != null)
-                    return OnEvent (this, event_);
+                    return OnEvent (this, e);
                 else
                     return new Events.CQResponses.EmptyResponse ();
-            } catch (Utils.InvokeDialogueException e) {
-                ComposeDialogue (ref e, ref event_);
+            } catch (Utils.InvokeDialogueException d) {
+                ComposeDialogue (ref d, ref e);
                 return new Events.CQResponses.EmptyResponse ();
             }
         }
         private static object dialoguePoolLock = new object ();
         private static void ComposeDialogue (
-            ref Utils.InvokeDialogueException e,
-            ref CQEvent event_
+            ref Utils.InvokeDialogueException d,
+            ref CQEvent e
         ) {
             lock (dialoguePoolLock) {
                 Logger.Debug ("got a dialogue");
+                long uid = (e as MessageEvent).sender.user_id;
                 long bid =
-                    (event_ is GroupMessageEvent) ? (event_ as GroupMessageEvent).group_id :
-                    (event_ is DiscussMessageEvent) ? (event_ as DiscussMessageEvent).discuss_id :
-                    -1;
-                long uid = (event_ as MessageEvent).sender.user_id;
-                if (e.acceptAll && bid != -1) {
-                    Utils.DialoguePool.Join (bid, bid, e.content);
-                    return;
-                }
-                if (bid == -1) bid = uid;
-                Utils.DialoguePool.Join (uid, bid, e.content);
+                    (e is GroupMessageEvent) ? (e as GroupMessageEvent).group_id :
+                    (e is DiscussMessageEvent) ? (e as DiscussMessageEvent).discuss_id :
+                    uid;
+                if (d.acceptAll && bid != uid)
+                    uid = bid;
+                Utils.DialoguePool.Join (uid, bid, d.content);
             }
             return;
         }
