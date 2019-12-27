@@ -8,8 +8,8 @@ namespace cqhttp.Cyan.Examples
     class WebsocketClientTest {
         public static void Test () {
             //设置日志
-            Logger.LogType = Enums.LogType.Console | Enums.LogType.File;
-            Logger.LogLevel = Enums.Verbosity.ALL;
+            Log.LogType = Enums.LogType.Console | Enums.LogType.File;
+            Log.LogLevel = Enums.Verbosity.ALL;
 
             string accessUrl = "ws://127.0.0.1:6700";
             string token = "";

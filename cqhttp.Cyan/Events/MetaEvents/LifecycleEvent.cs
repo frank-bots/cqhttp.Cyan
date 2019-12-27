@@ -1,4 +1,3 @@
-using cqhttp.Cyan.Events.CQEvents.Base;
 namespace cqhttp.Cyan.Events.MetaEvents {
     /// <summary></summary>
     public class LifecycleEvent : MetaEvent {

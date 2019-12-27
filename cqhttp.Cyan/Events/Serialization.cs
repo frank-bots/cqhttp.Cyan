@@ -20,7 +20,7 @@ namespace cqhttp.Cyan.Events {
                     JToken.ReadFrom (reader)
                 );
             } catch (JsonException) {
-                Logger.Error ($"收到了错误的上报消息");
+                Log.Error ($"收到了错误的上报消息");
                 throw new Exceptions.ErrorEventException ("收到了错误的上报消息");
             }
         }
@@ -53,17 +53,17 @@ namespace cqhttp.Cyan.Events {
                 case "heartbeat":
                     return new MetaEvents.HeartbeatEvent (
                         eventJson["time"].ToObject<long> (),
-                        eventJson["status"].ToObject<Status> (),
+                        eventJson["status"].ToObject<MetaEvents.Status> (),
                         eventJson["interval"].ToObject<long> ()
                     );
                 default:
-                    Logger.Error (
+                    Log.Error (
                         $"未能解析元事件{eventJson.ToString()}"
                     );
                     throw new Exceptions.ErrorEventException ("未能解析元事件");
                 }
             }
-            Logger.Error ($"未能解析type为{post_type}的event");
+            Log.Error ($"未能解析type为{post_type}的event");
             throw new Exceptions.NullEventException ($"未能解析type为{post_type}的event");
         }
 
@@ -96,7 +96,7 @@ namespace cqhttp.Cyan.Events {
                     e["discuss_id"].ToObject<long> ()
                 );
             default:
-                Logger.Error (
+                Log.Error (
                     $"未能解析消息事件{e.ToString()}"
                 );
                 return new UnknownEvent (
@@ -126,7 +126,7 @@ namespace cqhttp.Cyan.Events {
                     e["flag"].ToString ()
                 );
             default:
-                Logger.Error (
+                Log.Error (
                     $"未能解析请求事件{e.ToString()}"
                 );
                 return new UnknownEvent (
@@ -180,7 +180,7 @@ namespace cqhttp.Cyan.Events {
                     e["duration"].ToObject<long> ()
                 );
             default:
-                Logger.Error (
+                Log.Error (
                     $"未能解析提醒事件{e.ToString()}"
                 );
                 return new UnknownEvent (

@@ -31,7 +31,7 @@ namespace cqhttp.Cyan.Clients {
 
             if (base.Initiate ().Result == false)
                 throw new Exceptions.ErrorApicallException ("初始化失败");
-            Logger.Info ("成功连接");
+            Log.Info ("成功连接");
         }
     }
 }

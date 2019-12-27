@@ -46,11 +46,11 @@ namespace cqhttp.Cyan.Clients.Callers {
                         response = await httpClient.PostAsync (host + request.apiPath, content);
                     }
                 } catch (HttpRequestException) {
-                    Logger.Error ("HTTP API连接错误");
+                    Log.Error ("HTTP API连接错误");
                     throw new Exceptions.NetworkFailureException ("您有没有忘记插网线emmmmmm?");
                 }
                 if (response.IsSuccessStatusCode == false) {
-                    Logger.Error (
+                    Log.Error (
                         $"调用HTTP API{await content.ReadAsStringAsync()}得到了错误的返回值{response.StatusCode}"
                     );
                     throw new Exceptions.NetworkFailureException ($"POST调用api出错");

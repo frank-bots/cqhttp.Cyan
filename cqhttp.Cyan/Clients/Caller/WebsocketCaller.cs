@@ -39,7 +39,7 @@ namespace cqhttp.Cyan.Clients.Callers {
             CleanUp ();
         }
         private async void CleanUp () {
-            Logger.Info ("开始关闭Websocket连接");
+            Log.Info ("开始关闭Websocket连接");
             await ConnectionPool.CloseAsync (
                 this.access_url + (this.access_token == "" ? "" : "?access_token=" + this.access_token)
             );

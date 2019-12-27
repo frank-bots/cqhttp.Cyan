@@ -50,7 +50,7 @@ namespace cqhttp.Cyan.Clients.Listeners {
                     context.Response.StatusCode = 204;
                 }
             } catch (Exception e) {
-                Logger.Error ($"网络出现未知错误{e}\n{e.Message}");
+                Log.Error ($"网络出现未知错误{e}\n{e.Message}");
             }
         }
         private static string GetContent (byte[] secret, HttpListenerRequest request) {

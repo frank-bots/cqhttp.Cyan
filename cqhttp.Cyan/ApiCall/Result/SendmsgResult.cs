@@ -10,9 +10,9 @@ namespace cqhttp.Cyan.ApiCall.Results {
                 message_id =
                     raw_data["message_id"].ToObject<int> ();
             } catch (Exceptions.AsyncApicallException) {
-                Logger.Warn ("以限速方式调用发送消息API, 未返回message_id");
+                Log.Warn ("以限速方式调用发送消息API, 未返回message_id");
             } catch {
-                Logger.Error ("调用发送消息API未返回message_id");
+                Log.Error ("调用发送消息API未返回message_id");
                 throw new Exceptions.ErrorApicallException ();
             }
         }

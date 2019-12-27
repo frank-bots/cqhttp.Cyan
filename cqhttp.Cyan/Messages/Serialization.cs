@@ -18,19 +18,19 @@ namespace cqhttp.Cyan.Messages {
         }
 
         private static Element BuildCQElement (string cqcode) {
-            Logger.Debug ($"正在为CQ码{cqcode}构筑消息段");
+            Log.Debug ($"正在为CQ码{cqcode}构筑消息段");
             Dictionary<string, string> dict = new Dictionary<string, string> ();
-            string type = Config.parseCqCode.Match (cqcode).Groups[1].Value;
-            foreach (Match i in Config.paramCqCode.Matches (cqcode))
-                dict.Add (i.Groups[1].Value, i.Groups[2].Value);
+            string type = Patterns.parseCqCode.Match (cqcode).Groups[1].Value;
+            foreach (Match i in Patterns.paramCqCode.Matches (cqcode))
+                dict.Add (i.Groups[1].Value, Encoder.Decode(i.Groups[2].Value));
             return Element.GetElement (type, dict);
         }
         public override object ReadJson (JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
             List<Element> data = new List<Element> ();
             if (reader.TokenType == JsonToken.String) {
-                Logger.Debug ("收到的消息为string格式");
+                Log.Debug ("收到的消息为string格式");
                 string message = (string) reader.Value;
-                Match match = Config.matchCqCode.Match (message);
+                Match match = Patterns.matchCqCode.Match (message);
                 while (match.Success) {
                     if (match.Index > 0)
                         data.Add (new ElementText (
@@ -38,12 +38,12 @@ namespace cqhttp.Cyan.Messages {
                         ));
                     data.Add (BuildCQElement (match.Value));
                     message = message.Substring (match.Index + match.Length);
-                    match = Config.matchCqCode.Match (message);
+                    match = Patterns.matchCqCode.Match (message);
                 }
                 if (message.Length != 0)
                     data.Add (new ElementText (message));
             } else if (reader.TokenType == JsonToken.StartArray) {
-                Logger.Debug ("收到的消息为json格式");
+                Log.Debug ("收到的消息为json格式");
                 while (reader.Read () && reader.TokenType != JsonToken.EndArray) {
                     JToken e = JToken.Load (reader);
                     data.Add (Element.GetElement (
@@ -52,7 +52,7 @@ namespace cqhttp.Cyan.Messages {
                     ));
                 }
             } else {
-                Logger.Error ("type error, maybe caused by broken packet");
+                Log.Error ("type error, maybe caused by broken packet");
             }
             return new Message { data = data };
 

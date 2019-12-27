@@ -52,11 +52,9 @@ namespace cqhttp.Cyan.Messages {
             return !(a == b);
         }
         /// <summary>
-        /// 按照默认设置序列化消息
+        /// 序列化消息为CQ码
         /// </summary>
         public override string ToString () {
-            if (Config.isSendJson)
-                return JsonConvert.SerializeObject (this);
             return string.Join ("", data);
         }
         /// <summary></summary>

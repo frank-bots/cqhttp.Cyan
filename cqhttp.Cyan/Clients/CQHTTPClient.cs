@@ -19,11 +19,11 @@ namespace cqhttp.Cyan.Clients {
                 use_group_table, use_message_table) {
                 if (listen_port != -1) {
                     this.listener.RegisterHandler (HandleEvent);
-                    Logger.Info ($"开始在{listen_port}端口上监听上报消息");
+                    Log.Info ($"开始在{listen_port}端口上监听上报消息");
                 }
                 if (base.Initiate ().Result == false)
                     throw new Exceptions.ErrorApicallException ("初始化失败");
-                Logger.Info ("成功连接");
+                Log.Info ("成功连接");
             }
     }
 

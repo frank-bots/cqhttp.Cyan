@@ -26,10 +26,10 @@ namespace cqhttp.Cyan.Clients.Listeners {
                                 operation: response.content
                             ));
                     else
-                        Logger.Warn ("反向WS无法快速响应（caller为null）");
+                        Log.Warn ("反向WS无法快速响应（caller为null）");
                 }
             } catch (System.Exception e) {
-                Logger.Error (
+                Log.Error (
                     $"处理事件时发生未处理的异常{e},错误信息为{e.Message}"
                 );
             }

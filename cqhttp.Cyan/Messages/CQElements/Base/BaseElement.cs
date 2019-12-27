@@ -160,18 +160,12 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
                         long.Parse (dict["id"])
                     );
                 default:
-                    Logger.Warn ($"未能解析type为{type}的元素");
+                    Log.Warn ($"未能解析type为{type}的元素");
                     return new Element (type, dict);
                 }
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ($"type为{type}的元素反序列化过程中缺少必要的参数");
             }
         }
-    }
-    class Encoder {
-        public static string EncodeText (string enc) => enc.Replace ("&", "&amp;").Replace ("[", "&#91;").Replace ("]", "&#93;");
-        public static string EncodeValue (string text) => EncodeText (text).Replace (",", "&#44;");
-        public static string Decode (string enc) => enc.Replace ("&amp;", "&").Replace ("&#91;", "[")
-            .Replace ("&#93;", "]").Replace ("&#44;", ",");
     }
 }

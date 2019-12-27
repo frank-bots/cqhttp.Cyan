@@ -14,7 +14,7 @@ namespace cqhttp.Cyan.ApiCall.Results {
                 nickname =
                     raw_data["nickname"].ToString ();
             } catch {
-                Logger.Error ("调用发送消息API未返回必要的参数");
+                Log.Error ("调用发送消息API未返回必要的参数");
                 throw new Exceptions.ErrorApicallException ();
             }
         }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Threading;
 using System.Threading.Tasks;
+using cqhttp.Cyan.Utils;
 using Fleck;
 
 namespace cqhttp.Cyan.Clients.WebsocketUtils {
@@ -15,16 +16,16 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
             Fleck.FleckLog.LogAction = (level, m, e) => {
                 switch (level) {
                 case LogLevel.Info:
-                    Logger.Info (m);
+                    Log.Info (m);
                     break;
                 case LogLevel.Warn:
-                    Logger.Warn (m);
+                    Log.Warn (m);
                     break;
                 case LogLevel.Error:
-                    Logger.Error (m);
+                    Log.Error (m);
                     break;
                 case LogLevel.Debug:
-                    Logger.Debug (m);
+                    Log.Debug (m);
                     break;
                 }
             }; // unify logs
@@ -49,13 +50,13 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                     servers[port].RestartAfterListenError = true;
                     servers[port].Start (socket => {
                         socket.OnOpen = () => {
-                            Logger.Debug (
+                            Log.Debug (
                                 $"来自{socket.ConnectionInfo.ClientIpAddress}的连接"
                             );
                             pool[(port, socket.ConnectionInfo.Path.Trim ('/'))] = socket;
                         };
                         socket.OnClose = () => {
-                            Logger.Debug (
+                            Log.Debug (
                                 $"{socket.ConnectionInfo.ClientIpAddress}关闭连接"
                             );
                             pool.Remove ((port, socket.ConnectionInfo.Path.Trim ('/')));
@@ -66,8 +67,7 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
             ///
             public IWebSocketConnection socket {
                 get {
-                    Config.TimeOut (
-                        () => pool.ContainsKey ((port, path)),
+                    new System.Func<bool> (() => pool.ContainsKey ((port, path))).TimeOut (
                         $"没有在{Config.timeOut}秒内收到发往0.0.0.0:{port}/{path}的连接请求"
                     ).Wait (); //请检查网络连通性或调整cqhttp.Cyan.Config.timeOut
                     return pool[(port, path)];
@@ -92,10 +92,9 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
 
         private static async Task EnsureConnected (string uri) {
             if (pool.ContainsKey (uri)) {
-                await Config.TimeOut (
-                    () => pool[uri].State != WebSocketState.Connecting,
-                    "websocket 连接超时"
-                );
+                await new System.Func<bool> (
+                    () => pool[uri].State != WebSocketState.Connecting
+                ).TimeOut ("websocket 连接超时");
                 if (pool[uri].State == WebSocketState.Open)
                     return;
                 pool[uri].Abort ();
@@ -129,9 +128,9 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                 }
                 return result;
             } catch (System.Exception e) {
-                Logger.Error ("Websocket调用API失败");
-                Logger.Debug ("调用:" + obj.ToString ());
-                Logger.Debug ("Traceback:" + e.StackTrace);
+                Log.Error ("Websocket调用API失败");
+                Log.Debug ("调用:" + obj.ToString ());
+                Log.Debug ("Traceback:" + e.StackTrace);
                 throw new Exceptions.NetworkFailureException ("调用API失败");
             } finally {
                 lock_.Release ();

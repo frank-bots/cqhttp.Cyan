@@ -1,12 +1,17 @@
+using System;
 using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.ApiCall.Results;
 using cqhttp.Cyan.Enums;
+using Newtonsoft.Json;
 
 namespace cqhttp.Cyan.ApiCall.Requests {
     /// <summary></summary>
+    [JsonConverter (typeof (SendmsgConverter))]
     public class SendmsgRequest : RateLimitableRequest {
-        long target_id;
-        MessageType messageType;
+        ///
+        public long target_id;
+        ///
+        public MessageType messageType;
         /// <summary>
         /// 消息本身
         /// </summary>
@@ -21,39 +26,41 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                 this.message = toSend;
                 this.target_id = target_id;
             }
-        /// <summary></summary>
-        public override string content {
-            get {
-                string messageType, idKey;
-                switch (this.messageType) {
-                    case MessageType.discuss_:
-                        messageType = "discuss";
-                        idKey = "discuss_id";
-                        break;
-                    case MessageType.group_:
-                        messageType = "group";
-                        idKey = "group_id";
-                        break;
-                    case MessageType.private_:
-                        messageType = "private";
-                        idKey = "user_id";
-                        break;
-                    default:
-                        messageType = idKey = "";
-                        break;
-                }
-                if (messageType.Length == 0)
-                    throw new Exceptions.ErrorApicallException ("what?");
-                string message = this.message.ToString ();
-                if (Config.isSendJson == false)
-                    message = '"' + Config.asJsonStringVariable (message) + '"';
-                string constructer =
-                    $"{{\"message_type\":\"{messageType}\","+
-                    $"\"{idKey}\":{this.target_id},"+
-                    $"\"message\":{message}}}";
+    }
+    class SendmsgConverter : JsonConverter {
+        public override bool CanConvert (Type objectType) {
+            throw new NotImplementedException ();
+        }
+        public override object ReadJson (JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
+            throw new NotImplementedException ();
+        }
 
-                return constructer;
+        public override void WriteJson (JsonWriter writer, object value, JsonSerializer serializer) {
+            SendmsgRequest request = value as SendmsgRequest;
+            writer.WriteStartObject ();
+            writer.WritePropertyName ("message_type");
+            switch (request.messageType) {
+            case MessageType.discuss_:
+                writer.WriteValue ("discuss");
+                writer.WritePropertyName ("discuss_id");
+                break;
+            case MessageType.group_:
+                writer.WriteValue ("group");
+                writer.WritePropertyName ("group_id");
+                break;
+            case MessageType.private_:
+                writer.WriteValue ("private");
+                writer.WritePropertyName ("user_id");
+                break;
+            default:
+                throw new Exceptions.ErrorApicallException ("what?");
             }
+            writer.WriteValue (request.target_id);
+            writer.WritePropertyName ("message");
+
+            if (Config.isSendJson) writer.WriteRawValue (JsonConvert.SerializeObject (request.message));
+            else writer.WriteValue (request.message.ToString ());
+            writer.WriteEndObject ();
         }
     }
 }

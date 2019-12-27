@@ -71,15 +71,13 @@ namespace cqhttp.Cyan.Clients {
         }
         ///
         protected void RequestPreprocess (ApiRequest x) {
-            Logger.Info ($"进行了{x.GetType()}请求");
+            Log.Info ($"进行了{x.GetType()}请求");
             if (groupTable != null) {
-                if (x is GetGroupListRequest) {
-                    foreach (var i in (x.response as GetGroupListResult).groupList) {
-                        groupTable[i.Item1].group_name = i.Item2;
-                    }
-                } else if (x is GetGroupMemberInfoRequest) {
+                if (x is GetGroupMemberInfoRequest) {
                     var r = x.response as GetGroupMemberInfoResult;
-                    groupTable[r.memberInfo.group_id][r.memberInfo.user_id] = r.memberInfo;
+                    groupTable[r.memberInfo.group_id].Add (
+                        r.memberInfo.user_id, r.memberInfo
+                    );
                 } else if (x is GetGroupMemberListRequest) {
                     foreach (var i in (x.response as GetGroupMemberListResult).memberInfo) {
                         groupTable[i.group_id][i.user_id] = i;
@@ -140,7 +138,7 @@ namespace cqhttp.Cyan.Clients {
         ) as SendmsgResult;
 
         //////////////////////////////////////////////////////////////////////////////////////
-        
+
         /// <summary></summary>
         public delegate CQResponse OnEventDelegate (CQApiClient client, CQEvent eventObj);
         ///
@@ -153,7 +151,7 @@ namespace cqhttp.Cyan.Clients {
         public event OnEventDelegateAsync OnEventAsync;
         /// <summary></summary>
         protected async Task<CQResponse> HandleEvent (CQEvent e) {
-            Logger.Debug ($"收到了完整的上报事件{e.postType}");
+            Log.Debug ($"收到了完整的上报事件{e.postType}");
             if (e is MetaEvent) {
                 if (e is HeartbeatEvent) {
                     if ((e as HeartbeatEvent).status.online) {
@@ -222,7 +220,7 @@ namespace cqhttp.Cyan.Clients {
             ref CQEvent e
         ) {
             lock (dialoguePoolLock) {
-                Logger.Debug ("got a dialogue");
+                Log.Debug ("got a dialogue");
                 long uid = (e as MessageEvent).sender.user_id;
                 long bid =
                     (e is GroupMessageEvent) ? (e as GroupMessageEvent).group_id :

@@ -1,25 +1,20 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using cqhttp.Cyan.Enums;
 
-namespace cqhttp.Cyan {
+namespace cqhttp.Cyan.Utils {
     /// <summary>
     /// 日志
     /// </summary>
     public class Logger {
-        static Verbosity logLevel = Verbosity.WARN;
-        static LogType logType = LogType.Console;
         /// <summary>
         /// 设置日志记录等级
         /// </summary>
-        public static Verbosity LogLevel {
-            set { logLevel = value; }
-        }
+        public Verbosity LogLevel = Verbosity.WARN;
         /// <summary>
         /// 日志输出方式
         /// </summary>
-        public static LogType LogType { set { logType = value; } }
+        public LogType LogType = LogType.Console;
         static void LogToConsole (
             string message,
             ConsoleColor textColor
@@ -47,22 +42,22 @@ namespace cqhttp.Cyan {
         }
         static void LogToConsole (Verbosity v, string message) {
             switch (v) {
-                case Verbosity.DEBUG:
-                    LogToConsole (message,
-                        ConsoleColor.Black, ConsoleColor.DarkYellow);
-                    break;
-                case Verbosity.INFO:
-                    LogToConsole (message, ConsoleColor.Cyan);
-                    break;
-                case Verbosity.WARN:
-                    LogToConsole (message, ConsoleColor.Yellow);
-                    break;
-                case Verbosity.ERROR:
-                    LogToConsole (message, ConsoleColor.Red);
-                    break;
-                case Verbosity.FATAL:
-                    LogToConsole (message, ConsoleColor.Gray, ConsoleColor.Red);
-                    break;
+            case Verbosity.DEBUG:
+                LogToConsole (message,
+                    ConsoleColor.Black, ConsoleColor.DarkYellow);
+                break;
+            case Verbosity.INFO:
+                LogToConsole (message, ConsoleColor.Cyan);
+                break;
+            case Verbosity.WARN:
+                LogToConsole (message, ConsoleColor.Yellow);
+                break;
+            case Verbosity.ERROR:
+                LogToConsole (message, ConsoleColor.Red);
+                break;
+            case Verbosity.FATAL:
+                LogToConsole (message, ConsoleColor.Gray, ConsoleColor.Red);
+                break;
             }
         }
 
@@ -78,29 +73,29 @@ namespace cqhttp.Cyan {
             }
         }
         /// <summary></summary>
-        static void Log (Verbosity v, string message) {
-            if (v > logLevel)
+        void Log (Verbosity v, string message) {
+            if (v > LogLevel)
                 return;
-            if ((logType & LogType.Console) != 0)
+            if ((LogType & LogType.Console) != 0)
                 LogToConsole (v, $"[{DateTime.Now.ToString("HH:mm:ss")}] [{v.ToString()}] {message}");
-            if ((logType & LogType.File) != 0)
+            if ((LogType & LogType.File) != 0)
                 LogToFile (v, $"[{DateTime.Now.ToString("HH:mm:ss")}] [{v.ToString()}] {message}\r\n");
             LogEvent?.Invoke (v, message);
         }
         ///
-        public static void Debug (string message) =>
+        public void Debug (string message) =>
             Log (Verbosity.DEBUG, message);
         ///
-        public static void Info (string message) =>
+        public void Info (string message) =>
             Log (Verbosity.INFO, message);
         ///
-        public static void Warn (string message) =>
+        public void Warn (string message) =>
             Log (Verbosity.WARN, message);
         ///
-        public static void Error (string message) =>
+        public void Error (string message) =>
             Log (Verbosity.ERROR, message);
         ///
-        public static void Fatal (string message) =>
+        public void Fatal (string message) =>
             Log (Verbosity.FATAL, message);
 
         /// <summary>

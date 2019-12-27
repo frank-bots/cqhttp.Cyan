@@ -1,15 +1,11 @@
 using cqhttp.Cyan.Enums;
 
-namespace cqhttp.Cyan.Events.MetaEvents
-{
+namespace cqhttp.Cyan.Events.MetaEvents {
     /// <summary>
-    /// midware, dont care
+    /// 元事件
     /// </summary>
-    public class MetaEvent : cqhttp.Cyan.Events.CQEvents.Base.CQEvent
-    {
+    public class MetaEvent : cqhttp.Cyan.Events.CQEvents.Base.CQEvent {
         /// <summary></summary>
-        public MetaEvent(long time, PostType postType) : base(time, postType)
-        {
-        }
+        public MetaEvent (long time, PostType postType) : base (time, postType) { }
     }
 }

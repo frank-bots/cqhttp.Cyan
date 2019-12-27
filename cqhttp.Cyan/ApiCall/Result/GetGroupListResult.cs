@@ -16,7 +16,7 @@ namespace cqhttp.Cyan.ApiCall.Results {
                     );
                 }
             } catch {
-                Logger.Error ("调用发送消息API未返回message_id");
+                Log.Error ("调用发送消息API未返回message_id");
                 throw new Exceptions.ErrorApicallException ();
             }
         }
