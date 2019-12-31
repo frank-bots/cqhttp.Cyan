@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace cqhttp.Cyan {
     internal static class Log {
-        static Utils.Logger logger = new Utils.Logger ();
+        static Utils.Logger logger = Utils.Logger.GetLogger ("cqhttp.Cyan");
         public static void Info (string message) =>
             logger.Info (message);
         public static void Debug (string message) =>

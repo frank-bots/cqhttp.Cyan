@@ -52,10 +52,10 @@ namespace cqhttp.Cyan.Enums {
         /// <summary>
         /// 文件
         /// </summary>
-        File =1,
+        file =1,
         /// <summary>
         /// 控制台
         /// </summary>
-        Console=2,
+        console=2,
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using cqhttp.Cyan.Enums;
 
@@ -7,14 +8,26 @@ namespace cqhttp.Cyan.Utils {
     /// 日志
     /// </summary>
     public class Logger {
+        static Dictionary<string, Logger> loggers = new Dictionary<string, Logger> ();
+        /// <summary>
+        /// 获取日志对象
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static Logger GetLogger (string name) {
+            if (loggers.ContainsKey (name) == false)
+                loggers.Add (name, new Logger ());
+            return loggers[name];
+        }
+        private Logger () { }
         /// <summary>
         /// 设置日志记录等级
         /// </summary>
-        public Verbosity LogLevel = Verbosity.WARN;
+        public Verbosity log_level = Config.log_default_verbosity;
         /// <summary>
         /// 日志输出方式
         /// </summary>
-        public LogType LogType = LogType.Console;
+        public LogType log_type = Config.log_default_type;
         static void LogToConsole (
             string message,
             ConsoleColor textColor
@@ -74,11 +87,11 @@ namespace cqhttp.Cyan.Utils {
         }
         /// <summary></summary>
         void Log (Verbosity v, string message) {
-            if (v > LogLevel)
+            if (v > log_level)
                 return;
-            if ((LogType & LogType.Console) != 0)
+            if ((log_type & LogType.console) != 0)
                 LogToConsole (v, $"[{DateTime.Now.ToString("HH:mm:ss")}] [{v.ToString()}] {message}");
-            if ((LogType & LogType.File) != 0)
+            if ((log_type & LogType.file) != 0)
                 LogToFile (v, $"[{DateTime.Now.ToString("HH:mm:ss")}] [{v.ToString()}] {message}\r\n");
             LogEvent?.Invoke (v, message);
         }

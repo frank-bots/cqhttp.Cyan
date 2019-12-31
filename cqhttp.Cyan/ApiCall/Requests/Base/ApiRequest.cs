@@ -11,12 +11,12 @@ namespace cqhttp.Cyan.ApiCall.Requests.Base {
     public abstract class ApiRequest {
         /// <summary></summary>
         [JsonIgnore]
-        public string apiPath { get; protected set; }
+        public string api_path { get; protected set; }
         /// <summary></summary>
         [JsonIgnore]
         public ApiResult response;
         /// <summary></summary>
-        public ApiRequest (string r) => apiPath = r;
+        public ApiRequest (string r) => api_path = r;
         /// <summary></summary>
         [JsonIgnore]
         public string content {

@@ -22,7 +22,7 @@ namespace cqhttp.Cyan.Clients.Callers {
         /// <summary></summary>
         public async Task<ApiResult> SendRequestAsync (ApiRequest x) {
             JObject constructor = new JObject ();
-            constructor["action"] = x.apiPath.Substring (1);
+            constructor["action"] = x.api_path.Substring (1);
             constructor["params"] = JObject.Parse (x.content);
             constructor["echo"] = System.DateTime.Now.Millisecond;
             var resp = await ConnectionPool.RequestAsync (

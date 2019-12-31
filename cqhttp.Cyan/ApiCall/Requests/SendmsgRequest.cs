@@ -58,7 +58,7 @@ namespace cqhttp.Cyan.ApiCall.Requests {
             writer.WriteValue (request.target_id);
             writer.WritePropertyName ("message");
 
-            if (Config.isSendJson) writer.WriteRawValue (JsonConvert.SerializeObject (request.message));
+            if (Config.is_send_json) writer.WriteRawValue (JsonConvert.SerializeObject (request.message));
             else writer.WriteValue (request.message.ToString ());
             writer.WriteEndObject ();
         }

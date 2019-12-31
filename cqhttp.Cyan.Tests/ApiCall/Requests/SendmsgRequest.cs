@@ -1,4 +1,3 @@
-using System;
 using cqhttp.Cyan.Messages.CQElements;
 using Xunit;
 
@@ -12,12 +11,12 @@ namespace cqhttp.Cyan.ApiCall.Requests {
                     new ElementFace ("234")
                 )
             );
-            Config.isSendJson = false;
+            Config.is_send_json = false;
             Assert.Equal (
                 @"{""message_type"":""group"",""group_id"":123,""message"":""te st1[CQ:face,id=234]""}",
                 request.content
             );
-            Config.isSendJson = true;
+            Config.is_send_json = true;
             Assert.Equal (
                 @"{""message_type"":""group"",""group_id"":123,""message"":[{""type"":""text"",""data"":{""text"":""te st1""}},{""type"":""face"",""data"":{""id"":""234""}}]}",
                 request.content

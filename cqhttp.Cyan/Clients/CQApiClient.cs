@@ -33,11 +33,11 @@ namespace cqhttp.Cyan.Clients {
         /// <summary>
         /// 指向本实例的群组记录对象
         /// </summary>
-        public Utils.GroupTable groupTable = null;
+        public Utils.GroupTable group_table = null;
         /// <summary>
         /// 消息记录
         /// </summary>
-        public Utils.MessageTable messageTable = null;
+        public Utils.MessageTable message_table = null;
 
         ///
         protected Callers.ICaller caller;
@@ -53,8 +53,8 @@ namespace cqhttp.Cyan.Clients {
         ) {
             this.caller = caller;
             this.listener = listener;
-            if (use_group_table) this.groupTable = new Utils.GroupTable ();
-            if (use_message_table) this.messageTable = new Utils.MessageTable ();
+            if (use_group_table) this.group_table = new Utils.GroupTable ();
+            if (use_message_table) this.message_table = new Utils.MessageTable ();
         }
         ///
         protected async Task<bool> Initiate () {
@@ -72,22 +72,22 @@ namespace cqhttp.Cyan.Clients {
         ///
         protected void RequestPreprocess (ApiRequest x) {
             Log.Info ($"进行了{x.GetType()}请求");
-            if (groupTable != null) {
+            if (group_table != null) {
                 if (x is GetGroupMemberInfoRequest) {
                     var r = x.response as GetGroupMemberInfoResult;
-                    groupTable[r.memberInfo.group_id].Add (
+                    group_table[r.memberInfo.group_id].Add (
                         r.memberInfo.user_id, r.memberInfo
                     );
                 } else if (x is GetGroupMemberListRequest) {
                     foreach (var i in (x.response as GetGroupMemberListResult).memberInfo) {
-                        groupTable[i.group_id][i.user_id] = i;
+                        group_table[i.group_id][i.user_id] = i;
                     }
                 }
             }
-            if (messageTable != null) {
+            if (message_table != null) {
                 if (x.response is SendmsgResult) {
                     var i = x.response as SendmsgResult;
-                    messageTable.Log (i.message_id, (x as SendmsgRequest).message);
+                    message_table.Log (i.message_id, (x as SendmsgRequest).message);
                 }
             }
         }
@@ -173,14 +173,14 @@ namespace cqhttp.Cyan.Clients {
                 return new Events.CQResponses.EmptyResponse ();
             } else if (e is MessageEvent) {
                 alive = true;
-                if (messageTable != null)
-                    messageTable.Log (
+                if (message_table != null)
+                    message_table.Log (
                         (e as MessageEvent).message_id,
                         (e as MessageEvent).message
                     );
                 if (e is GroupMessageEvent) {
                     var group_id = (e as GroupMessageEvent).group_id;
-                    if (groupTable == null || groupTable[group_id][self_id] == null) {
+                    if (group_table == null || group_table[group_id].ContainsKey(self_id) == false) {
                         try {
                             var info = await SendRequestAsync (
                                 new GetGroupMemberInfoRequest (
@@ -189,13 +189,13 @@ namespace cqhttp.Cyan.Clients {
                                     no_cache : true
                                 )
                             ) as GetGroupMemberInfoResult;
-                            if (groupTable != null)
-                                groupTable[group_id][self_id] = info.memberInfo;
+                            if (group_table != null)
+                                group_table[group_id][self_id] = info.memberInfo;
                             (e as GroupMessageEvent).self_info = info.memberInfo;
                         } catch { }
                     } else {
                         (e as GroupMessageEvent).self_info
-                            = groupTable[group_id][self_id];
+                            = group_table[group_id][self_id];
                     }
                 }
                 if (Utils.DialoguePool.Handle (this, (e as MessageEvent)))

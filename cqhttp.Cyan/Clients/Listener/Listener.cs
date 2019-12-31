@@ -20,8 +20,8 @@ namespace cqhttp.Cyan.Clients.Listeners {
                         JsonConvert.DeserializeObject<CQEvent> (message)
                     );
                 } catch (Exception e) {
-                    Log.Error ("处理事件时出现异常");
-                    Log.Error (e.StackTrace);
+                    Log.Error ("处理事件时出现异常：");
+                    Log.Error (e.ToString ());
                 }
             }
             return response;

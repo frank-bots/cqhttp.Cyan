@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -29,21 +28,21 @@ namespace cqhttp.Cyan.Clients.Callers {
         public async Task<ApiResult> SendRequestAsync (ApiRequest request) {
             return await PostJsonAsync (accessUrl, request, accessToken);
         }
-        async static Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string accessToken = "") {
+        async static Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string access_token = "") {
             HttpResponseMessage response = new HttpResponseMessage ();
             using (HttpContent content = new StringContent (
                 request.content,
                 Encoding.UTF8, "application/json"
             ))
-            using (HttpClient httpClient = new HttpClient ()) {
-                httpClient.Timeout = new System.TimeSpan (0, 0, Config.timeOut);
-                if (string.IsNullOrEmpty (accessToken) == false)
-                    httpClient.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue ("Token", accessToken);
+            using (HttpClient client = new HttpClient ()) {
+                client.Timeout = new System.TimeSpan (0, 0, Config.timeout);
+                if (string.IsNullOrEmpty (access_token) == false)
+                    client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue ("Token", access_token);
                 try {
-                    for (int i = 0; i < Config.networkMaxFailure && (i == 0 ||
+                    for (int i = 0; i < Config.network_max_failure && (i == 0 ||
                             response.IsSuccessStatusCode == false); i++) {
-                        response = await httpClient.PostAsync (host + request.apiPath, content);
+                        response = await client.PostAsync (host + request.api_path, content);
                     }
                 } catch (HttpRequestException) {
                     Log.Error ("HTTP API连接错误");

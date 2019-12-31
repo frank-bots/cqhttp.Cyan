@@ -37,7 +37,7 @@ namespace cqhttp.Cyan.Clients.Callers {
         public async Task<ApiResult> SendRequestAsync (ApiRequest request) {
             JObject constructor = new JObject ();
             long echo = DateTime.Now.ToBinary ();
-            constructor["action"] = request.apiPath.Substring (1);
+            constructor["action"] = request.api_path.Substring (1);
             constructor["params"] = JObject.Parse (request.content);
             constructor["echo"] = echo;
             await server.socket.Send (constructor.ToString (Formatting.None));

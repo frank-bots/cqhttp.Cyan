@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -14,12 +13,12 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// could be base64://, http(s):// or file://
         /// <see>https://tools.ietf.org/html/rfc8089</see>
         /// </summary>
-        public string fileUrl { get; private set; }
+        public string file_url { get; private set; }
 
         /// <summary>represents whether the file has downloaded</summary>
-        public bool isFixed {
+        public bool is_fixed {
             get {
-                return fileUrl.Substring (0, fileUrl.IndexOf (':')) == "base64"; //"[base64]://"
+                return file_url.Substring (0, file_url.IndexOf (':')) == "base64"; //"[base64]://"
             }
         }
         /// <summary>以二进制形式存储的文件</summary>
@@ -43,43 +42,43 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// </summary>
         /// <param name="type">消息段种类</param>
         /// <param name="bytes"></param>
-        /// <param name="useCache"></param>
+        /// <param name="use_cache"></param>
         /// <returns></returns>
-        public ElementFile (string type, byte[] bytes, bool useCache):
+        public ElementFile (string type, byte[] bytes, bool use_cache):
             base (type, ("file", $"base64://{Convert.ToBase64String (bytes)}")) {
-                if (!useCache) data["cache"] = "0";
+                if (!use_cache) data["cache"] = "0";
             }
         /// <summary>
         /// 通过url构建文件消息段
         /// </summary>
         /// <param name="type">消息段种类</param>
         /// <param name="url"></param>
-        /// <param name="useCache">是否缓存于酷Q端</param>
+        /// <param name="use_cache">是否缓存于酷Q端</param>
         /// <returns></returns>
-        public ElementFile (string type, string url, bool useCache):
+        public ElementFile (string type, string url, bool use_cache):
             base (type, ("file", url)) {
-                fileUrl = url;
-                if (!useCache) data["cache"] = "0";
+                file_url = url;
+                if (!use_cache) data["cache"] = "0";
             }
 
         private void GetFilePath () {
             try {
-                this.fileUrl = data["file"];
+                this.file_url = data["file"];
             } catch (KeyNotFoundException) {
                 throw new Exceptions.ErrorElementException ("data中没有file段***");
             }
         }
         /// <summary>
         /// 下载图片并转为base64存储，并删除data中的url项
-        /// 网络环境恶劣的情况下最多获取<see cref="Config.networkMaxFailure"/>次
-        /// 若仍需url可从<see cref="ElementFile.fileUrl"/>中获取
+        /// 网络环境恶劣的情况下最多获取<see cref="Config.network_max_failure"/>次
+        /// 若仍需url可从<see cref="ElementFile.file_url"/>中获取
         /// </summary>
         /// <returns>返回是否成功获取到</returns>
         public async Task<bool> Fix () {
-            for (int i = 0; i < Config.networkMaxFailure; i++) {
+            for (int i = 0; i < Config.network_max_failure; i++) {
                 try {
                     using (var http = new HttpClient ()) {
-                        HttpResponseMessage response = await http.GetAsync (fileUrl);
+                        HttpResponseMessage response = await http.GetAsync (file_url);
                         response.EnsureSuccessStatusCode ();
                         bin_content = await response.Content.ReadAsByteArrayAsync ();
                         data["file"] =
