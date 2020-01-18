@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp2.2;netcoreapp3.1</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NuspecFile>cqhttp.Cyan.nuspec</NuspecFile>
+    <GenerateAssemblyInfo Condition=" '$(Configuration)' == 'Debug' ">false</GenerateAssemblyInfo>
+    <Version>2.1.2</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fleck" Version="1.1.0" />
