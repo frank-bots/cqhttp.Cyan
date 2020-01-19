@@ -22,7 +22,7 @@ namespace cqhttp.Cyan.Messages {
             Dictionary<string, string> dict = new Dictionary<string, string> ();
             string type = Patterns.parseCqCode.Match (cqcode).Groups[1].Value;
             foreach (Match i in Patterns.paramCqCode.Matches (cqcode))
-                dict.Add (i.Groups[1].Value, Encoder.Decode(i.Groups[2].Value));
+                dict.Add (i.Groups[1].Value, Encoder.Decode (i.Groups[2].Value));
             return Element.GetElement (type, dict);
         }
         public override object ReadJson (JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {

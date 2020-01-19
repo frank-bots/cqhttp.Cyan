@@ -15,7 +15,7 @@ namespace cqhttp.Cyan.Clients.Listeners {
                 event_url += "/event/";
             }
             event_url += !string.IsNullOrEmpty (access_token) ? "?access_token=" + access_token : "";
-            
+
             client = new ClientWebSocket ();
             client.ConnectAsync (
                 new System.Uri (event_url), new System.Threading.CancellationToken ()

@@ -7,8 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events {
-    ///
-    public class EventConverter : JsonConverter {
+    class EventConverter : JsonConverter {
         ///
         public override bool CanConvert (Type objectType) {
             return objectType == typeof (CQEvents.Base.CQEvent);

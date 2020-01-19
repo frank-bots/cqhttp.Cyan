@@ -9,7 +9,7 @@ namespace cqhttp.Cyan.Utils {
         /// <param name="condition">条件</param>
         /// <param name="e">超时后抛出的异常</param>
         /// <param name="interval">检查条件的间隔(毫秒)</param>
-        public static async Task TimeOut (
+        internal static async Task TimeOut (
             this System.Func<bool> condition,
             string e,
             int interval = 200

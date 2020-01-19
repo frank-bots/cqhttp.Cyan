@@ -13,13 +13,13 @@ namespace cqhttp.Cyan.Messages.CQElements {
         public ElementRecord (byte[] record, bool useCache = true, bool isMagic = false):
             base ("record", record, useCache) {
                 this.isMagic = isMagic;
-                if(isMagic)data["magic"] = "true";
+                if (isMagic) data["magic"] = "true";
             }
         /// <summary></summary>
         public ElementRecord (string url, bool useCache = true, bool isMagic = false):
             base ("record", url, useCache) {
                 this.isMagic = isMagic;
-                if(isMagic)data["magic"] = "true";
+                if (isMagic) data["magic"] = "true";
             }
 
     }

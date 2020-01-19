@@ -1,5 +1,4 @@
 using cqhttp.Cyan.Enums;
-using cqhttp.Cyan.Events.CQEvents.Base;
 
 namespace cqhttp.Cyan.Events.CQEvents {
     class UnknownEvent : Base.CQEvent {

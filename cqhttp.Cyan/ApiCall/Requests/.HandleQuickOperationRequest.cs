@@ -14,8 +14,8 @@ namespace cqhttp.Cyan.ApiCall.Requests {
         public HandleQuickOperationRequest (string context, string operation):
             base ("/.handle_quick_operation") {
                 this.response = new Results.EmptyResult ();
-                this.context = JObject.Parse(context);
-                this.operation = JObject.Parse(operation);
+                this.context = JObject.Parse (context);
+                this.operation = JObject.Parse (operation);
             }
     }
 }

@@ -42,7 +42,14 @@ namespace cqhttp.Cyan.Enums {
     /// 日志 严重性
     /// </summary>
     public enum Verbosity {
-        /**<summary/>*/OFF,/**<summary/>*/FATAL,/**<summary/>*/ERROR,/**<summary/>*/WARN,/**<summary/>*/INFO,/**<summary/>*/DEBUG,/**<summary/>*/ALL
+        /**<summary/>*/
+        OFF,
+        /**<summary/>*/ FATAL,
+        /**<summary/>*/ ERROR,
+        /**<summary/>*/ WARN,
+        /**<summary/>*/ INFO,
+        /**<summary/>*/ DEBUG,
+        /**<summary/>*/ ALL
     }
 
     /// <summary>
@@ -52,10 +59,10 @@ namespace cqhttp.Cyan.Enums {
         /// <summary>
         /// 文件
         /// </summary>
-        file =1,
+        file = 1,
         /// <summary>
         /// 控制台
         /// </summary>
-        console=2,
+        console = 2,
     }
 }

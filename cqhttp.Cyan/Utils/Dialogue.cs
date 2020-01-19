@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
-using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Messages;
 
 namespace cqhttp.Cyan.Utils {
@@ -77,7 +77,7 @@ namespace cqhttp.Cyan.Utils {
     /// 
     /// 某群/某人/某群中对某人
     /// </summary>
-    public static class DialoguePool {
+    internal static class DialoguePool {
         static Dictionary<long, Dialogue> pool = new Dictionary<long, Dialogue> ();
         /// <summary>
         /// 是否存在某一段正在进行的对话

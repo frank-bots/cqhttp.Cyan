@@ -6,9 +6,11 @@ using cqhttp.Cyan.ApiCall.Results.Base;
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
+using cqhttp.Cyan.Events.CQResponses;
 using cqhttp.Cyan.Events.CQResponses.Base;
 using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Messages;
+using cqhttp.Cyan.Utils;
 
 namespace cqhttp.Cyan.Clients {
     /// <summary></summary>
@@ -33,11 +35,11 @@ namespace cqhttp.Cyan.Clients {
         /// <summary>
         /// 指向本实例的群组记录对象
         /// </summary>
-        public Utils.GroupTable group_table = null;
+        public GroupTable group_table = null;
         /// <summary>
         /// 消息记录
         /// </summary>
-        public Utils.MessageTable message_table = null;
+        public MessageTable message_table = null;
 
         ///
         protected Callers.ICaller caller;
@@ -53,8 +55,8 @@ namespace cqhttp.Cyan.Clients {
         ) {
             this.caller = caller;
             this.listener = listener;
-            if (use_group_table) this.group_table = new Utils.GroupTable ();
-            if (use_message_table) this.message_table = new Utils.MessageTable ();
+            if (use_group_table) this.group_table = new GroupTable ();
+            if (use_message_table) this.message_table = new MessageTable ();
         }
         ///
         protected async Task<bool> Initiate () {
@@ -170,7 +172,7 @@ namespace cqhttp.Cyan.Clients {
                         alive = true;
                     else alive = false;
                 }
-                return new Events.CQResponses.EmptyResponse ();
+                return new EmptyResponse ();
             } else if (e is MessageEvent) {
                 alive = true;
                 if (message_table != null)
@@ -180,7 +182,7 @@ namespace cqhttp.Cyan.Clients {
                     );
                 if (e is GroupMessageEvent) {
                     var group_id = (e as GroupMessageEvent).group_id;
-                    if (group_table == null || group_table[group_id].ContainsKey(self_id) == false) {
+                    if (group_table == null || group_table[group_id].ContainsKey (self_id) == false) {
                         try {
                             var info = await SendRequestAsync (
                                 new GetGroupMemberInfoRequest (
@@ -198,8 +200,8 @@ namespace cqhttp.Cyan.Clients {
                             = group_table[group_id][self_id];
                     }
                 }
-                if (Utils.DialoguePool.Handle (this, (e as MessageEvent)))
-                    return new Events.CQResponses.EmptyResponse ();
+                if (DialoguePool.Handle (this, (e as MessageEvent)))
+                    return new EmptyResponse ();
             }
             try {
                 if (OnEventAsync != null)
@@ -208,15 +210,15 @@ namespace cqhttp.Cyan.Clients {
                 if (OnEvent != null)
                     return OnEvent (this, e);
                 else
-                    return new Events.CQResponses.EmptyResponse ();
-            } catch (Utils.InvokeDialogueException d) {
+                    return new EmptyResponse ();
+            } catch (InvokeDialogueException d) {
                 ComposeDialogue (ref d, ref e);
-                return new Events.CQResponses.EmptyResponse ();
+                return new EmptyResponse ();
             }
         }
         private static object dialoguePoolLock = new object ();
         private static void ComposeDialogue (
-            ref Utils.InvokeDialogueException d,
+            ref InvokeDialogueException d,
             ref CQEvent e
         ) {
             lock (dialoguePoolLock) {
@@ -228,7 +230,7 @@ namespace cqhttp.Cyan.Clients {
                     uid;
                 if (d.acceptAll && bid != uid)
                     uid = bid;
-                Utils.DialoguePool.Join (uid, bid, d.content);
+                DialoguePool.Join (uid, bid, d.content);
             }
             return;
         }

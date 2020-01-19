@@ -80,7 +80,7 @@ namespace cqhttp.Cyan.Exceptions {
     ///
     public class ErrorUtilOperationException : Exception {
         ///
-        public ErrorUtilOperationException () : base() { }
+        public ErrorUtilOperationException () : base () { }
         ///
         public ErrorUtilOperationException (string message) : base (message) { }
     }

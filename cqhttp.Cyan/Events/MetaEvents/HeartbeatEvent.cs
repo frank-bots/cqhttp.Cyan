@@ -13,7 +13,7 @@ namespace cqhttp.Cyan.Events.MetaEvents {
         /// 
         public bool app_enabled { get; private set; }
         ///
-        public Dictionary<string,bool> plugins_good { get; private set; }
+        public Dictionary<string, bool> plugins_good { get; private set; }
         ///
         public bool app_good { get; private set; }
         ///

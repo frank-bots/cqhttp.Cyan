@@ -5,10 +5,10 @@ namespace cqhttp.Cyan.Events.CQResponses.Base {
     /// <summary></summary>
     public abstract class CQReplyMessageResponse : CQResponse {
         /// <summary></summary>
-        [Newtonsoft.Json.JsonProperty]
+        [JsonProperty]
         JToken reply;
         /// <summary></summary>
-        [Newtonsoft.Json.JsonProperty]
+        [JsonProperty]
         bool auto_escape;
         /// <summary></summary>
         public CQReplyMessageResponse (Messages.Message reply, bool auto_escape) {
