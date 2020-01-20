@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+    build:
+        docker:
+            - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+        steps:
+            - checkout
+            - run:
+                name: run test
+                command:
+                    dotnet test -c Release -f netcoreapp3.1
