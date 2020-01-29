@@ -5,11 +5,23 @@
   "files": [
     {
       "type": "Conceptual",
+      "source_relative_path": "guide/connections.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/connections.html",
+          "hash": "W0qqPLbnt/GMVfye+Z+Fqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "guide/further_reading.md",
       "output": {
         ".html": {
           "relative_path": "guide/further_reading.html",
-          "hash": "/dtYRFBucIFe6TCTzmBHug=="
+          "hash": "VGJ0zD6qNnpzBp43HtAYWQ=="
         }
       },
       "is_incremental": true,
@@ -21,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/getting_started.html",
-          "hash": "WuRxGNHV+Fv1pByr9qULvg=="
+          "hash": "M2yC/h/pd9T4xkz2jW733Q=="
         }
       },
       "is_incremental": true,
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "guide/toc.html",
-          "hash": "WgIs8DnzIoF8Vz9xerzrFA=="
+          "hash": "dh1yqHQTTu8MeF0IjLNwCw=="
         }
       },
       "is_incremental": false,
@@ -612,7 +624,7 @@
           "hash": "tGbD8gGCK+yYLVGujd6epQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -624,7 +636,7 @@
           "hash": "x/B9WkklgNNFCcETUbC3jQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -636,7 +648,7 @@
           "hash": "LwLM8VcOb5QuJ+Yqjti0Mg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -648,7 +660,7 @@
           "hash": "oyz7K6BiTKM3hNdWf0VsKA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -660,7 +672,7 @@
           "hash": "oYVVcWXwzlDDnmpOg107/Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -672,7 +684,7 @@
           "hash": "iiebSWMw0KWupT183B91iA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -732,7 +744,7 @@
           "hash": "h3oBjDM556VwPa/iSk6OCg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1716,7 +1728,7 @@
           "hash": "KjEScltuDzvO9vQDhtznfA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1812,7 +1824,7 @@
           "hash": "HNoR4Vu3EBQKmeUpesZvOA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1873,24 +1885,24 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 147,
-          "skipped_file_count": 144
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 5,
-          "skipped_file_count": 5
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 147,
+          "skipped_file_count": 147
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 5
         }
       }
     },

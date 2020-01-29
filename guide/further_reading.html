@@ -70,22 +70,45 @@
 <h2 id="further-reading">Further Reading</h2>
 
 <h3 id="cqapiclient的参数">CQApiClient的参数</h3>
-<p><code>CQHTTPClient</code>的参数中除accessUrl外皆为可选参数，即你可以实例化一个“仅发送API请求”的Client对象。</p>
+<ul>
+<li><code>CQHTTPClient</code>的参数中除access_url外皆为可选参数，即你可以实例化一个“仅发送API请求”的Client对象。</li>
+<li>你可以通过指定<code>CQApiClient</code>的<code>Caller</code>与<code>Listener</code>来以不同的连接方式连接到cqhttp(好像没太大必要？)</li>
+</ul>
 <h3 id="多实例">多实例</h3>
 <p>你可以实例化多个Client对象以连接到不同的酷Q实例，以完成各种骚操作</p>
 <h3 id="using-cqhttpcyanutils">using cqhttp.Cyan.Utils</h3>
-<p>Utils命名空间中有很多好用的工具<br>
-比如</p>
-<blockquote>
-<p>持久化存储群列表与群员信息<code>GroupTable</code>,</p>
-</blockquote>
-<ul>
-<li>使用方式: 对于任意CQApiClient对象i,将一个GroupTable对象赋给i.groupTable后,在这个Client示例调用GetGroupList API时将自动向此对象记录获得的群组信息</li>
-</ul>
-<blockquote>
-<p>持久化存储两分钟内发送的消息<code>MessageTable</code>,<br>
-还有各种用于转换消息用的函数<code>Convert.*</code>(如<code>Convert.ToEmoji(id)</code>可以将QQ表情转换为相似的Emoji，便于发送奇怪的表情)</p>
-</blockquote>
+<p>Utils命名空间中有很多好用的工具</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GroupTable</code>/<code>MessageTable</code></td>
+<td>持久化存储群列表与群员信息<code>GroupTable</code> / 持久化存储两分钟内发送的消息<code>MessageTable</code></td>
+<td>向<code>CQApiClient</code>的构造函数中传入<code>use_group_table: true</code>，则在这个Client示例调用GetGroupList API时将自动向Client的<code>group_table</code>记录获得的群组信息。</td>
+</tr>
+<tr>
+<td><code>Dialogue</code></td>
+<td>可以用来构建对话系统</td>
+<td>参考<a href="https://github.com/frank-bots/WeeklyReportBot/blob/455bbe977a1aac24a7ecf7b7858298db504e33b0/OnPrivate.cs#L70">WeeklyReportBot</a></td>
+</tr>
+<tr>
+<td><code>Convert.*</code></td>
+<td>各种用于转换消息用的函数</td>
+<td>如<code>Convert.ToEmoji(id)</code>可以将QQ表情转换为相似的Emoji，便于发送奇怪的表情</td>
+</tr>
+<tr>
+<td><code>Logger</code></td>
+<td>一个简易的日志类，构造方式类似Python中的日志</td>
+<td><code>var logger = Logger.GetLogger(&quot;my_logger&quot;);</code></td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
