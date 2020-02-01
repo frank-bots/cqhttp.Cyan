@@ -23,11 +23,11 @@ namespace cqhttp.Cyan.Utils {
         /// <summary>
         /// 设置日志记录等级
         /// </summary>
-        public Verbosity log_level = Config.log_default_verbosity;
+        public Verbosity log_level = Verbosity.WARN;
         /// <summary>
         /// 日志输出方式
         /// </summary>
-        public LogType log_type = Config.log_default_type;
+        public LogType log_type = LogType.console;
         static void LogToConsole (
             string message,
             ConsoleColor textColor
