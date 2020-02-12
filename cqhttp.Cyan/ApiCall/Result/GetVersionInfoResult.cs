@@ -24,9 +24,13 @@ namespace cqhttp.Cyan.ApiCall.Results {
     public class InstanceVersionInfo {
         /// <summary>酷Q的版本，"pro"/"air"</summary>
         public string coolq_edition { get; private set; }
-        /// <summary>cqhttp的版本号</summary>
-        public string plugin_ver { get; private set; }
+        /// <summary>HTTP API 插件版本</summary>
+        public string plugin_version { get; private set; }
+        /// <summary>HTTP API 插件 build 号</summary>
+        public long plugin_build_number { get; private set; }
+        /// <summary>HTTP API 插件编译配置，debug 或 release</summary>
+        public string plugin_build_configuration { get; private set; }
         /// <summary>酷 Q 根目录路径</summary>
-        public string coolq_dir { get; private set; }
+        public string coolq_directory { get; private set; }
     }
 }
