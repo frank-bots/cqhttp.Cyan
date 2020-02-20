@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using cqhttp.Cyan.Clients;
+using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Messages;
@@ -17,14 +18,10 @@ namespace cqhttp.Cyan.Utils {
     /// </summary>
     public class InvokeDialogueException : Exception {
         ///
-        public bool acceptAll { get; private set; }
-        ///
         public Dialogue content { get; private set; }
         /// <param name="dialogue">向DialoguePool中加入的对话</param>
-        /// <param name="acceptAll">表示在多人对话中是否接受同一群组内所有人的消息, 仅当当前event为群组消息或讨论组消息时有效</param>
-        public InvokeDialogueException (Dialogue dialogue, bool acceptAll = false) {
+        public InvokeDialogueException (Dialogue dialogue) {
             content = dialogue;
-            this.acceptAll = acceptAll;
         }
     }
     /// <summary>
@@ -58,15 +55,13 @@ namespace cqhttp.Cyan.Utils {
         /// 用于设置某一状态下FSM的行为。
         /// </summary>
         /// <value></value>
-        public Func<CQApiClient, Message, string> this [string state_name] {
+        public Func<CQApiClient, Message, string> this[string state_name] {
             set {
                 operations[state_name] = value;
             }
         }
-        /// <summary>
-        /// 用于更新FSM状态，请勿调用
-        /// </summary>
-        public bool update (CQApiClient cli, Message m) {
+        ///
+        internal bool Update (CQApiClient cli, Message m) {
             if (operations.ContainsKey (state) == false) return false;
             state = operations[state] (cli, m);
             return true;
@@ -74,46 +69,29 @@ namespace cqhttp.Cyan.Utils {
     }
     /// <summary>
     /// 用于标记某一对话的作用范围
-    /// 
-    /// 某群/某人/某群中对某人
     /// </summary>
-    internal static class DialoguePool {
-        static Dictionary<long, Dialogue> pool = new Dictionary<long, Dialogue> ();
-        /// <summary>
-        /// 是否存在某一段正在进行的对话
-        /// 
-        /// 请勿调用!
-        /// </summary>
+    public static class DialoguePool {
+        static Dictionary<(MessageType, long), Dialogue> pool =
+            new Dictionary<(MessageType, long), Dialogue> ();
         /// <returns>是否阻止此消息向用户逻辑传递</returns>
-        public static bool Handle (CQApiClient cli, MessageEvent e) {
+        internal static bool Handle (CQApiClient cli, MessageEvent e) {
             if (pool.Count == 0) return false;
-            long uid = e.sender.user_id;
-            long gid;
-            if (e is GroupMessageEvent) {
-                gid = (e as GroupMessageEvent).group_id;
-            } else if (e is DiscussMessageEvent) {
-                gid = (e as DiscussMessageEvent).discuss_id;
-            } else { //e is PrivateMessageEvent
-                gid = uid;
-            }
-            long hash = (uid >> 1) ^ (gid << 1);
-            if (pool.ContainsKey (hash)) {
-                if (pool[hash].update (cli, e.message) == false) {
-                    pool.Remove (hash);
-                    return false;
-                }
-                return pool[hash].blockEvent;
+            var endpoint = e.GetEndpoint ();
+            if (pool.ContainsKey (endpoint)) {
+                var block = pool[endpoint].blockEvent;
+                if (pool[endpoint].Update (cli, e.message) == false)
+                    pool.Remove (endpoint);
+                return block;
             }
             return false;
         }
         /// <summary>
         /// 添加Dialogue, 每次收到MessageEvent时都会检查
         /// </summary>
-        /// <param name="uid">用户QQ号</param>
-        /// <param name="gid">群号或讨论组号, 私聊的话与uid相同</param>
+        /// <param name="endpoint">消息来源</param>
         /// <param name="d">需要添加的Dialogue</param>
-        public static void Join (long uid, long gid, Dialogue d) {
-            pool[(uid >> 1) ^ (gid << 1)] = d;
+        public static void Join ((MessageType, long) endpoint, Dialogue d) {
+            pool[endpoint] = d;
         }
     }
 }

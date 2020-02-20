@@ -82,7 +82,7 @@ namespace cqhttp.Cyan.Clients {
                 else
                     return new EmptyResponse ();
             } catch (InvokeDialogueException d) {
-                ComposeDialogue (ref d, ref e);
+                DialoguePool.Join ((e as MessageEvent).GetEndpoint (), d.content);
                 return new EmptyResponse ();
             }
         }
