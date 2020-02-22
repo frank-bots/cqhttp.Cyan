@@ -36,11 +36,8 @@ namespace cqhttp.Cyan.Clients.Callers {
             return x.response;
         }
         ~WebsocketCaller () {
-            CleanUp ();
-        }
-        private async void CleanUp () {
             Log.Info ("开始关闭Websocket连接");
-            await ConnectionPool.CloseAsync (
+            ConnectionPool.DisposeTarget (
                 this.access_url + (this.access_token == "" ? "" : "?access_token=" + this.access_token)
             );
         }

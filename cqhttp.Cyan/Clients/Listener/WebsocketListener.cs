@@ -70,11 +70,8 @@ namespace cqhttp.Cyan.Clients.Listeners {
             }
         }
         ~WebsocketListener () {
-            client.CloseAsync (
-                WebSocketCloseStatus.NormalClosure, "",
-                new CancellationToken ()
-            ).RunSynchronously ();
             ctoken_source.Cancel ();
+            client.Dispose ();
         }
     }
 }
