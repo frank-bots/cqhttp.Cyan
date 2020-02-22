@@ -21,62 +21,72 @@ namespace cqhttp.Cyan.Clients {
         /// 异步执行命令，忽略返回值
         /// </summary>
         public event OnEventDelegateAsync OnEventAsync;
+        async Task ProcessMessageEvent (MessageEvent message) {
+            switch (message) {
+            case GroupMessageEvent group_message:
+                var group_id = group_message.group_id;
+                if (
+                    group_table == null ||
+                    !group_table[group_id].ContainsKey (self_id)
+                ) {
+                    try {
+                        var info = await SendRequestAsync (
+                            new GetGroupMemberInfoRequest (
+                                group_id,
+                                this.self_id,
+                                no_cache: true
+                            )
+                        ) as GetGroupMemberInfoResult;
+                        if (group_table != null)
+                            group_table[group_id][self_id] = info.memberInfo;
+                        group_message.self_info = info.memberInfo;
+                    } catch { }
+                } else {
+                    group_message.self_info
+                        = group_table[group_id][self_id];
+                }
+                break;
+            case PrivateMessageEvent private_message:
+                break;
+            case DiscussMessageEvent discuss_message:
+                break;
+            }
+        }
         /// <summary></summary>
         protected async Task<CQResponse> HandleEvent (CQEvent e) {
             Log.Debug ($"收到了完整的上报事件{e.postType}");
-            if (e is MetaEvent) {
-                if (e is HeartbeatEvent) {
-                    if ((e as HeartbeatEvent).status.online) {
-                        alive = true;
-                        alive_counter++;
-                        var task = Task.Run (() => {
-                            System.Threading.Thread.Sleep (
-                                (int) (e as HeartbeatEvent).interval
-                            );
-                            if (alive_counter-- == 0)
-                                alive = false;
-                        });
-                    } else alive = false;
-                } else if (e is LifecycleEvent) {
-                    if ((e as LifecycleEvent).enabled)
-                        alive = true;
-                    else alive = false;
-                }
+            switch (e) {
+            case HeartbeatEvent heartbeat:
+                if (heartbeat.status.online) {
+                    alive = true;
+                    alive_counter++;
+                    var task = Task.Run (() => {
+                        System.Threading.Thread.Sleep (
+                            (int) heartbeat.interval
+                        );
+                        if (alive_counter-- == 0)
+                            alive = false;
+                    });
+                } else alive = false;
                 return new EmptyResponse ();
-            } else if (e is MessageEvent) {
+            case LifecycleEvent lifecycle:
+                alive = lifecycle.enabled ? true : false;
+                return new EmptyResponse ();
+            case MessageEvent message:
                 alive = true;
                 if (message_table != null)
                     message_table.Log (
-                        (e as MessageEvent).message_id,
-                        (e as MessageEvent).message
+                        message.message_id,
+                        message.message
                     );
-                if (e is GroupMessageEvent) {
-                    var group_id = (e as GroupMessageEvent).group_id;
-                    if (group_table == null || group_table[group_id].ContainsKey (self_id) == false) {
-                        try {
-                            var info = await SendRequestAsync (
-                                new GetGroupMemberInfoRequest (
-                                    group_id,
-                                    this.self_id,
-                                    no_cache: true
-                                )
-                            ) as GetGroupMemberInfoResult;
-                            if (group_table != null)
-                                group_table[group_id][self_id] = info.memberInfo;
-                            (e as GroupMessageEvent).self_info = info.memberInfo;
-                        } catch { }
-                    } else {
-                        (e as GroupMessageEvent).self_info
-                            = group_table[group_id][self_id];
-                    }
-                }
+                await ProcessMessageEvent (message);
                 if (DialoguePool.Handle (this, (e as MessageEvent)))
                     return new EmptyResponse ();
+                break;
             }
             try {
                 if (OnEventAsync != null)
                     await OnEventAsync (this, e);
-
                 if (OnEvent != null)
                     return OnEvent (this, e);
                 else
