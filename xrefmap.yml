@@ -285,6 +285,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Requests.GetRecordRequest.GetRecordRequest
   nameWithType: GetRecordRequest.GetRecordRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest
+  name: GetStrangerInfoRequest
+  href: meta/cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest
+  nameWithType: GetStrangerInfoRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.#ctor(System.Int64,System.Boolean)
+  name: GetStrangerInfoRequest(Int64, Boolean)
+  href: meta/cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.html#cqhttp_Cyan_ApiCall_Requests_GetStrangerInfoRequest__ctor_System_Int64_System_Boolean_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.#ctor(System.Int64,System.Boolean)
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.GetStrangerInfoRequest(System.Int64, System.Boolean)
+  nameWithType: GetStrangerInfoRequest.GetStrangerInfoRequest(Int64, Boolean)
+- uid: cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.#ctor*
+  name: GetStrangerInfoRequest
+  href: meta/cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.html#cqhttp_Cyan_ApiCall_Requests_GetStrangerInfoRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetStrangerInfoRequest.GetStrangerInfoRequest
+  nameWithType: GetStrangerInfoRequest.GetStrangerInfoRequest
 - uid: cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest
   name: GetVersionInfoRequest
   href: meta/cqhttp.Cyan.ApiCall.Requests.GetVersionInfoRequest.html
@@ -899,6 +918,77 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.GetRecordResult.Parse
   nameWithType: GetRecordResult.Parse
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult
+  name: GetStrangerInfoResult
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html
+  commentId: T:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult
+  nameWithType: GetStrangerInfoResult
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.age
+  name: age
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_age
+  commentId: P:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.age
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.age
+  nameWithType: GetStrangerInfoResult.age
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.age*
+  name: age
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_age_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.age
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.age
+  nameWithType: GetStrangerInfoResult.age
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.nickname
+  name: nickname
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_nickname
+  commentId: P:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.nickname
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.nickname
+  nameWithType: GetStrangerInfoResult.nickname
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.nickname*
+  name: nickname
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_nickname_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.nickname
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.nickname
+  nameWithType: GetStrangerInfoResult.nickname
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  name: Parse(JToken)
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_Parse_Newtonsoft_Json_Linq_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.Parse(Newtonsoft.Json.Linq.JToken)
+  nameWithType: GetStrangerInfoResult.Parse(JToken)
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.Parse*
+  name: Parse
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_Parse_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.Parse
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.Parse
+  nameWithType: GetStrangerInfoResult.Parse
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.sex
+  name: sex
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_sex
+  commentId: P:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.sex
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.sex
+  nameWithType: GetStrangerInfoResult.sex
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.sex*
+  name: sex
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_sex_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.sex
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.sex
+  nameWithType: GetStrangerInfoResult.sex
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.user_id
+  name: user_id
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_user_id
+  commentId: P:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.user_id
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.user_id
+  nameWithType: GetStrangerInfoResult.user_id
+- uid: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.user_id*
+  name: user_id
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.html#cqhttp_Cyan_ApiCall_Results_GetStrangerInfoResult_user_id_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.user_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.GetStrangerInfoResult.user_id
+  nameWithType: GetStrangerInfoResult.user_id
 - uid: cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult
   name: GetVersionInfoResult
   href: meta/cqhttp.Cyan.ApiCall.Results.GetVersionInfoResult.html
@@ -950,19 +1040,19 @@ references:
   commentId: T:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo
   nameWithType: InstanceVersionInfo
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_dir
-  name: coolq_dir
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_dir
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_dir
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_dir
-  nameWithType: InstanceVersionInfo.coolq_dir
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_dir*
-  name: coolq_dir
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_dir_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_dir
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
+  name: coolq_directory
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_directory
+  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
+  nameWithType: InstanceVersionInfo.coolq_directory
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory*
+  name: coolq_directory
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_directory_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
   isSpec: "True"
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_dir
-  nameWithType: InstanceVersionInfo.coolq_dir
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
+  nameWithType: InstanceVersionInfo.coolq_directory
 - uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
   name: coolq_edition
   href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_edition
@@ -976,19 +1066,45 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
   nameWithType: InstanceVersionInfo.coolq_edition
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_ver
-  name: plugin_ver
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_ver
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_ver
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_ver
-  nameWithType: InstanceVersionInfo.plugin_ver
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_ver*
-  name: plugin_ver
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_ver_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_ver
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
+  name: plugin_build_configuration
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_configuration
+  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
+  nameWithType: InstanceVersionInfo.plugin_build_configuration
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration*
+  name: plugin_build_configuration
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_configuration_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
   isSpec: "True"
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_ver
-  nameWithType: InstanceVersionInfo.plugin_ver
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
+  nameWithType: InstanceVersionInfo.plugin_build_configuration
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
+  name: plugin_build_number
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_number
+  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
+  nameWithType: InstanceVersionInfo.plugin_build_number
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number*
+  name: plugin_build_number
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_number_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
+  nameWithType: InstanceVersionInfo.plugin_build_number
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
+  name: plugin_version
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_version
+  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
+  nameWithType: InstanceVersionInfo.plugin_version
+- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version*
+  name: plugin_version
+  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_version_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
+  nameWithType: InstanceVersionInfo.plugin_version
 - uid: cqhttp.Cyan.ApiCall.Results.SendmsgResult
   name: SendmsgResult
   href: meta/cqhttp.Cyan.ApiCall.Results.SendmsgResult.html
@@ -1122,6 +1238,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Clients.CQApiClient.Initiate
   nameWithType: CQApiClient.Initiate
+- uid: cqhttp.Cyan.Clients.CQApiClient.initiate_task
+  name: initiate_task
+  href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_initiate_task
+  commentId: F:cqhttp.Cyan.Clients.CQApiClient.initiate_task
+  fullName: cqhttp.Cyan.Clients.CQApiClient.initiate_task
+  nameWithType: CQApiClient.initiate_task
+- uid: cqhttp.Cyan.Clients.CQApiClient.initiated
+  name: initiated
+  href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_initiated
+  commentId: P:cqhttp.Cyan.Clients.CQApiClient.initiated
+  fullName: cqhttp.Cyan.Clients.CQApiClient.initiated
+  nameWithType: CQApiClient.initiated
+- uid: cqhttp.Cyan.Clients.CQApiClient.initiated*
+  name: initiated
+  href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_initiated_
+  commentId: Overload:cqhttp.Cyan.Clients.CQApiClient.initiated
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Clients.CQApiClient.initiated
+  nameWithType: CQApiClient.initiated
 - uid: cqhttp.Cyan.Clients.CQApiClient.is_pro
   name: is_pro
   href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_is_pro
@@ -1171,19 +1306,6 @@ references:
   commentId: T:cqhttp.Cyan.Clients.CQApiClient.OnEventDelegateAsync
   fullName: cqhttp.Cyan.Clients.CQApiClient.OnEventDelegateAsync
   nameWithType: CQApiClient.OnEventDelegateAsync
-- uid: cqhttp.Cyan.Clients.CQApiClient.RequestPreprocess(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
-  name: RequestPreprocess(ApiRequest)
-  href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_RequestPreprocess_cqhttp_Cyan_ApiCall_Requests_Base_ApiRequest_
-  commentId: M:cqhttp.Cyan.Clients.CQApiClient.RequestPreprocess(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
-  fullName: cqhttp.Cyan.Clients.CQApiClient.RequestPreprocess(cqhttp.Cyan.ApiCall.Requests.Base.ApiRequest)
-  nameWithType: CQApiClient.RequestPreprocess(ApiRequest)
-- uid: cqhttp.Cyan.Clients.CQApiClient.RequestPreprocess*
-  name: RequestPreprocess
-  href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_RequestPreprocess_
-  commentId: Overload:cqhttp.Cyan.Clients.CQApiClient.RequestPreprocess
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Clients.CQApiClient.RequestPreprocess
-  nameWithType: CQApiClient.RequestPreprocess
 - uid: cqhttp.Cyan.Clients.CQApiClient.self_id
   name: self_id
   href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_self_id
@@ -1354,24 +1476,38 @@ references:
   commentId: T:cqhttp.Cyan.Config
   fullName: cqhttp.Cyan.Config
   nameWithType: Config
+- uid: cqhttp.Cyan.Config.internal_logger_output
+  name: internal_logger_output
+  href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_internal_logger_output
+  commentId: P:cqhttp.Cyan.Config.internal_logger_output
+  fullName: cqhttp.Cyan.Config.internal_logger_output
+  nameWithType: Config.internal_logger_output
+- uid: cqhttp.Cyan.Config.internal_logger_output*
+  name: internal_logger_output
+  href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_internal_logger_output_
+  commentId: Overload:cqhttp.Cyan.Config.internal_logger_output
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Config.internal_logger_output
+  nameWithType: Config.internal_logger_output
+- uid: cqhttp.Cyan.Config.internal_logger_verbosity
+  name: internal_logger_verbosity
+  href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_internal_logger_verbosity
+  commentId: P:cqhttp.Cyan.Config.internal_logger_verbosity
+  fullName: cqhttp.Cyan.Config.internal_logger_verbosity
+  nameWithType: Config.internal_logger_verbosity
+- uid: cqhttp.Cyan.Config.internal_logger_verbosity*
+  name: internal_logger_verbosity
+  href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_internal_logger_verbosity_
+  commentId: Overload:cqhttp.Cyan.Config.internal_logger_verbosity
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Config.internal_logger_verbosity
+  nameWithType: Config.internal_logger_verbosity
 - uid: cqhttp.Cyan.Config.is_send_json
   name: is_send_json
   href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_is_send_json
   commentId: F:cqhttp.Cyan.Config.is_send_json
   fullName: cqhttp.Cyan.Config.is_send_json
   nameWithType: Config.is_send_json
-- uid: cqhttp.Cyan.Config.log_default_type
-  name: log_default_type
-  href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_log_default_type
-  commentId: F:cqhttp.Cyan.Config.log_default_type
-  fullName: cqhttp.Cyan.Config.log_default_type
-  nameWithType: Config.log_default_type
-- uid: cqhttp.Cyan.Config.log_default_verbosity
-  name: log_default_verbosity
-  href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_log_default_verbosity
-  commentId: F:cqhttp.Cyan.Config.log_default_verbosity
-  fullName: cqhttp.Cyan.Config.log_default_verbosity
-  nameWithType: Config.log_default_verbosity
 - uid: cqhttp.Cyan.Config.network_max_failure
   name: network_max_failure
   href: meta/cqhttp.Cyan.Config.html#cqhttp_Cyan_Config_network_max_failure
@@ -1724,6 +1860,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.font
   nameWithType: MessageEvent.font
+- uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.GetEndpoint
+  name: GetEndpoint()
+  href: meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_GetEndpoint
+  commentId: M:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.GetEndpoint
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.GetEndpoint()
+  nameWithType: MessageEvent.GetEndpoint()
+- uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.GetEndpoint*
+  name: GetEndpoint
+  href: meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_GetEndpoint_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.GetEndpoint
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.GetEndpoint
+  nameWithType: MessageEvent.GetEndpoint
 - uid: cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.message
   name: message
   href: meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_message
@@ -3641,12 +3790,6 @@ references:
   commentId: M:cqhttp.Cyan.Messages.CQElements.ElementMusic.#ctor(System.String,System.Int64)
   fullName: cqhttp.Cyan.Messages.CQElements.ElementMusic.ElementMusic(System.String, System.Int64)
   nameWithType: ElementMusic.ElementMusic(String, Int64)
-- uid: cqhttp.Cyan.Messages.CQElements.ElementMusic.#ctor(System.String,System.String)
-  name: ElementMusic(String, String)
-  href: meta/cqhttp.Cyan.Messages.CQElements.ElementMusic.html#cqhttp_Cyan_Messages_CQElements_ElementMusic__ctor_System_String_System_String_
-  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementMusic.#ctor(System.String,System.String)
-  fullName: cqhttp.Cyan.Messages.CQElements.ElementMusic.ElementMusic(System.String, System.String)
-  nameWithType: ElementMusic.ElementMusic(String, String)
 - uid: cqhttp.Cyan.Messages.CQElements.ElementMusic.#ctor*
   name: ElementMusic
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementMusic.html#cqhttp_Cyan_Messages_CQElements_ElementMusic__ctor_
@@ -3654,6 +3797,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementMusic.ElementMusic
   nameWithType: ElementMusic.ElementMusic
+- uid: cqhttp.Cyan.Messages.CQElements.ElementMusic.GetMusicID(System.String,System.String)
+  name: GetMusicID(String, String)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementMusic.html#cqhttp_Cyan_Messages_CQElements_ElementMusic_GetMusicID_System_String_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementMusic.GetMusicID(System.String,System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementMusic.GetMusicID(System.String, System.String)
+  nameWithType: ElementMusic.GetMusicID(String, String)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementMusic.GetMusicID*
+  name: GetMusicID
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementMusic.html#cqhttp_Cyan_Messages_CQElements_ElementMusic_GetMusicID_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementMusic.GetMusicID
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementMusic.GetMusicID
+  nameWithType: ElementMusic.GetMusicID
 - uid: cqhttp.Cyan.Messages.CQElements.ElementMusicCustom
   name: ElementMusicCustom
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementMusicCustom.html
@@ -3994,19 +4150,26 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.Dialogue.Item
   nameWithType: Dialogue.Item
-- uid: cqhttp.Cyan.Utils.Dialogue.update(cqhttp.Cyan.Clients.CQApiClient,cqhttp.Cyan.Messages.Message)
-  name: update(CQApiClient, Message)
-  href: meta/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue_update_cqhttp_Cyan_Clients_CQApiClient_cqhttp_Cyan_Messages_Message_
-  commentId: M:cqhttp.Cyan.Utils.Dialogue.update(cqhttp.Cyan.Clients.CQApiClient,cqhttp.Cyan.Messages.Message)
-  fullName: cqhttp.Cyan.Utils.Dialogue.update(cqhttp.Cyan.Clients.CQApiClient, cqhttp.Cyan.Messages.Message)
-  nameWithType: Dialogue.update(CQApiClient, Message)
-- uid: cqhttp.Cyan.Utils.Dialogue.update*
-  name: update
-  href: meta/cqhttp.Cyan.Utils.Dialogue.html#cqhttp_Cyan_Utils_Dialogue_update_
-  commentId: Overload:cqhttp.Cyan.Utils.Dialogue.update
+- uid: cqhttp.Cyan.Utils.DialoguePool
+  name: DialoguePool
+  href: meta/cqhttp.Cyan.Utils.DialoguePool.html
+  commentId: T:cqhttp.Cyan.Utils.DialoguePool
+  fullName: cqhttp.Cyan.Utils.DialoguePool
+  nameWithType: DialoguePool
+- uid: cqhttp.Cyan.Utils.DialoguePool.Join(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},cqhttp.Cyan.Utils.Dialogue)
+  name: Join((MessageType, Int64), Dialogue)
+  href: meta/cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Join_System_ValueTuple_cqhttp_Cyan_Enums_MessageType_System_Int64__cqhttp_Cyan_Utils_Dialogue_
+  commentId: M:cqhttp.Cyan.Utils.DialoguePool.Join(System.ValueTuple{cqhttp.Cyan.Enums.MessageType,System.Int64},cqhttp.Cyan.Utils.Dialogue)
+  fullName: cqhttp.Cyan.Utils.DialoguePool.Join(System.ValueTuple<cqhttp.Cyan.Enums.MessageType, System.Int64>, cqhttp.Cyan.Utils.Dialogue)
+  fullName.vb: cqhttp.Cyan.Utils.DialoguePool.Join(System.ValueTuple(Of cqhttp.Cyan.Enums.MessageType, System.Int64), cqhttp.Cyan.Utils.Dialogue)
+  nameWithType: DialoguePool.Join((MessageType, Int64), Dialogue)
+- uid: cqhttp.Cyan.Utils.DialoguePool.Join*
+  name: Join
+  href: meta/cqhttp.Cyan.Utils.DialoguePool.html#cqhttp_Cyan_Utils_DialoguePool_Join_
+  commentId: Overload:cqhttp.Cyan.Utils.DialoguePool.Join
   isSpec: "True"
-  fullName: cqhttp.Cyan.Utils.Dialogue.update
-  nameWithType: Dialogue.update
+  fullName: cqhttp.Cyan.Utils.DialoguePool.Join
+  nameWithType: DialoguePool.Join
 - uid: cqhttp.Cyan.Utils.Get
   name: Get
   href: meta/cqhttp.Cyan.Utils.Get.html
@@ -4026,12 +4189,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.Get.GroupAvatarUrl
   nameWithType: Get.GroupAvatarUrl
-- uid: cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.Int64)
-  name: UserAvatarUrl(Int64)
-  href: meta/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_UserAvatarUrl_System_Int64_
-  commentId: M:cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.Int64)
-  fullName: cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.Int64)
-  nameWithType: Get.UserAvatarUrl(Int64)
+- uid: cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.UInt64)
+  name: UserAvatarUrl(UInt64)
+  href: meta/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_UserAvatarUrl_System_UInt64_
+  commentId: M:cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.UInt64)
+  fullName: cqhttp.Cyan.Utils.Get.UserAvatarUrl(System.UInt64)
+  nameWithType: Get.UserAvatarUrl(UInt64)
 - uid: cqhttp.Cyan.Utils.Get.UserAvatarUrl*
   name: UserAvatarUrl
   href: meta/cqhttp.Cyan.Utils.Get.html#cqhttp_Cyan_Utils_Get_UserAvatarUrl_
@@ -4163,12 +4326,12 @@ references:
   commentId: T:cqhttp.Cyan.Utils.InvokeDialogueException
   fullName: cqhttp.Cyan.Utils.InvokeDialogueException
   nameWithType: InvokeDialogueException
-- uid: cqhttp.Cyan.Utils.InvokeDialogueException.#ctor(cqhttp.Cyan.Utils.Dialogue,System.Boolean)
-  name: InvokeDialogueException(Dialogue, Boolean)
-  href: meta/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException__ctor_cqhttp_Cyan_Utils_Dialogue_System_Boolean_
-  commentId: M:cqhttp.Cyan.Utils.InvokeDialogueException.#ctor(cqhttp.Cyan.Utils.Dialogue,System.Boolean)
-  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.InvokeDialogueException(cqhttp.Cyan.Utils.Dialogue, System.Boolean)
-  nameWithType: InvokeDialogueException.InvokeDialogueException(Dialogue, Boolean)
+- uid: cqhttp.Cyan.Utils.InvokeDialogueException.#ctor(cqhttp.Cyan.Utils.Dialogue)
+  name: InvokeDialogueException(Dialogue)
+  href: meta/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException__ctor_cqhttp_Cyan_Utils_Dialogue_
+  commentId: M:cqhttp.Cyan.Utils.InvokeDialogueException.#ctor(cqhttp.Cyan.Utils.Dialogue)
+  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.InvokeDialogueException(cqhttp.Cyan.Utils.Dialogue)
+  nameWithType: InvokeDialogueException.InvokeDialogueException(Dialogue)
 - uid: cqhttp.Cyan.Utils.InvokeDialogueException.#ctor*
   name: InvokeDialogueException
   href: meta/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException__ctor_
@@ -4176,19 +4339,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Utils.InvokeDialogueException.InvokeDialogueException
   nameWithType: InvokeDialogueException.InvokeDialogueException
-- uid: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
-  name: acceptAll
-  href: meta/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_acceptAll
-  commentId: P:cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
-  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
-  nameWithType: InvokeDialogueException.acceptAll
-- uid: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll*
-  name: acceptAll
-  href: meta/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_acceptAll_
-  commentId: Overload:cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
-  isSpec: "True"
-  fullName: cqhttp.Cyan.Utils.InvokeDialogueException.acceptAll
-  nameWithType: InvokeDialogueException.acceptAll
 - uid: cqhttp.Cyan.Utils.InvokeDialogueException.content
   name: content
   href: meta/cqhttp.Cyan.Utils.InvokeDialogueException.html#cqhttp_Cyan_Utils_InvokeDialogueException_content
