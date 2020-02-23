@@ -8,11 +8,14 @@ namespace cqhttp.Cyan.Messages.CQElements {
     public class ElementMusic : Base.Element {
         static Regex musicIdRe = new Regex ("<a href=\"/song?id=([0-9]+)\">");
         ///
-        public ElementMusic (string type, string keyword) : base ("music", ("type", type), ("id", GetMusicID (type, keyword).Result)) { }
-        ///
         public ElementMusic (string type, long id) : base ("music", ("type", type), ("id", id.ToString ())) { }
-
-        private async static Task<string> GetMusicID (string type, string keyword) {
+        /// <summary>
+        /// 以相应关键词在对应平台上搜索歌曲，取结果中的第一首的id
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public async static Task<long> GetMusicID (string type, string keyword) {
             if (type == "163")
                 using (var i = new HttpClient ()) {
                     var res = JToken.Parse (await i.GetStringAsync (new System.Uri ("https://music.163.com/api/search/get?type=1&limit=1&s=" + keyword)));
@@ -20,10 +23,10 @@ namespace cqhttp.Cyan.Messages.CQElements {
                         res["code"].ToObject<int> () != 200 ||
                         res["result"]["songCount"].ToObject<int> () == 0
                     ) {
-                        return "511728615"; // 404 Not Found(Prod.by CashMoneyAP)
+                        return 511728615; // 404 Not Found(Prod.by CashMoneyAP)
                     }
                     Log.Debug ($"解析了163音乐搜索{keyword}的搜索结果");
-                    return res["result"]["songs"][0]["id"].ToString ();
+                    return res["result"]["songs"][0]["id"].ToObject<long> ();
                 }
             // else if (type == "qq")
 

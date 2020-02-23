@@ -9,8 +9,8 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
     static class WebsocketDaemon {
         static Dictionary<int, WebSocketServer> servers =
             new Dictionary<int, WebSocketServer> ();
-        static Dictionary < (int, string), IWebSocketConnection > pool =
-            new Dictionary < (int, string), IWebSocketConnection > ();
+        static Dictionary<(int, string), IWebSocketConnection> pool =
+            new Dictionary<(int, string), IWebSocketConnection> ();
         //                  port, path
         static WebsocketDaemon () {
             Fleck.FleckLog.LogAction = (level, m, e) => {
@@ -136,11 +136,7 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                 lock_.Release ();
             }
         }
-        public static async Task CloseAsync (string uri) {
-            await pool[uri].CloseAsync (
-                WebSocketCloseStatus.NormalClosure,
-                "", new CancellationToken ()
-            );
-        }
+        public static void DisposeTarget (string uri) =>
+            pool[uri].Dispose ();
     }
 }

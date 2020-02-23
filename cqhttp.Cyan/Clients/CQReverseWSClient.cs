@@ -3,7 +3,6 @@ namespace cqhttp.Cyan.Clients {
     /// 反向websocket连接方式
     /// </summary>
     public class CQReverseWSClient : CQApiClient {
-        object bufferLock = new object ();
         /// <summary>
         /// 当cqhttp中use_ws_reverse配置项为true时使用
         /// </summary>
@@ -29,8 +28,7 @@ namespace cqhttp.Cyan.Clients {
             (this.listener as Listeners.ReverseWSListener).caller = this.caller;
             this.listener.RegisterHandler (HandleEvent);
 
-            if (base.Initiate ().Result == false)
-                throw new Exceptions.ErrorApicallException ("初始化失败");
+            initiate_task = Initiate ();
             Log.Info ("成功连接");
         }
     }

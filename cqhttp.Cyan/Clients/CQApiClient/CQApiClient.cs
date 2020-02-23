@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Results;
 using cqhttp.Cyan.Utils;
@@ -21,6 +22,14 @@ namespace cqhttp.Cyan.Clients {
         /// 表示插件是否正常运行
         /// </summary>
         public bool alive { get; private set; }
+        /// <summary>
+        /// 是否已经初始化完成（检查连通性并获取self_id与self_nick）
+        /// </summary>
+        public bool initiated {
+            get {
+                return initiate_task.IsCompleted;
+            }
+        }
         int alive_counter = 0;
         /// <summary>
         /// 指向本实例的群组记录对象
@@ -48,8 +57,14 @@ namespace cqhttp.Cyan.Clients {
             if (use_group_table) this.group_table = new GroupTable ();
             if (use_message_table) this.message_table = new MessageTable ();
         }
-        ///
-        protected async System.Threading.Tasks.Task<bool> Initiate () {
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Task initiate_task;
+        /// <summary>
+        /// 检查连通性并获取self_id与self_nick
+        /// </summary>
+        protected async System.Threading.Tasks.Task Initiate () {
             GetLoginInfoResult loginInfo =
                 await SendRequestAsync (new GetLoginInfoRequest ())
             as GetLoginInfoResult;
@@ -59,7 +74,6 @@ namespace cqhttp.Cyan.Clients {
             this.self_id = loginInfo.user_id;
             this.self_nick = loginInfo.nickname;
             this.is_pro = (versionInfo.instanceVersionInfo.coolq_edition == "pro");
-            return true;
         }
     }
 }
