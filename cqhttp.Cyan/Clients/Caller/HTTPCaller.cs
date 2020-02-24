@@ -9,6 +9,7 @@ namespace cqhttp.Cyan.Clients.Callers {
     class HTTPCaller : ICaller {
         string accessUrl;
         string accessToken = "";
+        HttpClient client = new HttpClient ();
         /// <summary>
         /// 使用HTTP方式调用API
         /// </summary>
@@ -28,13 +29,12 @@ namespace cqhttp.Cyan.Clients.Callers {
         public async Task<ApiResult> SendRequestAsync (ApiRequest request) {
             return await PostJsonAsync (accessUrl, request, accessToken);
         }
-        async static Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string access_token = "") {
+        async Task<ApiResult> PostJsonAsync (string host, ApiRequest request, string access_token = "") {
             HttpResponseMessage response = new HttpResponseMessage ();
             using (HttpContent content = new StringContent (
                 request.content,
                 Encoding.UTF8, "application/json"
-            ))
-            using (HttpClient client = new HttpClient ()) {
+            )) {
                 client.Timeout = new System.TimeSpan (0, 0, Config.timeout);
                 if (string.IsNullOrEmpty (access_token) == false)
                     client.DefaultRequestHeaders.Authorization =
@@ -50,7 +50,7 @@ namespace cqhttp.Cyan.Clients.Callers {
                 }
                 if (response.IsSuccessStatusCode == false) {
                     Log.Error (
-                        $"调用HTTP API{await content.ReadAsStringAsync()}得到了错误的返回值{response.StatusCode}"
+                        $"调用HTTP API{request.content}得到了错误的返回值{response.StatusCode}"
                     );
                     throw new Exceptions.NetworkFailureException ($"POST调用api出错");
                 }
