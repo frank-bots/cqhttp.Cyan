@@ -4,7 +4,7 @@
     <TargetFrameworks>netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <Version>2.1.3</Version>
+    <Version>2.1.6</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fleck" Version="1.1.0" />

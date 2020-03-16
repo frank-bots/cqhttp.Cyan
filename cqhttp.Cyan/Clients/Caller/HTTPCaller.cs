@@ -25,6 +25,7 @@ namespace cqhttp.Cyan.Clients.Callers {
         ) {
             this.accessUrl = accessUrl;
             this.accessToken = accessToken;
+            client.Timeout = new System.TimeSpan (0, 0, Config.timeout);
         }
         public async Task<ApiResult> SendRequestAsync (ApiRequest request) {
             return await PostJsonAsync (accessUrl, request, accessToken);
@@ -35,7 +36,6 @@ namespace cqhttp.Cyan.Clients.Callers {
                 request.content,
                 Encoding.UTF8, "application/json"
             )) {
-                client.Timeout = new System.TimeSpan (0, 0, Config.timeout);
                 if (string.IsNullOrEmpty (access_token) == false)
                     client.DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue ("Token", access_token);

@@ -19,19 +19,24 @@ namespace cqhttp.Cyan.Clients.Callers {
             string access_token
         ) {
             api_path = api_path.Trim ('/');
-            server = new WebsocketDaemon.WebsocketServerInstance (listen_port, api_path);
-
-            if (server.socket.ConnectionInfo.Headers["Authorization"].Contains (
-                    access_token
-                ) == false)
-                throw new Exceptions.ErrorApicallException ("身份验证失败");
-            server.socket.OnMessage = (m) => {
-                Log.Debug ($"[reverse websocket received API response]:\n{m}");
-                JToken t = JToken.Parse (m);
-                lock (buffer_lock) {
-                    buffer[t["echo"].ToObject<long> ()] = t;
+            server = new WebsocketDaemon.WebsocketServerInstance (
+                listen_port, api_path,
+                m => {
+                    Log.Debug ($"[reverse websocket received API response]:\n{m}");
+                    JToken t = JToken.Parse (m);
+                    lock (buffer_lock) {
+                        buffer[t["echo"].ToObject<long> ()] = t;
+                    }
                 }
-            };
+            );
+
+            string token;
+            if (
+                access_token != "" &&
+                (server.socket.ConnectionInfo.Headers.TryGetValue ("Authorization", out token) &&
+                token.Contains (access_token)) == false
+            )
+                throw new Exceptions.ErrorApicallException ("身份验证失败");
             Log.Info ($"成功连接");
         }
         public async Task<ApiResult> SendRequestAsync (ApiRequest request) {

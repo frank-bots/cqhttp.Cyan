@@ -25,6 +25,7 @@ namespace cqhttp.Cyan.Clients.Callers {
         }
         public async Task Reconnect () {
             client.Abort ();
+            client = new ClientWebSocket ();
             await client.ConnectAsync (
                 new Uri (access_url + (access_token == "" ? "" : "?access_token=" + access_token)),
                 token_source.Token
