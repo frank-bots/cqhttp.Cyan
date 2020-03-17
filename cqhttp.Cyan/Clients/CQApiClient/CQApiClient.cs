@@ -7,6 +7,10 @@ namespace cqhttp.Cyan.Clients {
     /// <summary></summary>
     public partial class CQApiClient {
         /// <summary>
+        /// 当前酷Q实例的各种参数
+        /// </summary>
+        public InstanceVersionInfo instance_version_info = null;
+        /// <summary>
         /// 当前实例的QQ号
         /// </summary>
         public long self_id { get; private set; }
@@ -17,7 +21,11 @@ namespace cqhttp.Cyan.Clients {
         /// <summary>
         /// 连接到的实例是否为酷Q pro
         /// </summary>
-        public bool is_pro { get; private set; }
+        public bool is_pro {
+            get {
+                return this.instance_version_info.coolq_edition == "pro";
+            }
+        }
         /// <summary>
         /// 表示插件是否正常运行
         /// </summary>
@@ -73,7 +81,7 @@ namespace cqhttp.Cyan.Clients {
             as GetVersionInfoResult;
             this.self_id = loginInfo.user_id;
             this.self_nick = loginInfo.nickname;
-            this.is_pro = (versionInfo.instanceVersionInfo.coolq_edition == "pro");
+            this.instance_version_info = versionInfo.instanceVersionInfo;
         }
     }
 }

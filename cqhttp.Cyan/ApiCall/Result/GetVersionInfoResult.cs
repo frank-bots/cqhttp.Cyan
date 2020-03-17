@@ -17,20 +17,18 @@ namespace cqhttp.Cyan.ApiCall.Results {
             instanceVersionInfo = raw_data.ToObject<InstanceVersionInfo> ();
         }
     }
-    /// <summary>
-    /// 
-    /// </summary>
+    ///
     [JsonObject]
     public class InstanceVersionInfo {
         /// <summary>酷Q的版本，"pro"/"air"</summary>
-        public string coolq_edition { get; private set; }
+        public string coolq_edition;
         /// <summary>HTTP API 插件版本</summary>
-        public string plugin_version { get; private set; }
+        public string plugin_version;
         /// <summary>HTTP API 插件 build 号</summary>
-        public long plugin_build_number { get; private set; }
+        public long plugin_build_number;
         /// <summary>HTTP API 插件编译配置，debug 或 release</summary>
-        public string plugin_build_configuration { get; private set; }
+        public string plugin_build_configuration;
         /// <summary>酷 Q 根目录路径</summary>
-        public string coolq_directory { get; private set; }
+        public string coolq_directory;
     }
 }
