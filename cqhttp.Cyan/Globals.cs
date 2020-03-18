@@ -3,6 +3,11 @@ using System.Text.RegularExpressions;
 namespace cqhttp.Cyan {
     internal static class Log {
         static Utils.Logger logger = Utils.Logger.GetLogger ("cqhttp.Cyan");
+        static Log () {
+            logger.log_type =
+                System.Diagnostics.Process.GetCurrentProcess ().MainWindowHandle !=
+                System.IntPtr.Zero ? Enums.LogType.file : Enums.LogType.console;
+        }
         public static void Info (string message) =>
             logger.Info (message);
         public static void Debug (string message) =>
