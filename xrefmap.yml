@@ -1043,66 +1043,31 @@ references:
 - uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
   name: coolq_directory
   href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_directory
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
-  nameWithType: InstanceVersionInfo.coolq_directory
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory*
-  name: coolq_directory
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_directory_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
-  isSpec: "True"
+  commentId: F:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_directory
   nameWithType: InstanceVersionInfo.coolq_directory
 - uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
   name: coolq_edition
   href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_edition
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
-  nameWithType: InstanceVersionInfo.coolq_edition
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition*
-  name: coolq_edition
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_coolq_edition_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
-  isSpec: "True"
+  commentId: F:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.coolq_edition
   nameWithType: InstanceVersionInfo.coolq_edition
 - uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
   name: plugin_build_configuration
   href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_configuration
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
-  nameWithType: InstanceVersionInfo.plugin_build_configuration
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration*
-  name: plugin_build_configuration
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_configuration_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
-  isSpec: "True"
+  commentId: F:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_configuration
   nameWithType: InstanceVersionInfo.plugin_build_configuration
 - uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
   name: plugin_build_number
   href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_number
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
-  nameWithType: InstanceVersionInfo.plugin_build_number
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number*
-  name: plugin_build_number
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_build_number_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
-  isSpec: "True"
+  commentId: F:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_build_number
   nameWithType: InstanceVersionInfo.plugin_build_number
 - uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
   name: plugin_version
   href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_version
-  commentId: P:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
-  fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
-  nameWithType: InstanceVersionInfo.plugin_version
-- uid: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version*
-  name: plugin_version
-  href: meta/cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.html#cqhttp_Cyan_ApiCall_Results_InstanceVersionInfo_plugin_version_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
-  isSpec: "True"
+  commentId: F:cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
   fullName: cqhttp.Cyan.ApiCall.Results.InstanceVersionInfo.plugin_version
   nameWithType: InstanceVersionInfo.plugin_version
 - uid: cqhttp.Cyan.ApiCall.Results.SendmsgResult
@@ -1257,6 +1222,12 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Clients.CQApiClient.initiated
   nameWithType: CQApiClient.initiated
+- uid: cqhttp.Cyan.Clients.CQApiClient.instance_version_info
+  name: instance_version_info
+  href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_instance_version_info
+  commentId: F:cqhttp.Cyan.Clients.CQApiClient.instance_version_info
+  fullName: cqhttp.Cyan.Clients.CQApiClient.instance_version_info
+  nameWithType: CQApiClient.instance_version_info
 - uid: cqhttp.Cyan.Clients.CQApiClient.is_pro
   name: is_pro
   href: meta/cqhttp.Cyan.Clients.CQApiClient.html#cqhttp_Cyan_Clients_CQApiClient_is_pro
