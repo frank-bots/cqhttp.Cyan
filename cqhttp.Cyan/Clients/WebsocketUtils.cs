@@ -28,7 +28,7 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
         public class WebsocketServerInstance {
             int port;
             string path;
-            internal WebsocketServerInstance (int port, string path, Action<string> OnMessage) {
+            internal WebsocketServerInstance (int port, string path, string token, Action<string> OnMessage) {
                 this.port = port;
                 this.path = path.Trim ('/');
                 if (handlers.ContainsKey ((port, path)))
@@ -41,13 +41,24 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                             Log.Debug (
                                 $"来自{socket.ConnectionInfo.ClientIpAddress}的连接"
                             );
-                            pool[(port, socket.ConnectionInfo.Path.Trim ('/'))] = socket;
+                            string remote_token;
+                            if (
+                                token != "" &&
+                                (socket.ConnectionInfo.Headers.TryGetValue ("Authorization", out remote_token) &&
+                                remote_token.Contains (token)) == false
+                            ) {
+                                Log.Error ("连接token错误，身份验证失败");
+                                socket.Close ();
+                            } else
+                                pool[(port, socket.ConnectionInfo.Path.Trim ('/'))] = socket;
                         };
                         socket.OnClose = () => {
-                            Log.Debug (
-                                $"{socket.ConnectionInfo.ClientIpAddress}关闭连接"
+                            var conn_path = socket.ConnectionInfo.Path.Trim ('/');
+                            Log.Warn (
+                                $"{socket.ConnectionInfo.ClientIpAddress}/${conn_path}关闭连接"
                             );
-                            pool.Remove ((port, socket.ConnectionInfo.Path.Trim ('/')));
+                            if (pool.ContainsKey ((port, conn_path)))
+                                pool.Remove ((port, conn_path));
                         };
                         socket.OnMessage = message => {
                             if (handlers.ContainsKey ((port, socket.ConnectionInfo.Path.Trim ('/'))))

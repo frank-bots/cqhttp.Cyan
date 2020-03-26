@@ -15,8 +15,7 @@ namespace cqhttp.Cyan.Clients {
         ) {
             (this.listener as Listeners.WebsocketListener).caller = this.caller;
             this.listener.RegisterHandler (HandleEvent);
-            initiate_task = Initiate ();
-            Log.Info ("成功连接");
+            initiate_task = System.Threading.Tasks.Task.Run(Initiate);
         }
     }
 }

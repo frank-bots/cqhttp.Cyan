@@ -12,7 +12,7 @@ namespace cqhttp.Cyan.Clients.Listeners {
         public ReverseWSListener (int bind_port, string event_path, string access_token) {
             event_path = event_path.Trim ('/');
             server = new WebsocketDaemon.WebsocketServerInstance (
-                bind_port, event_path,
+                bind_port, event_path, access_token,
                 message => {
                     Task.Run (async () => {
                         try {
@@ -37,12 +37,6 @@ namespace cqhttp.Cyan.Clients.Listeners {
                     });
                 }
             );
-            string token;
-            if (
-                access_token != "" &&
-                (server.socket.ConnectionInfo.Headers.TryGetValue ("Authorization", out token) &&
-                token.Contains (access_token)) == false
-            ) throw new Exceptions.ErrorApicallException ("身份验证失败");
         }
     }
 }

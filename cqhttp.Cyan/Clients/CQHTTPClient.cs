@@ -20,8 +20,7 @@ namespace cqhttp.Cyan.Clients {
                 this.listener.RegisterHandler (HandleEvent);
                 Log.Info ($"开始在{listen_port}端口上监听上报消息");
             }
-            initiate_task = Initiate ();
-            Log.Info ("成功连接");
+            initiate_task = System.Threading.Tasks.Task.Run(Initiate);
         }
     }
 

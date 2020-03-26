@@ -1,4 +1,3 @@
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace cqhttp.Cyan.Utils {
@@ -16,7 +15,7 @@ namespace cqhttp.Cyan.Utils {
         ) {
             int cnt = 0;
             while (condition () == false && cnt++ * interval < Config.timeout * 1000)
-                await Task.Run (() => Thread.Sleep (interval));
+                await Task.Delay (interval);
             if (condition () == false) {
                 Log.Error ($"操作超时: {e}");
                 throw new Exceptions.NetworkFailureException (e);
