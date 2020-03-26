@@ -22,28 +22,29 @@ namespace cqhttp.Cyan.Clients.Listeners {
             client = new ClientWebSocket ();
             ctoken_source = new CancellationTokenSource ();
             Task.Run (async () => {
-                await client.ConnectAsync (
-                    new System.Uri (event_url),
-                    ctoken_source.Token
-                );
                 byte[] recv_buffer = new byte[2048];
                 List<byte> message = new List<byte> ();
-                while (
-                    client.State != WebSocketState.Open &&
-                    ctoken_source.Token.IsCancellationRequested == false
-                ) {
-                    var t = await client.ReceiveAsync (
-                        recv_buffer,
+                while (ctoken_source.Token.IsCancellationRequested == false) {
+                    await client.ConnectAsync (
+                        new System.Uri (event_url),
                         ctoken_source.Token
                     );
-                    if (!t.EndOfMessage) {
-                        message.AddRange (recv_buffer);
-                    } else {
-                        message.AddRange (recv_buffer.ToList ().GetRange (0, t.Count));
-                        Process (System.Text.Encoding.UTF8.GetString (message.ToArray ()));
-                        message.Clear ();
+                    while (
+                        client.State == WebSocketState.Open &&
+                        ctoken_source.Token.IsCancellationRequested == false
+                    ) {
+                        var t = await client.ReceiveAsync (
+                            recv_buffer,
+                            ctoken_source.Token
+                        );
+                        if (!t.EndOfMessage) {
+                            message.AddRange (recv_buffer);
+                        } else {
+                            message.AddRange (recv_buffer.ToList ().GetRange (0, t.Count));
+                            Process (System.Text.Encoding.UTF8.GetString (message.ToArray ()));
+                            message.Clear ();
+                        }
                     }
-                    break;
                 }
             });
         }

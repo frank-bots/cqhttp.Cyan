@@ -21,11 +21,7 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                 }
             }; // unify logs
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remark>不要实例化</remark>
-        public class WebsocketServerInstance {
+        internal class WebsocketServerInstance {
             int port;
             string path;
             internal WebsocketServerInstance (int port, string path, string token, Action<string> OnMessage) {
@@ -55,7 +51,7 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                         socket.OnClose = () => {
                             var conn_path = socket.ConnectionInfo.Path.Trim ('/');
                             Log.Warn (
-                                $"{socket.ConnectionInfo.ClientIpAddress}/${conn_path}关闭连接"
+                                $"{socket.ConnectionInfo.ClientIpAddress}/{conn_path}关闭连接"
                             );
                             if (pool.ContainsKey ((port, conn_path)))
                                 pool.Remove ((port, conn_path));
@@ -67,7 +63,6 @@ namespace cqhttp.Cyan.Clients.WebsocketUtils {
                     });
                 }
             }
-            ///
             public IWebSocketConnection socket {
                 get {
                     new System.Func<bool> (() => pool.ContainsKey ((port, path))).TimeOut (
