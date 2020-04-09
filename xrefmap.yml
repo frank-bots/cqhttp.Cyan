@@ -702,19 +702,6 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.raw_data
   nameWithType: ApiResult.raw_data
-- uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.retcode
-  name: retcode
-  href: meta/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_retcode
-  commentId: P:cqhttp.Cyan.ApiCall.Results.Base.ApiResult.retcode
-  fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.retcode
-  nameWithType: ApiResult.retcode
-- uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.retcode*
-  name: retcode
-  href: meta/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_retcode_
-  commentId: Overload:cqhttp.Cyan.ApiCall.Results.Base.ApiResult.retcode
-  isSpec: "True"
-  fullName: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.retcode
-  nameWithType: ApiResult.retcode
 - uid: cqhttp.Cyan.ApiCall.Results.Base.ApiResult.status
   name: status
   href: meta/cqhttp.Cyan.ApiCall.Results.Base.ApiResult.html#cqhttp_Cyan_ApiCall_Results_Base_ApiResult_status
