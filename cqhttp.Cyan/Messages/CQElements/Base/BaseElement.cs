@@ -117,6 +117,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
                 case "image":
                     return new ElementImage (dict["url"]);
                 case "at":
+                    if (dict["qq"] == "all") return new ElementAt ();
                     return new ElementAt (long.Parse (dict["qq"]));
                 case "record":
                     return new ElementRecord (dict["file"]);
