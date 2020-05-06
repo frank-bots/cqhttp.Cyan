@@ -80,7 +80,7 @@ namespace cqhttp.Cyan.Clients {
                         message.message
                     );
                 await ProcessMessageEvent (message);
-                if (DialoguePool.Handle (this, (e as MessageEvent)))
+                if (await DialoguePool.Handle (this, (e as MessageEvent)))
                     return new EmptyResponse ();
                 break;
             }

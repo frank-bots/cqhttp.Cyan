@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Enums;
-using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Messages;
 
@@ -41,8 +41,8 @@ namespace cqhttp.Cyan.Utils {
         /// 也就是说, 若此值为真, 则OnEvent与OnEventAsync不会收到被这一FSM处理过的上报消息事件
         /// </value>
         public bool blockEvent { get; private set; }
-        Dictionary<string, Func<CQApiClient, Message, string>> operations =
-            new Dictionary<string, Func<CQApiClient, Message, string>> ();
+        Dictionary<string, Func<CQApiClient, Message, Task<string>>> operations =
+            new Dictionary<string, Func<CQApiClient, Message, Task<string>>> ();
 
         /// <summary>
         /// 表示一段对话
@@ -55,15 +55,15 @@ namespace cqhttp.Cyan.Utils {
         /// 用于设置某一状态下FSM的行为。
         /// </summary>
         /// <value></value>
-        public Func<CQApiClient, Message, string> this[string state_name] {
+        public Func<CQApiClient, Message, Task<string>> this[string state_name] {
             set {
                 operations[state_name] = value;
             }
         }
         ///
-        internal bool Update (CQApiClient cli, Message m) {
+        internal async Task<bool> Update (CQApiClient cli, Message m) {
             if (operations.ContainsKey (state) == false) return false;
-            state = operations[state] (cli, m);
+            state = await operations[state] (cli, m);
             return true;
         }
     }
@@ -74,13 +74,15 @@ namespace cqhttp.Cyan.Utils {
         static Dictionary<(MessageType, long), Dialogue> pool =
             new Dictionary<(MessageType, long), Dialogue> ();
         /// <returns>是否阻止此消息向用户逻辑传递</returns>
-        internal static bool Handle (CQApiClient cli, MessageEvent e) {
+        internal async static Task<bool> Handle (CQApiClient cli, MessageEvent e) {
             if (pool.Count == 0) return false;
             var endpoint = e.GetEndpoint ();
             if (pool.ContainsKey (endpoint)) {
                 var block = pool[endpoint].blockEvent;
-                if (pool[endpoint].Update (cli, e.message) == false)
+                if (await pool[endpoint].Update (cli, e.message) == false) {
                     pool.Remove (endpoint);
+                    return false;
+                }
                 return block;
             }
             return false;
