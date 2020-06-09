@@ -8,7 +8,7 @@
     <title>&#28040;&#24687;&#30340;&#21457;&#36865;&#19982;&#25509;&#25910; </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="&#28040;&#24687;&#30340;&#21457;&#36865;&#19982;&#25509;&#25910; ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,24 +67,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="消息的发送与接收">消息的发送与接收</h2>
+<h1 id="消息的发送与接收">消息的发送与接收</h1>
 
 <p>本项目中发送与接收到的消息同为Message类型。</p>
-<h3 id="消息接收">消息接收</h3>
+<h2 id="消息接收">消息接收</h2>
 <p>在事件处理函数中可通过<code>(e is MessageEvent)</code>判断收到的是否为消息事件，如下：</p>
 <pre><code class="lang-csharp">static void Main() {
     var client = new HTTPApiClient(...);
-    client.OnEvent += HandleEvent;
+    client.OnEventAsync += HandleEvent;
 }
-static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
-    if(e is MessageEvent) {
-        return HandleMessage (
-            (e as MessageEvent).message
-        )
+static async Task&lt;CQResponse&gt; HandleEvent(CQApiClient api, CQEvent e) {
+    switch (e) {
+    case MessageEvent me:
+        await client.SendTextAsync(me.GetEndpoint(), &quot;收到消息&quot;);
+        return await HandleMessage (me.message);
     }
 }
 </code></pre>
-<h3 id="消息发送">消息发送</h3>
+<p>收到消息事件 <code>e</code> 后可以：</p>
+<ul>
+<li>通过 <a class="xref" href="../meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_GetEndpoint">e.GetEndpoint</a> 获取消息的发送位置。</li>
+<li>通过 <a class="xref" href="../meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_message_id">e.message_id</a> 调用撤回接口（pro only）</li>
+<li>通过 <a class="xref" href="../meta/cqhttp.Cyan.Events.CQEvents.Base.MessageEvent.html#cqhttp_Cyan_Events_CQEvents_Base_MessageEvent_sender">e.sender</a> 获取消息的发送者</li>
+</ul>
+<h2 id="消息发送">消息发送</h2>
 <p>可以自己构建需要发送的消息，也可以选择直接发送文本消息，亦或是发送定义好的<a class="xref" href="../meta/cqhttp.Cyan.Messages.CommonMessages.html">常用消息</a></p>
 <pre><code class="lang-csharp">static void Main() {
     var client = HTTPApiClient(...);
@@ -104,7 +110,7 @@ static CQResponse HandleEvent(CQApiClient api, CQEvent e) {
 }
 </code></pre>
 <p>除了可以主动发送消息，在接收到特定事件时，也可以通过在OnEvent中返回CQResponse来发送消息，完整列表可以在<a class="xref" href="../meta/cqhttp.Cyan.Events.CQResponses.html">这里</a>找到</p>
-<h3 id="消息构建">消息构建</h3>
+<h2 id="消息构建">消息构建</h2>
 <p>与cqhttp以及酷Q的消息/消息段的概念相对应，cqhttp.Cyan中的消息(Message)也由消息元素(Elements)组成。完整的Element列表可以在<a class="xref" href="../meta/cqhttp.Cyan.Messages.CQElements.html">这里</a>找到。</p>
 <p>Message/Element之间支持判等、相加的操作：</p>
 <pre><code class="lang-csharp">Message a = new Message(new ElementText(&quot;asdf&quot;), new ElementFace(4));
@@ -125,9 +131,6 @@ a + c;//asdf[CQ:face, id=4]asdf[CQ:face, id=3]
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/docs/guide/messages.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
