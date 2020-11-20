@@ -32,26 +32,20 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
         }
 
         /// <summary>
-        /// 获取当前的
+        /// 获取消息的发送位置
         /// </summary>
-        /// <returns></returns>
+        /// <returns>返回一个Tuple，Item1代表对话种类（群聊/私聊/讨论组），Item2代表号码（群号/QQ号/讨论组号）</returns>
         public (MessageType, long) GetEndpoint () {
-            if (this is GroupMessageEvent) {
-                return (
-                    MessageType.group_,
-                    (this as GroupMessageEvent).group_id
-                );
-            } else if (this is PrivateMessageEvent) {
-                return (
-                    MessageType.private_,
-                    (this as PrivateMessageEvent).sender_id
-                );
-            } else if (this is DiscussMessageEvent) {
-                return (
-                    MessageType.discuss_,
-                    (this as DiscussMessageEvent).discuss_id
-                );
-            } else return (MessageType.private_, 745679136);
+            switch (this) {
+            case GroupMessageEvent g:
+                return (MessageType.group_, g.group_id);
+            case PrivateMessageEvent p:
+                return (MessageType.private_, p.sender_id);
+            case DiscussMessageEvent d:
+                return (MessageType.discuss_, d.discuss_id);
+            default:
+                return (MessageType.private_, 745679136);
+            }
         }
     }
     /// <summary>

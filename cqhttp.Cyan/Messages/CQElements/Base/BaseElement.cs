@@ -77,7 +77,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
             string paramBuilder = "";
             foreach (var i in data)
                 if (i.Value.Length > 0)
-                    paramBuilder += $",{i.Key}={Encoder.EncodeValue(i.Value)}";
+                    paramBuilder += $",{i.Key}={Encoder.EncodeValue (i.Value)}";
             return string.Format (
                 "[CQ:{0}{1}]",
                 type, paramBuilder.TrimEnd (' ')
@@ -88,7 +88,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// </summary>
         /// <param name="type">消息段类型</param>
         /// <param name="dict">手动输入的键值对</param>
-        public Element (string type, params (string key, string value) [] dict) {
+        public Element (string type, params (string key, string value)[] dict) {
             this.type = type;
             data = new Dictionary<string, string> ();
             foreach (var i in dict)
