@@ -4,8 +4,7 @@ Cyan---青
 
 ## 目标
 
-写一个看完[cqhttp的文档](https://cqhttp.cc/docs)就能上手的cqhttp C# SDK
-
+写一个看完[OneBot文档](https://github.com/howmanybots/onebot/blob/master/README.md)就能上手的OneBot兼容 C# SDK
 
 ## 文档
 
@@ -23,7 +22,3 @@ Cyan---青
 |Api响应|```ApiResponse```|.ApiCall.Responses(.Base)|
 
 ------------------------------
-
-# TODO:
-添加一些必要的测试  
-为websocket添加消息队列  
