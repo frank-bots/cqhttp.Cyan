@@ -33,8 +33,7 @@ namespace cqhttp.Cyan.Events {
         /// <param name="eventJson">上报事件</param>
         /// <returns>处理后的事件对象</returns>
         public static CQEvent ParseEvent (JToken eventJson) {
-            string post_type;
-            post_type = eventJson["post_type"].ToString ();
+            string post_type = eventJson["post_type"].ToString ();
             switch (post_type) {
             case "message":
                 return HandleMessage (ref eventJson);

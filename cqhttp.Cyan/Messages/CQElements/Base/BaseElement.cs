@@ -26,16 +26,17 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         public bool isSingle = false;
 
         /// <summary></summary>
-        public static Message operator + (Element a, Element b) {
-            return new Message (a, b);
-        }
+        public static Message operator + (Element a, Element b) => new Message (a, b);
+        ///
+        public static bool operator == (Element a, Element b) => a.Equals (b);
+        ///
+        public static bool operator != (Element a, Element b) => !a.Equals (b);
         /// <summary></summary>
-        public static bool operator == (Element a, Element b) {
-            if (a is null && b is null) return true;
-            if (a is null || b is null) return false;
-            if (a.type != b.type) return false;
-            var i = a.data.GetEnumerator ();
-            var j = b.data.GetEnumerator ();
+        public override bool Equals (object b) {
+            if (!(b is Element that)) return false;
+            if (this.type != that.type) return false;
+            var i = this.data.GetEnumerator ();
+            var j = that.data.GetEnumerator ();
             while (i.Current.Key == j.Current.Key && i.Current.Value == j.Current.Value) {
                 if (i.MoveNext ()) {
                     if (j.MoveNext ()) continue;
@@ -47,17 +48,6 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
             }
             if (!(i.Current.Key is null) || !(j.Current.Key is null)) return false;
             return true;
-        }
-        /// <summary></summary>
-        public static bool operator != (Element a, Element b) {
-            return !(a == b);
-        }
-        /// <summary></summary>
-        public override bool Equals (object b) {
-            if (b is Element) {
-                return this == (b as Element);
-            }
-            return false;
         }
         /// <summary></summary>
         public override int GetHashCode () {

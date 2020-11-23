@@ -33,24 +33,11 @@ namespace cqhttp.Cyan.Messages {
             a.data.Add (b);
             return a;
         }
-        /// <summary></summary>
-        public static bool operator == (Message a, object b) {
-            if (a is null && b is null) return true;
-            if (a is null || b is null) return false;
-            if (b is Message) {
-                if (a.data.Count != (b as Message).data.Count)
-                    return false;
-                for (int i = 0; i < a.data.Count; i++) {
-                    if (a.data[i] != (b as Message).data[i])
-                        return false;
-                }
-                return true;
-            } else return false;
-        }
-        /// <summary></summary>
-        public static bool operator != (Message a, object b) {
-            return !(a == b);
-        }
+        ///
+        public static bool operator == (Message a, Message b) => a.Equals (b);
+        ///
+        public static bool operator != (Message a, Message b) => !a.Equals (b);
+
         /// <summary>
         /// 序列化消息为CQ码
         /// </summary>
@@ -63,15 +50,23 @@ namespace cqhttp.Cyan.Messages {
         }
         /// <summary></summary>
         public override bool Equals (object a) {
-            return this.data == (a as Message).data;
+             if (a is Message that) {
+                if (this.data.Count != that.data.Count)
+                    return false;
+                for (int i = 0; i < this.data.Count; i++) {
+                    if (this.data[i] != that.data[i])
+                        return false;
+                }
+                return true;
+            } else return false;
         }
         /// <summary>
         /// 下载所有文件元素(图片,语音)
         /// </summary>
         public async void FixAsync () {
             foreach (var i in data)
-                if (i is ElementFile)
-                    await (i as ElementFile).Fix ();
+                if (i is ElementFile file)
+                    await file.Fix ();
         }
     }
 }
