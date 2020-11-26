@@ -1,3 +1,4 @@
+using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Events.CQEvents;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -80,6 +81,10 @@ namespace cqhttp.Cyan.Events {
             Assert.Equal (
                 JToken.Parse (@"[{""type"":""text"",""data"":{""text"":""a""}}]"),
                 JToken.Parse (JsonConvert.SerializeObject (gme.message))
+            );
+            Assert.Equal (
+                (MessageType.group_, 12345),
+                gme.GetEndpoint ()
             );
         }
     }

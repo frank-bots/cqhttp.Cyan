@@ -3,7 +3,7 @@ namespace cqhttp.Cyan {
     public class Config {
         /// <summary>消息默认发送格式</summary>
         /// <see>https://cqhttp.cc/docs/4.6/#/Message</see>
-        public static bool is_send_json = false;
+        public static bool is_send_json = true;
 
         /// <summary>网络错误时最多重试的次数</summary>
         public const int network_max_failure = 3;

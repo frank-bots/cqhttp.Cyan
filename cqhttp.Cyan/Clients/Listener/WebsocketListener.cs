@@ -33,14 +33,13 @@ namespace cqhttp.Cyan.Clients.Listeners {
                         client.State == WebSocketState.Open &&
                         ctoken_source.Token.IsCancellationRequested == false
                     ) {
-                        var t = await client.ReceiveAsync (
-                            recv_buffer,
-                            ctoken_source.Token
+                        var res = await client.ReceiveAsync (
+                            recv_buffer, ctoken_source.Token
                         );
-                        if (!t.EndOfMessage) {
+                        if (!res.EndOfMessage) {
                             message.AddRange (recv_buffer);
                         } else {
-                            message.AddRange (recv_buffer.ToList ().GetRange (0, t.Count));
+                            message.AddRange (recv_buffer.ToList ().GetRange (0, res.Count));
                             Process (System.Text.Encoding.UTF8.GetString (message.ToArray ()));
                             message.Clear ();
                         }
