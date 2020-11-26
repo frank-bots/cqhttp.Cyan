@@ -9,17 +9,17 @@ namespace cqhttp.Cyan.Events.MetaEvents {
     [JsonObject]
     public class Status {
         /// 
-        public bool app_initialized { get; private set; }
+        public bool app_initialized { get; set; }
         /// 
-        public bool app_enabled { get; private set; }
+        public bool app_enabled { get; set; }
         ///
-        public Dictionary<string, bool> plugins_good { get; private set; }
+        public Dictionary<string, bool> plugins_good { get; set; }
         ///
-        public bool app_good { get; private set; }
+        public bool app_good { get; set; }
         ///
-        public bool online { get; private set; }
+        public bool online { get; set; }
         ///
-        public bool good { get; private set; }
+        public bool good { get; set; }
     }
     /// <summary>心跳包，请在设置中开启</summary>
     public class HeartbeatEvent : MetaEvent {
@@ -28,10 +28,10 @@ namespace cqhttp.Cyan.Events.MetaEvents {
         ///
         public long interval { get; private set; }
         /// <summary></summary>
-        public HeartbeatEvent (long time, Status status, long interval):
+        public HeartbeatEvent (long time, Status status, long interval) :
             base (time, Enums.PostType.meta_event) {
-                this.status = status;
-                this.interval = interval;
-            }
+            this.status = status;
+            this.interval = interval;
+        }
     }
 }

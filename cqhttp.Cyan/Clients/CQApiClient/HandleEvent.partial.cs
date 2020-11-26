@@ -60,12 +60,12 @@ namespace cqhttp.Cyan.Clients {
                 if (heartbeat.status.online) {
                     alive = true;
                     alive_counter++;
-                    var task = Task.Run (() => {
-                        System.Threading.Thread.Sleep (
-                            (int) heartbeat.interval
-                        );
-                        if (alive_counter-- == 0)
+                    var task = Task.Run (async () => {
+                        await Task.Delay ((int) heartbeat.interval);
+                        if (alive_counter-- == 0) {
                             alive = false;
+                            cqhttp.Cyan.Log.Warn ("Bot went offline");
+                        }
                     });
                 } else alive = false;
                 return new EmptyResponse ();
