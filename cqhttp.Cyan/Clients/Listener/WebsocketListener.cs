@@ -12,10 +12,9 @@ namespace cqhttp.Cyan.Clients.Listeners {
         public Callers.ICaller caller;
         CancellationTokenSource ctoken_source;
         public WebsocketListener (string event_url, string access_token) {
-            if (event_url.EndsWith ("/event")) {
-                event_url += '/';
-            } else if (!event_url.EndsWith ("/event/")) {
-                event_url += "/event/";
+            event_url.TrimEnd ('/');
+            if (!event_url.EndsWith ("/event")) {
+                event_url += "/event";
             }
             event_url += !string.IsNullOrEmpty (access_token) ? "?access_token=" + access_token : "";
 

@@ -15,10 +15,9 @@ namespace cqhttp.Cyan.Clients.Callers {
             string access_url,
             string access_token
         ) {
-            if (access_url.EndsWith ("/api")) {
-                access_url += '/';
-            } else if (!access_url.EndsWith ("/api/")) {
-                access_url += "/api/";
+            access_url.TrimEnd ('/');
+            if (!access_url.EndsWith ("/api")) {
+                access_url += "/api";
             }
             this.access_url = access_url;
             this.access_token = access_token;
