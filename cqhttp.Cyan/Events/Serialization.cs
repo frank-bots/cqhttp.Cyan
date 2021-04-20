@@ -55,9 +55,7 @@ namespace cqhttp.Cyan.Events {
                         eventJson["interval"].ToObject<long> ()
                     );
                 default:
-                    Log.Error (
-                        $"未能解析元事件{eventJson.ToString()}"
-                    );
+                    Log.Error ($"未能解析元事件{eventJson.ToString ()}");
                     throw new Exceptions.ErrorEventException ("未能解析元事件");
                 }
             }
@@ -94,9 +92,7 @@ namespace cqhttp.Cyan.Events {
                     e["discuss_id"].ToObject<long> ()
                 );
             default:
-                Log.Error (
-                    $"未能解析消息事件{e.ToString()}"
-                );
+                Log.Error ($"未能解析消息事件{e.ToString ()}");
                 return new UnknownEvent (
                     e["time"].ToObject<long> (),
                     PostType.message,
@@ -124,9 +120,7 @@ namespace cqhttp.Cyan.Events {
                     e["flag"].ToString ()
                 );
             default:
-                Log.Error (
-                    $"未能解析请求事件{e.ToString()}"
-                );
+                Log.Error ($"未能解析请求事件{e.ToString ()}");
                 return new UnknownEvent (
                     e["time"].ToObject<long> (),
                     PostType.request,
@@ -177,10 +171,15 @@ namespace cqhttp.Cyan.Events {
                     e["user_id"].ToObject<long> (),
                     e["duration"].ToObject<long> ()
                 );
-            default:
-                Log.Error (
-                    $"未能解析提醒事件{e.ToString()}"
+            case "group_recall":
+                return new GroupRecallEvent (
+                    e["time"].ToObject<long> (),
+                    e["group_id"].ToObject<long> (),
+                    e["user_id"].ToObject<long> (),
+                    e["operator_id"].ToObject<long> ()
                 );
+            default:
+                Log.Error ($"未能解析提醒事件{e.ToString ()}");
                 return new UnknownEvent (
                     e["time"].ToObject<long> (),
                     PostType.notice,

@@ -36,7 +36,9 @@ namespace cqhttp.Cyan.Enums {
         /// <summary></summary>
         group_lift_ban,
         /// <summary>好友申请</summary>
-        friend_add
+        friend_add,
+        /// <summary>群消息撤回</summary>
+        group_recall,
     }
     /// <summary>
     /// 日志 严重性
@@ -44,12 +46,18 @@ namespace cqhttp.Cyan.Enums {
     public enum Verbosity {
         /**<summary/>*/
         OFF,
-        /**<summary/>*/ FATAL,
-        /**<summary/>*/ ERROR,
-        /**<summary/>*/ WARN,
-        /**<summary/>*/ INFO,
-        /**<summary/>*/ DEBUG,
-        /**<summary/>*/ ALL
+        /**<summary/>*/
+        FATAL,
+        /**<summary/>*/
+        ERROR,
+        /**<summary/>*/
+        WARN,
+        /**<summary/>*/
+        INFO,
+        /**<summary/>*/
+        DEBUG,
+        /**<summary/>*/
+        ALL
     }
 
     /// <summary>
