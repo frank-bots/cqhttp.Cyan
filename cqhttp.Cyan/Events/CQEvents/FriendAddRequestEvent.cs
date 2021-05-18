@@ -5,6 +5,8 @@ namespace cqhttp.Cyan.Events.CQEvents {
     /// 属性this.user_id中存储了请求者QQ
     /// </summary>
     public class FriendAddRequestEvent : Base.RequestEvent {
+        /// <summary></summary>
+        public override string request_type { get; } = "friend";
         /// <summary>请求验证信息</summary>
         public string comment { get; private set; }
         /// <summary>请求 flag，在调用处理请求的 API 时需要传入</summary>

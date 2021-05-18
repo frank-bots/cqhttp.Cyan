@@ -1,11 +1,12 @@
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events.CQEvents {
     /// <summary>收到群消息</summary>
     public class GroupMessageEvent : MessageEvent {
+        /// <summary></summary>
+        public override string message_type { get; } = "group";
         /// <summary></summary>
         public long group_id { get; private set; }
         /// <summary></summary>
@@ -23,18 +24,17 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public Utils.GroupMemberInfo self_info = null;
         /// <summary></summary>
         public GroupMessageEvent (
-                long time,
-                string sub_type,
-                Message message,
-                GroupSender sender,
-                int message_id,
-                long group_id,
-                AnonymousInfo anonymous
-            ):
-            base (time, Enums.MessageType.group_, sender, message, message_id) {
-                this.group_id = group_id;
-                this.sub_type = sub_type;
-            }
+            long time,
+            string sub_type,
+            Message message,
+            GroupSender sender,
+            int message_id,
+            long group_id,
+            AnonymousInfo anonymous
+        ) : base (time, sender, message, message_id) {
+            this.group_id = group_id;
+            this.sub_type = sub_type;
+        }
     }
 
     ///

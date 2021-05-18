@@ -8,9 +8,9 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
         /// </summary>
         public long group_id { get; private set; }
         /// <summary></summary>
-        public GroupNoticeEvent (long time, Enums.NoticeType noticeType, long group_id, long user_id):
-            base (time, noticeType, user_id) {
-                this.group_id = group_id;
-            }
+        public GroupNoticeEvent (long time, long group_id, long user_id)
+        : base (time, user_id) {
+            this.group_id = group_id;
+        }
     }
 }

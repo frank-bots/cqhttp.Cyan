@@ -6,13 +6,15 @@ namespace cqhttp.Cyan.Events.CQEvents {
     /// <see>https://cqhttp.cc/docs/4.6/#/Post?id=%E7%BE%A4%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0</see>
     /// </summary>
     public class GroupUploadEvent : GroupNoticeEvent {
+        /// <summary></summary>
+        public override string notice_type { get; } = "group_upload";
         /// <summary>上传文件信息</summary>
         public FileInfo fileInfo { get; private set; }
         /// <summary></summary>
-        public GroupUploadEvent (long time, FileInfo fileInfo, long group_id, long user_id):
-            base (time, Enums.NoticeType.group_upload, group_id, user_id) {
-                this.fileInfo = fileInfo;
-            }
+        public GroupUploadEvent (long time, FileInfo fileInfo, long group_id, long user_id)
+        : base (time, group_id, user_id) {
+            this.fileInfo = fileInfo;
+        }
     }
     /// <summary></summary>
     [JsonObject]

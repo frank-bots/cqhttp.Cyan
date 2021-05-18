@@ -1,12 +1,35 @@
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
+using JsonSubTypes;
 
 namespace cqhttp.Cyan.Events.CQEvents.Base {
     /// <summary></summary>
+    [JsonConverter (typeof (JsonSubtypes), "message_type")]
+    [JsonSubtypes.KnownSubType (typeof (GroupMessageEvent), "group")]
+    [JsonSubtypes.KnownSubType (typeof (PrivateMessageEvent), "private")]
+    [JsonSubtypes.KnownSubType (typeof (DiscussMessageEvent), "discuss")]
+    [JsonSubtypes.FallBackSubType (typeof (UnknownEvent))]
     public abstract class MessageEvent : CQEvent {
         /// <summary></summary>
-        public MessageType messageType { get; private set; }
+        public override string post_type { get; } = "message";
+        /// <summary></summary>
+        public virtual string message_type { get; }
+        /// <summary></summary>
+        public MessageType messageType {
+            get {
+                switch (message_type) {
+                case "group":
+                    return MessageType.group_;
+                case "private":
+                    return MessageType.private_;
+                case "discuss":
+                    return MessageType.discuss_;
+                default:
+                    throw new Exceptions.ErrorMessageException ("未能解析消息类型");
+                }
+            }
+        }
         /// <summary>消息发送者</summary>
         public Sender sender { get; private set; }
         /// <summary></summary>
@@ -18,13 +41,11 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
         /// <summary></summary>
         public MessageEvent (
             long time,
-            MessageType messageType,
             Sender sender,
             Message message,
             int message_id,
             int font = 0
-        ) : base (time, PostType.message) {
-            this.messageType = messageType;
+        ) : base (time) {
             this.sender = sender;
             this.message = message;
             this.message_id = message_id;
