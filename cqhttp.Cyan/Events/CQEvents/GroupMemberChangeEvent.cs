@@ -6,24 +6,16 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// <summary>
         /// 退出群/加入群的方式
         /// </summary>
-        public string sub_type { get; private set; }
+        public string sub_type { get; set; }
         /// <summary>
         /// 操作者id
         /// </summary>
-        public long operator_id { get; private set; }
-        /// <summary></summary>
-        public GroupMemberChangeEvent (
-            long time, long group_id, long user_id,
-            long operator_id, bool is_add, string sub_type
-        ) : base (
-            time,
-            is_add ? Enums.NoticeType.group_increase :
-            Enums.NoticeType.group_decrease,
-            group_id,
-            user_id
-        ) {
-            this.sub_type = sub_type;
-            this.operator_id = operator_id;
-        }
+        public long operator_id { get; set; }
     }
+    /// <summary>群成员增加</summary>
+    [DiscriminatorValue ("group_increase")]
+    public class GroupMemberIncreaseEvent : GroupMemberChangeEvent { }
+    /// <summary>群成员减少</summary>
+    [DiscriminatorValue ("group_decrease")]
+    public class GroupMemberDecreaseEvent : GroupMemberChangeEvent { }
 }

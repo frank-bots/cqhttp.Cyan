@@ -38,10 +38,10 @@ namespace cqhttp.Cyan.Events {
                 raw_event
             );
             Assert.Equal (
-                typeof (GroupMemberChangeEvent),
+                typeof (GroupMemberDecreaseEvent),
                 test_event.GetType ()
             );
-            var gmce = test_event as GroupMemberChangeEvent;
+            var gmce = test_event as GroupMemberDecreaseEvent;
             Assert.Equal (
                 Enums.NoticeType.group_decrease,
                 gmce.noticeType
