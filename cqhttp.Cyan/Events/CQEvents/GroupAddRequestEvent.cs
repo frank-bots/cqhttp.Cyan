@@ -12,11 +12,11 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// <summary>请求 flag，在调用处理请求的 API 时需要传入</summary>
         public string flag { get; private set; }
         /// <summary></summary>
-        public GroupAddRequestEvent (long time, long user_id, long group_id, string comment, string flag):
-            base (time, user_id) {
-                this.comment = comment;
-                this.flag = flag;
-                this.group_id = group_id;
-            }
+        public GroupAddRequestEvent (long time, long user_id, long group_id, string comment, string flag)
+        : base (time, user_id) {
+            this.comment = comment;
+            this.flag = flag;
+            this.group_id = group_id;
+        }
     }
 }

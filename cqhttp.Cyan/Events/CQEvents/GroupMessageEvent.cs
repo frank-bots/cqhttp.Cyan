@@ -23,18 +23,17 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public Utils.GroupMemberInfo self_info = null;
         /// <summary></summary>
         public GroupMessageEvent (
-                long time,
-                string sub_type,
-                Message message,
-                GroupSender sender,
-                int message_id,
-                long group_id,
-                AnonymousInfo anonymous
-            ):
-            base (time, Enums.MessageType.group_, sender, message, message_id) {
-                this.group_id = group_id;
-                this.sub_type = sub_type;
-            }
+            long time,
+            string sub_type,
+            Message message,
+            GroupSender sender,
+            int message_id,
+            long group_id,
+            AnonymousInfo anonymous
+        ) : base (time, Enums.MessageType.group_, sender, message, message_id) {
+            this.group_id = group_id;
+            this.sub_type = sub_type;
+        }
     }
 
     ///

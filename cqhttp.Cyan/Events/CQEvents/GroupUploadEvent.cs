@@ -9,10 +9,10 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// <summary>上传文件信息</summary>
         public FileInfo fileInfo { get; private set; }
         /// <summary></summary>
-        public GroupUploadEvent (long time, FileInfo fileInfo, long group_id, long user_id):
-            base (time, Enums.NoticeType.group_upload, group_id, user_id) {
-                this.fileInfo = fileInfo;
-            }
+        public GroupUploadEvent (long time, FileInfo fileInfo, long group_id, long user_id)
+        : base (time, Enums.NoticeType.group_upload, group_id, user_id) {
+            this.fileInfo = fileInfo;
+        }
     }
     /// <summary></summary>
     [JsonObject]

@@ -15,9 +15,7 @@ namespace cqhttp.Cyan.Events {
         ///
         public override object ReadJson (JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
             try {
-                return ParseEvent (
-                    JToken.ReadFrom (reader)
-                );
+                return ParseEvent (JObject.Load (reader));
             } catch (JsonException) {
                 Log.Error ($"收到了错误的上报消息");
                 throw new Exceptions.ErrorEventException ("收到了错误的上报消息");
@@ -32,21 +30,21 @@ namespace cqhttp.Cyan.Events {
         /// </summary>
         /// <param name="eventJson">上报事件</param>
         /// <returns>处理后的事件对象</returns>
-        public static CQEvent ParseEvent (JToken eventJson) {
+        public static CQEvent ParseEvent (in JObject eventJson) {
             string post_type = eventJson["post_type"].ToString ();
             switch (post_type) {
             case "message":
-                return HandleMessage (ref eventJson);
+                return HandleMessage (eventJson);
             case "notice":
-                return HandleNotice (ref eventJson);
+                return HandleNotice (eventJson);
             case "request":
-                return HandleRequest (ref eventJson);
+                return HandleRequest (eventJson);
             case "meta_event":
                 switch (eventJson["meta_event_type"].ToString ()) {
                 case "lifecycle":
                     return new MetaEvents.LifecycleEvent (
                         eventJson["time"].ToObject<long> (),
-                        eventJson["sub_type"].ToString () == "enable"
+                        eventJson["sub_type"].ToObject<string> ()
                     );
                 case "heartbeat":
                     return new MetaEvents.HeartbeatEvent (
@@ -63,7 +61,7 @@ namespace cqhttp.Cyan.Events {
             throw new Exceptions.NullEventException ($"未能解析type为{post_type}的event");
         }
 
-        private static CQEvent HandleMessage (ref JToken e) {
+        private static CQEvent HandleMessage (in JObject e) {
             string sub_type = e["message_type"].ToString ();
             switch (sub_type) {
             case "private":
@@ -101,15 +99,15 @@ namespace cqhttp.Cyan.Events {
             }
             //throw new Exceptions.ErrorEventException ("未能解析消息(message)事件");
         }
-        private static CQEvent HandleRequest (ref JToken e) {
+        private static CQEvent HandleRequest (in JObject e) {
             string request_type = e["request_type"].ToString ();
             switch (request_type) {
             case "friend":
                 return new FriendAddRequestEvent (
                     e["time"].ToObject<long> (),
                     e["user_id"].ToObject<long> (),
-                    e["comment"].ToString (),
-                    e["flag"].ToString ()
+                    e["comment"].ToObject<string> (),
+                    e["flag"].ToObject<string> ()
                 );
             case "group":
                 return new GroupAddRequestEvent (
@@ -130,7 +128,7 @@ namespace cqhttp.Cyan.Events {
             //throw new Exceptions.ErrorEventException ("未能解析请求(request)事件");
         }
 
-        private static CQEvent HandleNotice (ref JToken e) {
+        private static CQEvent HandleNotice (in JToken e) {
             string notice_type = e["notice_type"].ToString ();
             switch (notice_type) {
             case "group_upload":

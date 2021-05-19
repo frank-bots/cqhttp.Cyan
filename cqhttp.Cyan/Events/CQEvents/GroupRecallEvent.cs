@@ -9,12 +9,12 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public long operator_id { get; private set; }
         /// <summary></summary>
         public GroupRecallEvent (
-                long time, long group_id, long user_id, long operator_id) :
-            base (
-                time,
-                Enums.NoticeType.group_recall,
-                group_id, user_id
-            ) {
+            long time, long group_id, long user_id, long operator_id
+        ) : base (
+            time,
+            Enums.NoticeType.group_recall,
+            group_id, user_id
+        ) {
             this.operator_id = operator_id;
         }
     }
