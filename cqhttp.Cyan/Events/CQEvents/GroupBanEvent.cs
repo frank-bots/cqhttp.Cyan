@@ -12,11 +12,11 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public long duration;
         ///
         public GroupBanEvent (
-                long time, bool is_ban,
-                long group_id, long operator_id, long user_id,
-                long duration):
-            base (time, NoticeType.friend_add, group_id, user_id) {
-                this.duration = duration;
-            }
+            long time, bool is_ban,
+            long group_id, long operator_id, long user_id,
+            long duration
+        ) : base (time, NoticeType.friend_add, group_id, user_id) {
+            this.duration = duration;
+        }
     }
 }

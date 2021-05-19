@@ -70,7 +70,10 @@ namespace cqhttp.Cyan.Clients {
                 } else alive = false;
                 return new EmptyResponse ();
             case LifecycleEvent lifecycle:
-                alive = lifecycle.enabled ? true : false;
+                switch (lifecycle.sub_type) {
+                case "enable": alive = true; break;
+                case "disable": alive = false; break;
+                }
                 return new EmptyResponse ();
             case MessageEvent message:
                 alive = true;
