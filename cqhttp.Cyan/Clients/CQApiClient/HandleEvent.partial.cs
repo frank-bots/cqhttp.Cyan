@@ -3,9 +3,9 @@ using cqhttp.Cyan.ApiCall.Requests;
 using cqhttp.Cyan.ApiCall.Results;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
+using cqhttp.Cyan.Events.CQEvents.MetaEvents;
 using cqhttp.Cyan.Events.CQResponses;
 using cqhttp.Cyan.Events.CQResponses.Base;
-using cqhttp.Cyan.Events.MetaEvents;
 using cqhttp.Cyan.Utils;
 
 namespace cqhttp.Cyan.Clients {
