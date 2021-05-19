@@ -53,4 +53,8 @@ namespace cqhttp.Cyan.Events {
         public override Type BaseType => typeof (CQEvents.MetaEvents.MetaEvent);
         public override string DiscriminatorFieldName => "meta_event_type";
     }
+    class NotifyNoticeEventDiscriminatorOptions : BaseEventDiscriminatorOptions {
+        public override Type BaseType => typeof (CQEvents.NotifyEvent);
+        public override string DiscriminatorFieldName => "sub_type";
+    }
 }

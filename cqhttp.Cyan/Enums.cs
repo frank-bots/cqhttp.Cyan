@@ -39,6 +39,8 @@ namespace cqhttp.Cyan.Enums {
         friend_add,
         /// <summary>群消息撤回</summary>
         group_recall,
+        /// <summary>戳一戳，运气王或群荣誉变更</summary>
+        notify,
     }
     /// <summary>
     /// 日志 严重性

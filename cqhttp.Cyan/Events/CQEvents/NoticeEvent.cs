@@ -1,4 +1,44 @@
 namespace cqhttp.Cyan.Events.CQEvents {
+    #region notify event
+    /// <summary></summary>
+    [Newtonsoft.Json.JsonConverter (
+        typeof (Utils.DiscriminatedJsonConverter),
+        typeof (NotifyNoticeEventDiscriminatorOptions)
+    )]
+    [DiscriminatorValue ("notify")]
+    public class NotifyEvent : Base.NoticeEvent {
+        /// <summary>提示类型</summary>
+        public string sub_type { get; set; }
+        /// <summary>被操作者 QQ 号</summary>
+        public long target_id { get; set; }
+    }
+
+    /// <summary>群内戳一戳</summary>
+    [DiscriminatorValue ("poke")]
+    public class PokeEvent : NotifyEvent {
+        ///
+        public bool is_group { get => group_id != null; }
+        /// <summary>群聊id，可能为null。若为null，则为私聊戳一戳。可由is_group属性判定</summary>
+        public long? group_id { get; set; }
+    }
+
+    /// <summary>群红包运气王</summary>
+    [DiscriminatorValue ("lucky_king")]
+    public class GroupLuckyKingEvent : NotifyEvent {
+        /// <summary>群聊id</summary>
+        public long group_id { get; set; }
+    }
+
+    /// <summary>群成员荣誉变更</summary>
+    [DiscriminatorValue ("honor")]
+    public class GroupHonorEvent : NotifyEvent {
+        /// <summary>荣誉类型，分别表示龙王、群聊之火、快乐源泉</summary>
+        public string honor_type { get; set; }
+        /// <summary>群聊id</summary>
+        public long group_id { get; set; }
+    }
+    #endregion
+
     /// <summary>加好友邀请</summary>
     [DiscriminatorValue ("friend_add")]
     public class FriendAddEvent : Base.NoticeEvent { }

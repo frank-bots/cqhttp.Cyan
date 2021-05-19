@@ -4,6 +4,10 @@ namespace cqhttp.Cyan.Events.CQEvents.MetaEvents {
     /// <summary>
     /// 元事件
     /// </summary>
+    [Newtonsoft.Json.JsonConverter (
+        typeof (Utils.DiscriminatedJsonConverter),
+        typeof (MetaEventDiscriminatorOptions)
+    )]
     public class MetaEvent : cqhttp.Cyan.Events.CQEvents.Base.CQEvent {
         ///
         public string meta_event_type { get; set; }
@@ -13,7 +17,7 @@ namespace cqhttp.Cyan.Events.CQEvents.MetaEvents {
     [DiscriminatorValue ("lifecycle")]
     public class LifecycleEvent : MetaEvent {
         /// <summary></summary>
-        public string sub_type { get; private set; }
+        public string sub_type { get; set; }
     }
 
     /// <summary>心跳包，请在设置中开启</summary>
@@ -38,8 +42,8 @@ namespace cqhttp.Cyan.Events.CQEvents.MetaEvents {
             public bool good { get; set; }
         }
         /// <summary></summary>
-        public Status status { get; private set; }
+        public Status status { get; set; }
         ///
-        public long interval { get; private set; }
+        public long interval { get; set; }
     }
 }
