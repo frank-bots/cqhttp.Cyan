@@ -83,8 +83,7 @@
   
   <h1 id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent" class="text-break">Class FriendAddRequestEvent
   </h1>
-  <div class="markdown level0 summary"><p>加个好友如何?</p>
-<p>属性this.user_id中存储了请求者QQ</p>
+  <div class="markdown level0 summary"><p>加好友邀请</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -97,34 +96,19 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.html#cqhttp_Cyan_Events_CQEvents_Base_RequestEvent_request_type">RequestEvent.request_type</a>
+    </div>
+    <div>
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.RequestEvent.html#cqhttp_Cyan_Events_CQEvents_Base_RequestEvent_user_id">RequestEvent.user_id</a>
     </div>
     <div>
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent_time">CQEvent.time</a>
     </div>
     <div>
+      <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent_post_type">CQEvent.post_type</a>
+    </div>
+    <div>
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent_postType">CQEvent.postType</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Events.CQEvents.html">cqhttp.Cyan.Events.CQEvents</a></h6>
@@ -133,55 +117,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class FriendAddRequestEvent : RequestEvent</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent__ctor_System_Int64_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.%23ctor(System.Int64%2CSystem.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/FriendAddRequestEvent.cs/#L13">View Source</a>
-  </span>
-  <a id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent__ctor_" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor*"></a>
-  <h4 id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent__ctor_System_Int64_System_Int64_System_String_System_String_" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.#ctor(System.Int64,System.Int64,System.String,System.String)">FriendAddRequestEvent(Int64, Int64, String, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FriendAddRequestEvent(long time, long user_id, string comment, string flag)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">time</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">user_id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">comment</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">flag</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -189,7 +124,7 @@
     <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent_comment.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.comment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/FriendAddRequestEvent.cs/#L9">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/RequestEvent.cs/#L6">View Source</a>
   </span>
   <a id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent_comment_" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.comment*"></a>
   <h4 id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent_comment" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.comment">comment</h4>
@@ -198,7 +133,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string comment { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string comment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,7 +155,7 @@
     <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent_flag.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.flag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/FriendAddRequestEvent.cs/#L11">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/RequestEvent.cs/#L8">View Source</a>
   </span>
   <a id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent_flag_" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.flag*"></a>
   <h4 id="cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent_flag" data-uid="cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent.flag">flag</h4>
@@ -229,7 +164,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string flag { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string flag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,7 +192,7 @@
                     <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_FriendAddRequestEvent.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.FriendAddRequestEvent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/FriendAddRequestEvent.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/RequestEvent.cs/#L3" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

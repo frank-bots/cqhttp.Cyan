@@ -83,7 +83,8 @@
   
   <h1 id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent" class="text-break">Class GroupAdminEvent
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>群管理员变更</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -99,6 +100,9 @@
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.GroupNoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_GroupNoticeEvent_group_id">GroupNoticeEvent.group_id</a>
     </div>
     <div>
+      <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_NoticeEvent_notice_type">NoticeEvent.notice_type</a>
+    </div>
+    <div>
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.NoticeEvent.html#cqhttp_Cyan_Events_CQEvents_Base_NoticeEvent_noticeType">NoticeEvent.noticeType</a>
     </div>
     <div>
@@ -108,28 +112,10 @@
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent_time">CQEvent.time</a>
     </div>
     <div>
+      <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent_post_type">CQEvent.post_type</a>
+    </div>
+    <div>
       <a class="xref" href="cqhttp.Cyan.Events.CQEvents.Base.CQEvent.html#cqhttp_Cyan_Events_CQEvents_Base_CQEvent_postType">CQEvent.postType</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="cqhttp.Cyan.Events.CQEvents.html">cqhttp.Cyan.Events.CQEvents</a></h6>
@@ -138,72 +124,23 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class GroupAdminEvent : GroupNoticeEvent</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_GroupAdminEvent__ctor_System_Int64_System_Int64_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.%23ctor(System.Int64%2CSystem.Int64%2CSystem.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/GroupAdminEvent.cs/#L11">View Source</a>
-  </span>
-  <a id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent__ctor_" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.#ctor*"></a>
-  <h4 id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent__ctor_System_Int64_System_Int64_System_Int64_System_Boolean_" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean)">GroupAdminEvent(Int64, Int64, Int64, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GroupAdminEvent(long time, long group_id, long user_id, bool isSet)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">time</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">group_id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">user_id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isSet</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_isSet.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.isSet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_is_set.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.is_set%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/GroupAdminEvent.cs/#L9">View Source</a>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/NoticeEvent.cs/#L45">View Source</a>
   </span>
-  <a id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_isSet_" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.isSet*"></a>
-  <h4 id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_isSet" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.isSet">isSet</h4>
+  <a id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_is_set_" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.is_set*"></a>
+  <h4 id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_is_set" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.is_set">is_set</h4>
   <div class="markdown level1 summary"><p>set/unset是设为管理员还是撤销管理员</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool isSet { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool is_set { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,6 +157,36 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_sub_type.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.sub_type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/NoticeEvent.cs/#L40">View Source</a>
+  </span>
+  <a id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_sub_type_" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.sub_type*"></a>
+  <h4 id="cqhttp_Cyan_Events_CQEvents_GroupAdminEvent_sub_type" data-uid="cqhttp.Cyan.Events.CQEvents.GroupAdminEvent.sub_type">sub_type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string sub_type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -231,7 +198,7 @@
                     <a href="https://github.com/frank-bots/cqhttp.Cyan/new/master/apiSpec/new?filename=cqhttp_Cyan_Events_CQEvents_GroupAdminEvent.md&amp;value=---%0Auid%3A%20cqhttp.Cyan.Events.CQEvents.GroupAdminEvent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/GroupAdminEvent.cs/#L5" class="contribution-link">View Source</a>
+                    <a href="https://github.com/frank-bots/cqhttp.Cyan/blob/master/cqhttp.Cyan/Events/CQEvents/NoticeEvent.cs/#L37" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
