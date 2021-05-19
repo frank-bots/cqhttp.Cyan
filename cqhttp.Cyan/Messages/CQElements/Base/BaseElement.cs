@@ -80,9 +80,9 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// <param name="dict">手动输入的键值对</param>
         public Element (string type, params (string key, string value)[] dict) {
             this.type = type;
-            data = new Dictionary<string, string> ();
+            this.data = new Dictionary<string, string> ();
             foreach (var i in dict)
-                data.Add (i.key, i.value);
+                this.data.Add (i.key, i.value);
         }
         /// <summary>
         /// 构造消息段，一般不会手动调用
@@ -91,7 +91,7 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// <param name="dict">消息段键值对</param>
         public Element (string type, Dictionary<string, string> dict) {
             this.type = type;
-            data = dict;
+            this.data = dict;
         }
         /// <summary>
         /// 构造一个类型为type的消息段
@@ -113,6 +113,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
                     return new ElementRecord (dict["file"]);
                 case "face":
                     return new ElementFace (dict["id"]);
+                case "reply":
+                    return new ElementReply (dict["id"]);
+                case "forward":
+                    return new ElementForward (dict["id"]);
                 case "bface":
                     return new ElementFace (dict["id"], "bface");
                 case "sface":
