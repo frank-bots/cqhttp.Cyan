@@ -34,7 +34,7 @@ namespace cqhttp.Cyan.Events {
             yield return ("request", typeof (CQEvents.Base.RequestEvent));
             yield return ("message", typeof (CQEvents.Base.MessageEvent));
             yield return ("notice", typeof (CQEvents.Base.NoticeEvent));
-            yield return ("meta_event", typeof (MetaEvents.MetaEvent));
+            yield return ("meta_event", typeof (CQEvents.MetaEvents.MetaEvent));
         }
     }
     class RequestEventDiscriminatorOptions : BaseEventDiscriminatorOptions {
@@ -50,7 +50,7 @@ namespace cqhttp.Cyan.Events {
         public override string DiscriminatorFieldName => "message_type";
     }
     class MetaEventDiscriminatorOptions : BaseEventDiscriminatorOptions {
-        public override Type BaseType => typeof (MetaEvents.MetaEvent);
+        public override Type BaseType => typeof (CQEvents.MetaEvents.MetaEvent);
         public override string DiscriminatorFieldName => "meta_event_type";
     }
 }
