@@ -1,15 +1,15 @@
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Messages;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace cqhttp.Cyan.Events.CQEvents {
     /// <summary>收到群消息</summary>
+    [DiscriminatorValue ("group")]
     public class GroupMessageEvent : MessageEvent {
         /// <summary></summary>
-        public long group_id { get; private set; }
+        public long group_id { get; set; }
         /// <summary></summary>
-        public string sub_type { get; private set; }
+        public string sub_type { get; set; }
         /// <summary>群消息是否匿名</summary>
         public bool isAnonymous {
             get {
@@ -21,30 +21,17 @@ namespace cqhttp.Cyan.Events.CQEvents {
         /// 来自于groupTable缓存或GetGroupMemberList结果
         /// </summary>
         public Utils.GroupMemberInfo self_info = null;
-        /// <summary></summary>
-        public GroupMessageEvent (
-            long time,
-            string sub_type,
-            Message message,
-            GroupSender sender,
-            int message_id,
-            long group_id,
-            AnonymousInfo anonymous
-        ) : base (time, Enums.MessageType.group_, sender, message, message_id) {
-            this.group_id = group_id;
-            this.sub_type = sub_type;
-        }
     }
 
     ///
     [JsonObject]
     public class AnonymousInfo {
         /// <summary>匿名用户id</summary>
-        public long id { get; private set; }
+        public long id { get; set; }
         /// <summary>匿名用户名称</summary>
-        public string name { get; private set; }
+        public string name { get; set; }
         /// <summary>匿名用户 flag，在调用禁言 API 时需要传入</summary>
-        public string flag { get; private set; }
+        public string flag { get; set; }
     }
     /// <summary>
     /// 群消息发送者信息，匿名时无参考价值
@@ -52,16 +39,16 @@ namespace cqhttp.Cyan.Events.CQEvents {
     [JsonObject]
     public class GroupSender : Sender {
         /// <summary>来自</summary>
-        [JsonProperty ("area")] public string area { get; private set; }
+        public string area { get; set; }
 
         /// <summary>成员等级</summary>
-        [JsonProperty ("level")] public string level { get; private set; }
+        public string level { get; set; }
 
         /// <summary>身份(owner/admin/member)</summary>
-        [JsonProperty ("role")] public string role { get; private set; }
+        public string role { get; set; }
         /// <summary>头衔</summary>
-        [JsonProperty ("title")] public string title { get; private set; }
+        public string title { get; set; }
         /// <summary>群名片／备注</summary>
-        [JsonProperty ("card")] public string card { get; private set; }
+        public string card { get; set; }
     }
 }

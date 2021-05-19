@@ -1,35 +1,24 @@
 using cqhttp.Cyan.Enums;
 using cqhttp.Cyan.Messages;
-using Newtonsoft.Json;
+using cqhttp.Cyan.Utils;
 
 namespace cqhttp.Cyan.Events.CQEvents.Base {
     /// <summary></summary>
+    [Newtonsoft.Json.JsonConverter (
+        typeof (DiscriminatedJsonConverter),
+        typeof (MessageEventDiscriminatorOptions)
+    )]
     public abstract class MessageEvent : CQEvent {
         /// <summary></summary>
-        public MessageType messageType { get; private set; }
+        public MessageType messageType { get; set; }
         /// <summary>消息发送者</summary>
-        public Sender sender { get; private set; }
+        public Sender sender { get; set; }
         /// <summary></summary>
-        public Message message { get; private set; }
+        public Message message { get; set; }
         /// <summary></summary>
-        public int message_id { get; private set; }
+        public int message_id { get; set; }
         /// <summary>字体</summary>
-        public int font { get; private set; }
-        /// <summary></summary>
-        public MessageEvent (
-            long time,
-            MessageType messageType,
-            Sender sender,
-            Message message,
-            int message_id,
-            int font = 0
-        ) : base (time, PostType.message) {
-            this.messageType = messageType;
-            this.sender = sender;
-            this.message = message;
-            this.message_id = message_id;
-            this.font = font;
-        }
+        public int font { get; set; }
 
         /// <summary>
         /// 获取消息的发送位置
@@ -51,17 +40,16 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
     /// <summary>
     /// 发送者信息
     /// </summary>
-    [JsonObject]
     public class Sender {
         /// <summary>QQ号</summary>
-        [JsonProperty ("user_id")] public long user_id { get; private set; }
+        public long user_id { get; set; }
         /// <summary>QQ昵称</summary>
-        [JsonProperty ("nickname")] public string nickname { get; private set; }
+        public string nickname { get; set; }
         /// <summary></summary>
 
-        [JsonProperty ("sex")] public string sex { get; private set; }
+        public string sex { get; set; }
         /// <summary></summary>
 
-        [JsonProperty ("age")] public int age { get; private set; }
+        public int age { get; set; }
     }
 }
