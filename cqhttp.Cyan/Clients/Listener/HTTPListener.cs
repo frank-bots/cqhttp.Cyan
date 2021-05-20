@@ -8,10 +8,7 @@ namespace cqhttp.Cyan.Clients.Listeners {
     class HTTPListener : Listener {
         byte[] secret;
         HttpListener listener;
-        public HTTPListener (
-            int port,
-            string secret = ""
-        ) {
+        public HTTPListener (int port, string secret = "") {
             this.secret = (secret == "" ? null :
                 Encoding.UTF8.GetBytes (secret));
             if (port != -1) {
@@ -20,8 +17,8 @@ namespace cqhttp.Cyan.Clients.Listeners {
                 listener.Start ();
                 Task.Run (async () => {
                     while (true) {
-                        var context = listener.GetContext ();
-                        await ProcessContext (context);
+                        var context = await listener.GetContextAsync ();
+                        var _ = ProcessContext (context);
                     }
                 });
             }

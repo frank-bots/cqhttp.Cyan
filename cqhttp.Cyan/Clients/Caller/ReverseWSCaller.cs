@@ -1,50 +1,56 @@
+using System.Net;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using cqhttp.Cyan.ApiCall.Requests.Base;
-using cqhttp.Cyan.ApiCall.Results.Base;
-using cqhttp.Cyan.Clients.WebsocketUtils;
-using cqhttp.Cyan.Utils;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Threading;
+using System.Net.WebSockets;
 
 namespace cqhttp.Cyan.Clients.Callers {
-    class ReverseWSCaller : ICaller {
-        WebsocketDaemon.WebsocketServerInstance server;
-        object buffer_lock = new object ();
-        Dictionary<long, JToken> buffer = new Dictionary<long, JToken> ();
+    class ReverseWSCaller : WebsocketCallerBase {
+        HttpListener listener;
         public ReverseWSCaller (
             int listen_port,
             string api_path,
             string access_token
         ) {
             api_path = api_path.Trim ('/');
-            server = new WebsocketDaemon.WebsocketServerInstance (
-                listen_port, api_path, access_token,
-                m => {
-                    Log.Debug ($"[reverse websocket received API response]:\n{m}");
-                    JToken t = JToken.Parse (m);
-                    lock (buffer_lock) {
-                        buffer[t["echo"].ToObject<long> ()] = t;
-                    }
+            listener = new HttpListener ();
+            listener.Prefixes.Add ($"http://+:{listen_port}/{api_path}/");
+            listener.Start ();
+            Task.Run (async () => {
+                while (listener.IsListening) {
+                    var context = await listener.GetContextAsync ();
+                    if (!context.Request.Url.AbsolutePath.StartsWith ($"/{api_path}")) {
+                        context.Response.StatusCode = 404;
+                        context.Response.Close ();
+                    } else if (context.Request.Headers["X-Client-Role"] != "API") {
+                        Log.Error ("X-Client-Role != API");
+                        Log.Warn ("Cyan暂不支持 ws_reverse_use_universal_client");
+                        context.Response.StatusCode = 403;
+                        context.Response.Close ();
+                    } else if (!context.Request.IsWebSocketRequest) {
+                        Log.Error ("非Websocket连接请求");
+                        context.Response.StatusCode = 404;
+                        context.Response.Close ();
+                    } else { var _ = ProcessContextAsync (context, ctoken_source.Token); }
                 }
-            );
+            });
         }
-        public async Task<ApiResult> SendRequestAsync (ApiRequest request) {
-            JObject constructor = new JObject ();
-            long echo = DateTime.Now.ToBinary ();
-            constructor["action"] = request.api_path.Substring (1);
-            constructor["params"] = JObject.Parse (request.content);
-            constructor["echo"] = echo;
-            await server.socket.Send (constructor.ToString (Formatting.None));
-            await new Func<bool> (
-                () => buffer.ContainsKey (echo)
-            ).TimeOut ("API调用超时");
-            request.response.Parse (buffer[echo]);
-            lock (buffer_lock) {
-                buffer.Remove (echo);
+        async Task ProcessContextAsync (HttpListenerContext context, CancellationToken token) {
+            var remote = context.Request.RemoteEndPoint;
+            Log.Info ($"来自<{remote.Address}:{remote.Port}>的反向Websocket连接");
+            WebSocket socket = null;
+            try {
+                WebSocketContext ws_context = await context.AcceptWebSocketAsync (null);
+                socket = ws_context.WebSocket;
+            } catch (Exception e) {
+                Log.Error ($"Websocket连接建立失败{e}\n{e.Message}");
+                context.Response.StatusCode = 500;
+                context.Response.Close ();
             }
-            return request.response;
+            if (socket != null)
+                this.socket = socket;
+            else
+                Log.Warn ("Websocket连接出现了问题");
         }
     }
 }
