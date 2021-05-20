@@ -20,4 +20,35 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release
     - name: Test
-      run: dotnet test --verbosity normal
+      run: dotnet test --verbosity normal --filter type!=integrity
+
+  int-go-cqhttp:
+    environment: go-cqhttp
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure go-cqhttp
+      run: |
+        wget https://github.com/Mrs4s/go-cqhttp/releases/download/v1.0.0-beta3/go-cqhttp_1.0.0-beta3_linux_amd64.deb
+        sudo dpkg -i go-cqhttp_1.0.0-beta3_linux_amd64.deb
+    - name: Setup .NET Core v5
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Secrets
+      run: |
+        mkdir opt
+        echo $DEVICE | base64 -d > ./opt/device.json
+        echo $CONFIG | base64 -d > ./opt/config.yml
+      shell: bash
+      env:
+        CONFIG : ${{secrets.CONFIG}}
+        DEVICE : ${{secrets.DEVICE}}
+    - name: Build Cyan
+      run: dotnet build --configuration Release
+    - name: Test
+      working-directory: ./opt
+      run: |
+        go-cqhttp faststart -d
+        sleep 10
+        dotnet test .. --verbosity normal
