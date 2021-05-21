@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link href="https://fonts.loli.net/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
@@ -94,6 +93,9 @@
       <section><p>用于清空插件的日志文件。</p>
 </section>
       <h4><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.DeleteMsgRequest.html">DeleteMsgRequest</a></h4>
+      <section><p>撤回消息</p>
+</section>
+      <h4><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.html">GetForwardMsgRequest</a></h4>
       <section><p>撤回消息</p>
 </section>
       <h4><a class="xref" href="cqhttp.Cyan.ApiCall.Requests.GetGroupListRequest.html">GetGroupListRequest</a></h4>
@@ -174,9 +176,22 @@
                 <ul class="nav">
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>
@@ -185,11 +200,13 @@
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-131292248-1"></script>
       <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        if (location.host != "localhost:8080") {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
       
-        gtag('config', 'UA-131292248-1');
+          gtag('config', 'UA-131292248-1');
+        }
       </script>
     </div>
     

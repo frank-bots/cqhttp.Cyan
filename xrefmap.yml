@@ -171,6 +171,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.ApiCall.Requests.DeleteMsgRequest.DeleteMsgRequest
   nameWithType: DeleteMsgRequest.DeleteMsgRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest
+  name: GetForwardMsgRequest
+  href: meta/cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.html
+  commentId: T:cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest
+  nameWithType: GetForwardMsgRequest
+- uid: cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.#ctor(System.String)
+  name: GetForwardMsgRequest(String)
+  href: meta/cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.html#cqhttp_Cyan_ApiCall_Requests_GetForwardMsgRequest__ctor_System_String_
+  commentId: M:cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.#ctor(System.String)
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.GetForwardMsgRequest(System.String)
+  nameWithType: GetForwardMsgRequest.GetForwardMsgRequest(String)
+- uid: cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.#ctor*
+  name: GetForwardMsgRequest
+  href: meta/cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.html#cqhttp_Cyan_ApiCall_Requests_GetForwardMsgRequest__ctor_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Requests.GetForwardMsgRequest.GetForwardMsgRequest
+  nameWithType: GetForwardMsgRequest.GetForwardMsgRequest
 - uid: cqhttp.Cyan.ApiCall.Requests.GetGroupListRequest
   name: GetGroupListRequest
   href: meta/cqhttp.Cyan.ApiCall.Requests.GetGroupListRequest.html
@@ -708,6 +727,31 @@ references:
   commentId: T:cqhttp.Cyan.ApiCall.Results.EmptyResult
   fullName: cqhttp.Cyan.ApiCall.Results.EmptyResult
   nameWithType: EmptyResult
+- uid: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult
+  name: GetForwardMsgResult
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.html
+  commentId: T:cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult
+  fullName: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult
+  nameWithType: GetForwardMsgResult
+- uid: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.messages
+  name: messages
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.html#cqhttp_Cyan_ApiCall_Results_GetForwardMsgResult_messages
+  commentId: F:cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.messages
+  fullName: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.messages
+  nameWithType: GetForwardMsgResult.messages
+- uid: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.Parse(JToken)
+  name: Parse(JToken)
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.html#cqhttp_Cyan_ApiCall_Results_GetForwardMsgResult_Parse_JToken_
+  commentId: M:cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.Parse(JToken)
+  fullName: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.Parse(JToken)
+  nameWithType: GetForwardMsgResult.Parse(JToken)
+- uid: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.Parse*
+  name: Parse
+  href: meta/cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.html#cqhttp_Cyan_ApiCall_Results_GetForwardMsgResult_Parse_
+  commentId: Overload:cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.Parse
+  isSpec: "True"
+  fullName: cqhttp.Cyan.ApiCall.Results.GetForwardMsgResult.Parse
+  nameWithType: GetForwardMsgResult.Parse
 - uid: cqhttp.Cyan.ApiCall.Results.GetGroupListResult
   name: GetGroupListResult
   href: meta/cqhttp.Cyan.ApiCall.Results.GetGroupListResult.html
@@ -1567,6 +1611,12 @@ references:
   commentId: F:cqhttp.Cyan.Enums.NoticeType.group_upload
   fullName: cqhttp.Cyan.Enums.NoticeType.group_upload
   nameWithType: NoticeType.group_upload
+- uid: cqhttp.Cyan.Enums.NoticeType.notify
+  name: notify
+  href: meta/cqhttp.Cyan.Enums.NoticeType.html#cqhttp_Cyan_Enums_NoticeType_notify
+  commentId: F:cqhttp.Cyan.Enums.NoticeType.notify
+  fullName: cqhttp.Cyan.Enums.NoticeType.notify
+  nameWithType: NoticeType.notify
 - uid: cqhttp.Cyan.Enums.PostType
   name: PostType
   href: meta/cqhttp.Cyan.Enums.PostType.html
@@ -2105,6 +2155,57 @@ references:
   commentId: F:cqhttp.Cyan.Events.CQEvents.GroupBanEvent.duration
   fullName: cqhttp.Cyan.Events.CQEvents.GroupBanEvent.duration
   nameWithType: GroupBanEvent.duration
+- uid: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent
+  name: GroupHonorEvent
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.html
+  commentId: T:cqhttp.Cyan.Events.CQEvents.GroupHonorEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent
+  nameWithType: GroupHonorEvent
+- uid: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.group_id
+  name: group_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.html#cqhttp_Cyan_Events_CQEvents_GroupHonorEvent_group_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.group_id
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.group_id
+  nameWithType: GroupHonorEvent.group_id
+- uid: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.group_id*
+  name: group_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.html#cqhttp_Cyan_Events_CQEvents_GroupHonorEvent_group_id_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.group_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.group_id
+  nameWithType: GroupHonorEvent.group_id
+- uid: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.honor_type
+  name: honor_type
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.html#cqhttp_Cyan_Events_CQEvents_GroupHonorEvent_honor_type
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.honor_type
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.honor_type
+  nameWithType: GroupHonorEvent.honor_type
+- uid: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.honor_type*
+  name: honor_type
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.html#cqhttp_Cyan_Events_CQEvents_GroupHonorEvent_honor_type_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.honor_type
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupHonorEvent.honor_type
+  nameWithType: GroupHonorEvent.honor_type
+- uid: cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent
+  name: GroupLuckyKingEvent
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.html
+  commentId: T:cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent
+  nameWithType: GroupLuckyKingEvent
+- uid: cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.group_id
+  name: group_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.html#cqhttp_Cyan_Events_CQEvents_GroupLuckyKingEvent_group_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.group_id
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.group_id
+  nameWithType: GroupLuckyKingEvent.group_id
+- uid: cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.group_id*
+  name: group_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.html#cqhttp_Cyan_Events_CQEvents_GroupLuckyKingEvent_group_id_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.group_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.GroupLuckyKingEvent.group_id
+  nameWithType: GroupLuckyKingEvent.group_id
 - uid: cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent
   name: GroupMemberChangeEvent
   href: meta/cqhttp.Cyan.Events.CQEvents.GroupMemberChangeEvent.html
@@ -2598,6 +2699,70 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Events.CQEvents.MetaEvents.MetaEvent.meta_event_type
   nameWithType: MetaEvent.meta_event_type
+- uid: cqhttp.Cyan.Events.CQEvents.NotifyEvent
+  name: NotifyEvent
+  href: meta/cqhttp.Cyan.Events.CQEvents.NotifyEvent.html
+  commentId: T:cqhttp.Cyan.Events.CQEvents.NotifyEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.NotifyEvent
+  nameWithType: NotifyEvent
+- uid: cqhttp.Cyan.Events.CQEvents.NotifyEvent.sub_type
+  name: sub_type
+  href: meta/cqhttp.Cyan.Events.CQEvents.NotifyEvent.html#cqhttp_Cyan_Events_CQEvents_NotifyEvent_sub_type
+  commentId: P:cqhttp.Cyan.Events.CQEvents.NotifyEvent.sub_type
+  fullName: cqhttp.Cyan.Events.CQEvents.NotifyEvent.sub_type
+  nameWithType: NotifyEvent.sub_type
+- uid: cqhttp.Cyan.Events.CQEvents.NotifyEvent.sub_type*
+  name: sub_type
+  href: meta/cqhttp.Cyan.Events.CQEvents.NotifyEvent.html#cqhttp_Cyan_Events_CQEvents_NotifyEvent_sub_type_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.NotifyEvent.sub_type
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.NotifyEvent.sub_type
+  nameWithType: NotifyEvent.sub_type
+- uid: cqhttp.Cyan.Events.CQEvents.NotifyEvent.target_id
+  name: target_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.NotifyEvent.html#cqhttp_Cyan_Events_CQEvents_NotifyEvent_target_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.NotifyEvent.target_id
+  fullName: cqhttp.Cyan.Events.CQEvents.NotifyEvent.target_id
+  nameWithType: NotifyEvent.target_id
+- uid: cqhttp.Cyan.Events.CQEvents.NotifyEvent.target_id*
+  name: target_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.NotifyEvent.html#cqhttp_Cyan_Events_CQEvents_NotifyEvent_target_id_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.NotifyEvent.target_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.NotifyEvent.target_id
+  nameWithType: NotifyEvent.target_id
+- uid: cqhttp.Cyan.Events.CQEvents.PokeEvent
+  name: PokeEvent
+  href: meta/cqhttp.Cyan.Events.CQEvents.PokeEvent.html
+  commentId: T:cqhttp.Cyan.Events.CQEvents.PokeEvent
+  fullName: cqhttp.Cyan.Events.CQEvents.PokeEvent
+  nameWithType: PokeEvent
+- uid: cqhttp.Cyan.Events.CQEvents.PokeEvent.group_id
+  name: group_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.PokeEvent.html#cqhttp_Cyan_Events_CQEvents_PokeEvent_group_id
+  commentId: P:cqhttp.Cyan.Events.CQEvents.PokeEvent.group_id
+  fullName: cqhttp.Cyan.Events.CQEvents.PokeEvent.group_id
+  nameWithType: PokeEvent.group_id
+- uid: cqhttp.Cyan.Events.CQEvents.PokeEvent.group_id*
+  name: group_id
+  href: meta/cqhttp.Cyan.Events.CQEvents.PokeEvent.html#cqhttp_Cyan_Events_CQEvents_PokeEvent_group_id_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.PokeEvent.group_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.PokeEvent.group_id
+  nameWithType: PokeEvent.group_id
+- uid: cqhttp.Cyan.Events.CQEvents.PokeEvent.is_group
+  name: is_group
+  href: meta/cqhttp.Cyan.Events.CQEvents.PokeEvent.html#cqhttp_Cyan_Events_CQEvents_PokeEvent_is_group
+  commentId: P:cqhttp.Cyan.Events.CQEvents.PokeEvent.is_group
+  fullName: cqhttp.Cyan.Events.CQEvents.PokeEvent.is_group
+  nameWithType: PokeEvent.is_group
+- uid: cqhttp.Cyan.Events.CQEvents.PokeEvent.is_group*
+  name: is_group
+  href: meta/cqhttp.Cyan.Events.CQEvents.PokeEvent.html#cqhttp_Cyan_Events_CQEvents_PokeEvent_is_group_
+  commentId: Overload:cqhttp.Cyan.Events.CQEvents.PokeEvent.is_group
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Events.CQEvents.PokeEvent.is_group
+  nameWithType: PokeEvent.is_group
 - uid: cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent
   name: PrivateMessageEvent
   href: meta/cqhttp.Cyan.Events.CQEvents.PrivateMessageEvent.html
@@ -3595,6 +3760,118 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementFace.ElementFace
   nameWithType: ElementFace.ElementFace
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward
+  name: ElementForward
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementForward
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward
+  nameWithType: ElementForward
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.#ctor(List{cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode})
+  name: ElementForward(List<ElementForward.ElementNode>)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html#cqhttp_Cyan_Messages_CQElements_ElementForward__ctor_List_cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode__
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementForward.#ctor(List{cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode})
+  name.vb: ElementForward(List(Of ElementForward.ElementNode))
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementForward(List<cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode>)
+  fullName.vb: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementForward(List(Of cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode))
+  nameWithType: ElementForward.ElementForward(List<ElementForward.ElementNode>)
+  nameWithType.vb: ElementForward.ElementForward(List(Of ElementForward.ElementNode))
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.#ctor(System.String)
+  name: ElementForward(String)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html#cqhttp_Cyan_Messages_CQElements_ElementForward__ctor_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementForward.#ctor(System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementForward(System.String)
+  nameWithType: ElementForward.ElementForward(String)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.#ctor*
+  name: ElementForward
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html#cqhttp_Cyan_Messages_CQElements_ElementForward__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementForward
+  nameWithType: ElementForward.ElementForward
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode
+  name: ElementForward.ElementNode
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode
+  nameWithType: ElementForward.ElementNode
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.#ctor(System.String,System.Int64,cqhttp.Cyan.Messages.Message)
+  name: ElementNode(String, Int64, Message)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode__ctor_System_String_System_Int64_cqhttp_Cyan_Messages_Message_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.#ctor(System.String,System.Int64,cqhttp.Cyan.Messages.Message)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.ElementNode(System.String, System.Int64, cqhttp.Cyan.Messages.Message)
+  nameWithType: ElementForward.ElementNode.ElementNode(String, Int64, Message)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.#ctor*
+  name: ElementNode
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.ElementNode
+  nameWithType: ElementForward.ElementNode.ElementNode
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.content
+  name: content
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_content
+  commentId: P:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.content
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.content
+  nameWithType: ElementForward.ElementNode.content
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.content*
+  name: content
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_content_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.content
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.content
+  nameWithType: ElementForward.ElementNode.content
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.data
+  name: data
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_data
+  commentId: P:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.data
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.data
+  nameWithType: ElementForward.ElementNode.data
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.data*
+  name: data
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_data_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.data
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.data
+  nameWithType: ElementForward.ElementNode.data
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.nickname
+  name: nickname
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_nickname
+  commentId: P:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.nickname
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.nickname
+  nameWithType: ElementForward.ElementNode.nickname
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.nickname*
+  name: nickname
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_nickname_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.nickname
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.nickname
+  nameWithType: ElementForward.ElementNode.nickname
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.user_id
+  name: user_id
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_user_id
+  commentId: P:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.user_id
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.user_id
+  nameWithType: ElementForward.ElementNode.user_id
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.user_id*
+  name: user_id
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.html#cqhttp_Cyan_Messages_CQElements_ElementForward_ElementNode_user_id_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.user_id
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.ElementNode.user_id
+  nameWithType: ElementForward.ElementNode.user_id
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.GetMessage(cqhttp.Cyan.Clients.CQApiClient)
+  name: GetMessage(CQApiClient)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html#cqhttp_Cyan_Messages_CQElements_ElementForward_GetMessage_cqhttp_Cyan_Clients_CQApiClient_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementForward.GetMessage(cqhttp.Cyan.Clients.CQApiClient)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.GetMessage(cqhttp.Cyan.Clients.CQApiClient)
+  nameWithType: ElementForward.GetMessage(CQApiClient)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementForward.GetMessage*
+  name: GetMessage
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html#cqhttp_Cyan_Messages_CQElements_ElementForward_GetMessage_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementForward.GetMessage
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementForward.GetMessage
+  nameWithType: ElementForward.GetMessage
 - uid: cqhttp.Cyan.Messages.CQElements.ElementImage
   name: ElementImage
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementImage.html
@@ -3760,6 +4037,25 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementRecord.isMagic
   nameWithType: ElementRecord.isMagic
+- uid: cqhttp.Cyan.Messages.CQElements.ElementReply
+  name: ElementReply
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementReply.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementReply
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementReply
+  nameWithType: ElementReply
+- uid: cqhttp.Cyan.Messages.CQElements.ElementReply.#ctor(System.String)
+  name: ElementReply(String)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementReply.html#cqhttp_Cyan_Messages_CQElements_ElementReply__ctor_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementReply.#ctor(System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementReply.ElementReply(System.String)
+  nameWithType: ElementReply.ElementReply(String)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementReply.#ctor*
+  name: ElementReply
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementReply.html#cqhttp_Cyan_Messages_CQElements_ElementReply__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementReply.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementReply.ElementReply
+  nameWithType: ElementReply.ElementReply
 - uid: cqhttp.Cyan.Messages.CQElements.ElementShake
   name: ElementShake
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementShake.html
