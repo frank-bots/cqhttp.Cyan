@@ -60,8 +60,9 @@ namespace cqhttp.Cyan.Clients.Callers {
             constructor["echo"] = echo;
             await lock_.WaitAsync ();
             await SendText (constructor.ToString (Formatting.None));
-            request.response.Parse (JToken.Parse (await ReceiveText ()));
+            var response = await ReceiveText ();
             lock_.Release ();
+            request.response.Parse (JToken.Parse (response));
             return request.response;
         }
     }

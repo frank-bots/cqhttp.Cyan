@@ -41,8 +41,15 @@ namespace cqhttp.Cyan.Events.CQEvents {
         public long group_id { get; set; }
         /// <summary></summary>
         public string sub_type { get; set; }
+        GroupSender _sender;
         /// <summary></summary>
-        public new GroupSender sender { get; set; }
+        public new GroupSender sender {
+            get => _sender;
+            set {
+                base.sender = value;
+                _sender = value;
+            }
+        }
         /// <summary>匿名信息，如果不是匿名消息则为 null</summary>
         public AnonymousInfo anonymous { get; set; }
         /// <summary>群消息是否匿名</summary>
