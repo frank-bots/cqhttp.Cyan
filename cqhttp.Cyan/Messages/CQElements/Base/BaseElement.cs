@@ -105,6 +105,20 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
                 case "text":
                     return new ElementText (dict["text"]);
                 case "image":
+                    if (dict.ContainsKey ("type")) {
+                        switch (dict["type"]) {
+                        // 闪照未提供url参数
+                        // <see>https://github.com/Mrs4s/go-cqhttp/issues/889</see>
+                        case "flash":
+                            var file = dict["file"].Split ('.');
+                            var (hash, suffix) = (file[0], file[1]);
+                            if (suffix != "image")
+                                Log.Warn ("收到的file参数异常，构造出的url可能不正确");
+                            return new ElementFlashImage (
+                                $"http://gchat.qpic.cn/gchatpic_new/{1}/{2}-{3}-{hash}/0?term=3"
+                            );
+                        }
+                    }
                     return new ElementImage (dict["url"]);
                 case "at":
                     if (dict["qq"] == "all") return new ElementAt ();

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -23,20 +24,34 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         }
         /// <summary>以二进制形式存储的文件</summary>
         private byte[] bin_content;
+
+        /// <summary>保存为本地文件</summary>
+        /// <param name="file_name">存储的文件名</param>
+        /// <returns>是否成功保存</returns>
+        public async Task<bool> Save (string file_name) {
+            try {
+                await File.WriteAllBytesAsync (file_name, bin_content);
+            } catch (Exception e) {
+                Log.Error ($"文件{file_name}保存失败{e}:\n{e.Message}");
+                return false;
+            }
+            return true;
+        }
+
         /// <summary>
         /// 手动构造一个消息段，一般用不到
         /// </summary>
         /// <param name="type">消息段类型</param>
         /// <param name="dict">手动输入的键值对</param>
-        public ElementFile (string type, params (string key, string val) [] dict):
-            base (type, dict) { GetFilePath (); }
+        public ElementFile (string type, params (string key, string val)[] dict)
+        : base (type, dict) => file_url = data["file"];
         /// <summary>
         /// 构造消息段，一般不会手动调用
         /// </summary>
         /// <param name="type">消息段类型</param>
         /// <param name="data">消息段键值对</param>
-        public ElementFile (string type, Dictionary<string, string> data):
-            base (type, data) { GetFilePath (); }
+        public ElementFile (string type, Dictionary<string, string> data)
+        : base (type, data) => file_url = data["file"];
         /// <summary>
         /// 通过byte array构造文件消息段
         /// </summary>
@@ -44,10 +59,11 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// <param name="bytes"></param>
         /// <param name="use_cache"></param>
         /// <returns></returns>
-        public ElementFile (string type, byte[] bytes, bool use_cache):
-            base (type, ("file", $"base64://{Convert.ToBase64String (bytes)}")) {
-                if (!use_cache) data["cache"] = "0";
-            }
+        public ElementFile (string type, byte[] bytes, bool use_cache)
+        : base (type,
+            ("file", $"base64://{Convert.ToBase64String (bytes)}"),
+            ("cache", use_cache ? "1" : "0")
+        ) => file_url = $"base64://{Convert.ToBase64String (bytes)}";
         /// <summary>
         /// 通过url构建文件消息段
         /// </summary>
@@ -55,19 +71,10 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
         /// <param name="url"></param>
         /// <param name="use_cache">是否缓存于酷Q端</param>
         /// <returns></returns>
-        public ElementFile (string type, string url, bool use_cache):
-            base (type, ("file", url)) {
-                file_url = url;
-                if (!use_cache) data["cache"] = "0";
-            }
+        public ElementFile (string type, string url, bool use_cache)
+        : base (type, ("file", url), ("cache", use_cache ? "1" : "0"))
+            => file_url = url;
 
-        private void GetFilePath () {
-            try {
-                this.file_url = data["file"];
-            } catch (KeyNotFoundException) {
-                throw new Exceptions.ErrorElementException ("data中没有file段***");
-            }
-        }
         /// <summary>
         /// 下载图片并转为base64存储，并删除data中的url项
         /// 网络环境恶劣的情况下最多获取<see cref="Config.network_max_failure"/>次
@@ -92,6 +99,5 @@ namespace cqhttp.Cyan.Messages.CQElements.Base {
             // checkFormat(bin_content)
             return true;
         }
-
     }
 }
