@@ -109,6 +109,13 @@
 <p>此外，<code>CQApiClient</code>都有<code>use_group_table</code>与<code>use_message_table</code>两参数，后文会说明其用途。</p>
 <h3 id="进行组合">进行组合</h3>
 <p>如果需要进行&quot;使用HTTP方式进行API调用，但使用Websocket监听上报事件&quot;这样奇怪的操作的话，可以直接实例化<code>CQApiClient</code>类。<code>CQApiClient</code>的构造参数接收一个<a class="xref" href="../meta/cqhttp.Cyan.Clients.Callers.ICaller.html">ICaller</a>与一个<a class="xref" href="../meta/cqhttp.Cyan.Clients.Listeners.IListener.html">IListener</a>，分别用于调用API接口与监听上报事件。</p>
+<h3 id="协议端的使用">协议端的使用</h3>
+<p>目前（May 2021）维护中的协议端有 <a href="https://github.com/yyuueexxiinngg/onebot-kotlin">onebot-kotlin</a>，<a href="https://github.com/Mrs4s/go-cqhttp">go-cqhttp</a> 等。关于协议端的使用请参考其各自的README及文档。如果想要一键启动，可以：</p>
+<pre><code class="lang-bash">git clone https://github.com/frank-bots/cqhttp.Cyan.Demo
+cd cqhttp.Cyan.Demo
+# 修改配置文件
+docker-compose up -d
+</code></pre>
 </article>
           </div>
           

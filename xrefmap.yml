@@ -3659,6 +3659,19 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.is_fixed
   nameWithType: ElementFile.is_fixed
+- uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Save(System.String)
+  name: Save(String)
+  href: meta/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html#cqhttp_Cyan_Messages_CQElements_Base_ElementFile_Save_System_String_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Save(System.String)
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Save(System.String)
+  nameWithType: ElementFile.Save(String)
+- uid: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Save*
+  name: Save
+  href: meta/cqhttp.Cyan.Messages.CQElements.Base.ElementFile.html#cqhttp_Cyan_Messages_CQElements_Base_ElementFile_Save_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Save
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.Base.ElementFile.Save
+  nameWithType: ElementFile.Save
 - uid: cqhttp.Cyan.Messages.CQElements.ElementAnnonymous
   name: ElementAnnonymous
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementAnnonymous.html
@@ -3760,6 +3773,43 @@ references:
   isSpec: "True"
   fullName: cqhttp.Cyan.Messages.CQElements.ElementFace.ElementFace
   nameWithType: ElementFace.ElementFace
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFlashImage
+  name: ElementFlashImage
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementFlashImage.html
+  commentId: T:cqhttp.Cyan.Messages.CQElements.ElementFlashImage
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFlashImage
+  nameWithType: ElementFlashImage
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor(Dictionary{System.String,System.String})
+  name: ElementFlashImage(Dictionary<String, String>)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementFlashImage.html#cqhttp_Cyan_Messages_CQElements_ElementFlashImage__ctor_Dictionary_System_String_System_String__
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor(Dictionary{System.String,System.String})
+  name.vb: ElementFlashImage(Dictionary(Of String, String))
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.ElementFlashImage(Dictionary<System.String, System.String>)
+  fullName.vb: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.ElementFlashImage(Dictionary(Of System.String, System.String))
+  nameWithType: ElementFlashImage.ElementFlashImage(Dictionary<String, String>)
+  nameWithType.vb: ElementFlashImage.ElementFlashImage(Dictionary(Of String, String))
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor(System.Byte[],System.Boolean)
+  name: ElementFlashImage(Byte[], Boolean)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementFlashImage.html#cqhttp_Cyan_Messages_CQElements_ElementFlashImage__ctor_System_Byte___System_Boolean_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor(System.Byte[],System.Boolean)
+  name.vb: ElementFlashImage(Byte(), Boolean)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.ElementFlashImage(System.Byte[], System.Boolean)
+  fullName.vb: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.ElementFlashImage(System.Byte(), System.Boolean)
+  nameWithType: ElementFlashImage.ElementFlashImage(Byte[], Boolean)
+  nameWithType.vb: ElementFlashImage.ElementFlashImage(Byte(), Boolean)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor(System.String,System.Boolean)
+  name: ElementFlashImage(String, Boolean)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementFlashImage.html#cqhttp_Cyan_Messages_CQElements_ElementFlashImage__ctor_System_String_System_Boolean_
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor(System.String,System.Boolean)
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.ElementFlashImage(System.String, System.Boolean)
+  nameWithType: ElementFlashImage.ElementFlashImage(String, Boolean)
+- uid: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor*
+  name: ElementFlashImage
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementFlashImage.html#cqhttp_Cyan_Messages_CQElements_ElementFlashImage__ctor_
+  commentId: Overload:cqhttp.Cyan.Messages.CQElements.ElementFlashImage.#ctor
+  isSpec: "True"
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementFlashImage.ElementFlashImage
+  nameWithType: ElementFlashImage.ElementFlashImage
 - uid: cqhttp.Cyan.Messages.CQElements.ElementForward
   name: ElementForward
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementForward.html
@@ -3878,6 +3928,15 @@ references:
   commentId: T:cqhttp.Cyan.Messages.CQElements.ElementImage
   fullName: cqhttp.Cyan.Messages.CQElements.ElementImage
   nameWithType: ElementImage
+- uid: cqhttp.Cyan.Messages.CQElements.ElementImage.#ctor(Dictionary{System.String,System.String})
+  name: ElementImage(Dictionary<String, String>)
+  href: meta/cqhttp.Cyan.Messages.CQElements.ElementImage.html#cqhttp_Cyan_Messages_CQElements_ElementImage__ctor_Dictionary_System_String_System_String__
+  commentId: M:cqhttp.Cyan.Messages.CQElements.ElementImage.#ctor(Dictionary{System.String,System.String})
+  name.vb: ElementImage(Dictionary(Of String, String))
+  fullName: cqhttp.Cyan.Messages.CQElements.ElementImage.ElementImage(Dictionary<System.String, System.String>)
+  fullName.vb: cqhttp.Cyan.Messages.CQElements.ElementImage.ElementImage(Dictionary(Of System.String, System.String))
+  nameWithType: ElementImage.ElementImage(Dictionary<String, String>)
+  nameWithType.vb: ElementImage.ElementImage(Dictionary(Of String, String))
 - uid: cqhttp.Cyan.Messages.CQElements.ElementImage.#ctor(System.Byte[],System.Boolean)
   name: ElementImage(Byte[], Boolean)
   href: meta/cqhttp.Cyan.Messages.CQElements.ElementImage.html#cqhttp_Cyan_Messages_CQElements_ElementImage__ctor_System_Byte___System_Boolean_
