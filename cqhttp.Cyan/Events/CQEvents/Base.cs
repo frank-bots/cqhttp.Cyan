@@ -35,6 +35,10 @@ namespace cqhttp.Cyan.Events.CQEvents.Base {
                 post_type = value.ToString ();
             }
         }
+        /// <summary>
+        /// 原始事件数据
+        /// </summary>
+        public Newtonsoft.Json.Linq.JObject raw_event { get; set; }
         ///
         public CQEvent () { }
         /// <summary>

@@ -58,6 +58,11 @@ namespace cqhttp.Cyan.Utils {
             }
 
             var json = JObject.Load (reader);
+
+            if (!json.ContainsKey("raw_event")) {
+                json.Add("raw_event", json);
+            }
+
             var discriminatorField = json.Property (_discriminatorOptions.DiscriminatorFieldName);
             if (discriminatorField is null) {
                 Log.Error ($"找不到属性{_discriminatorOptions.DiscriminatorFieldName}，这可能是协议端的bug");
@@ -71,7 +76,6 @@ namespace cqhttp.Cyan.Utils {
                 Log.Warn ($"未能解析 ({_discriminatorOptions.DiscriminatorFieldName}=>{discriminatorFieldValue})");
                 Log.Debug (json.ToString ());
                 found = _discriminatorOptions.FallbackType ?? objectType;
-                json.Add ("raw_event", json);
             }
 
             _discriminatorOptions.Preprocessor?.Invoke (discriminatorFieldValue, json);
