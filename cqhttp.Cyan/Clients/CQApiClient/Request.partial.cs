@@ -16,7 +16,7 @@ namespace cqhttp.Cyan.Clients {
             if (group_table != null) {
                 if (x is GetGroupMemberInfoRequest) {
                     var r = x.response as GetGroupMemberInfoResult;
-                    group_table[r.memberInfo.group_id].Add (
+                    group_table[r.memberInfo.group_id].TryAdd (
                         r.memberInfo.user_id, r.memberInfo
                     );
                 } else if (x is GetGroupMemberListRequest) {

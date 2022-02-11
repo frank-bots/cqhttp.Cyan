@@ -36,7 +36,7 @@ namespace cqhttp.Cyan.ApiCall.Results.Base {
                     ErrorHandler.Handle (retcode);
                 }catch(Exceptions.ErrorApicallException e){
                     Log.Error (e.Message);
-                    Log.Debug (this.raw_data.ToString ());
+                    Log.Debug (parsed.ToString ());
                 }
                 break;
             }

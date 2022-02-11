@@ -21,9 +21,9 @@ namespace cqhttp.Cyan.Utils {
         ///
         public string area;
         ///
-        public int join_time;
+        public ulong join_time;
         ///
-        public int last_sent_time;
+        public ulong last_sent_time;
         /// <summary>成员等级</summary>
         public string level;
         ///
@@ -33,7 +33,7 @@ namespace cqhttp.Cyan.Utils {
         /// <summary>专属头衔</summary>
         public string title;
         ///
-        public int title_expire_time;
+        public ulong title_expire_time;
         ///
         public bool card_changeable;
     }
