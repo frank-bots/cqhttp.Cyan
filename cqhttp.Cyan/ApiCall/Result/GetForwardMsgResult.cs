@@ -15,11 +15,10 @@ namespace cqhttp.Cyan.ApiCall.Results {
             if (messages == null)
                 throw new Exceptions.ErrorMessageException ("转发消息获取异常");
             foreach (JObject node in messages) {
-                node.TryGetValue ("sender", out var sender);
                 // for compatibility with go-cqhttp
                 this.messages.Add (new ElementForward.ElementNode (
-                    sender?["nickname"].ToObject<string> () ?? node["nickname"].ToObject<string> (),
-                    sender?["user_id"].ToObject<long> () ?? node["user_id"].ToObject<long> (),
+                    node.GetValue ("name")?.ToObject<string> () ?? node.GetValue ("nickname")?.ToObject<string> (),
+                    node.GetValue ("uin")?.ToObject<long> () ?? node.GetValue ("user_id")?.ToObject<long> () ?? 0,
                     node["content"].ToObject<Messages.Message> ()
                 ));
             }
